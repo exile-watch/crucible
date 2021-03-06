@@ -3,7 +3,7 @@ import Head from 'next/head'
 import SidebarDesktop from "./Sidebar/SidebarDesktop";
 import styles from './Layout.module.scss'
 import TopbarDesktop from "./Topbar/TopbarDesktop";
-import cn from "classnames";
+import cx from "classnames";
 
 type LayoutProps = {
   children?: ReactNode
@@ -22,7 +22,7 @@ const Layout = ({ children, title = 'This is the default title' }: LayoutProps) 
         <SidebarDesktop/>
         <div className={styles.contentWrapper}>
           <TopbarDesktop />
-          <div className={cn("p-3", styles.content)}>
+          <div className={cx("p-3", styles.content)}>
             {children}
           </div>
         </div>

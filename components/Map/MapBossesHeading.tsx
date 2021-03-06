@@ -1,5 +1,4 @@
 import React from 'react';
-import cn from "classnames";
 import styles from "./Map.module.scss";
 import Heading from "#components/Heading/Heading";
 import Link from "next/link";
@@ -16,7 +15,7 @@ const MapBossesHeading = ({data}: MapBossesHeadingProps) => {
   const { query: { category, map, boss: queryBoss } } = useRouter()
 
   return (
-    <div className={cn('', styles.bosses)}>
+    <div className={cx('', styles.bosses)}>
       {data?.bosses?.map(boss => {
         const [bossName] = Object.keys(boss);
         const isActive = kebabCase(bossName) === queryBoss;

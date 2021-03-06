@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {SearchIcon} from "#assets/icons";
-import cn from "classnames";
+import cx from "classnames";
 import styles from "./InputWithResults.module.scss";
 import Results from "./Results/Results";
 import {IndexedSearchResultsProps} from "#types";
@@ -53,19 +53,19 @@ const InputWithResults = () => {
 
   return (
     <div className={styles.inputWrapper} ref={inputContainerRef}>
-      <SearchIcon className={cn(areResultsOpen && styles.iconFocused, styles.icon)} onClick={handleIconClick} />
+      <SearchIcon className={cx(areResultsOpen && styles.iconFocused, styles.icon)} onClick={handleIconClick} />
       <input onChange={handleChange}
              onFocus={handleFocus}
-             className={cn('pl-2 py-1', areResultsOpen && styles.inputFocused, styles.input)}
+             className={cx('pl-2 py-1', areResultsOpen && styles.inputFocused, styles.input)}
              ref={inputEl}
              value={value} placeholder="Eradicator, Whirling Charge..."
       />
 
-      {isLoading && <Loader className={cn('mr-2', styles.loader)} size={20} thickness={2}/>}
+      {isLoading && <Loader className={cx('mr-2', styles.loader)} size={20} thickness={2}/>}
 
       {!isLoading && value.length > 0 && (
         <>
-          <Badge className={cn('mr-2', styles.clearInput)} onClick={handleClear}>clear</Badge>
+          <Badge className={cx('mr-2', styles.clearInput)} onClick={handleClear}>clear</Badge>
           {areResultsOpen && <Results data={data} inputValue={value} onClick={handleClose}/>}
         </>
       )}

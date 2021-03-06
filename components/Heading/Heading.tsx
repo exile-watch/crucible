@@ -1,5 +1,5 @@
 import {ReactNode} from 'react';
-import cn from 'classnames';
+import cx from 'classnames';
 import styles from './Heading.module.scss';
 
 type HeadingProps = {
@@ -18,7 +18,7 @@ const Heading = ({ as: T, children, className, ...props }: HeadingProps) => {
   }
 
   return (
-    <T className={cn(styles.heading, fontSize, className)} {...props}>
+    <T className={cx(styles.heading, fontSize, className)} {...props}>
       {children}
     </T>
   );

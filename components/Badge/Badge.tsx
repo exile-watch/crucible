@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-import cn from "classnames";
+import cx from "classnames";
 import styles from './Badge.module.scss';
 
 type BadgeProps = {
@@ -10,7 +10,7 @@ type BadgeProps = {
 
 const Badge = ({children, className, onClick}: BadgeProps) => {
   return (
-    <div className={cn('px-1', className, styles.badge)} onClick={onClick}>
+    <div className={cx('px-1', className, styles.badge)} onClick={onClick}>
       {children}
     </div>
   );
