@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 28px;
+
+  --font-line-height-sm: 18px;
+  --font-line-height-md: 20px;
+  --font-line-height-lg: 22px;
+  --font-line-height-xl: 34px;
+  --font-line-height-2xl: 36px;
+
+  --font-weight-thin: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 900;
+
+  font-family: 'Lato', sans-serif;
+}

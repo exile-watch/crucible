@@ -1,0 +1,95 @@
+.bossContainer {
+  height: calc(100% - 56px - 1rem);
+  display: flex;
+}
+
+//.phases {
+//  width: 100px;
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+//.phase, .transition {
+//  margin-bottom: 50px;
+//  background: var(--gray900);
+//  border: 2px solid var(--gray300);
+//  position: relative;
+//  color: var(--gray300);
+//
+//  &:not(:last-child):before {
+//    content: '';
+//    position: absolute;
+//    width: 2px;
+//    background: var(--gray300);
+//    height: 30px;
+//    left: calc(50% - 1px);
+//    top: calc(100% + 12px);
+//  }
+//}
+//
+//.phaseWithTransition, .transition {
+//  margin-bottom: 40px;
+//
+//  &:not(:last-child):before{
+//    height: 20px;
+//  }
+//}
+//
+//.phase {
+//  border-radius: 50%;
+//  width: 50px;
+//  height: 50px;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  font-size: var(--font-size-md);
+//  flex-direction: column;
+//}
+//
+//.transition {
+//  font-size: var(--font-size-xs);
+//  text-transform: uppercase;
+//  border-radius: 10px;
+//}
+//
+//.previouslyActive {
+//  color: var(--sand500);
+//  border-color: var(--sand500);
+//
+//  &:not(:last-child):before {
+//    background: var(--sand500);
+//  }
+//}
+//
+//.active {
+//  color: var(--sand500);
+//  border-color: var(--sand500);
+//  box-shadow: 0 0 10px var(--sand500);
+//}
+//
+//
+//.bossPhase {
+//  font-size: var(--font-size-xl);
+//  text-transform: uppercase;
+//  text-align: center;
+//  position: relative;
+//  color: var(--gray300);
+//
+//  span {
+//    background: var(--gray900);
+//    position: relative;
+//  }
+//
+//  &:before {
+//    content: '';
+//    position: absolute;
+//    height: 1px;
+//    width: 100%;
+//    background: var(--gray300);
+//    left: 0;
+//    top: 50%;
+//  }
+//}
+

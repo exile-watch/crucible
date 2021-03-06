@@ -1,0 +1,10 @@
+@import 'reset';
+@import 'variables/spacing';
+@import 'variables/colors';
+@import 'variables/typography';
+@import 'variables/z-index';
+@import 'mixins/spacing';
+
+#__next {
+  height: 100%;
+}

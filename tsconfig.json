@@ -16,7 +16,31 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "#global-styles/*": [
+        "global-styles/*"
+      ],
+      "#assets/*": [
+        "assets/*"
+      ],
+      "#components/*": [
+        "components/*"
+      ],
+      "#data/*": [
+        "data/*"
+      ],
+      "#hooks/*": [
+        "hooks/*"
+      ],
+      "#types": [
+        "types/index.d.ts"
+      ],
+      "#utils/*": [
+        "utils/*"
+      ]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"]

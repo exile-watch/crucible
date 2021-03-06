@@ -5,17 +5,32 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
+    "build:indexed-search": "node scripts/build-indexed-search.js",
+    "build:paths": "node scripts/build-paths.js",
+    "extract:tokens": "node scripts/extract-tokens.js",
+    "clean-invalid-data-files": "node scripts/clean-invalid-data-files.js",
+    "data:update": "yarn extract:tokens && yarn build:indexed-search && yarn build:paths"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.21",
     "next": "latest",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "sass": "^1.32.8"
   },
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
+    "@types/classnames": "^2.2.11",
+    "@types/lodash": "^4.14.168",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.0.0",
     "typescript": "4.0"
   },
   "license": "MIT"

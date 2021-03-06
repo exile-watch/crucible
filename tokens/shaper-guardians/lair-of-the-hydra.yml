@@ -1,0 +1,39 @@
+map: Lair of the Hydra
+bosses:
+  - Guardian of the Hydra:
+      abilities:
+        - Doom Arrow:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif:
+            about:
+              - "Deals 220% of Damage"
+              - "80% more Attack Speed"
+              - "9 additional Projectiles"
+
+        - Barrage:
+            type: [ cold, physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "Deals 66% of Damage"
+              - "50% of Physical Damage Converted to Cold Damage"
+              - "9 additional Projectiles"
+
+        - Fork Arrow:
+            type: [ cold. physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "Deals 300% of Damage"
+              - "50% of Physical Damage Converted to Cold Damage"
+              - "50% less Attack Speed"
+
+        - Cannons:
+            type: [ cold ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "Sides of the room are filled with cannons"
+              - "Each cannon shoots Frostbolts every 6 seconds"
+              - "The less health the boss has, the more often these cannons shoot"

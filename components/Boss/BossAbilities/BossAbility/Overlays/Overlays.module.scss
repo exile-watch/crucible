@@ -1,0 +1,30 @@
+.abilityName,
+.aboutAbility,
+.playerInteraction {
+  position: absolute;
+  z-index: var(--z-index-10);
+  background: var(--gray700);
+  border: 1px solid var(--gray300);
+}
+
+
+.abilityName{
+  left: -1rem;
+  top: -1rem;
+  font-size: var(--font-size-lg);
+}
+
+.aboutAbility {
+  display: flex;
+  flex-direction: column;
+  left: 750px;
+  top: 90px;
+  width: fit-content;
+  max-width: 400px;
+}
+
+.playerInteraction {
+  bottom: 0;
+  left: 400px;
+  transform: translate(calc(-50% - 2px), calc(50% - 2px))
+}

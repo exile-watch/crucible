@@ -1,0 +1,68 @@
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  height: 34px;
+  padding-top: 3px;
+  padding-left: 2px;
+  border-bottom: 2px solid var(--gray300);
+  background: var(--sand900);
+  transition: all .4s ease;
+
+  circle, path {
+    transition: all .4s ease;
+    stroke: var(--gray300)
+  }
+}
+
+.iconFocused {
+  height: 34px;
+  padding-top: 3px;
+  border-bottom: 2px solid var(--sand500);
+  background: var(--sand900);
+
+  circle, path {
+    stroke: var(--sand500)
+  }
+}
+
+.input {
+  background: var(--sand900);
+  color: var(--gray300);
+  border: none;
+  border-bottom: 2px solid var(--gray300);
+  outline: none;
+  width: 300px;
+  padding-right: 58px;
+  transition: all ease .4s;
+
+  &::selection {
+    background: var(--sand500);
+    color: var(--gray900)
+  }
+
+  &::placeholder {
+    color: var(--gray300)
+  }
+}
+
+.inputFocused {
+  color: var(--sand500);
+  border-color: var(--sand500);
+}
+
+.loader, .clearInput {
+  position: absolute;
+  right: 0;
+}
+
+.clearInput {
+  transition: all ease .2s;
+
+  &:hover {
+    background: var(--gray700);
+  }
+}

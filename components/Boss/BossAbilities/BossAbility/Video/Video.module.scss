@@ -1,0 +1,16 @@
+.videoWrapper,
+.video {
+  position: relative;
+  width: 800px;
+  border: 1px solid var(--gray300);
+}
+
+.videoWrapper {
+  height: 450px;
+  overflow: hidden;
+}
+
+.video {
+  transform: scale(1.35);
+  z-index: var(--z-index-1);
+}

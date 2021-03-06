@@ -1,0 +1,33 @@
+.abilityWrapper {
+  display: flex;
+  margin-bottom: 5rem;
+  transition: all ease .4s;
+
+  &:nth-child(even) {
+    justify-content: flex-end;
+
+    > div {
+      > p:first-child {
+        right: -1rem;
+        left: initial;
+      }
+
+      > div:nth-child(3) {
+        right: 750px;
+        left: initial;
+      }
+    }
+  }
+
+  &:first-child {
+    margin-top: 1rem;
+  }
+}
+
+.ability {
+  position: relative;
+}
+
+.activeAbility{
+  opacity: 1;
+}
