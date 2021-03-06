@@ -1,10 +1,9 @@
 import React from 'react';
 import cx from "classnames";
 import styles from "./Overlays.module.scss";
-import {BossAbilityType} from "#types";
 
 type AboutAbilityProps = {
-  about: Pick<BossAbilityType, 'about'>[]
+  about: string[]
 }
 
 const AboutAbility = ({about}: AboutAbilityProps) => (

@@ -1,35 +1,37 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import useImportDataOnLoad from "#hooks/useImportDataOnLoad";
 import Layout from "#components/Layout/Layout";
-import { kebabCase, startCase } from 'lodash';
-import {useRouter} from "next/router";
+import { kebabCase } from 'lodash';
+import useRouter from "#hooks/useRouter";
 import Map from '#components/Map/Map'
 import BossContainer from "#components/Boss/BossContainer";
+import {BossAbilityWithNameType} from "#types";
 
 const Boss = () => {
-  const {isLoading, data, pageTitle} = useImportDataOnLoad()
-  const [activeBossAbilities, setActiveBossAbilities] = useState(null);
+  // @ts-ignore
+  const {isLoading, data} = useImportDataOnLoad()
+  const [activeBossAbilities, setActiveBossAbilities] = useState<BossAbilityWithNameType[] | null>(null);
   const { query } = useRouter()
 
   useEffect(() => {
     if(data) {
-      data.bosses.find(boss => {
+      data?.bosses?.find(boss => {
         const [[bossName, bossProps]] = Object.entries(boss);
-        const abilities = bossProps.abilities?.reduce((acc, v) => {
-          const [[abilityName, abilities]] = Object.entries(v);
+        const abilities: any = bossProps.abilities?.reduce((acc, v) => {
+          const [[abilityName, abilities]]: any = Object.entries(v);
             return acc.concat({
               ...abilities,
               name: abilityName
             })
           }, [])
-        console.log(abilities);
+
         return kebabCase(bossName) === query.boss && setActiveBossAbilities(abilities)
       })
     }
-  }, [data, pageTitle, query.boss])
+  }, [data, query.boss])
 
   return (
-    <Layout title={pageTitle}>
+    <Layout>
       <Map>
         {activeBossAbilities && <BossContainer abilities={activeBossAbilities} />}
       </Map>

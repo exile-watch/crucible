@@ -2,15 +2,12 @@
  * pageDir = all available page directories under {dirName} in `/pages/[dirName]/[fileName].json` path
  * fileName = all available pages under {fileName} in `/pages/[dirName]/[fileName].json` path
  */
+import {NextRouter} from "next/router";
+import {ParsedUrlQuery} from "querystring";
+
 export type useImportDataProps = {
   pageDir?: 'bosses';
   fileName: 'boss' | 'paths' | 'indexed-search';
-}
-
-export type useImportDataReturnProps = {
-  pageTitle?: string | string[];
-  isLoading: boolean;
-  data: IndexedSearchResultsProps
 }
 
 export type IndexedSearchResultsBossProps = {
@@ -26,15 +23,6 @@ export type IndexedSearchResultsProps = Array<IndexedSearchResultsBossProps> | n
 
 export type SupportedDamageTypes = 'fire' | 'lightning' | 'cold' | 'chaos' | 'physical';
 
-export type BossAbilityType = {
-  name: string;
-  about: string[];
-  gif: string;
-  phases: number[];
-  transmissions: number[];
-  playerInteraction?: string[]
-}
-
 export type SingleBossDataType = {
   name: string;
   phases: number;
@@ -49,3 +37,65 @@ export type MultipleBossDataType = {
 }
 
 export type BossDataType = SingleBossDataType | MultipleBossDataType;
+
+export interface DOMEvent extends Event {
+  readonly target: any
+  readonly currentTarget: any
+}
+
+/**
+ * useRouter()
+ */
+export type RouterType = {
+  query: {
+    category: string;
+    map?: string;
+    boss?: string;
+    ability?: string;
+  }
+} & Omit<ParsedUrlQuery | NextRouter>
+
+export type PathDataType = {
+  [category: string]: Array<{
+    label: string;
+    path: string;
+  }>
+}
+
+/**
+ * Category / Map / Boss Data
+ */
+export type BossAbilityWithNameType = {
+  tip: string[];
+  about: string[];
+  gif: string;
+  type?: string;
+  name?: string;
+}
+
+export type PureBossAbilityType = {
+  tip: string[];
+  about: string[];
+  gif: string;
+  type?: string;
+  name?: string;
+}
+
+export type BossAbilityType = {
+  [abilityName: string]: PureBossAbilityType
+}
+
+export type BossType = {
+  [bossName: string]: {
+    abilities: BossAbilityType[];
+    damageTypes: string[]
+  }
+}
+
+export type MapType = {
+  bosses: BossType[]
+  category: string;
+  map: string;
+}
+
+export type DataType = MapType | null

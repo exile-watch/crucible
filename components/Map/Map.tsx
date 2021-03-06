@@ -1,12 +1,16 @@
-import React from 'react';
+import {ReactNode} from 'react';
 import useImportDataOnLoad from "#hooks/useImportDataOnLoad";
-import {useRouter} from "next/router";
 import Heading from "#components/Heading/Heading";
 import {startCase} from "lodash";
 import PageLoader from "#components/PageLoader/PageLoader";
 import MapBossesHeading from "#components/Map/MapBossesHeading";
+import useRouter from "#hooks/useRouter";
 
-const Map = ({children}: any) => {
+type MapProps = {
+  children?: ReactNode;
+}
+
+const Map = ({children}: MapProps) => {
   const {isLoading, data} = useImportDataOnLoad()
   const { query: { map } } = useRouter()
 

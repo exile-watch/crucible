@@ -1,3 +1,3 @@
 export { default as AbilityName } from './AbilityName'
 export { default as AboutAbility } from './AboutAbility'
-export { default as PlayerInteraction } from './PlayerInteraction'
+export { default as Tip } from './Tip'

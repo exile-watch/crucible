@@ -1,28 +1,29 @@
 import React, {useEffect, useState} from 'react';
 import Layout from "#components/Layout/Layout";
-import {useRouter} from "next/router";
+import useRouter from "#hooks/useRouter";
 import useImportDataOnLoad from "#hooks/useImportDataOnLoad";
 import Heading from "#components/Heading/Heading";
 import { startCase } from 'lodash'
 import Link from 'next/link';
+import {PathDataType} from "#types";
 
 const Categories = () => {
-  const {isLoading, data} = useImportDataOnLoad({fileName: 'paths'})
+  const {data} = useImportDataOnLoad<PathDataType>({fileName: 'paths'})
   const { query: { category } } = useRouter();
-  const [activeCategory, setActiveEntity] = useState(null)
+  // @ts-ignore
+  const [activeCategory, setActiveEntity] = useState<string | null>(null)
 
   useEffect(() => {
     if(data) {
-      Object.entries(data).find(({0: c, 1: entities}) => {
+      Object.entries(data).find(({0: c}) => {
         c === category && setActiveEntity(c)
       });
     }
   }, [data])
 
-  console.log(activeCategory);
   return (
     <Layout>
-      {data && Object.entries(data)?.map(({0: cat, 1: ent}) => (
+      {data && Object.entries(data).map(({0: cat, 1: ent}) => (
         <ul key={`content_${cat}`}>
           <li>
             <Heading as="h1">{startCase(cat)}</Heading>

@@ -1,12 +1,10 @@
-import React from 'react';
 import cx from "classnames";
 import styles from "./BossAbilities.module.scss";
 import BossAbility from "./BossAbility/BossAbility";
-import {BossAbilityType} from "#types";
+import {BossAbilityWithNameType} from "#types";
 
 type BossAbilitiesProps = {
-  abilities?: BossAbilityType[]
-  bosses?: any;
+  abilities?: BossAbilityWithNameType[]
 }
 
 const BossAbilities = ({abilities}: BossAbilitiesProps) => {
@@ -14,7 +12,7 @@ const BossAbilities = ({abilities}: BossAbilitiesProps) => {
     <div className={cx('pl-3 ml-3', styles.abilitiesWrapper)}>
       <div className={styles.abilities}>
         {abilities?.map(({name, about, tip, gif}) => (
-          <BossAbility name={name} about={about} playerInteraction={tip} gif={gif}/>
+          <BossAbility name={name} about={about} tip={tip} gif={gif}/>
         ))}
       </div>
     </div>

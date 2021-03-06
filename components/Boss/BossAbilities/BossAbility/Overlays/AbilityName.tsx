@@ -1,10 +1,8 @@
 import React from 'react';
 import cx from "classnames";
 import styles from "./Overlays.module.scss";
-import {BossAbilityType} from "#types";
-
 type AbilityNameProps = {
-  name: Pick<BossAbilityType, 'name'>
+  name?: string
 }
 
 const AbilityName = ({name}: AbilityNameProps) => (

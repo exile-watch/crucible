@@ -1,13 +1,23 @@
 import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
-import {useImportDataProps, useImportDataReturnProps} from "#types";
+import useRouter from "#hooks/useRouter";
+import {DataType} from "#types";
 
-function useImportDataOnLoad({pageDir = null, fileName = null} = {}) {
+type useImportDataOnLoadReturnProps<T> = {
+  isLoading: boolean;
+  data?: T;
+}
+
+type useImportDataOnLoadProps = {
+  pageDir?: string | null;
+  fileName?: string | null;
+}
+
+function useImportDataOnLoad<T = DataType>({pageDir = null, fileName = null}: useImportDataOnLoadProps = {}): useImportDataOnLoadReturnProps<T> {
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<T | undefined>(undefined);
 
   if(!pageDir && !fileName) {
-    const { query: { category, map} } = useRouter()
+    const { query: { category, map } } = useRouter()
 
     useEffect(() => {
       setIsLoading(true)
@@ -19,6 +29,7 @@ function useImportDataOnLoad({pageDir = null, fileName = null} = {}) {
         .catch(err => {
           console.log(err)
           setIsLoading(false)
+          setData(undefined)
         })
     }, [category, map])
 
@@ -38,6 +49,7 @@ function useImportDataOnLoad({pageDir = null, fileName = null} = {}) {
           .catch(err => {
             console.log(err)
             setIsLoading(false)
+            setData(undefined)
           })
       }
     }, [])
@@ -47,7 +59,6 @@ function useImportDataOnLoad({pageDir = null, fileName = null} = {}) {
 
   const { query } = useRouter()
   const pageDirQuery = query[pageDir || query.category];
-  const pageTitle = query[fileName || query.map]
 
   useEffect(() => {
     setIsLoading(true)
@@ -61,11 +72,12 @@ function useImportDataOnLoad({pageDir = null, fileName = null} = {}) {
         .catch(err => {
           console.log(err)
           setIsLoading(false)
+          setData(undefined)
         })
     }
   }, [pageDirQuery, data])
 
-  return {isLoading, data, pageTitle}
+  return {isLoading, data}
 }
 
 export default useImportDataOnLoad

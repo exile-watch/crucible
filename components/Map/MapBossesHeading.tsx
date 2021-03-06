@@ -4,15 +4,20 @@ import styles from "./Map.module.scss";
 import Heading from "#components/Heading/Heading";
 import Link from "next/link";
 import {kebabCase} from "lodash";
-import {useRouter} from "next/router";
+import useRouter from "#hooks/useRouter";
 import cx from "classnames";
+import {MapType} from "#types";
 
-const MapBossesHeading = ({data}) => {
+type MapBossesHeadingProps = {
+  data: MapType
+}
+
+const MapBossesHeading = ({data}: MapBossesHeadingProps) => {
   const { query: { category, map, boss: queryBoss } } = useRouter()
 
   return (
     <div className={cn('', styles.bosses)}>
-      {data?.bosses.map(boss => {
+      {data?.bosses?.map(boss => {
         const [bossName] = Object.keys(boss);
         const isActive = kebabCase(bossName) === queryBoss;
 

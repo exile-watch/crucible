@@ -1,6 +1,6 @@
 .abilityName,
 .aboutAbility,
-.playerInteraction {
+.tip {
   position: absolute;
   z-index: var(--z-index-10);
   background: var(--gray700);
@@ -23,7 +23,7 @@
   max-width: 400px;
 }
 
-.playerInteraction {
+.tip {
   bottom: 0;
   left: 400px;
   transform: translate(calc(-50% - 2px), calc(50% - 2px))

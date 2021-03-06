@@ -6,20 +6,19 @@ import Results from "./Results/Results";
 import {IndexedSearchResultsProps} from "#types";
 import Loader from "#components/Loader/Loader";
 import Badge from "#components/Badge/Badge";
-import {useRouter} from "next/router";
+import useRouter from "#hooks/useRouter";
 import importDataOnDemand from "#utils/importDataOnDemand";
 import useOnClickOutside from "#hooks/useOnClickOutside";
 import startCase from 'lodash/startCase';
 
 const InputWithResults = () => {
-  const inputContainerRef = useRef<HTMLDivElement>(null)
-
   const [value, setInputValue] = useState<string>('');
   const [data, setData] = useState<IndexedSearchResultsProps>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [areResultsOpen, setAreResultsOpen] = useState(false);
   const inputEl = useRef<HTMLInputElement>(null)
-  const {query: {ability, boss}}: any = useRouter()
+  const {query: {ability, boss}} = useRouter()
+  const inputContainerRef = useRef<HTMLDivElement>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => !isLoading && setInputValue(e.target.value)
 

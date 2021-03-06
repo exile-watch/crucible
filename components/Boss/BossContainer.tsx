@@ -1,9 +1,13 @@
 import styles from './BossContainer.module.scss';
 import cx from "classnames";
 import BossAbilities from "./BossAbilities/BossAbilities";
-import {BossDataType} from "#types";
+import {BossAbilityWithNameType} from "#types";
 
-const BossContainer = ({abilities}: BossDataType) => {
+type BossContainerProps = {
+  abilities: BossAbilityWithNameType[];
+}
+
+const BossContainer = ({abilities}: BossContainerProps) => {
   return (
     <div className={cx("my-3", styles.bossContainer)}>
       {/*<div className={styles.phases}>*/}
