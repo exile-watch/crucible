@@ -1,5 +1,6 @@
 .sidebar {
   height: 100%;
+  min-width: calc(250px - 2rem);
   width: calc(250px - 2rem);
   background: var(--gray700);
   color: var(--sand500)

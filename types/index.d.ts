@@ -69,6 +69,8 @@ export type BossAbilityWithNameType = {
   tip: string[];
   about: string[];
   gif: string;
+  isChallenge?: boolean;
+  aboutChallenge?: string;
   type?: string;
   name?: string;
 };
@@ -77,6 +79,8 @@ export type PureBossAbilityType = {
   tip: string[];
   about: string[];
   gif: string;
+  isChallenge?: boolean;
+  aboutChallenge?: string;
   type?: string;
   name?: string;
 };
