@@ -3,6 +3,7 @@ const { kebabCase } = require('lodash');
 
 const cleanInvalidDataFiles = async () => {
   await fs.readdirSync('./tokens').forEach((dir) => {
+    if(dir === 'README.md') return;
     try {
       const d = kebabCase(dir);
       const supportedFiles = fs.readdirSync(`./tokens/${d}`);

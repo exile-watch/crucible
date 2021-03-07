@@ -7,6 +7,7 @@ const outputDir = `./extracted-data`;
 const data = [];
 
 fs.readdirSync(tokensDir).forEach((dir) => {
+  if(dir === 'README.md') return;
   fs.readdirSync(`./extracted-data/${dir}`).forEach((file) => {
     data.push(JSON.parse(fs.readFileSync(`./extracted-data/${dir}/${file}`)));
   });
@@ -16,7 +17,7 @@ const preparePathsData = () =>
   data.reduce((acc, map) => {
     const [bossName] = Object.keys(map.bosses[0]);
     const path = map.map
-      ? `/${map.category}/${kebabCase(map.map)}`
+      ? `/${map.category}/${kebabCase(map.map)}/${kebabCase(bossName)}`
       : `/${map.category}/${map.category}/${kebabCase(bossName)}`;
 
     return acc.concat({

@@ -5,6 +5,7 @@ const outputDir = `./extracted-data`;
 const data = [];
 
 fs.readdirSync('./tokens').forEach((dir) => {
+  if(dir === 'README.md') return;
   fs.readdirSync(`./extracted-data/${dir}`).forEach((file) => {
     data.push(JSON.parse(fs.readFileSync(`./extracted-data/${dir}/${file}`)));
   });

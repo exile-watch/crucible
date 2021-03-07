@@ -28,6 +28,7 @@ const injectAllAbilityDamageTypesToBoss = (data) => {
 const getExtractedData = async () => {
   let data = [];
   await fs.readdirSync('./tokens').forEach((dir) => {
+    if(dir === 'README.md') return;
     const outputDir = `./tokens/${dir}`;
     try {
       fs.readdirSync(outputDir).forEach((file) => {
