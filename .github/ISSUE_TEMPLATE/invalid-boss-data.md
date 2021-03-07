@@ -1,5 +1,5 @@
 ---
-name: Invalid Boss Data
+name: [BUG] Invalid Boss Data
 about: Create an Invalid Boss Data report to help us improve
 title: '[Invalid Boss Data][what exactly]: map if exists > boss name'
 labels: ''
