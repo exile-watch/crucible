@@ -1,17 +1,11 @@
-## Prerequisites
-1. `node > v15.x`
-2. `yarn > v2.x`
+# About
 
-## Usage
-1. `yarn && yarn dev`
+### Features roadmap
+`project` - [#2](https://github.com/sbsrnt/poe-watch/issues/2)
 
-## Scripts
-| yarn | desc |
-| ---- | ---- |
-| yarn | install dependencies |
-| yarn dev | dev server |
-| yarn build && yarn start | prod server |
-| yarn svgr | convert svg icons to react components |
-| yarn data:update | generate / update data from tokens |
-| yarn tsc | type check |
-| yarn lint | linter |
+`dev` - [#3](https://github.com/sbsrnt/poe-watch/issues/3)
+
+# Contributing
+
+---
+
