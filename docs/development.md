@@ -1,6 +1,5 @@
 # Development
 
----
 ### Prerequisites
 1. `node > 15.x`
 2. `yarn > 2.x` (`eslint` with `yarn 2` doesn't work with JetBrains IDE's - see https://youtrack.jetbrains.com/issue/WEB-47366)

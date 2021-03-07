@@ -1,7 +1,5 @@
 # Boss Token breakdown
 
----
-
 ### Keys Definition
 | key       | Necessity | type     | description                                                                                                         | Example                                                        |
 | --------- | --------- | -------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -11,7 +9,7 @@
 | type      | optional  | string[] | List of ability damage types.                                                                                       | physical, fire                                                 |
 | tip       | required  | string[] | List of Player Interactions to given Ability. `yml` brackets have the same role as dashes.                          | dodge, kill new spawns                                         |
 | gif       | required  | string   | Video source. Currently all of the sources are hosted from `http://gyazo.com/`                                      | https://i.gyazo.com/279f86d6f8652e9708cde4a80276223c.mp4       |
-| about     | required  | string[] | About ability list                                                                                                  | Every couple seconds Telvar throws Barrel at player's position |
+| about     | required  | string[] | About ability list. Wrap each sentence with double quotation marks (`""`). In future we may enhance those strings.  | Every couple seconds Telvar throws Barrel at player's position |
 
 ---
 
