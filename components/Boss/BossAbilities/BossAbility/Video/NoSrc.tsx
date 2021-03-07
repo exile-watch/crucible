@@ -10,8 +10,8 @@ type NoSrcProps = {
 const NoSrc = ({abilityName}: NoSrcProps) => {
   const {query: { map, boss }} = useRouter();
   const issueTitle = map
-    ? `[Missing Ability Data][Video Source]: ${startCase(map)} > ${startCase(boss)} > ${abilityName}`
-    : `[Missing Ability Data][Video Source]: ${startCase(boss)} > ${abilityName}`
+    ? `[Invalid Ability Data][Missing Video Source]: ${startCase(map)} > ${startCase(boss)} > ${abilityName}`
+    : `[Invalid Ability Data][Missing Video Source]: ${startCase(boss)} > ${abilityName}`
   const issueSrc = `https://github.com/sbsrnt/poe-watch/issues/new?template=missing-ability-data.md&title=${issueTitle}`
   const target = "_blank"
   const rel = "noreferrer noopener"
