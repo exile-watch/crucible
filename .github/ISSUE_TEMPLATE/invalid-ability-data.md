@@ -1,5 +1,5 @@
 ---
-name: [BUG] Invalid Ability Data
+name: '[BUG] Invalid Ability Data'
 about: Create an Invalid Ability Data report to help us improve
 title: '[Invalid Ability Data][what exactly]: map if exists > boss name > boss ability name'
 labels: ''
