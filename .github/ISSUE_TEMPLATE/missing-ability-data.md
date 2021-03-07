@@ -17,5 +17,5 @@ assignees: sbsrnt
 
 <!-- If your issue title was prefilled -->
 <!-- You are all set, as all the data we need is in the issue title :) -->
-<!-- Just hit the Submit Issue button  -->
+<!-- Just hit the "Submit new issue" button and you are good to go -->
 <!-- Thanks! -->
