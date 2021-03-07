@@ -50,7 +50,6 @@ Now that you're a part of the poe-watch community, you can keep participating in
     - [:beetle: Issues](#beetle-issues)
     - [:hammer_and_wrench: Pull requests](#hammer_and_wrench-pull-requests)
     - [:question: Support](#question-support)
-    - [:balance_scale: Site Policy](#balance_scale-site-policy)
 - [Starting with an issue](#starting-with-an-issue)
 - [Opening a pull request](#opening-a-pull-request)
 - [Working in the sbsrnt/poe-watch repository](#working-in-the-sbsrntpoe-watch-repository)
@@ -83,8 +82,6 @@ You can browse existing issues to find something that needs help!
 Here's some information that might be helpful while working on a poe-watch PR:
 
 - [Development](/docs/development.md) - This short guide describes how to get this app running on your local machine.
-
-- [Tests](/tests/README.md) - We use tests to ensure content will render correctly on the site. Tests run automatically in your PR, and sometimes it's also helpful to run them locally.
 
 ## Reviewing
 We review every single PR.
