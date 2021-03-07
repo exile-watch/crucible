@@ -32,11 +32,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  &:link, &:visited, &:active, &:hover {
-    color: var(--gray300);
-    text-decoration: none;
-  }
+  border: transparent;
+  color: var(--gray300);
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  outline: 0;
+  text-align: left;
 
   &:hover {
     color: var(--sand500)

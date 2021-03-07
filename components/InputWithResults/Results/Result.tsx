@@ -1,54 +1,73 @@
 import React from 'react';
-import {IndexedSearchResultsBossProps} from "#types";
+import cx from 'classnames';
 import Link from 'next/link';
-import styles from './Results.module.scss'
-import cx from "classnames";
-import Badge from "#components/Badge/Badge";
+
+import Badge from '#components/Badge/Badge';
+import { IndexedSearchResultsBossProps } from '#types';
+
+import styles from './Results.module.scss';
 
 type ResultProps = {
   onClick: () => any;
-} & IndexedSearchResultsBossProps
+} & IndexedSearchResultsBossProps;
 
-const Result = ({mapPath, mapName, bossPath, bossName, abilityPath, abilityName, onClick}: ResultProps) => {
+const Result = ({
+  mapPath,
+  mapName,
+  bossPath,
+  bossName,
+  abilityPath,
+  abilityName,
+  onClick,
+}: ResultProps) => {
   const isMap = !bossPath && !abilityPath;
   const isBoss = bossPath && !abilityPath;
 
   if (isMap) {
     return (
       <Link href={mapPath}>
-        <a className={cx('px-2 py-1', styles.result)} onClick={onClick}>
+        <button className={cx('px-2 py-1', styles.result)} onClick={onClick}>
           {mapName}
           <Badge>map</Badge>
-        </a>
+        </button>
       </Link>
-    )
+    );
   }
 
-  if(isBoss) {
+  if (isBoss) {
     return (
       <Link href={bossPath}>
-        <a className={cx('px-2 py-1', styles.result)} onClick={onClick}>
+        <button className={cx('px-2 py-1', styles.result)} onClick={onClick}>
           <div className={styles.labelWrapper}>
             <span>{bossName}</span>
-            {mapName && <span className={styles.sublabel}><i>{mapName}</i></span>}
+            {mapName && (
+              <span className={styles.sublabel}>
+                <i>{mapName}</i>
+              </span>
+            )}
           </div>
           <Badge>boss</Badge>
-        </a>
+        </button>
       </Link>
-    )
+    );
   }
 
   return (
     <Link href={abilityPath}>
-      <a className={cx('px-2 py-1', styles.result)} onClick={onClick}>
+      <button className={cx('px-2 py-1', styles.result)} onClick={onClick}>
         <div className={styles.labelWrapper}>
           <span className={styles.label}>{abilityName}</span>
-          <span className={styles.sublabel}><i>{bossName}{mapName && ` - ${mapName}`}</i></span>
+          <span className={styles.sublabel}>
+            <i>
+              {bossName}
+              {mapName && ` - ${mapName}`}
+            </i>
+          </span>
         </div>
         <Badge>ability</Badge>
-      </a>
+      </button>
     </Link>
-  )
+  );
 };
 
 export default Result;

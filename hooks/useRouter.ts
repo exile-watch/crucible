@@ -1,8 +1,9 @@
-import {useRouter as useNextRouter} from "next/router";
-import {RouterType} from "#types";
+import { useRouter as useNextRouter } from 'next/router';
+
+import { RouterType } from '#types';
 
 function useRouter(): RouterType {
-  return useNextRouter()
+  return useNextRouter();
 }
 
-export default useRouter
+export default useRouter;

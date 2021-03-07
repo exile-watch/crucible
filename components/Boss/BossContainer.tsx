@@ -1,15 +1,18 @@
+import cx from 'classnames';
+
+import { BossAbilityWithNameType } from '#types';
+
+import BossAbilities from './BossAbilities/BossAbilities';
+
 import styles from './BossContainer.module.scss';
-import cx from "classnames";
-import BossAbilities from "./BossAbilities/BossAbilities";
-import {BossAbilityWithNameType} from "#types";
 
 type BossContainerProps = {
   abilities: BossAbilityWithNameType[];
-}
+};
 
-const BossContainer = ({abilities}: BossContainerProps) => {
+const BossContainer = ({ abilities }: BossContainerProps) => {
   return (
-    <div className={cx("my-3", styles.bossContainer)}>
+    <div className={cx('my-3', styles.bossContainer)}>
       {/*<div className={styles.phases}>*/}
       {/*  <div className={cx(styles.phase, styles.phaseWithTransition, styles.previouslyActive)}>*/}
       {/*    <p>P1</p>*/}
@@ -25,6 +28,6 @@ const BossContainer = ({abilities}: BossContainerProps) => {
       <BossAbilities abilities={abilities} />
     </div>
   );
-}
+};
 
 export default BossContainer;

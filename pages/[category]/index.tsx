@@ -1,44 +1,44 @@
-import React, {useEffect, useState} from 'react';
-import Layout from "#components/Layout/Layout";
-import useRouter from "#hooks/useRouter";
-import useImportDataOnLoad from "#hooks/useImportDataOnLoad";
-import Heading from "#components/Heading/Heading";
-import { startCase } from 'lodash'
+import React, { useEffect, useState } from 'react';
+import { startCase } from 'lodash';
 import Link from 'next/link';
-import {PathDataType} from "#types";
+
+import Heading from '#components/Heading/Heading';
+import Layout from '#components/Layout/Layout';
+import useImportDataOnLoad from '#hooks/useImportDataOnLoad';
+import useRouter from '#hooks/useRouter';
+import { PathDataType } from '#types';
 
 const Categories = () => {
-  const {data} = useImportDataOnLoad<PathDataType>({fileName: 'paths'})
-  const { query: { category } } = useRouter();
+  const { data } = useImportDataOnLoad<PathDataType>({ fileName: 'paths' });
+  const {
+    query: { category },
+  } = useRouter();
   // @ts-ignore
-  const [activeCategory, setActiveEntity] = useState<string | null>(null)
+  const [activeCategory, setActiveEntity] = useState<string | null>(null);
 
   useEffect(() => {
-    if(data) {
-      Object.entries(data).find(({0: c}) => {
-        c === category && setActiveEntity(c)
-      });
+    if (data) {
+      Object.entries(data).find(({ 0: c }) => c === category && setActiveEntity(c));
     }
-  }, [data])
+  }, [data, category]);
 
   return (
     <Layout>
-      {data && Object.entries(data).map(({0: cat, 1: ent}) => (
-        <ul key={`content_${cat}`}>
-          <li>
-            <Heading as="h1">{startCase(cat)}</Heading>
-            <ul>
-              {ent.map(e => (
-                <li key={`content_${e.label}`}>
-                  <Link href={e.path}>
-                    {e.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </li>
-        </ul>
-      ))}
+      {data &&
+        Object.entries(data).map(({ 0: cat, 1: ent }) => (
+          <ul key={`content_${cat}`}>
+            <li>
+              <Heading as="h1">{startCase(cat)}</Heading>
+              <ul>
+                {ent.map((e) => (
+                  <li key={`content_${e.label}`}>
+                    <Link href={e.path}>{e.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          </ul>
+        ))}
     </Layout>
   );
 };

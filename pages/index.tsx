@@ -1,7 +1,5 @@
-import Layout from '#components/Layout/Layout'
+import Layout from '#components/Layout/Layout';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example" />
-)
+const IndexPage = () => <Layout title="Home | Next.js + TypeScript Example" />;
 
-export default IndexPage
+export default IndexPage;

@@ -1,6 +1,8 @@
+import cx from 'classnames';
+
+import InputWithResults from '#components/InputWithResults/InputWithResults';
+
 import styles from './TopbarDesktop.module.scss';
-import cx from 'classnames'
-import InputWithResults from "#components/InputWithResults/InputWithResults";
 
 const TopbarDesktop = () => {
   return (

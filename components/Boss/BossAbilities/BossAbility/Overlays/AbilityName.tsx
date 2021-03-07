@@ -1,11 +1,12 @@
 import React from 'react';
-import cx from "classnames";
-import styles from "./Overlays.module.scss";
-type AbilityNameProps = {
-  name?: string
-}
+import cx from 'classnames';
 
-const AbilityName = ({name}: AbilityNameProps) => (
+import styles from './Overlays.module.scss';
+type AbilityNameProps = {
+  name?: string;
+};
+
+const AbilityName = ({ name }: AbilityNameProps) => (
   <p className={cx('py-2 px-3', styles.abilityName)}>{name}</p>
 );
 

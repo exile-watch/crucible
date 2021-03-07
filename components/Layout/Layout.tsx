@@ -1,14 +1,16 @@
-import {ReactNode} from 'react'
-import Head from 'next/head'
-import SidebarDesktop from "./Sidebar/SidebarDesktop";
-import styles from './Layout.module.scss'
-import TopbarDesktop from "./Topbar/TopbarDesktop";
-import cx from "classnames";
+import { ReactNode } from 'react';
+import cx from 'classnames';
+import Head from 'next/head';
+
+import SidebarDesktop from './Sidebar/SidebarDesktop';
+import TopbarDesktop from './Topbar/TopbarDesktop';
+
+import styles from './Layout.module.scss';
 
 type LayoutProps = {
-  children?: ReactNode
-  title?: string
-}
+  children?: ReactNode;
+  title?: string;
+};
 
 const Layout = ({ children, title = 'This is the default title' }: LayoutProps) => {
   return (
@@ -19,16 +21,14 @@ const Layout = ({ children, title = 'This is the default title' }: LayoutProps) 
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={styles.container}>
-        <SidebarDesktop/>
+        <SidebarDesktop />
         <div className={styles.contentWrapper}>
           <TopbarDesktop />
-          <div className={cx("p-3", styles.content)}>
-            {children}
-          </div>
+          <div className={cx('p-3', styles.content)}>{children}</div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
