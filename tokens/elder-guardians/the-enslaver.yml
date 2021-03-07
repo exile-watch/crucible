@@ -1,0 +1,37 @@
+bosses:
+  - The Enslaver:
+      abilities:
+        - Knife Toss:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif:
+            about:
+              - "Throws knives forward that fan out left or right"
+
+        - Sidestep Knife Toss:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "Dashes sideways and throws multiple knives a short distance forward at the ground, which then explode"
+
+        - Backstep Knife Toss:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "Backsteps and throws multiple knives a short distance in a line forward at the ground, which then explode to deal damage"
+
+        - Knife Barrage:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "Jumps up and throws many knives at the ground in a cone pattern, then slams down to deal heavy physical damage, which is immediately followed by the knives detonating"
+
+        - Obsidian Golems:
+            type: [ physical ]
+            tip: [ kill new spawns ]
+            gif: ""
+            about:
+              - "Each golem attack with Fire projectiles"
