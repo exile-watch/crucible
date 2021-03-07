@@ -26,10 +26,10 @@ const Result = ({
   if (isMap) {
     return (
       <Link href={mapPath}>
-        <button className={cx('px-2 py-1', styles.result)} onClick={onClick}>
+        <a href={mapPath} className={cx('px-2 py-1', styles.result)} onClick={onClick}>
           {mapName}
           <Badge>map</Badge>
-        </button>
+        </a>
       </Link>
     );
   }
@@ -37,7 +37,7 @@ const Result = ({
   if (isBoss) {
     return (
       <Link href={bossPath}>
-        <button className={cx('px-2 py-1', styles.result)} onClick={onClick}>
+        <a href={bossPath} className={cx('px-2 py-1', styles.result)} onClick={onClick}>
           <div className={styles.labelWrapper}>
             <span>{bossName}</span>
             {mapName && (
@@ -47,14 +47,14 @@ const Result = ({
             )}
           </div>
           <Badge>boss</Badge>
-        </button>
+        </a>
       </Link>
     );
   }
 
   return (
     <Link href={abilityPath}>
-      <button className={cx('px-2 py-1', styles.result)} onClick={onClick}>
+      <a href={abilityPath} className={cx('px-2 py-1', styles.result)} onClick={onClick}>
         <div className={styles.labelWrapper}>
           <span className={styles.label}>{abilityName}</span>
           <span className={styles.sublabel}>
@@ -65,7 +65,7 @@ const Result = ({
           </span>
         </div>
         <Badge>ability</Badge>
-      </button>
+      </a>
     </Link>
   );
 };

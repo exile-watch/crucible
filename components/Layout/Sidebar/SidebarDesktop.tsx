@@ -14,7 +14,7 @@ const SidebarDesktop = () => {
   const [activeCategory, setActiveCategory] = useState('');
   const { isLoading, data } = useImportDataOnLoad<PathDataType>({ fileName: 'paths' });
   const {
-    query: { map, boss },
+    query: { category, map, boss },
   } = useRouter();
   const handleCategoryClick = (e: MouseEvent<HTMLLIElement>) => {
     setActiveCategory((e.currentTarget as Element).id);
@@ -22,7 +22,7 @@ const SidebarDesktop = () => {
 
   useEffect(() => {
     if (map) {
-      setActiveCategory(`sidebar_${map}`);
+      setActiveCategory(`sidebar_${category}`);
     }
   }, [map]);
 
@@ -55,7 +55,7 @@ const SidebarDesktop = () => {
                           className={cx(
                             'px-3 py-1 ml-3',
                             styles.boss,
-                            boss === kebabCase(label) && styles.activeBoss
+                            ((boss === kebabCase(label)) || (map === kebabCase(label))) && styles.activeBoss
                           )}
                         >
                           {label}

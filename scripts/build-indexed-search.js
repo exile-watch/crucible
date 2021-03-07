@@ -12,7 +12,7 @@ fs.readdirSync('./tokens').forEach((dir) => {
 
 const prepareIndexedSearchData = () =>
   data.reduce((acc, map) => {
-    const mapPath = map.map && `${map.category}/${kebabCase(map.map)}`;
+    const mapPath = map.map && `/${map.category}/${kebabCase(map.map)}`;
     let searchObj = [];
 
     /**
@@ -34,7 +34,7 @@ const prepareIndexedSearchData = () =>
         const [bossName, bossValues] = Object.entries(boss)[0];
         const bossPath = map.map
           ? `${mapPath}/${kebabCase(bossName)}`
-          : `${map.category}/${map.category}/${kebabCase(bossName)}`;
+          : `/${map.category}/${map.category}/${kebabCase(bossName)}`;
         const newBossIndexedSearch = {
           ...(map.map && {
             mapPath,
