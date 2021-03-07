@@ -27,7 +27,7 @@ const BossAbility = ({ name, about, gif, tip }: PureBossAbilityType) => {
     >
       <div className={cx('mx-5', styles.ability)}>
         <AbilityName name={name} />
-        <Video isActive={isActive} src={gif} />
+        <Video isActive={isActive} src={gif} abilityName={name} />
         <AboutAbility about={about} />
         <AbilityTip tip={tip} />
       </div>

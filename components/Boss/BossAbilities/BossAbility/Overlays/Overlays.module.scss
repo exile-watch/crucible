@@ -2,9 +2,10 @@
 .aboutAbility,
 .tip {
   position: absolute;
-  z-index: var(--z-index-10);
+  z-index: var(--z-index-100);
   background: var(--gray700);
   border: 1px solid var(--gray300);
+  box-shadow: 0 5px 20px black;
 }
 
 
