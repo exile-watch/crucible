@@ -2,7 +2,7 @@
 name: '[BUG] Invalid Map Data'
 about: Create an Invalid Map Data report to help us improve
 title: '[Invalid Map Data][what exactly]: map if exists > boss name'
-labels: ''
+labels: 'invalid%2Fmissing%20data'
 assignees: sbsrnt
 
 ---
