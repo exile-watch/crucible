@@ -55,7 +55,8 @@ const SidebarDesktop = () => {
                           className={cx(
                             'px-3 py-1 ml-3',
                             styles.boss,
-                            ((boss === kebabCase(label)) || (map === kebabCase(label))) && styles.activeBoss
+                            (boss === kebabCase(label) || map === kebabCase(label)) &&
+                              styles.activeBoss
                           )}
                         >
                           {label}

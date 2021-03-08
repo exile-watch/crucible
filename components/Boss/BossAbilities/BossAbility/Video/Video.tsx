@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 
-import styles from './Video.module.scss';
-import Loader from '#components/Loader/Loader';
 import NoSrc from '#components/Boss/BossAbilities/BossAbility/Video/NoSrc';
+import Loader from '#components/Loader/Loader';
+
+import styles from './Video.module.scss';
 
 type VideoProps = {
   src?: string;

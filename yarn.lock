@@ -5309,7 +5309,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.1.2":
+"prettier@npm:^2.1.2, prettier@npm:^2.2.1":
   version: 2.2.1
   resolution: "prettier@npm:2.2.1"
   bin:
@@ -6760,6 +6760,7 @@ typescript@4.0:
     js-yaml: ^4.0.0
     lodash: latest
     next: latest
+    prettier: ^2.2.1
     react: latest
     react-dom: latest
     sass: latest
