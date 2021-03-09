@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
 
-import NoSrc from '#components/Boss/BossAbilities/BossAbility/Video/NoSrc';
 import Loader from '#components/Loader/Loader';
+import MissingContent from '#components/MissingContent/MissingContent';
 
 import styles from './Video.module.scss';
 
 type VideoProps = {
   src?: string;
   isActive: boolean;
-  abilityName: string;
+  abilityName?: string;
 };
 
 // @ts-ignore
@@ -29,7 +29,7 @@ const Video = ({ src, isActive, abilityName }: VideoProps) => {
 
   return (
     <div className={styles.videoWrapper}>
-      {!src && <NoSrc abilityName={abilityName} />}
+      {!src && <MissingContent abilityName={abilityName} missingContentType="Video Source" />}
       {src && (
         <>
           <Loader className={styles.loader} size={40} />

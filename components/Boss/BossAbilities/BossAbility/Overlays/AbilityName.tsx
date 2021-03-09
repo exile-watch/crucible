@@ -7,7 +7,10 @@ type AbilityNameProps = {
 };
 
 const AbilityName = ({ name }: AbilityNameProps) => (
-  <p className={cx('py-2 px-3', styles.abilityName)}>{name}</p>
+  <div>
+    <p className={cx('py-2 px-3', styles.abilityName)}>{name}</p>
+    <i className={styles.abilityLabel}>Ability</i>
+  </div>
 );
 
 export default AbilityName;

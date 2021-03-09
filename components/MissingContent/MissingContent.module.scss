@@ -1,0 +1,20 @@
+.missingContent {
+  position: absolute;
+  top: calc(50%);
+  text-align: center;
+  width: 100%;
+  transform: translateY(-50%);
+  color: orangered;
+
+  a {
+    transition: color ease .4s;
+
+    &:link, &:active, &:hover, &:visited {
+      color: var(--gray300)
+    }
+
+    &:hover {
+      color: var(--sand500)
+    }
+  }
+}
