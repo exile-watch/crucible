@@ -1,0 +1,62 @@
+map: Precinct
+bosses:
+  - Eoin Greyfur:
+      abilities:
+        - Cyclone:
+            damageType: [ cold ]
+            tip: [ dodge]
+            gif: https://i.gyazo.com/2c666046a6eeab03b8b3894cdc955b74.mp4
+            about:
+              - ""
+        - Cold Snap:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/2b3fb893e953942e06725a9b74f4c31f.mp4
+            about:
+              - ""
+        - Vaal Cold Snap:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/cf3e4883b08b49377b0db0d37fa521fe.mp4
+            about:
+              - ""
+        - Vaal Glacial Hammer:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/e69ca6621256b863757eb16e08f25e36.mp4
+            about:
+              - ""
+  - Igna Phoenix:
+      abilities:
+        - Firestorm:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/caaf9c68a51d27bc3e10734b6c6390cb.mp4
+            about:
+              - ""
+        - Righteous Fire:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/2acc71fd98a96beec764325a8ec0399e.mp4
+            about:
+              - ""
+        - Fireball:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/d5b34bc5ec397e3da056c23496736373.mp4
+            about:
+              - ""
+  - Torr Olgosso:
+      abilities:
+        - Arctic Armour:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/a37e2b37dbc247f01aa1ae5a8d6dc9aa.mp4
+            about:
+              - ""
+        - Leap Slam:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/df00888832df7a8829232deb841766cd.mp4
+            about:
+              - ""
