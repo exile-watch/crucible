@@ -21,6 +21,7 @@ bosses:
               - "Every couple seconds Telvar throws Barrel at player's position"
         - Alchemy Orb:
             type: [ fire ]
+            tip: [ dodge ]
             gif: https://i.gyazo.com/22602b30cc9cf622a91f1a0c371477d6.mp4
             about:
               - "Every couple seconds Telvar throws Alchemy Orb at player's position"
