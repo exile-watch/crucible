@@ -1,0 +1,33 @@
+map: Atoll
+bosses:
+  - Puruna, The Challenger:
+      abilities:
+        - Water Cascade:
+            damageType: [ cold ]
+            tip: [ dodge]
+            gif: https://i.gyazo.com/8436143ab1c467bf38109ed0b0eda28e.mp4
+            about:
+              - ""
+        - Spawn Totem:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/9847c268b777f11082455e67afc38801.mp4
+            about:
+              - ""
+        - Frostbolt:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/051b275bcf785170d209531838a7b406.mp4
+            about:
+              - ""
+        - Ice Nova:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/8176d7017de8eddb51f4182805137729.mp4
+            about:
+              - ""
+        - Ice Nova Chilled Ground:
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/385e3e2c225f29b2653ce9b76fab1896.mp4
+            about:
+              - ""
