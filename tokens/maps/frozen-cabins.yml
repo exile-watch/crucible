@@ -1,0 +1,40 @@
+map: Frozen Cabins
+bosses:
+  - Captain Clayborne, The Accursed:
+      abilities:
+        - Whirling Blades:
+            damageType: [ chaos ]
+            tip: [ dodge]
+            gif: https://i.gyazo.com/9916c7a2731dcac9091296fc0728313e.mp4
+            about:
+              - ""
+        - Cyclone:
+            damageType: [ chaos ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/828012e920428891439c4936a2dc7096.mp4
+            about:
+              - ""
+        - Soul Bolts:
+            damageType: [ chaos ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/ceed4756ff5c9e35d2dc7d9f9d61d6f3.mp4
+            about:
+              - ""
+        - Ghostfire Aura:
+            damageType: [ chaos ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/a24d981ff43701dd195cfa606a572c45.mp4
+            about:
+              - ""
+        - Burtal Melee:
+            damageType: [ chaos ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/23094bd0bb86d8e3ac1cf8f20a9cc32c.mp4
+            about:
+              - ""
+        - Summon Minion:
+            damageType: [ physical ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/f376835e37f3c7aea22d41cb55ffc9bd.mp4
+            about:
+              - ""
