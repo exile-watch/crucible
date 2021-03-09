@@ -1,0 +1,28 @@
+map: Lair
+bosses:
+  - Lycius, Midnight's Howl:
+      abilities:
+        - Wolf Barrage:
+            damageType: [ physical ]
+            tip: [ line of sight ]
+            gif: https://i.gyazo.com/3e8bd09e386fff32198f57b6696c50c7.mp4
+            about:
+              - ""
+        - Summon Wolfs:
+            damageType: [ physical ]
+            tip: [ kill new spawns ]
+            gif: https://i.gyazo.com/03e2539d1098154a7ed392b0f5feb797.mp4
+            about:
+              - ""
+        - Barrage:
+            damageType: [ physical ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/6306f2ea0b2d69238af8d2358c4821ec.mp4
+            about:
+              - ""
+        - Wolf Form:
+            damageType: [ physical ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/945740b35f4ce546ed5981696ab9061a.mp4
+            about:
+              - ""
