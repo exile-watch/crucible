@@ -26,6 +26,7 @@ const injectAllAbilityDamageTypesToBoss = (data) => {
 };
 
 const getExtractedData = async () => {
+  await console.time('Data Extract Time')
   let data = [];
   await fs.readdirSync('./tokens').forEach((dir) => {
     if(dir === 'README.md') return;
@@ -49,8 +50,8 @@ const getExtractedData = async () => {
   return data;
 };
 
-getExtractedData().then((extractedData) => {
-  extractedData.forEach((data) => {
+getExtractedData().then(async (extractedData)=> {
+  await extractedData.forEach((data) => {
     const [bossName] = Object.keys(data.bosses[0]);
     const fileName = data.map
       ? `${toLower(kebabCase(data.map))}.json`
@@ -58,4 +59,5 @@ getExtractedData().then((extractedData) => {
 
     fs.writeFileSync(`./extracted-data/${data.category}/${fileName}`, JSON.stringify(data));
   });
+  await console.timeEnd('Data Extract Time')
 });

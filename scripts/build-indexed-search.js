@@ -67,10 +67,12 @@ const prepareIndexedSearchData = () =>
   }, []);
 
 const buildIndexedSearch = async () => {
+  await console.time('Indexed Search Time')
   const preparedIndexedSearchData = await prepareIndexedSearchData();
   return JSON.stringify(preparedIndexedSearchData);
 };
 
-buildIndexedSearch().then((data) => {
-  return fs.writeFileSync(`${outputDir}/indexed-search.json`, data);
+buildIndexedSearch().then(async (data) => {
+  await fs.writeFileSync(`${outputDir}/indexed-search.json`, data);
+  await console.timeEnd('Indexed Search Time')
 });

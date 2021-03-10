@@ -56,12 +56,14 @@ const mergeSameKeysInArr = (arr) =>
     .value();
 
 const buildPaths = async () => {
+  await console.time('Build Paths Time')
   const preparedPaths = await preparePathsData();
   const [paths] = await mergeSameKeysInArr(preparedPaths);
 
   return JSON.stringify(paths);
 };
 
-buildPaths().then((data) => {
-  return fs.writeFileSync(`${outputDir}/paths.json`, data);
+buildPaths().then(async (data) => {
+  await fs.writeFileSync(`${outputDir}/paths.json`, data);
+  await console.timeEnd('Build Paths Time')
 });
