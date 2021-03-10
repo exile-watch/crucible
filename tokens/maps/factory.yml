@@ -3,7 +3,7 @@ bosses:
   - Pesquin, the Mad Baron:
       abilities:
         - Earthquake:
-            damageType: [ cold ]
+            damageType: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/af45f9ad151fa63e7ccbe9d882f1bfd0.mp4
             about:
@@ -15,13 +15,13 @@ bosses:
             about:
               - ""
         - Living Bomb:
-            damageType: [ cold ]
+            damageType: [ lightning ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/42a0f03c9323ed7ae00ef5f57c96c6c9.mp4
             about:
               - ""
         - Lightning Walls:
-            damageType: [ cold ]
+            damageType: [ lightning ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/2957252267ed8967810b7086eb0e2c30.mp4
             about:
