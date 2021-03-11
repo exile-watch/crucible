@@ -1,0 +1,34 @@
+map: Lighthouse
+bosses:
+  - Uruk Baleh:
+      abilities:
+        - Fire Bombs:
+            damageType: [ physical ]
+            tip: [ dodge]
+            gif: https://i.gyazo.com/129362bb030cd8f6357a71a6dbe31ca6.mp4
+            about:
+              - ""
+        - Living Bomb:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/a82c1418f8de82d99da0eaefadf73092.mp4
+            about:
+              - ""
+        - Firestorm:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/95a2ab35424679c6e1ad9d1bb983a7af.mp4
+            about:
+              - ""
+        - Cyclone:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/23b7b6c8ff3722657167df8d5679fda1.mp4
+            about:
+              - ""
+        - Molten Strike:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/d6f0e03dbf3ed018436381600e6ff8b8.mp4
+            about:
+              - ""
