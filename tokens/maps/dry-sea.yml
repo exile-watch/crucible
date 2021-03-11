@@ -1,0 +1,34 @@
+map: Dry Sea
+bosses:
+  - Gazuul, Droughtspawn:
+      abilities:
+        - Charge:
+            damageType: [ physical ]
+            tip: [ dodge]
+            gif: https://i.gyazo.com/257dbd29ff76e589899a73f67a77eea5.mp4
+            about:
+              - ""
+        - Fireball:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/da90b37627b974c6e424fb36b84466e6.mp4
+            about:
+              - ""
+        - Trigger Spikes:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/dc744a41ad4179b1a696974acd17fe98.mp4
+            about:
+              - ""
+        - Slam:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/380aca8b297625033a90307039fc12ca.mp4
+            about:
+              - ""
+        - Leap Slam:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/e67c92b4dece11536eca0c25db6a7758.mp4
+            about:
+              - ""
