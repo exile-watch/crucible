@@ -1,0 +1,34 @@
+map: Plaza
+bosses:
+  - The Goddess:
+      abilities:
+        - Beam:
+            damageType: [ physical ]
+            tip: [ dodge]
+            gif: https://i.gyazo.com/6dd152ad265853727d959b4d81ddafba.mp4
+            about:
+              - ""
+        - Warp:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/675cc5e91b2a31fbe9c7b53cdc0d819a.mp4
+            about:
+              - ""
+        - Summon Skeleton:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/67abab48e059939a1e9ce6a1888de3c9.mp4
+            about:
+              - ""
+        - Offering of Judgement:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/aa01afefaeac188ed263cbf6756c6976.mp4
+            about:
+              - ""
+        - Mortar:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/0378b626aefcc5ed0627992ae81dd332.mp4
+            about:
+              - ""
