@@ -1,5 +1,31 @@
 map: Precinct
 bosses:
+  - Damoi Tui:
+      abilities:
+        - Cyclone:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/331015c2562d912918f515a8ab51b901.mp4
+            about:
+              - ""
+        - Cleave:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/9bbd22581ca749a859f561499c64d78f.mp4
+            about:
+              - ""
+        - Leap Slam:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https:/i.gyazo.com/4ce7826deb6e06331c1dee78960f75da.mp4
+            about:
+              - ""
+        - Warlords Mark:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/e6d9cac1995d647eef6d6dacef934155.mp4
+            about:
+              - ""
   - Eoin Greyfur:
       abilities:
         - Cyclone:
