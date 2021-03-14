@@ -10,21 +10,26 @@ type AboutAbilityProps = {
   abilityName?: string;
 };
 
-const AboutAbility = ({ about, abilityName }: AboutAbilityProps) => (
-  <div className={cx('py-2 px-3', styles.aboutAbility)}>
-    {about.map((about, i) =>
-      about.length === 0 ? (
-        <MissingContent
-          abilityName={abilityName}
-          missingContentType="About"
-          className={styles.missingContent}
-          key={`bossAboutAbility_${i}`}
-        />
-      ) : (
-        <p key={`bossAboutAbility_${i}`}>{about}</p>
-      )
-    )}
-  </div>
-);
+const AboutAbility = ({ about, abilityName }: AboutAbilityProps) => {
+  const className = cx('py-2 px-3', styles.abilityBorder);
+  return (
+    <div className={styles.aboutAbility}>
+      {about.map((about, i) =>
+        about.length === 0 ? (
+          <MissingContent
+            abilityName={abilityName}
+            missingContentType="About"
+            className={cx(className, styles.missingContent)}
+            key={`bossAboutAbility_${i}`}
+          />
+        ) : (
+          <p className={className} key={`bossAboutAbility_${i}`}>
+            {about}
+          </p>
+        )
+      )}
+    </div>
+  );
+};
 
 export default AboutAbility;

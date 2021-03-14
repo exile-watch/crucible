@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import startCase from 'lodash/startCase';
 
+import { RedirectIcon } from '#assets/icons';
 import useRouter from '#hooks/useRouter';
 
 import styles from './MissingContent.module.scss';
@@ -37,18 +38,17 @@ const MissingContent = ({
       <p>
         Before reporting an issue,{' '}
         <a
-          href={`https://github.com/sbsrnt/poe-watch/issues?q=${abilityName}`}
+          href={`https://github.com/sbsrnt/poe-watch/issues?q=${startCase(boss)} > ${abilityName}`}
           target={target}
           rel={rel}
         >
-          check if it already exists
+          <span>check if it already exists</span> <RedirectIcon />
         </a>
-        .
       </p>
       <p>
         If you can't find desired issue then{' '}
         <a href={issueSrc} target={target} rel={rel}>
-          create a new issue
+          <span>create a new issue</span> <RedirectIcon />
         </a>
       </p>
     </div>

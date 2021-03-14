@@ -7,14 +7,25 @@
   color: orangered;
 
   a {
-    transition: color ease .4s;
+    display: inline-flex;
 
-    &:link, &:active, &:hover, &:visited {
-      color: var(--gray300)
+    span {
+      border-bottom: 1px solid transparent;
+      transition: all ease .4s;
     }
 
-    &:hover {
-      color: var(--sand500)
+    &:link, &:active, &:hover, &:visited, path {
+      color: var(--sand500);
+      stroke: var(--sand500);
+      text-decoration: none;
+    }
+
+    &:hover span {
+      border-color: var(--sand500);
+    }
+
+    svg {
+      transform: scale(.8);
     }
   }
 }

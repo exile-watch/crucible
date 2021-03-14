@@ -8,6 +8,10 @@
   box-shadow: 0 5px 20px black;
 }
 
+.missingContentBorder {
+  border-color: orangered;
+}
+
 
 .abilityName{
   left: -1rem;
@@ -22,7 +26,8 @@
   left: 750px;
   top: 90px;
   width: fit-content;
-  max-width: 400px;
+  max-width: 440px;
+  border: none;
 }
 
 .tip {
@@ -67,6 +72,10 @@
   padding: 0 5px;
 }
 
+.abilityBorder {
+  border: 1px solid var(--gray300);
+}
+
 .tipLabel {
   position: absolute;
   left: 50%;
@@ -85,4 +94,6 @@
 .missingContent {
   position: relative !important;
   transform: initial !important;
+  border: 1px solid orangered !important;
+  width: 100%;
 }
