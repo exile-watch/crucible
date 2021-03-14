@@ -17,6 +17,21 @@
 .active {
   display: flex;
   flex-direction: column;
+
+  max-height: 800px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+
+    &-track {
+      background: var(--sand900);
+    }
+
+    &-thumb {
+      background: var(--sand500);
+    }
+  }
 }
 
 .category {
@@ -41,6 +56,45 @@
 
 .categoryTitle {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrowIcon {
+  transition: all ease .2s;
+  transform: scale(.7);
+
+  path {
+    stroke: var(--sand500);
+  }
+}
+
+.arrowIconActive {
+  transform: rotate(90deg) scale(.7);
+}
+
+.firstChar {
+  font-size: var(--font-size-md);
+  text-align: center;
+  position: relative;
+  color: var(--sand500);
+  background: var(--gray700);
+
+  span {
+    position: relative;
+    background: var(--gray700);
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    background: var(--sand500);
+    width: calc(100% - 2rem - 2px);
+    left: calc(1rem + 2px);
+    top: 50%;
+  }
 }
 
 .boss {
@@ -49,14 +103,22 @@
   text-decoration: none;
   transition: all ease .4s;
 
+  span {
+    border: 1px solid transparent;
+    transition: all ease .4s;
+  }
+
   &:active, &:hover, &:link, &:visited {
     color: var(--gray300);
     transition: all ease .4s;
   }
 
   &:hover {
-    color: var(--sand500);
-    text-decoration: underline;
+
+    span {
+      color: var(--sand500);
+      border-bottom-color: var(--sand500);
+    }
   }
 }
 

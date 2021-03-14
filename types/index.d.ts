@@ -55,11 +55,13 @@ export type RouterType = {
   };
 } & Omit<ParsedUrlQuery | NextRouter>;
 
+export type AtomPathData = Array<{
+  label: string;
+  path: string;
+}>;
+
 export type PathDataType = {
-  [category: string]: Array<{
-    label: string;
-    path: string;
-  }>;
+  [category: string]: AtomPathData;
 };
 
 /**
