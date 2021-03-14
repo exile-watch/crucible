@@ -1,5 +1,43 @@
 map: Precinct
 bosses:
+  - Augustina Solaria:
+      abilities:
+        - Spectral Throw:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/a95b3cc11c38bef20a61f2874d4f1dcf.mp4
+            about:
+              - ""
+        - Sniper's Mark:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/f24c602e80a955873cb153ccb51c354f.mp4
+            about:
+              - ""
+        - Leap Slam:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/1f3f5fc6735011943ff770c524149285.mp4
+            about:
+              - ""
+        - Enduring Cry:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/62bc0b3f1db33c3b4ebf4a1daceb1912.mp4
+            about:
+              - ""
+        - Immortal Call:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/c090d86c27ca75d684a791413f6fd9b1.mp4
+            about:
+              - ""
+        - Vaal Spectral Throw:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/cc6a3f2fa886cb7d5f5d8bb71bfef32b.mp4
+            about:
+              - ""
   - Damoi Tui:
       abilities:
         - Cyclone:
@@ -84,5 +122,31 @@ bosses:
             damageType: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/df00888832df7a8829232deb841766cd.mp4
+            about:
+              - ""
+  - Wilorin Demontamer:
+      abilities:
+        - Ball Lightning:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/0c56a5d72400418ba0ea33335aec4ed5.mp4
+            about:
+              - ""
+        - Storm Call:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/d04ca97f0a609af3b4fcd7f54d60264c.mp4
+            about:
+              - ""
+        - Lightning Warp:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/8d0baefb2d046f77dba430d127c0a38d.mp4
+            about:
+              - ""
+        - Conductivity:
+            damageType: [ cold ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/23a7b2b4f13bf8858ad339d1d1779be7.mp4
             about:
               - ""
