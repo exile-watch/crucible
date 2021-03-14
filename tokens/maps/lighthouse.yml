@@ -1,10 +1,54 @@
 map: Lighthouse
 bosses:
+  - Bin'aia, Crimson Rain:
+      abilities:
+        - Guard Firestorm:
+            damageType: [ physical ]
+            tip: [ dodge]
+            gif: https://i.gyazo.com/ac6e9eba42b57b78b77a2fa00d0ed188.mp4
+            about:
+              - ""
+        - Guard Flammability:
+            damageType: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/33616cdaaabbd32a1deba34100f4ba2f.mp4
+            about:
+              - ""
+        - Flameblast:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/1c6ec3ee68bc10a9268f90181b02f5c3.mp4
+            about:
+              - ""
+        - Discharge:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/7bd46ff1681453252b04084eb1d1c9ef.mp4
+            about:
+              - ""
+        - Flame Golem:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/dcbcde35009f7bff04fbe96116354302.mp4
+            about:
+              - ""
+        - Enduring Cry:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/fe12f02da8afdbd6e43f12faf8bc2fca.mp4
+            about:
+              - ""
+        - Flame Dash:
+            damageType: [ lightning ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/48aeaeba0d4d291db394246c13207f23.mp4
+            about:
+              - ""
   - Uruk Baleh:
       abilities:
         - Fire Bombs:
             damageType: [ physical ]
-            tip: [ dodge]
+            tip: [ dodge ]
             gif: https://i.gyazo.com/129362bb030cd8f6357a71a6dbe31ca6.mp4
             about:
               - ""
