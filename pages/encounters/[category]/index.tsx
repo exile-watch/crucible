@@ -9,7 +9,7 @@ import useRouter from '#hooks/useRouter';
 import { PathDataType } from '#types';
 
 const Categories = () => {
-  const { data } = useImportDataOnLoad<PathDataType>({ fileName: 'paths' });
+  const { data } = useImportDataOnLoad<PathDataType>({ module: 'encounters', fileName: 'paths' });
   const {
     query: { category },
   } = useRouter();

@@ -9,12 +9,14 @@ type useImportDataOnLoadReturnProps<T> = {
 };
 
 type useImportDataOnLoadProps = {
+  module?: 'encounters' | null;
   pageDir?: string | null;
   fileName?: string | null;
 };
 
 /* eslint-disable react-hooks/rules-of-hooks */
 function useImportDataOnLoad<T = DataType>({
+  module = null,
   pageDir = null,
   fileName = null,
 }: useImportDataOnLoadProps = {}): useImportDataOnLoadReturnProps<T> {
@@ -29,7 +31,7 @@ function useImportDataOnLoad<T = DataType>({
     useEffect(() => {
       setIsLoading(true);
 
-      import(`../extracted-data/${category}/${map}.json`)
+      import(`../extracted-data/${module}/${category}/${map}.json`)
         .then((importedData) => {
           setData(importedData.default);
           setIsLoading(false);
@@ -39,7 +41,7 @@ function useImportDataOnLoad<T = DataType>({
           setIsLoading(false);
           setData(undefined);
         });
-    }, [category, map]);
+    }, [module, category, map]);
 
     return { isLoading, data };
   }
@@ -49,7 +51,7 @@ function useImportDataOnLoad<T = DataType>({
       setIsLoading(true);
 
       if (!!fileName) {
-        import(`../extracted-data/${fileName}.json`)
+        import(`../extracted-data/${module}/${fileName}.json`)
           .then((importedData) => {
             setData(importedData.default);
             setIsLoading(false);
@@ -60,7 +62,7 @@ function useImportDataOnLoad<T = DataType>({
             setData(undefined);
           });
       }
-    }, [fileName]);
+    }, [module, fileName]);
 
     return { isLoading, data };
   }
@@ -72,7 +74,7 @@ function useImportDataOnLoad<T = DataType>({
     setIsLoading(true);
 
     if (pageDirQuery) {
-      import(`../extracted-data/${pageDir}/${pageDirQuery}.json`)
+      import(`../extracted-data/${module}/${pageDir}/${pageDirQuery}.json`)
         .then((importedData) => {
           setData(importedData.default);
           setIsLoading(false);
@@ -83,7 +85,7 @@ function useImportDataOnLoad<T = DataType>({
           setData(undefined);
         });
     }
-  }, [pageDir, pageDirQuery, data]);
+  }, [module, pageDir, pageDirQuery, data]);
 
   return { isLoading, data };
 }

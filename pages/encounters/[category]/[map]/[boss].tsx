@@ -10,7 +10,7 @@ import { BossAbilityWithNameType } from '#types';
 
 const Boss = () => {
   // @ts-ignore
-  const { isLoading, data } = useImportDataOnLoad();
+  const { isLoading, data } = useImportDataOnLoad({ module: 'encounters' });
   const [activeBossAbilities, setActiveBossAbilities] = useState<BossAbilityWithNameType[] | null>(
     null
   );

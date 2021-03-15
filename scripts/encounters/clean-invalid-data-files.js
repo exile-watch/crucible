@@ -2,12 +2,12 @@ const fs = require('fs');
 const { kebabCase } = require('lodash');
 
 const cleanInvalidDataFiles = async () => {
-  await fs.readdirSync('./tokens').forEach((dir) => {
+  await fs.readdirSync('./tokens/encounters').forEach((dir) => {
     if(dir === 'README.md') return;
     try {
       const d = kebabCase(dir);
-      const supportedFiles = fs.readdirSync(`./tokens/${d}`);
-      const currentDataFiles = fs.readdirSync(`./extracted-data/${d}`);
+      const supportedFiles = fs.readdirSync(`./tokens/encounters/${d}`);
+      const currentDataFiles = fs.readdirSync(`./extracted-data/encounters/${d}`);
       const supportedFilesInJsonExt = supportedFiles.map(
         (file) => `${file.split('.').shift()}.json`
       ); //.yml by default
@@ -15,7 +15,7 @@ const cleanInvalidDataFiles = async () => {
       currentDataFiles.map((currentFile) => {
         if (!supportedFilesInJsonExt.includes(currentFile)) {
           try {
-            fs.unlinkSync(`./extracted-data/${d}/${currentFile}`);
+            fs.unlinkSync(`./extracted-data/encounters/${d}/${currentFile}`);
           } catch (err) {
             console.error(`[Error][Clean Invalid Data - Single File]: ${err}`);
           }

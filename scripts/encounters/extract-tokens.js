@@ -28,9 +28,9 @@ const injectAllAbilityDamageTypesToBoss = (data) => {
 const getExtractedData = async () => {
   await console.time('Data Extract Time')
   let data = [];
-  await fs.readdirSync('./tokens').forEach((dir) => {
+  await fs.readdirSync('./tokens/encounters').forEach((dir) => {
     if(dir === 'README.md') return;
-    const outputDir = `./tokens/${dir}`;
+    const outputDir = `./tokens/encounters/${dir}`;
     try {
       fs.readdirSync(outputDir).forEach((file) => {
         try {
@@ -57,7 +57,7 @@ getExtractedData().then(async (extractedData)=> {
       ? `${toLower(kebabCase(data.map))}.json`
       : `${toLower(kebabCase(bossName))}.json`;
 
-    fs.writeFileSync(`./extracted-data/${data.category}/${fileName}`, JSON.stringify(data));
+    fs.writeFileSync(`./extracted-data/encounters/${data.category}/${fileName}`, JSON.stringify(data));
   });
   await console.timeEnd('Data Extract Time')
 });

@@ -1,19 +1,19 @@
 const { kebabCase } = require('lodash');
 const fs = require('fs');
 
-const outputDir = `./extracted-data`;
+const outputDir = `./extracted-data/encounters`;
 const data = [];
 
-fs.readdirSync('./tokens').forEach((dir) => {
+fs.readdirSync('./tokens/encounters').forEach((dir) => {
   if(dir === 'README.md') return;
-  fs.readdirSync(`./extracted-data/${dir}`).forEach((file) => {
-    data.push(JSON.parse(fs.readFileSync(`./extracted-data/${dir}/${file}`)));
+  fs.readdirSync(`./extracted-data/encounters/${dir}`).forEach((file) => {
+    data.push(JSON.parse(fs.readFileSync(`./extracted-data/encounters/${dir}/${file}`)));
   });
 });
 
 const prepareIndexedSearchData = () =>
   data.reduce((acc, map) => {
-    const mapPath = map.map && `/${map.category}/${kebabCase(map.map)}`;
+    const mapPath = map.map && `/encounters/${map.category}/${kebabCase(map.map)}`;
     let searchObj = [];
 
     /**
@@ -35,7 +35,7 @@ const prepareIndexedSearchData = () =>
         const [bossName, bossValues] = Object.entries(boss)[0];
         const bossPath = map.map
           ? `${mapPath}/${kebabCase(bossName)}`
-          : `/${map.category}/${map.category}/${kebabCase(bossName)}`;
+          : `/encounters/${map.category}/${map.category}/${kebabCase(bossName)}`;
         const newBossIndexedSearch = {
           ...(map.map && {
             mapPath,

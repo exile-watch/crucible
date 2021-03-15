@@ -12,7 +12,7 @@ type MapProps = {
 };
 
 const Map = ({ children }: MapProps) => {
-  const { isLoading, data } = useImportDataOnLoad();
+  const { isLoading, data } = useImportDataOnLoad({ module: 'encounters' });
   const {
     query: { map },
   } = useRouter();

@@ -24,7 +24,10 @@ const startingChar = (entities: AtomPathData, i: number) => {
 
 const SidebarDesktop = () => {
   const [activeCategory, setActiveCategory] = useState('');
-  const { isLoading, data } = useImportDataOnLoad<PathDataType>({ fileName: 'paths' });
+  const { isLoading, data } = useImportDataOnLoad<PathDataType>({
+    module: 'encounters',
+    fileName: 'paths',
+  });
   const {
     query: { category, map, boss },
   } = useRouter();

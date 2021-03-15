@@ -8,11 +8,11 @@
     "type-check": "tsc",
     "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
     "lint": "yarn eslint --fix",
-    "build:indexed-search": "node scripts/build-indexed-search.js",
-    "build:paths": "node scripts/build-paths.js",
-    "extract:tokens": "node scripts/extract-tokens.js",
-    "clean-invalid-data-files": "node scripts/clean-invalid-data-files.js",
-    "data:update": "yarn extract:tokens && yarn build:indexed-search && yarn build:paths"
+    "build:encounters:indexed-search": "node scripts/encounters/build-indexed-search.js",
+    "build:encounters:paths": "node scripts/encounters/build-paths.js",
+    "extract:encounters:tokens": "node scripts/encounters/extract-tokens.js",
+    "clean-invalid-data-files": "node scripts/encounters/clean-invalid-data-files.js",
+    "data:encounters:update": "yarn extract:encounters:tokens && yarn build:encounters:indexed-search && yarn build:encounters:paths"
   },
   "dependencies": {
     "@svgr/webpack": "^5.5.0",

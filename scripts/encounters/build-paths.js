@@ -2,14 +2,14 @@ const { kebabCase } = require('lodash');
 const _ = require('lodash');
 const fs = require('fs');
 
-const tokensDir = './tokens';
-const outputDir = `./extracted-data`;
+const tokensDir = './tokens/encounters';
+const outputDir = `./extracted-data/encounters`;
 const data = [];
 
 fs.readdirSync(tokensDir).forEach((dir) => {
   if(dir === 'README.md') return;
-  fs.readdirSync(`./extracted-data/${dir}`).forEach((file) => {
-    data.push(JSON.parse(fs.readFileSync(`./extracted-data/${dir}/${file}`)));
+  fs.readdirSync(`./extracted-data/encounters/${dir}`).forEach((file) => {
+    data.push(JSON.parse(fs.readFileSync(`./extracted-data/encounters/${dir}/${file}`)));
   });
 });
 
@@ -17,8 +17,8 @@ const preparePathsData = () =>
   data.reduce((acc, map) => {
     const [bossName] = Object.keys(map.bosses[0]);
     const path = map.map
-      ? `/${map.category}/${kebabCase(map.map)}/${kebabCase(bossName)}`
-      : `/${map.category}/${map.category}/${kebabCase(bossName)}`;
+      ? `/encounters/${map.category}/${kebabCase(map.map)}/${kebabCase(bossName)}`
+      : `/encounters/${map.category}/${map.category}/${kebabCase(bossName)}`;
 
     return acc.concat({
       [map.category]: [
@@ -34,8 +34,8 @@ const preparePathsData = () =>
     //   map.bosses.map(boss => {
     //     const [bossName] = Object.entries(boss)[0];
     //     const path = map.map
-    //       ? `/${map.category}/${kebabCase(map.map)}`
-    //       : `/${map.category}/${kebabCase(map.category)}/${kebabCase(bossName)}`
+    //       ? `/encounters/${map.category}/${kebabCase(map.map)}`
+    //       : `/encounters/${map.category}/${kebabCase(map.category)}/${kebabCase(bossName)}`
     //     paths.push({
     //       [kebabCase(map.category)]: [
     //         {
