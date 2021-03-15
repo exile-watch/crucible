@@ -74,6 +74,17 @@
 
 .abilityBorder {
   border: 1px solid var(--gray300);
+
+  border-top: 0;
+  border-bottom: 0;
+
+  &:first-child {
+    border-top: 1px solid var(--gray300);
+  }
+
+  &:last-child {
+    border-bottom: 1px solid var(--gray300);
+  }
 }
 
 .tipLabel {
