@@ -41,52 +41,6 @@
       ]
     },
     {
-      "name": "Guardian of the Hydra",
-      "damageTypes": [
-        "physical",
-        "cold"
-      ],
-      "damage": "4913",
-      "abilities": [
-        {
-          "name": "Doom Arrow",
-          "about": [
-            "Deals 220% of Damage",
-            "80% more Attack Speed",
-            "9 additional Projectiles"
-          ],
-          "gif": ""
-        },
-        {
-          "name": "Barrage",
-          "about": [
-            "Deals 66% of Damage",
-            "50% of Physical Damage Converted to Cold Damage",
-            "9 additional Projectiles"
-          ],
-          "gif": ""
-        },
-        {
-          "name": "Fork Arrow",
-          "about": [
-            "Deals 300% of Damage",
-            "50% of Physical Damage Converted to Cold Damage",
-            "50% less Attack Speed"
-          ],
-          "gif": ""
-        },
-        {
-          "name": "Cannons",
-          "about": [
-            "Sides of the room are filled with cannons",
-            "Each cannon shoots Frostbolts every 6 seconds",
-            "The less health the boss has, the more often these cannons shoot"
-          ],
-          "gif": ""
-        }
-      ]
-    },
-    {
       "name": "Guardian of the Minotaur",
       "damageTypes": [
         "physical",
