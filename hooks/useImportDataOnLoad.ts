@@ -28,9 +28,10 @@ function useImportDataOnLoad<T = DataType>({
       query: { category, map },
     } = useRouter();
 
+    if (!category || !map) return { isLoading, data };
+
     useEffect(() => {
       setIsLoading(true);
-
       import(`../extracted-data/${module}/${category}/${map}.json`)
         .then((importedData) => {
           setData(importedData.default);

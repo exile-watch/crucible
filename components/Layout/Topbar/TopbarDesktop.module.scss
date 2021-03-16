@@ -1,7 +1,8 @@
 .topbar {
-  width: 100%;
+  grid-area: topbar;
+  display: grid;
+  position: relative;
+  grid-template-columns: 250px repeat(2, 1fr);
   background: var(--gray700);
   color: var(--sand500);
-  display: flex;
-  justify-content: center;
 }

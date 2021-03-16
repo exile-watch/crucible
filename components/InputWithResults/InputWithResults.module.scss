@@ -1,7 +1,13 @@
 .inputWrapper {
   display: flex;
   align-items: center;
-  position: relative;
+  width: 324px;
+  justify-self: center;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: .5rem;
 }
 
 .icon {
