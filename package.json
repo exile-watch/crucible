@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "type-check": "tsc",
     "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
