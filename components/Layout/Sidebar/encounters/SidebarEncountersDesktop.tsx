@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 import { ArrowRightIcon } from '#assets/icons';
 import Heading from '#components/Heading/Heading';
-import useImportDataOnLoad from '#hooks/useImportDataOnLoad';
+import useLoadSidebarData from '#hooks/useLoadSidebarData';
 import useRouter from '#hooks/useRouter';
-import { AtomPathData, PathDataType } from '#types';
+import { AtomPathData } from '#types';
 
 import styles from './SidebarEncountersDesktop.module.scss';
 
@@ -24,10 +24,7 @@ const startingChar = (entities: AtomPathData, i: number) => {
 
 const SidebarEncountersDesktop = () => {
   const [activeCategory, setActiveCategory] = useState('');
-  const { isLoading, data } = useImportDataOnLoad<PathDataType>({
-    module: 'encounters',
-    fileName: 'paths',
-  });
+  const { isLoading, data } = useLoadSidebarData();
   const {
     query: { category, map, boss },
   } = useRouter();

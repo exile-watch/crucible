@@ -62,39 +62,6 @@ function useImportDataOnLoad<T = DataType>({
     return { isLoading, data };
   }
 
-  if (!pageDir) {
-    useEffect(() => {
-      setIsLoading(true);
-      console.log(
-        'Init (effect#2 | sidebar data): ',
-        `../extracted-data/${module}/${fileName}.json`
-      );
-
-      if (!!fileName) {
-        import(`../extracted-data/${module}/${fileName}.json`)
-          .then((importedData) => {
-            setData(importedData.default);
-            setIsLoading(false);
-            console.log(
-              'Loaded (effect#2 | sidebar data): ',
-              `../extracted-data/${module}/${fileName}.json`
-            );
-          })
-          .catch((err) => {
-            console.log(
-              'Fail (effect#2 | sidebar data): ',
-              `../extracted-data/${module}/${fileName}.json`
-            );
-            throw new Error(err);
-            setIsLoading(false);
-            setData(undefined);
-          });
-      }
-    }, []);
-
-    return { isLoading, data };
-  }
-
   const { query } = useRouter();
   const pageDirQuery = query[pageDir || query.category];
 
