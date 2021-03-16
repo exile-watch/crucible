@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next",
     "export": "next build && next export",
-    "build": "next export",
+    "build": "yarn export",
     "start": "next start",
     "type-check": "tsc",
     "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
