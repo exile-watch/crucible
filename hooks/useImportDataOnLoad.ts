@@ -28,21 +28,36 @@ function useImportDataOnLoad<T = DataType>({
       query: { category, map },
     } = useRouter();
 
-    if (!category || !map) return { isLoading, data };
+    if (!category || !map) {
+      console.log('No category or map', `../extracted-data/${module}/${category}/${map}.json`);
+      return { isLoading, data };
+    }
 
     useEffect(() => {
       setIsLoading(true);
+      console.log(
+        'Init (effect#1 | content data): ',
+        `../extracted-data/${module}/${category}/${map}.json`
+      );
       import(`../extracted-data/${module}/${category}/${map}.json`)
         .then((importedData) => {
           setData(importedData.default);
           setIsLoading(false);
+          console.log(
+            'Loaded (effect#1 | content data): ',
+            `../extracted-data/${module}/${category}/${map}.json`
+          );
         })
         .catch((err) => {
-          console.log(err);
+          throw new Error(err);
           setIsLoading(false);
           setData(undefined);
+          console.log(
+            'Fail (effect#1 | content data): ',
+            `../extracted-data/${module}/${category}/${map}.json`
+          );
         });
-    }, [module, category, map]);
+    }, [map]);
 
     return { isLoading, data };
   }
@@ -50,20 +65,32 @@ function useImportDataOnLoad<T = DataType>({
   if (!pageDir) {
     useEffect(() => {
       setIsLoading(true);
+      console.log(
+        'Init (effect#2 | sidebar data): ',
+        `../extracted-data/${module}/${fileName}.json`
+      );
 
       if (!!fileName) {
         import(`../extracted-data/${module}/${fileName}.json`)
           .then((importedData) => {
             setData(importedData.default);
             setIsLoading(false);
+            console.log(
+              'Loaded (effect#2 | sidebar data): ',
+              `../extracted-data/${module}/${fileName}.json`
+            );
           })
           .catch((err) => {
-            console.log(err);
+            console.log(
+              'Fail (effect#2 | sidebar data): ',
+              `../extracted-data/${module}/${fileName}.json`
+            );
+            throw new Error(err);
             setIsLoading(false);
             setData(undefined);
           });
       }
-    }, [module, fileName]);
+    }, []);
 
     return { isLoading, data };
   }
@@ -73,6 +100,7 @@ function useImportDataOnLoad<T = DataType>({
 
   useEffect(() => {
     setIsLoading(true);
+    console.log('Init (effect#3): ', `../extracted-data/${module}/${pageDir}/${pageDirQuery}.json`);
 
     if (pageDirQuery) {
       import(`../extracted-data/${module}/${pageDir}/${pageDirQuery}.json`)
@@ -81,12 +109,12 @@ function useImportDataOnLoad<T = DataType>({
           setIsLoading(false);
         })
         .catch((err) => {
-          console.log(err);
+          throw new Error(err);
           setIsLoading(false);
           setData(undefined);
         });
     }
-  }, [module, pageDir, pageDirQuery, data]);
+  }, []);
 
   return { isLoading, data };
 }
