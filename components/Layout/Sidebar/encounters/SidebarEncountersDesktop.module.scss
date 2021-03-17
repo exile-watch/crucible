@@ -50,8 +50,8 @@
 }
 
 .arrowIcon {
-  transition: all ease .2s;
-  transform: scale(.7);
+  transition: all ease 0.2s;
+  transform: scale(0.7);
 
   path {
     stroke: var(--sand500);
@@ -59,7 +59,7 @@
 }
 
 .arrowIconActive {
-  transform: rotate(90deg) scale(.7);
+  transform: rotate(90deg) scale(0.7);
 }
 
 .firstChar {
@@ -89,20 +89,22 @@
   display: block;
   border-left: 4px solid transparent;
   text-decoration: none;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
 
   span {
     border: 1px solid transparent;
-    transition: all ease .4s;
+    transition: all ease 0.4s;
   }
 
-  &:active, &:hover, &:link, &:visited {
+  &:active,
+  &:hover,
+  &:link,
+  &:visited {
     color: var(--gray300);
-    transition: all ease .4s;
+    transition: all ease 0.4s;
   }
 
   &:hover {
-
     span {
       color: var(--sand500);
       border-bottom-color: var(--sand500);
@@ -113,9 +115,12 @@
 .activeBoss {
   background: var(--sand900);
   border-color: var(--sand500);
-  transition: all ease .4s;
+  transition: all ease 0.4s;
 
-  &:active, &:hover, &:link, &:visited {
+  &:active,
+  &:hover,
+  &:link,
+  &:visited {
     color: var(--sand500);
   }
 }

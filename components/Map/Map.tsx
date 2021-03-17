@@ -4,15 +4,16 @@ import { startCase } from 'lodash';
 import Heading from '#components/Heading/Heading';
 import MapBossesHeading from '#components/Map/MapBossesHeading';
 import PageLoader from '#components/PageLoader/PageLoader';
-import useImportDataOnLoad from '#hooks/useImportDataOnLoad';
 import useRouter from '#hooks/useRouter';
+import { DataType } from '#types';
 
 type MapProps = {
   children?: ReactNode;
+  isLoading: boolean;
+  data: DataType;
 };
 
-const Map = ({ children }: MapProps) => {
-  const { isLoading, data } = useImportDataOnLoad({ module: 'encounters' });
+const Map = ({ children, isLoading, data }: MapProps) => {
   const {
     query: { map },
   } = useRouter();

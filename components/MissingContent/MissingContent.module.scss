@@ -11,10 +11,14 @@
 
     span {
       border-bottom: 1px solid transparent;
-      transition: all ease .4s;
+      transition: all ease 0.4s;
     }
 
-    &:link, &:active, &:hover, &:visited, path {
+    &:link,
+    &:active,
+    &:hover,
+    &:visited,
+    path {
       color: var(--sand500);
       stroke: var(--sand500);
       text-decoration: none;
@@ -25,7 +29,7 @@
     }
 
     svg {
-      transform: scale(.8);
+      transform: scale(0.8);
     }
   }
 }

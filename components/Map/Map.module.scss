@@ -11,7 +11,7 @@
     }
 
     &:not(:last-child):after {
-      content: "•";
+      content: '•';
       margin-left: 1rem;
       color: var(--gray300);
       font-size: var(--font-size-xs);
@@ -20,10 +20,13 @@
 }
 
 .link {
-  &:visited, &:hover, &:link, &:active {
+  &:visited,
+  &:hover,
+  &:link,
+  &:active {
     color: var(--gray300);
     text-decoration: none;
-    transition: all ease .4s;
+    transition: all ease 0.4s;
     border-bottom: 1px solid transparent;
   }
 
@@ -34,7 +37,10 @@
 }
 
 .active {
-  &:visited, &:hover, &:link, &:active {
+  &:visited,
+  &:hover,
+  &:link,
+  &:active {
     color: var(--sand500);
   }
 }

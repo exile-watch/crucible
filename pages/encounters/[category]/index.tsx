@@ -1,34 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { startCase } from 'lodash';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import Heading from '#components/Heading/Heading';
-import Layout from '#components/Layout/Layout';
-import useImportDataOnLoad from '#hooks/useImportDataOnLoad';
-import useRouter from '#hooks/useRouter';
 import { PathDataType } from '#types';
 
 const Categories = () => {
-  const { data } = useImportDataOnLoad<PathDataType>({ module: 'encounters', fileName: 'paths' });
+  const [data, setData] = useState<PathDataType>(null);
   const {
     query: { category },
   } = useRouter();
-  // @ts-ignore
-  const [activeCategory, setActiveEntity] = useState<string | null>(null);
 
   useEffect(() => {
-    if (data) {
-      Object.entries(data).find(({ 0: c }) => c === category && setActiveEntity(c));
+    if (!data) {
+      import(`../../../extracted-data/encounters/paths.json`)
+        .then((d) => {
+          setData(d.default);
+        })
+        .catch(() => {
+          setData([]);
+        });
     }
-  }, [data, category]);
+  }, [category]);
 
   return (
-    <Layout>
+    <div>
       {data &&
         Object.entries(data).map(({ 0: cat, 1: ent }) => (
           <ul key={`content_${cat}`}>
             <li>
-              <Heading as="h1">{startCase(cat)}</Heading>
+              <h1>{startCase(cat)}</h1>
               <ul>
                 {ent.map((e) => (
                   <li key={`content_${e.label}`}>
@@ -39,7 +40,7 @@ const Categories = () => {
             </li>
           </ul>
         ))}
-    </Layout>
+    </div>
   );
 };
 

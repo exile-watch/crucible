@@ -1,25 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { kebabCase } from 'lodash';
+import { useRouter } from 'next/router';
 
 import BossContainer from '#components/Boss/BossContainer';
 import Layout from '#components/Layout/Layout';
 import Map from '#components/Map/Map';
-import useImportDataOnLoad from '#hooks/useImportDataOnLoad';
-import useRouter from '#hooks/useRouter';
-import { BossAbilityWithNameType } from '#types';
+import { BossAbilityWithNameType, DataType } from '#types';
 
 const Boss = () => {
-  // @ts-ignore
-  const { isLoading, data } = useImportDataOnLoad({ module: 'encounters' });
+  const [data, setData] = useState<DataType>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [activeBossAbilities, setActiveBossAbilities] = useState<BossAbilityWithNameType[] | null>(
     null
   );
-  const { query } = useRouter();
+  const {
+    query: { category, map, boss },
+  } = useRouter();
+
+  useEffect(() => {
+    import(`../../../../extracted-data/encounters/${category}/${map}.json`)
+      .then((d) => {
+        setData(d.default);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setData(null);
+        setIsLoading(false);
+      });
+  }, [map]);
 
   useEffect(() => {
     if (data) {
-      data?.bosses?.find((boss) => {
-        const [[bossName, bossProps]] = Object.entries(boss);
+      data?.bosses?.find((b) => {
+        const [[bossName, bossProps]] = Object.entries(b);
         const abilities: any = bossProps.abilities?.reduce((acc, v) => {
           const [[abilityName, abilities]]: any = Object.entries(v);
           return acc.concat({
@@ -28,14 +41,16 @@ const Boss = () => {
           });
         }, []);
 
-        return kebabCase(bossName) === query.boss && setActiveBossAbilities(abilities);
+        return kebabCase(bossName) === boss && setActiveBossAbilities(abilities);
       });
     }
-  }, [data, query.boss]);
-
+  }, [data, boss]);
+  console.log(data);
   return (
     <Layout>
-      <Map>{activeBossAbilities && <BossContainer abilities={activeBossAbilities} />}</Map>
+      <Map isLoading={isLoading} data={data}>
+        {activeBossAbilities && <BossContainer abilities={activeBossAbilities} />}
+      </Map>
     </Layout>
   );
 };

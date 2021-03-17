@@ -1,13 +1,7 @@
 import React from 'react';
 
-import Layout from '#components/Layout/Layout';
-import Map from '#components/Map/Map';
-const Maps = () => {
-  return (
-    <Layout>
-      <Map />
-    </Layout>
-  );
+const Map = () => {
+  return <div>map index page</div>;
 };
 
-export default Maps;
+export default Map;

@@ -7,7 +7,7 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  top: .5rem;
+  top: 0.5rem;
 }
 
 .icon {
@@ -16,11 +16,12 @@
   padding-left: 2px;
   border-bottom: 2px solid var(--gray300);
   background: var(--sand900);
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 
-  circle, path {
-    transition: all .4s ease;
-    stroke: var(--gray300)
+  circle,
+  path {
+    transition: all 0.4s ease;
+    stroke: var(--gray300);
   }
 }
 
@@ -30,8 +31,9 @@
   border-bottom: 2px solid var(--sand500);
   background: var(--sand900);
 
-  circle, path {
-    stroke: var(--sand500)
+  circle,
+  path {
+    stroke: var(--sand500);
   }
 }
 
@@ -43,15 +45,15 @@
   outline: none;
   width: 300px;
   padding-right: 58px;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
 
   &::selection {
     background: var(--sand500);
-    color: var(--gray900)
+    color: var(--gray900);
   }
 
   &::placeholder {
-    color: var(--gray300)
+    color: var(--gray300);
   }
 }
 
@@ -60,13 +62,14 @@
   border-color: var(--sand500);
 }
 
-.loader, .clearInput {
+.loader,
+.clearInput {
   position: absolute;
   right: 0;
 }
 
 .clearInput {
-  transition: all ease .2s;
+  transition: all ease 0.2s;
 
   &:hover {
     background: var(--gray700);

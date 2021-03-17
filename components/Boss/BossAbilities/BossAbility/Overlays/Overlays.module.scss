@@ -12,8 +12,7 @@
   border-color: orangered;
 }
 
-
-.abilityName{
+.abilityName {
   left: -1rem;
   top: -1rem;
   font-size: var(--font-size-lg);
@@ -40,12 +39,7 @@
   background: linear-gradient(to bottom, var(--gray700) 54%, transparent);
   box-shadow: none;
   border: 1px solid var(--gray300);
-  border-image:
-          linear-gradient(
-                          to bottom,
-                          var(--gray300) 50%,
-                          transparent
-          ) 1 100%;
+  border-image: linear-gradient(to bottom, var(--gray300) 50%, transparent) 1 100%;
   border-top: 1px solid var(--gray300);
   border-bottom: none;
 
@@ -68,7 +62,12 @@
   left: -10px;
   color: var(--gray300);
   z-index: 10000;
-  background: linear-gradient(to bottom, var(--gray900) 50%, var(--gray700) 66%, var(--gray700) 62%);
+  background: linear-gradient(
+    to bottom,
+    var(--gray900) 50%,
+    var(--gray700) 66%,
+    var(--gray700) 62%
+  );
   padding: 0 5px;
 }
 
@@ -95,11 +94,11 @@
   margin-top: -36px;
   /* background: var( --gray700); */
   padding: 0 5px;
-  color: var( --gray300);
+  color: var(--gray300);
   font-size: 25px;
   bottom: -36px;
   text-transform: lowercase;
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .missingContent {

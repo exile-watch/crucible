@@ -17,7 +17,6 @@ const MapBossesHeading = ({ data }: MapBossesHeadingProps) => {
   const {
     query: { category, map, boss: queryBoss },
   } = useRouter();
-
   return (
     <div className={cx('', styles.bosses)}>
       {data?.bosses?.map((boss) => {
@@ -26,7 +25,7 @@ const MapBossesHeading = ({ data }: MapBossesHeadingProps) => {
 
         return (
           <Heading as="h2" key={`mapBossesHeading_${bossName}`}>
-            <Link href={`/${category}/${map}/${kebabCase(bossName)}`}>
+            <Link href={`/encounters/${category}/${map}/${kebabCase(bossName)}`}>
               <a className={cx(isActive ? styles.active : undefined, styles.link)}>{bossName}</a>
             </Link>
           </Heading>

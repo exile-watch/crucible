@@ -61,9 +61,12 @@ export type AtomPathData = Array<{
   path: string;
 }>;
 
-export type PathDataType = {
-  [category: string]: AtomPathData;
-};
+export type PathDataType =
+  | {
+      [category: string]: AtomPathData;
+    }
+  | null
+  | [];
 
 /**
  * Category / Map / Boss Data
