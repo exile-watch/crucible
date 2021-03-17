@@ -45,7 +45,7 @@ const Boss = () => {
       });
     }
   }, [data, boss]);
-  console.log(data);
+
   return (
     <Layout>
       <Map isLoading={isLoading} data={data}>

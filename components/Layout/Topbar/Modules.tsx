@@ -1,5 +1,11 @@
 import React from 'react';
+import cx from 'classnames';
 import Link from 'next/link';
+
+import Heading from '#components/Heading/Heading';
+import useActiveModule from '#hooks/useActiveModule';
+
+import styles from './TopbarDesktop.module.scss';
 
 const modules = [
   {
@@ -9,12 +15,19 @@ const modules = [
 ];
 
 const Modules = () => {
+  const activeModule = useActiveModule();
+
   return (
-    <ul>
+    <ul className={styles.moduleList}>
       {modules.map(({ name, path }) => (
-        <li key={`topbar_module_${name}`}>
+        <li
+          className={cx(styles.module, activeModule === name && styles.activeModule)}
+          key={`topbar_module_${name}`}
+        >
           <Link href={path}>
-            <a>{name}</a>
+            <a className="px-3">
+              <Heading as="h4">{name}</Heading>
+            </a>
           </Link>
         </li>
       ))}

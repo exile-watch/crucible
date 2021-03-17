@@ -16,7 +16,7 @@ type LayoutProps = {
 
 const Layout = ({ children, title = 'This is the default title' }: LayoutProps) => {
   const activeModule = useActiveModule();
-  console.log(activeModule);
+
   return (
     <>
       <Head>
