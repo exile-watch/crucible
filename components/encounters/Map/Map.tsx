@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import { startCase } from 'lodash';
 
+import MapBossesHeading from '#components/encounters/Map/MapBossesHeading';
 import Heading from '#components/Heading/Heading';
-import MapBossesHeading from '#components/Map/MapBossesHeading';
 import PageLoader from '#components/PageLoader/PageLoader';
 import useRouter from '#hooks/useRouter';
 import { DataType } from '#types';

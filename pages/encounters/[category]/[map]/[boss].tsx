@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
 
-import BossContainer from '#components/Boss/BossContainer';
+import BossContainer from '#components/encounters/Boss/BossContainer';
+import Map from '#components/encounters/Map/Map';
 import Layout from '#components/Layout/Layout';
-import Map from '#components/Map/Map';
 import { BossAbilityWithNameType, DataType } from '#types';
 
 const Boss = () => {
