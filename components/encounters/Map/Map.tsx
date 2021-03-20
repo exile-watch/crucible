@@ -15,15 +15,15 @@ type MapProps = {
 
 const Map = ({ children, isLoading, data }: MapProps) => {
   const {
-    query: { map },
+    query: { category, map },
   } = useRouter();
-
+  const heading = category === 'maps' ? map : category;
   return (
     <>
       {isLoading && <PageLoader />}
       {!isLoading && data && (
         <>
-          <Heading as="h4">{startCase(map)}</Heading>
+          <Heading as="h4">{startCase(heading)}</Heading>
           <MapBossesHeading data={data} />
           {children}
         </>
