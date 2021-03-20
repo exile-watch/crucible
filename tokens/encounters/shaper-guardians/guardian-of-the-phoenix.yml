@@ -1,0 +1,28 @@
+bosses:
+  - Guardian of the Phoenix:
+      abilities:
+        - Whirling Charge:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "Deals 80% of Damag"
+              - "80% more Attack Speed"
+
+        - Phoenix Firebomb:
+            type: [ fire ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/2c76d24d9dd7ca11178e3a2e3ea92fea.mp4
+            about:
+              - "Deals 66% of Damage"
+              - "50% of Physical Damage Converted to Cold Damage"
+              - "9 additional Projectiles"
+
+        - Summon Phoenix:
+            type: [ fire ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/a385f72908270c7d8871767e08b60545.mp4
+            about:
+              - "A Phoenix is summoned that shoots fire projectiles at the player"
+              - "The phoenix is revived a few seconds after being killed"
+              - "The less health the boss has, the more phoenixes are summoned"
