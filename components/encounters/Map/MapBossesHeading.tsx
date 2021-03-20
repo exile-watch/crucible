@@ -21,11 +21,15 @@ const MapBossesHeading = ({ data }: MapBossesHeadingProps) => {
     <div className={cx('', styles.bosses)}>
       {data?.bosses?.map((boss) => {
         const [bossName] = Object.keys(boss);
-        const isActive = kebabCase(bossName) === queryBoss;
+        const isMap = category === 'maps';
+        const isActive = isMap ? kebabCase(bossName) === queryBoss : kebabCase(bossName) === map;
+        const redirect = isMap
+          ? `/encounters/${category}/${map}/${kebabCase(bossName)}`
+          : `/encounters/${category}/${kebabCase(bossName)}`;
 
         return (
           <Heading as="h2" key={`mapBossesHeading_${bossName}`}>
-            <Link href={`/encounters/${category}/${map}/${kebabCase(bossName)}`}>
+            <Link href={redirect}>
               <a className={cx(isActive ? styles.active : undefined, styles.link)}>{bossName}</a>
             </Link>
           </Heading>

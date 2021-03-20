@@ -18,7 +18,7 @@ const preparePathsData = () =>
     const [bossName] = Object.keys(map.bosses[0]);
     const path = map.map
       ? `/encounters/${map.category}/${kebabCase(map.map)}/${kebabCase(bossName)}`
-      : `/encounters/${map.category}/${map.category}/${kebabCase(bossName)}`;
+      : `/encounters/${map.category}/${kebabCase(bossName)}`;
 
     return acc.concat({
       [map.category]: [

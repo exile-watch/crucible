@@ -35,7 +35,7 @@ const prepareIndexedSearchData = () =>
         const [bossName, bossValues] = Object.entries(boss)[0];
         const bossPath = map.map
           ? `${mapPath}/${kebabCase(bossName)}`
-          : `/encounters/${map.category}/${map.category}/${kebabCase(bossName)}`;
+          : `/encounters/${map.category}/${kebabCase(bossName)}`;
         const newBossIndexedSearch = {
           ...(map.map && {
             mapPath,

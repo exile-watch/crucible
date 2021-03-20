@@ -18,6 +18,7 @@ const Boss = () => {
   } = useRouter();
 
   useEffect(() => {
+    setIsLoading(true);
     import(`../../../../extracted-data/encounters/${category}/${map}.json`)
       .then((d) => {
         setData(d.default);
@@ -41,7 +42,9 @@ const Boss = () => {
           });
         }, []);
 
-        return kebabCase(bossName) === boss && setActiveBossAbilities(abilities);
+        const bossMatchedWithUrl =
+          category === 'maps' ? kebabCase(bossName) === boss : kebabCase(bossName) === map;
+        return bossMatchedWithUrl && setActiveBossAbilities(abilities);
       });
     }
   }, [data, boss]);
