@@ -1,0 +1,82 @@
+bosses:
+  - Al'Hezmin, the Hunter:
+      abilities:
+        - Mortar:
+            type: [ physical, chaos ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "50% of Physical Damage Converted to Chaos Damage"
+
+        -  Barrage:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "+100 to Melee Weapon and Unarmed Attack range"
+
+        - Combo Thrust:
+            type: [ physical, chaos ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "25% of Physical Damage Converted to Chaos Damage"
+
+        - Combo Slam:
+            type: [ physical, chaos ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "25% of Physical Damage Converted to Chaos Damage"
+
+        - Decapitate Left to Right:
+            type: [ physical, chaos ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "25% of Physical Damage Converted to Chaos Damage"
+
+        - Decapitate Thrust:
+            type: [ physical, chaos ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "25% of Physical Damage Converted to Chaos Damage"
+
+        - Basilisk Wyvern:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "+100 to Melee Strike Range"
+
+        - Basilisk Decapitate:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - ""
+
+        - Basilisk Spin Attack:
+            type: [ physical ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - ""
+
+        - Wyvern Flight:
+            type: [ physical, chaos ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "25% of Physical Damage Converted to Chaos Damage"
+
+        - Dual Projectile:
+            type: [ physical, chaos ]
+            tip: [ dodge ]
+            gif: ""
+            about:
+              - "25% of Physical Damage Converted to Chaos Damage"
+
+
+
