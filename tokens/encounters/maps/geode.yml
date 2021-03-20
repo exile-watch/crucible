@@ -1,0 +1,28 @@
+map: Geode
+bosses:
+  - Avatar of Undoing:
+      abilities:
+        - Cascade:
+            damageType: [ fire ]
+            tip: [ dodge]
+            gif: https://gyazo.com/8c2b4a01d112da819991c3bb7a0425ba.mp4
+            about:
+              - ""
+        - Chaos Storm:
+            damageType: [ fire ]
+            tip: [ dodge ]
+            gif: https://gyazo.com/fe157584e1502621d9146884c06933d6.mp4
+            about:
+              - ""
+        - Chaos Sandstorm:
+            damageType: [ fire ]
+            tip: [ avoid traps ]
+            gif: https://gyazo.com/e670a50a45ad77bacf90097fd638c5c5.mp4
+            about:
+              - ""
+        - Summon Miners:
+            damageType: [ physical ]
+            tip: [ dodge ]
+            gif: https://gyazo.com/a4bedc6bd08ac256c0ed01cd062a071e.mp4
+            about:
+              - ""
