@@ -1,0 +1,21 @@
+map: Castle Ruins
+bosses:
+  - Left, the Swift-Handed:
+      abilities:
+        - Flicker Strike:
+            tip: [ Get Curse Immunity ]
+            gif: https://i.gyazo.com/083c96ebfdc5aa6eb9f7f8569b573089.mp4
+            about:
+              - ""
+        - Charged Attack:
+            type: [ fire ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/343be403c67f62eec06d6077a00e9c32.mp4
+            about:
+              - ""
+        - Smoke Bomb:
+            type: [ fire ]
+            tip: [ run to bonfire ]
+            gif: https://i.gyazo.com/ea38b65a6bc3cf02b798af8606be0515.mp4
+            about:
+              - ""
