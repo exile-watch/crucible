@@ -1,6 +1,37 @@
 const fs = require('fs');
 const { toLower, kebabCase } = require('lodash');
 const yaml = require('js-yaml');
+const skills = require('../../extracted-data/skills.json');
+
+/**
+ * Replaces `/SKILL/` value to matched key/value in `tokens/skills.yml`
+ *
+ * @example
+ * // ...
+ * abilities:
+ *  - Slam
+ *    - about:
+ *      - /FIREBALL/
+ *      - does something specific to this boss's ability
+ *      - and something else
+ * // ...
+ * @becomes:
+ * abilities:
+ *  - Slam
+ *    - about:
+ *      - Unleashes a ball of fire towards a target which explodes, damaging nearby foes
+ *      - does something specific to this boss's ability
+ *      - and something else
+ */
+const replaceTokenWithValue = arr => arr.map(about => {
+  // See more at https://github.com/sbsrnt/poe-watch/tree/main/tokens/README.md
+  const IS_SKILL_TOKEN = about && about.charAt && about.charAt(0) === '/'
+  if(IS_SKILL_TOKEN) {
+    const [, skill] = about.split('/');
+    about = skills[skill];
+  }
+  return about;
+})
 
 const injectAllAbilityDamageTypesToBoss = (data) => {
   const bosses = data.bosses.map((d) => {
@@ -8,7 +39,14 @@ const injectAllAbilityDamageTypesToBoss = (data) => {
     const [bossName, { abilities }] = Object.entries(d)[0];
     abilities.map((ability) => {
       const [a] = Object.values(ability);
-      a.type && damageTypes.push(a.type);
+      if(a.type ) {
+        damageTypes.push(a.type);
+      }
+
+
+      if(a.about) {
+        a.about = replaceTokenWithValue(a.about)
+      }
     });
 
     return {

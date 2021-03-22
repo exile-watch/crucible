@@ -12,8 +12,9 @@
     "build:encounters:indexed-search": "node scripts/encounters/build-indexed-search.js",
     "build:encounters:paths": "node scripts/encounters/build-paths.js",
     "extract:encounters:tokens": "node scripts/encounters/extract-tokens.js",
+    "extract:spells:tokens": "node scripts/extract-skill-tokens.js",
     "clean-invalid-data-files": "node scripts/encounters/clean-invalid-data-files.js",
-    "data:encounters:update": "yarn extract:encounters:tokens && yarn build:encounters:indexed-search && yarn build:encounters:paths"
+    "data:encounters:update": "yarn extract:spells:tokens && yarn extract:encounters:tokens && yarn build:encounters:indexed-search && yarn build:encounters:paths"
   },
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
