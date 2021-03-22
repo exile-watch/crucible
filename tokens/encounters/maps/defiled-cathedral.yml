@@ -3,25 +3,25 @@ bosses:
   - Woad, Mockery of Man:
       abilities:
         - Rapid Projectile:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/88663b1e7f0c19221b8e3d0c9579dd9f.mp4
             about:
               - ""
         - Offset Projectile Forward:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/513988e7c78e13dee9181c200c23e77f.mp4
             about:
               - ""
         - Offset Projectile Right:
-            damageType: [ lightning ]
+            type: [ lightning ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/2eb133ed1b57938e7b65a43d4d199e3a.mp4
             about:
               - ""
         - Cleave:
-            damageType: [ lightning ]
+            type: [ lightning ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/fd46e45d4be675e1042a20d0666fa2d1.mp4
             about:

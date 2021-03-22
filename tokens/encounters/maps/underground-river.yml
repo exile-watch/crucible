@@ -3,19 +3,19 @@ bosses:
   - It That Fell:
       abilities:
         - Enrage:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/d00a653646d1fc571d16cfd267ec318f.mp4
             about:
               - ""
         - Quake Slam:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/3d15ce257874a803d9384c9d63c8981c.mp4
             about:
               - ""
         - Bear Rain:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/885f5500f92f4e7904fefb5dc982cc0b.mp4
             about:

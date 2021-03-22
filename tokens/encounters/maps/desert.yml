@@ -3,13 +3,13 @@ bosses:
   - Preethi, Eye-Pecker:
       abilities:
         - Teleport:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/910bae5be476d133139a3f91417f2fae.mp4
             about:
               - ""
         - Tornado Spawn:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/6c04a7be31cd7dcf10a17c729c209f9d.mp4
             about:

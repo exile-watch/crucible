@@ -3,31 +3,31 @@ bosses:
   - Bazur:
       abilities:
         - Slam:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/788cd07a55a4dca06818ce7145b87388.mp4
             about:
               - ""
         - Hook:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/e9f4bf9134ce66720a7285779e40fed4.mp4
             about:
               - ""
         - Charged Slam:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/fedf80c76681697998a1b6e2997a232e.mp4
             about:
               - ""
         - Charged Hook:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/f74aeffc251300f6f8eeac7e7c4b7133.mp4
             about:
               - ""
         - Charged Aerial Slam:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/3f96dcc3f8513570e31571a56a98e7ec.mp4
             about:
@@ -35,37 +35,37 @@ bosses:
   - Liantra:
       abilities:
         - Barrage:
-            damageType: [ lightning ]
+            type: [ lightning ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/4dfe772c483baadb428f26654781c814.mp4
             about:
               - ""
         - Summon Books:
-            damageType: [ lightning ]
+            type: [ lightning ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/9c2c5235eb9c12754d756cb89877d13f.mp4
             about:
               - ""
         - Books Discharge:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/2e5410b218eb181359dddef6a1161a9b.mp4
             about:
               - ""
         - Discharge:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/556ec3210d173f67e685b8b6ef9d8d4f.mp4
             about:
               - ""
         - Lightning Ball:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/3a9970e5d8591af762abec75e660906f.mp4
             about:
               - ""
         - Aerial Barrage:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/02dd367abcdc798259b1a4f8e8eaf19a.mp4
             about:

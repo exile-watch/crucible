@@ -3,19 +3,19 @@ bosses:
   - Excellis Aurafix:
       abilities:
         - Lightning Trap:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/e5a66078f578ad7cda70f2e92f29f8fb.mp4
             about:
               - ""
         - Fire Trap:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/1ff151f3526d51b1ff8b64548a150d62.mp4
             about:
               - ""
         - Bear Trap:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/751f31b39decd9798ae2b8334a644c32.mp4
             about:

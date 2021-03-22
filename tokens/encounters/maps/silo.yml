@@ -3,13 +3,13 @@ bosses:
   - Renkarr, The Kiln Keeper:
       abilities:
         - Mortar:
-            damageType: [ fire ]
+            type: [ fire ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/5aaf9e297e6c02f0b7225c82f130a818.mp4
             about:
               - ""
         - Gas Mortar:
-            damageType: [ fire ]
+            type: [ fire ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/f2e26cd6517f68b2b88e1c949b5da4f9.mp4
             about:

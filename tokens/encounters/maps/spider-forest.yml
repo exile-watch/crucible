@@ -3,19 +3,19 @@ bosses:
   - Enticer of Rot:
       abilities:
         - Desecrate:
-            damageType: [ fire ]
+            type: [ fire ]
             tip: [ dodge]
             gif: https://i.gyazo.com/4eb33979b0816c8f25e25b3929689723.mp4
             about:
               - ""
         - Detonate Dead:
-            damageType: [ fire ]
+            type: [ fire ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/6cc1350f6cdfd49fb7092dcc66b37f05.mp4
             about:
               - ""
         - Summon Altar of Rot:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/8c12f040c0a2c48d985543cda4906f8c.mp4
             about:

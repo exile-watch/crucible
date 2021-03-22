@@ -3,25 +3,25 @@ bosses:
   - Corruptor Eedaiak:
       abilities:
         - Rune Explosion:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/a4bc0013ff2942ebd6b7213b1774c12c.mp4
             about:
               - ""
         - Rune Aftershock:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/d78d7d42591aae468841de6a8ba384c5.mp4
             about:
               - ""
         - Orb:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/b1eb247d64080887bfd5f9e2008a16d4.mp4
             about:
               - ""
         - Horizontal Ice Rain:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/31d7e7d763155b62f72616f7a94b07e1.mp4
             about:
@@ -29,19 +29,19 @@ bosses:
   - Skictis, Frostkeeper:
       abilities:
         - Mortar:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/d309e435e91bc59d8636e217d698729e.mp4
             about:
               - ""
         - Orb:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/b1eb247d64080887bfd5f9e2008a16d4.mp4
             about:
               - ""
         - Horizontal Ice Rain:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/31d7e7d763155b62f72616f7a94b07e1.mp4
             about:
@@ -49,19 +49,19 @@ bosses:
   - Takatax Brittlethorn:
       abilities:
         - Ice Prison Spike:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ dodge]
             gif: https://i.gyazo.com/591438ff63c00b1113b4ff3791280f6b.mp4
             about:
               - ""
         - Orb:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/b1eb247d64080887bfd5f9e2008a16d4.mp4
             about:
               - ""
         - Horizontal Ice Rain:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/31d7e7d763155b62f72616f7a94b07e1.mp4
             about:

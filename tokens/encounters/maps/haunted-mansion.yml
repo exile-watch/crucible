@@ -3,19 +3,19 @@ bosses:
   - Barthol, the Pure:
       abilities:
         - Holy Cannon:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/b38bb057dc16619a07e969107a74b69c.mp4
             about:
               - ""
         - Fireball:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/e5203128ea94528bf6d5f736d6b4c2ee.mp4
             about:
-              - ""
+              - /FIREBALL/
         - Incinerate:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/d9e72915c1aa7c82d481469c5fc79fdd.mp4
             about:
@@ -23,25 +23,25 @@ bosses:
   - Barthol, the Corruptor:
       abilities:
         - Corrupt Cannon:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/90c9fcee4c23d4ad8919fee1405f9c7e.mp4
             about:
               - ""
         - Fireball:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/e94e10fa725359b1061350894bb8af9b.mp4
             about:
               - ""
         - Incinerate:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/2fd0ddab520497fb960cc1b13782dac9.mp4
             about:
               - ""
         - Nova:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/9484c96832cbfa5ea94a216bab14e6b3.mp4
             about:

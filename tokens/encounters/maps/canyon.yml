@@ -3,19 +3,19 @@ bosses:
   - Stonebeak, Battle Fowl:
       abilities:
         - Caustic Arrow:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/0713ed2135ceeda2fad5f369e56220d9.mp4
             about:
               - ""
         - Split Arrow:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/ab3f4cea2b161cf1b4e7bfa61a3272bd.mp4
             about:
               - ""
         - Vaal Rain of Arrows:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/a14efe3c5bcd119418cc1177c31e2d32.mp4
             about:
@@ -23,7 +23,7 @@ bosses:
   - Gnar, Eater of Carrion:
       abilities:
         - Charge:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/d03c328f2b7524e7191952a0759b6d0a.mp4
             about:

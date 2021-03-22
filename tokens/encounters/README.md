@@ -1,4 +1,4 @@
-# Boss Token breakdown
+# Encounter Token breakdown
 
 ### Keys Definition
 | key            | Necessity | type     | description                                                                                                         | Example                                                                        |
@@ -15,7 +15,7 @@
 
 ---
 
-`coves.yml`
+[encounters/maps/coves.yml](https://github.com/sbsrnt/poe-watch/blob/main/tokens/encounters/maps/coves.yml)
 ```yml
 map: Coves
 bosses:
@@ -60,3 +60,34 @@ bosses:
               - "Rolls towards player linearly"
               - "This ability can explode Telvar's Barrel"
 ```
+---
+# IMPORTANT
+
+In common cases you may notice we don't use "normal" strings but `tokens`. Pay attention to `about` key in example below:
+
+`coves.yml`
+```yml
+map: Coves
+bosses:
+  - Telvar, the Inebriated:
+      abilities:
+        - Spawn Barrel:
+            tip: [ destroy ]
+            gif: https://i.gyazo.com/20b4ddbade91f264d18ba8c304d9a19a.mp4
+            about:
+              - /SPAWN_BARREL/
+              - "Once destroyed leaves a pool of Tar"
+```
+
+In example above `/SPAWN_BARREL/` is a skill token which value is located in [tokens/skills.yml](https://github.com/sbsrnt/poe-watch/tree/main/tokens/skills.yml)
+
+Skill token has 3 rules:
+1. Must start with forward slash (`/`)
+2. Must be upper-cased with underline in case ability name has more than 2 words
+3. Must end with forward slash (`/`)
+
+_example: `/SPAWN_BARREL/`, `/FIREBALL/`_
+
+Since __standard__ `yaml` files by definition are independent of each other we can't import in any shape or form values form other `yaml` file values nor make a use of [yaml anchors/aliases](https://support.atlassian.com/bitbucket-cloud/docs/yaml-anchors/).
+
+To make our lives easier and not duplicate definitions of common skills, in [scripts/encounters/extract-tokens.js](https://github.com/sbsrnt/poe-watch/tree/main/scripts/encounters/extract-tokens.js#L26-L36) we are replacing token(s) value for our [`.json` auto-generated](https://github.com/sbsrnt/poe-watch/tree/main/extracted-data/encounters) files.

@@ -3,19 +3,19 @@ bosses:
   - Gisale, Thought Thief:
       abilities:
         - Book Discharge:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/816a963cb08cf8fb848d38aff238bfd7.mp4
             about:
               - ""
         - Lightning Tendrils:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/26d54c0c251b2196b46a561ab4c7c245.mp4
             about:
               - ""
         - Lightning Balls:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/ded561bd02afd2a22bc382d195460663.mp4
             about:

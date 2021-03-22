@@ -3,25 +3,25 @@ bosses:
   - Fire and Fury:
       abilities:
         - Lava Cascade:
-            damageType: [ physical ]
+            type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/e72efcc224b8eb674139e4bc313bebfc.mp4
             about:
               - ""
         - Fire Orbs:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/1caa1992dda9e838c79a81aae605c0ed.mp4
             about:
               - ""
         - Mortar:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/635d32ded356a8b5eb9afb299ac6adbf.mp4
             about:
               - ""
         - Summon Seawitch:
-            damageType: [ cold ]
+            type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/8bf239a372c2b048a704f2d52ab5f31e.mp4
             about:
