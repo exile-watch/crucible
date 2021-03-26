@@ -1,0 +1,20 @@
+map: Coral Ruins
+bosses:
+  - Captain Tanner Lightfoot:
+      abilities:
+        - Glacial Cascade:
+            tip: [ Get Curse Immunity ]
+            gif: https://i.gyazo.com/3cfdbee2d79d2e153058ade9f0b1cd0c.mp4
+            about:
+              - ""
+        - Fireball:
+            type: [ fire ]
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/8067bb9bf5b083b395517ec86bc89809.mp4
+            about:
+              - ""
+        - Earthquake:
+            tip: [ Get Curse Immunity ]
+            gif: https://i.gyazo.com/49273e879d28c0ccf2bcf6687a09d9f8.mp4
+            about:
+              - ""
