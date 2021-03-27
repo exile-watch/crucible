@@ -1,0 +1,9 @@
+bosses:
+  - Stygian Spire:
+      abilities:
+        - Meteor:
+            type: [ physical ]
+            tip: [ dodge]
+            gif: https://i.gyazo.com/c506e0d5050d878c6eac2e428655448f.mp4
+            about:
+              - ""
