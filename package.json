@@ -9,11 +9,11 @@
     "type-check": "tsc",
     "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
     "lint": "yarn eslint --fix",
-    "build:encounters:indexed-search": "node scripts/encounters/build-indexed-search.js",
-    "build:encounters:paths": "node scripts/encounters/build-paths.js",
-    "extract:encounters:tokens": "node scripts/encounters/extract-tokens.js",
-    "extract:spells:tokens": "node scripts/extract-skill-tokens.js",
-    "clean-invalid-data-files": "node scripts/encounters/clean-invalid-data-files.js",
+    "build:encounters:indexed-search": "node features/encounters/scripts/build-indexed-search.js",
+    "build:encounters:paths": "node features/encounters/scripts/build-paths.js",
+    "extract:encounters:tokens": "node features/encounters/scripts/extract-tokens.js",
+    "extract:spells:tokens": "node features/encounters/scripts/extract-skill-tokens.js",
+    "clean-invalid-data-files": "node features/encounters/scripts/clean-invalid-data-files.js",
     "data:encounters:update": "yarn extract:spells:tokens && yarn extract:encounters:tokens && yarn build:encounters:indexed-search && yarn build:encounters:paths"
   },
   "dependencies": {

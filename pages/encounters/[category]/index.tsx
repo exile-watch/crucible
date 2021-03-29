@@ -13,7 +13,7 @@ const Categories = () => {
 
   useEffect(() => {
     if (!data) {
-      import(`../../../extracted-data/encounters/paths.json`)
+      import(`../../../features/encounters/extracted-data/paths.json`)
         .then((d) => {
           setData(d.default);
         })

@@ -6,7 +6,7 @@ import { ParsedUrlQuery } from 'querystring';
  * fileName = all available pages under {fileName} in `/pages/[dirName]/[fileName].json` path
  */
 export type useImportDataProps = {
-  module?: 'encounters';
+  feature?: 'encounters';
   pageDir?: 'bosses';
   fileName: 'boss' | 'paths' | 'indexed-search';
 };

@@ -1,8 +1,7 @@
 import cx from 'classnames';
 
-import useActiveModule from '#hooks/useActiveModule';
-
-import SidebarEncountersDesktop from './encounters/SidebarEncountersDesktop';
+import SidebarEncountersDesktop from '#features/encounters/components/Sidebar/SidebarEncountersDesktop';
+import useActiveFeature from '#hooks/useActiveFeature';
 
 import styles from './Sidebar.module.scss';
 
@@ -14,7 +13,7 @@ const sidebarComponents = [
 ];
 
 const Sidebar = () => {
-  const activeModule = useActiveModule();
+  const activeModule = useActiveFeature();
 
   if (!activeModule) return null;
 

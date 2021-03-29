@@ -1,7 +1,7 @@
 import { useImportDataProps } from '#types';
 
-const importDataOnDemand = ({ module, fileName }: useImportDataProps) =>
-  import(`../extracted-data/${module}/${fileName}.json`)
+const importDataOnDemand = ({ feature, fileName }: useImportDataProps) =>
+  import(`../features/${feature}/extracted-data/${fileName}.json`)
     .then((importedData) => importedData.default)
     .catch((err) => err);
 

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
 
-import BossContainer from '#components/encounters/Boss/BossContainer';
-import Map from '#components/encounters/Map/Map';
 import Layout from '#components/Layout/Layout';
+import BossContainer from '#features/encounters/components/Boss/BossContainer';
+import Map from '#features/encounters/components/Map/Map';
 import { BossAbilityWithNameType, DataType } from '#types';
 
 const Boss = () => {
@@ -19,7 +19,7 @@ const Boss = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    import(`../../../../extracted-data/encounters/${category}/${map}.json`)
+    import(`../../../../features/encounters/extracted-data/${category}/${map}.json`)
       .then((d) => {
         setData(d.default);
         setIsLoading(false);
@@ -43,7 +43,7 @@ const Boss = () => {
         }, []);
 
         const bossMatchedWithUrl =
-          category === 'maps' ? kebabCase(bossName) === boss : kebabCase(bossName) === map;
+          category === 'common-maps' ? kebabCase(bossName) === boss : kebabCase(bossName) === map;
         return bossMatchedWithUrl && setActiveBossAbilities(abilities);
       });
     }

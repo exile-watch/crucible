@@ -31,6 +31,9 @@
       "#data/*": [
         "data/*"
       ],
+      "#features/*": [
+        "features/*"
+      ],
       "#hooks/*": [
         "hooks/*"
       ],

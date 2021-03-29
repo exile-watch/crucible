@@ -37,7 +37,7 @@ const InputWithResults = () => {
     if (data) return;
 
     setIsLoading(true);
-    importDataOnDemand({ module: 'encounters', fileName: 'indexed-search' })
+    importDataOnDemand({ feature: 'encounters', fileName: 'indexed-search' })
       .then((d) => {
         setData(d);
         setIsLoading(false);

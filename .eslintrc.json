@@ -6,7 +6,7 @@
   "plugins": [
     "simple-import-sort"
   ],
-  "ignorePatterns": ["scripts", "tokens", "node_modules", ".next*", "extracted-data", "docs"],
+  "ignorePatterns": ["scripts", "tokens", "node_modules", ".next*", "docs"],
   "rules": {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [

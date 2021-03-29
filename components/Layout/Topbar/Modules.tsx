@@ -3,7 +3,7 @@ import cx from 'classnames';
 import Link from 'next/link';
 
 import Heading from '#components/Heading/Heading';
-import useActiveModule from '#hooks/useActiveModule';
+import useActiveFeature from '#hooks/useActiveFeature';
 
 import styles from './TopbarDesktop.module.scss';
 
@@ -15,7 +15,7 @@ const modules = [
 ];
 
 const Modules = () => {
-  const activeModule = useActiveModule();
+  const activeModule = useActiveFeature();
 
   return (
     <ul className={styles.moduleList}>

@@ -8,7 +8,7 @@ const Map = () => {
   const {
     query: { category },
   } = useRouter();
-  if (category !== 'maps') return <Boss />;
+  if (category !== 'common-maps') return <Boss />;
 
   return <div>map index page</div>;
 };

@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
 
-import useActiveModule from '#hooks/useActiveModule';
+import useActiveFeature from '#hooks/useActiveFeature';
 import { PathDataType } from '#types';
 
 function useLoadSidebarData() {
-  const module = useActiveModule();
+  const feature = useActiveFeature();
   const [data, setData] = useState<PathDataType | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (module) {
+    if (feature) {
       setIsLoading(true);
 
-      import(`../extracted-data/${module}/paths.json`)
+      import(`../features/${feature}/extracted-data/paths.json`)
         .then((importedData) => {
           setData(importedData.default);
           setIsLoading(false);
@@ -23,7 +23,7 @@ function useLoadSidebarData() {
           throw new Error(err);
         });
     }
-  }, [module]);
+  }, [feature]);
 
   return { isLoading, data };
 }

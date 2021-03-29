@@ -3,7 +3,7 @@ import cx from 'classnames';
 import Head from 'next/head';
 
 import Sidebar from '#components/Layout/Sidebar/Sidebar';
-import useActiveModule from '#hooks/useActiveModule';
+import useActiveFeature from '#hooks/useActiveFeature';
 
 import TopbarDesktop from './Topbar/TopbarDesktop';
 
@@ -15,7 +15,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ children, title = 'This is the default title' }: LayoutProps) => {
-  const activeModule = useActiveModule();
+  const activeModule = useActiveFeature();
 
   return (
     <>
