@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import Loader from '#components/Loader/Loader';
 import MissingContent from '#components/MissingContent/MissingContent';
+import useOnScreen from '#hooks/useOnScreen';
 
 import styles from './Video.module.scss';
 
@@ -13,11 +14,19 @@ type VideoProps = {
 
 // @ts-ignore
 const Video = ({ src, isActive, abilityName }: VideoProps) => {
-  const ref = useRef<HTMLVideoElement>(null);
-
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const isVisible = useOnScreen<HTMLDivElement | null>(videoContainerRef.current);
   const setPlayBack = () => {
-    if (ref.current) ref.current.playbackRate = 1.5;
+    if (videoRef.current) videoRef.current.playbackRate = 1.5;
   };
+
+  console.log(isVisible, videoRef.current && videoRef.current.paused);
+
+  useEffect(() => {
+    if (videoRef.current && isVisible) videoRef.current.play();
+    if (videoRef.current && !isVisible) videoRef.current.pause();
+  }, [isVisible]);
 
   // const play = () => {
   //   if(ref.current) ref.current.play();
@@ -28,19 +37,19 @@ const Video = ({ src, isActive, abilityName }: VideoProps) => {
   // }
 
   return (
-    <div className={styles.videoWrapper}>
+    <div className={styles.videoWrapper} ref={videoContainerRef}>
       {!src && <MissingContent abilityName={abilityName} missingContentType="Video Source" />}
       {src && (
         <>
           <Loader className={styles.loader} size={40} />
           <video
             className={styles.video}
-            autoPlay
+            autoPlay={isVisible}
             muted
             loop
             playsInline
             key={src}
-            ref={ref}
+            ref={videoRef}
             onCanPlay={setPlayBack}
           >
             <source src={src} type="video/mp4" />

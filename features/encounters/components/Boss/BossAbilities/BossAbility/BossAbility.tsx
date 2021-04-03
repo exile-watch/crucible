@@ -6,7 +6,7 @@ import Link from 'next/link';
 import useRouter from '#hooks/useRouter';
 import { PureBossAbilityType } from '#types';
 
-import { AbilityName, AbilityTip, AboutAbility } from './Overlays';
+import { AbilityName, AbilityTip, AboutAbility } from './Details';
 import Video from './Video/Video';
 
 import styles from './BossAbility.module.scss';
@@ -15,6 +15,14 @@ const BossAbility = ({ name, about, gif, tip }: PureBossAbilityType) => {
   const { query, pathname } = useRouter();
   const activeAbilityRef = useRef<HTMLDivElement>(null);
   const isActive = query.ability === kebabCase(name);
+  const activeClassname = isActive ? styles.activeAbility : query.ability && styles.inactiveAbility;
+  const redirect = {
+    pathname,
+    query: {
+      ...query,
+      ability: isActive ? undefined : kebabCase(name),
+    },
+  };
 
   useEffect(() => {
     if (activeAbilityRef.current)
@@ -22,30 +30,19 @@ const BossAbility = ({ name, about, gif, tip }: PureBossAbilityType) => {
   }, [isActive]);
 
   return (
-    <div
-      className={cx(
-        styles.abilityWrapper,
-        isActive ? styles.activeAbility : query.ability && styles.inactiveAbility
-      )}
-      ref={isActive ? activeAbilityRef : null}
-    >
-      <Link
-        href={{
-          pathname,
-          query: {
-            ...query,
-            ability: isActive ? undefined : kebabCase(name),
-          },
-        }}
+    <Link href={redirect}>
+      <div
+        className={cx('mx-5', styles.ability, activeClassname)}
+        ref={isActive ? activeAbilityRef : null}
       >
-        <div className={cx('mx-5', styles.ability)}>
+        <Video isActive={isActive} src={gif} abilityName={name} />
+        <div className={styles.details}>
           <AbilityName name={name} />
-          <Video isActive={isActive} src={gif} abilityName={name} />
           <AboutAbility about={about} abilityName={name} />
           <AbilityTip tip={tip} />
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 

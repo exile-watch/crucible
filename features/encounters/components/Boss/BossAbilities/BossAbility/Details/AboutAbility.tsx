@@ -1,9 +1,10 @@
 import React from 'react';
-import cx from 'classnames';
 
 import MissingContent from '#components/MissingContent/MissingContent';
 
-import styles from './Overlays.module.scss';
+import DetailRow from './DetailRow';
+
+import styles from './Details.module.scss';
 
 type AboutAbilityProps = {
   about: string[];
@@ -11,24 +12,21 @@ type AboutAbilityProps = {
 };
 
 const AboutAbility = ({ about, abilityName }: AboutAbilityProps) => {
-  const className = cx('py-2 px-3', styles.abilityBorder);
   return (
-    <div className={styles.aboutAbility}>
+    <DetailRow label="About" withBottomMargin>
       {about.map((about, i) =>
         about.length === 0 ? (
           <MissingContent
             abilityName={abilityName}
             missingContentType="About"
-            className={cx(className, styles.missingContent)}
+            className={styles.missingContent}
             key={`bossAboutAbility_${i}`}
           />
         ) : (
-          <p className={className} key={`bossAboutAbility_${i}`}>
-            {about}
-          </p>
+          <p key={`bossAboutAbility_${i}`}>{about}</p>
         )
       )}
-    </div>
+    </DetailRow>
   );
 };
 

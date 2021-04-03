@@ -1,18 +1,8 @@
 .missingContent {
-  position: absolute;
-  top: calc(50%);
-  text-align: center;
-  width: 100%;
-  transform: translateY(-50%);
   color: orangered;
 
   a {
     display: inline-flex;
-
-    span {
-      border-bottom: 1px solid transparent;
-      transition: all ease 0.4s;
-    }
 
     &:link,
     &:active,
