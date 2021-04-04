@@ -24,7 +24,7 @@
     text-transform: uppercase;
     letter-spacing: 1.1px;
     text-decoration: none;
-    transition: all ease .4s;
+    transition: all ease 0.4s;
 
     &:hover {
       color: var(--sand500);
@@ -36,7 +36,10 @@
 
 .activeModule {
   a {
-    &:active, &:hover, &:visited, &:link {
+    &:active,
+    &:hover,
+    &:visited,
+    &:link {
       color: var(--sand500);
       border-bottom-color: var(--sand500);
       background: var(--sand900);
