@@ -20,7 +20,7 @@ const Sidebar = () => {
   const ActiveSidebar = sidebarComponents.find((s) => s.name === activeModule)!.component;
 
   return (
-    <div className={cx('pt-1', styles.sidebar)}>
+    <div className={cx('theme-transition-scope pt-1', styles.sidebar)}>
       <ActiveSidebar />
     </div>
   );

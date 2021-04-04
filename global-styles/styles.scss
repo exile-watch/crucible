@@ -3,8 +3,17 @@
 @import 'variables/colors';
 @import 'variables/typography';
 @import 'variables/z-index';
+@import 'variables/transitions';
 @import 'mixins/spacing';
 
 #__next {
   height: 100%;
+}
+
+html {
+  color: var(--sand500);
+}
+
+.theme-transition-scope {
+  transition: var(--transition-theme);
 }

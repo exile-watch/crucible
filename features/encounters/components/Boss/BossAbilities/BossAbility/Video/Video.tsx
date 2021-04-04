@@ -21,8 +21,6 @@ const Video = ({ src, isActive, abilityName }: VideoProps) => {
     if (videoRef.current) videoRef.current.playbackRate = 1.5;
   };
 
-  console.log(isVisible, videoRef.current && videoRef.current.paused);
-
   useEffect(() => {
     if (videoRef.current && isVisible) videoRef.current.play();
     if (videoRef.current && !isVisible) videoRef.current.pause();

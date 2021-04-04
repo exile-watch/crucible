@@ -68,10 +68,12 @@
   position: relative;
   color: var(--sand500);
   background: var(--gray700);
+  transition: var(--transition-theme);
 
   span {
     position: relative;
     background: var(--gray700);
+    transition: background ease .4s;
   }
 
   &:before {
@@ -93,7 +95,6 @@
 
   span {
     border: 1px solid transparent;
-    transition: all ease 0.4s;
   }
 
   &:active,
@@ -101,7 +102,6 @@
   &:link,
   &:visited {
     color: var(--gray300);
-    transition: all ease 0.4s;
   }
 
   &:hover {
@@ -115,7 +115,6 @@
 .activeBoss {
   background: var(--sand900);
   border-color: var(--sand500);
-  transition: all ease 0.4s;
 
   &:active,
   &:hover,

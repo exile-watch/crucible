@@ -15,7 +15,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ children, title = 'This is the default title' }: LayoutProps) => {
-  const activeModule = useActiveFeature();
+  const activeFeature = useActiveFeature();
 
   return (
     <>
@@ -27,8 +27,9 @@ const Layout = ({ children, title = 'This is the default title' }: LayoutProps) 
       </Head>
       <div
         className={cx(
+          'theme-transition-scope',
           styles.container,
-          activeModule ? styles.moduleContainer : styles.noModuleContainer
+          activeFeature ? styles.featureContainer : styles.noFeatureContainer
         )}
       >
         <TopbarDesktop />

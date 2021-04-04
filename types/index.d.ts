@@ -109,3 +109,5 @@ export type MapType = {
 };
 
 export type DataType = MapType | null;
+
+export type Themes = 'light' | 'dark';

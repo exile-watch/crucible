@@ -1,7 +1,7 @@
 .ability {
   display: flex;
   margin-bottom: 5rem;
-  transition: all ease 0.4s;
+  //transition: opacity ease 0.4s;
 
   &:nth-child(odd) {
     > div:last-child {

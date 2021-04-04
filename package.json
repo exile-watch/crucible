@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build && next export",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "type-check": "tsc",
     "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
     "lint": "yarn eslint --fix",
@@ -19,9 +19,12 @@
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
     "classnames": "^2.2.6",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
     "lodash": "^4.17.21",
     "next": "10.0.9",
     "react": "17.0.1",
+    "react-cookie": "^4.0.3",
     "react-dom": "17.0.1",
     "sass": "^1.32.8"
   },
