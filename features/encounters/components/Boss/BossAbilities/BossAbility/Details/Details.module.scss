@@ -8,7 +8,7 @@
 
 .label {
   position: relative;
-  color: var(--gray300);
+  color: var(--tertiary-bg);
   width: 100%;
   font-size: var(--font-size-xs);
   text-transform: uppercase;
@@ -17,7 +17,7 @@
 
   i {
     position: relative;
-    background: var(--gray900);
+    background: var(--primary-bg);
   }
 }
 

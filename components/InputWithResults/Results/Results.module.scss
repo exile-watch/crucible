@@ -2,9 +2,9 @@
   position: absolute;
   top: 50px;
   width: 100%;
-  background: var(--sand900);
+  background: var(--secondary-color);
   z-index: var(--z-index100);
-  box-shadow: 0 2px 6px var(--sand900);
+  box-shadow: 0 2px 6px var(--secondary-color);
 }
 .results {
   overflow: auto;
@@ -17,11 +17,11 @@
     width: 10px;
 
     &-track {
-      background: var(--gray300);
+      background: var(--tertiary-bg);
     }
 
     &-thumb {
-      background: var(--sand500);
+      background: var(--primary-color);
     }
   }
 }
@@ -33,7 +33,7 @@
   justify-content: space-between;
   align-items: center;
   border: transparent;
-  color: var(--gray300);
+  color: var(--tertiary-bg);
   text-decoration: none;
   background: transparent;
   cursor: pointer;
@@ -41,7 +41,7 @@
   text-align: left;
 
   &:hover {
-    color: var(--sand500);
+    color: var(--primary-color);
   }
 }
 

@@ -13,11 +13,11 @@
     width: 6px;
 
     &-track {
-      background: var(--sand900);
+      background: var(--secondary-color);
     }
 
     &-thumb {
-      background: var(--sand500);
+      background: var(--primary-color);
     }
   }
 }
@@ -31,7 +31,7 @@
     height: calc(100% - 26px);
     top: 26px;
     width: 1px;
-    background: var(--sand500);
+    background: var(--primary-color);
     left: calc(1rem + 1.5px);
   }
 
@@ -54,7 +54,7 @@
   transform: scale(0.7);
 
   path {
-    stroke: var(--sand500);
+    stroke: var(--primary-color);
   }
 }
 
@@ -66,13 +66,13 @@
   font-size: var(--font-size-md);
   text-align: center;
   position: relative;
-  color: var(--sand500);
-  background: var(--gray700);
+  color: var(--primary-color);
+  background: var(--secondary-bg);
   transition: var(--transition-theme);
 
   span {
     position: relative;
-    background: var(--gray700);
+    background: var(--secondary-bg);
     transition: background ease .4s;
   }
 
@@ -80,7 +80,7 @@
     position: absolute;
     content: '';
     height: 1px;
-    background: var(--sand500);
+    background: var(--primary-color);
     width: calc(100% - 2rem - 2px);
     left: calc(1rem + 2px);
     top: 50%;
@@ -101,25 +101,25 @@
   &:hover,
   &:link,
   &:visited {
-    color: var(--gray300);
+    color: var(--tertiary-bg);
   }
 
   &:hover {
     span {
-      color: var(--sand500);
-      border-bottom-color: var(--sand500);
+      color: var(--primary-color);
+      border-bottom-color: var(--primary-color);
     }
   }
 }
 
 .activeBoss {
-  background: var(--sand900);
-  border-color: var(--sand500);
+  background: var(--secondary-color);
+  border-color: var(--primary-color);
 
   &:active,
   &:hover,
   &:link,
   &:visited {
-    color: var(--sand500);
+    color: var(--primary-color);
   }
 }

@@ -14,52 +14,52 @@
   height: 34px;
   padding-top: 3px;
   padding-left: 2px;
-  border-bottom: 2px solid var(--gray300);
-  background: var(--sand900);
+  border-bottom: 2px solid var(--tertiary-bg);
+  background: var(--secondary-color);
   transition: all 0.4s ease;
 
   circle,
   path {
     transition: all 0.4s ease;
-    stroke: var(--gray300);
+    stroke: var(--tertiary-bg);
   }
 }
 
 .iconFocused {
   height: 34px;
   padding-top: 3px;
-  border-bottom: 2px solid var(--sand500);
-  background: var(--sand900);
+  border-bottom: 2px solid var(--primary-color);
+  background: var(--secondary-color);
 
   circle,
   path {
-    stroke: var(--sand500);
+    stroke: var(--primary-color);
   }
 }
 
 .input {
-  background: var(--sand900);
-  color: var(--gray300);
+  background: var(--secondary-color);
+  color: var(--tertiary-bg);
   border: none;
-  border-bottom: 2px solid var(--gray300);
+  border-bottom: 2px solid var(--tertiary-bg);
   outline: none;
   width: 300px;
   padding-right: 58px;
   transition: all ease 0.4s;
 
   &::selection {
-    background: var(--sand500);
-    color: var(--gray900);
+    background: var(--primary-color);
+    color: var(--primary-bg);
   }
 
   &::placeholder {
-    color: var(--gray300);
+    color: var(--tertiary-bg);
   }
 }
 
 .inputFocused {
-  color: var(--sand500);
-  border-color: var(--sand500);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .loader,
@@ -72,6 +72,6 @@
   transition: all ease 0.2s;
 
   &:hover {
-    background: var(--gray700);
+    background: var(--secondary-bg);
   }
 }

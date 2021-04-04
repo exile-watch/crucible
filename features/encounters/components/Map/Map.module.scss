@@ -13,7 +13,7 @@
     &:not(:last-child):after {
       content: '•';
       margin-left: 1rem;
-      color: var(--gray300);
+      color: var(--tertiary-bg);
       font-size: var(--font-size-xs);
     }
   }
@@ -24,15 +24,15 @@
   &:hover,
   &:link,
   &:active {
-    color: var(--gray300);
+    color: var(--tertiary-bg);
     text-decoration: none;
     //transition: all ease 0.4s;
     border-bottom: 1px solid transparent;
   }
 
   &:hover {
-    color: var(--sand500);
-    border-color: var(--sand500);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
   }
 }
 
@@ -41,6 +41,6 @@
   &:hover,
   &:link,
   &:active {
-    color: var(--sand500);
+    color: var(--primary-color);
   }
 }

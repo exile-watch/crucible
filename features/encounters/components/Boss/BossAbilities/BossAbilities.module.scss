@@ -10,11 +10,11 @@
     transition: var(--transition-theme);
 
     &-track {
-      background: var(--gray700);
+      background: var(--secondary-bg);
     }
 
     &-thumb {
-      background: var(--sand500);
+      background: var(--primary-color);
     }
   }
 }

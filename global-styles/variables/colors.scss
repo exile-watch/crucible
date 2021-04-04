@@ -1,18 +1,19 @@
 html {
-  --sand500: #e6e2af;
-  --sand900: #3e3e34;
+  --primary-color: #e6e2af;
+  --secondary-color: #3e3e34;
   --pink800: #702459;
 
-  --gray300: #aaaaaa;
-  --gray700: #212121;
-  --gray900: #181818;
+  --primary-bg: #181818;
+  --secondary-bg: #212121;
+  --tertiary-bg: #aaaaaa;
 }
 
 html:not(.dark) {
-  --sand500: #513C06;
-  --sand900: #e2d4aa;
+  --primary-color: #513C06;
+  --secondary-color: #e2d4aa;
   --pink800: #702459;
-  --gray300: #C99A2E;
-  --gray700: #FCEFC7;
-  --gray900: #FFFAEB;
+
+  --primary-bg: #FFFAEB;
+  --secondary-bg: #FCEFC7;
+  --tertiary-bg: #C99A2E;
 }

@@ -9,13 +9,13 @@
     &:hover,
     &:visited,
     path {
-      color: var(--sand500);
-      stroke: var(--sand500);
+      color: var(--primary-color);
+      stroke: var(--primary-color);
       text-decoration: none;
     }
 
     &:hover span {
-      border-color: var(--sand500);
+      border-color: var(--primary-color);
     }
 
     svg {

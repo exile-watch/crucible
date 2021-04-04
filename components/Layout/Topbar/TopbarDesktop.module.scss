@@ -3,8 +3,8 @@
   display: grid;
   position: relative;
   grid-template-columns: 250px repeat(2, 1fr);
-  background: var(--gray700);
-  color: var(--sand500);
+  background: var(--secondary-bg);
+  color: var(--primary-color);
 }
 
 .moduleList {
@@ -19,17 +19,17 @@
     align-items: center;
     width: fit-content;
     height: 100%;
-    color: var(--gray300);
-    border-bottom: 2px solid var(--gray300);
+    color: var(--tertiary-bg);
+    border-bottom: 2px solid var(--tertiary-bg);
     text-transform: uppercase;
     letter-spacing: 1.1px;
     text-decoration: none;
     transition: all ease 0.4s;
 
     &:hover {
-      color: var(--sand500);
-      border-bottom-color: var(--sand500);
-      background: var(--sand900);
+      color: var(--primary-color);
+      border-bottom-color: var(--primary-color);
+      background: var(--secondary-color);
     }
   }
 }
@@ -40,9 +40,9 @@
     &:hover,
     &:visited,
     &:link {
-      color: var(--sand500);
-      border-bottom-color: var(--sand500);
-      background: var(--sand900);
+      color: var(--primary-color);
+      border-bottom-color: var(--primary-color);
+      background: var(--secondary-color);
     }
   }
 }
