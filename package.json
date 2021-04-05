@@ -19,11 +19,11 @@
     "commit": "cz"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,ts,tsx}": [
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{yaml,yml,json,md,mdx}": [
+    "*.{yml,json}": [
       "prettier --write",
       "git add"
     ]
