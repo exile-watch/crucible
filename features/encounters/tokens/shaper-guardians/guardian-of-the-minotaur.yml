@@ -4,7 +4,7 @@ bosses:
         - Slam:
             type: [ physical ]
             tip: [ dodge ]
-            gif: ""
+            gif: https://i.gyazo.com/6e7f99a655ee8cec0179716a5de74163.mp4
             about:
               - "Deals 150% of Damage"
               - "Base duration is 35 seconds"
@@ -12,21 +12,21 @@ bosses:
         - Burrow:
             type: [ physical ]
             tip: [ dodge ]
-            gif: ""
+            gif: https://i.gyazo.com/ca961bdb5b07ee1f616bb0d387c967a5.mp4
             about:
               - "Deals 160% of Damage"
 
         - Sweep:
             type: [ physical ]
             tip: [ dodge ]
-            gif: ""
+            gif: https://i.gyazo.com/6851f398c24aaffdee4c68504fb387b8.mp4
             about:
               - "30% of Physical Damage Converted to Lightning Damage"
 
         - Lightning Walls:
             type: [ physical, lightning ]
             tip: [ dodge ]
-            gif: ""
+            gif: https://i.gyazo.com/c97bfa41a12bb395293713ac95935510.mp4
             about:
               - "Every 20% health the boss loses, one of four lightning walls activates"
               - "Touching a *Lightning Wall* applies a debuff that slows the player"
