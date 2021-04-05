@@ -15,13 +15,13 @@
     "extract:spells:tokens": "node features/encounters/scripts/extract-skill-tokens.js",
     "clean-invalid-data-files": "node features/encounters/scripts/clean-invalid-data-files.js",
     "data:encounters:update": "yarn extract:spells:tokens && yarn extract:encounters:tokens && yarn build:encounters:indexed-search && yarn build:encounters:paths",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "commit": "cz"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "prettier --write",
-    "*.ts": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "git add"
+      "prettier --write"
     ],
     "*.{yaml,yml,json,md,mdx}": [
       "prettier --write",
