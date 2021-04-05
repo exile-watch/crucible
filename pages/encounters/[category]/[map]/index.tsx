@@ -6,9 +6,9 @@ import Boss from './[boss]';
 
 const Map = () => {
   const {
-    query: { category },
+    query: { boss },
   } = useRouter();
-  if (category !== 'common-maps') return <Boss />;
+  if (!boss) return <Boss />;
 
   return <div>map index page</div>;
 };

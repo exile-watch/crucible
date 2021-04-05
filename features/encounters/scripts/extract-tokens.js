@@ -2,8 +2,7 @@ const fs = require('fs');
 const { toLower, kebabCase } = require('lodash');
 const yaml = require('js-yaml');
 const getDirectories = require('../../../utils/getDirectories');
-const skills = require('../../../extracted-data/skills.json');
-
+const skills = require('../../../features/encounters/extracted-data/skills.json');
 const rootPath = './features/encounters'
 const tokensPath = `${rootPath}/tokens`;
 const extractedDataPath = `${rootPath}/extracted-data`

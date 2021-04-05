@@ -42,8 +42,9 @@ const Boss = () => {
           });
         }, []);
 
-        const bossMatchedWithUrl =
-          category === 'common-maps' ? kebabCase(bossName) === boss : kebabCase(bossName) === map;
+        const bossMatchedWithUrl = !!boss
+          ? kebabCase(bossName) === boss
+          : kebabCase(bossName) === map;
         return bossMatchedWithUrl && setActiveBossAbilities(abilities);
       });
     }

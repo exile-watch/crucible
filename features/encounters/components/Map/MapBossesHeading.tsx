@@ -17,11 +17,12 @@ const MapBossesHeading = ({ data }: MapBossesHeadingProps) => {
   const {
     query: { category, map, boss: queryBoss },
   } = useRouter();
+
   return (
     <div className={cx('', styles.bosses)}>
       {data?.bosses?.map((boss) => {
         const [bossName] = Object.keys(boss);
-        const isMap = category === 'common-maps';
+        const isMap = !!data.map;
         const isActive = isMap ? kebabCase(bossName) === queryBoss : kebabCase(bossName) === map;
         const redirect = isMap
           ? `/encounters/${category}/${map}/${kebabCase(bossName)}`

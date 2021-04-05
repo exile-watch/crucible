@@ -19,12 +19,15 @@ const Map = ({ children, isLoading, data }: MapProps) => {
     query: { category, map },
   } = useRouter();
   const heading = category === 'common-maps' ? map : category;
+  const subheading = category !== 'common-maps' && data?.map;
   return (
     <>
       {isLoading && <PageLoader />}
       {!isLoading && data && (
         <>
-          <Heading as="h4">{startCase(heading)}</Heading>
+          <Heading as="h4">
+            {startCase(heading)} {subheading && `* ${subheading}`}
+          </Heading>
           <MapBossesHeading data={data} />
           {children}
         </>

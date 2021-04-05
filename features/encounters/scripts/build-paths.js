@@ -24,7 +24,7 @@ const preparePathsData = () =>
     return acc.concat({
       [map.category]: [
         {
-          label: map.category === 'common-maps' ? map.map : bossName,
+          label: map.map ? map.map : bossName,
           path,
         },
       ],
