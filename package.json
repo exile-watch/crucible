@@ -14,24 +14,23 @@
     "extract:encounters:tokens": "node features/encounters/scripts/extract-tokens.js",
     "extract:spells:tokens": "node features/encounters/scripts/extract-skill-tokens.js",
     "clean-invalid-data-files": "node features/encounters/scripts/clean-invalid-data-files.js",
-    "data:encounters:update": "yarn extract:spells:tokens && yarn extract:encounters:tokens && yarn build:encounters:indexed-search && yarn build:encounters:paths"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
+    "data:encounters:update": "yarn extract:spells:tokens && yarn extract:encounters:tokens && yarn build:encounters:indexed-search && yarn build:encounters:paths",
+    "postinstall": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx,mdx,json}": "pretty-quick --staged",
+    "*.{ts,tsx}": "pretty-quick --staged",
     "*.ts": [
       "eslint --fix",
+      "git add"
+    ],
+    "*.{yaml,yml,json,md,mdx}": [
+      "prettier --write",
       "git add"
     ]
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
   },
   "dependencies": {
