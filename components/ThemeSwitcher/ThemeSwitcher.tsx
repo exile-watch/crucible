@@ -6,6 +6,11 @@ import { Themes } from '#types';
 
 import styles from './ThemeSwitcher.module.scss';
 
+const cookieOptions = {
+  path: '/', // Match all paths
+  expires: new Date(2038, 0, 1), //https://en.wikipedia.org/wiki/Year_2038_problem
+};
+
 const ThemeSwitcher = () => {
   const [_, setCookie] = useCookies();
 
@@ -21,7 +26,7 @@ const ThemeSwitcher = () => {
       default:
         break;
     }
-    setCookie('theme', theme);
+    setCookie('theme', theme, cookieOptions);
   };
 
   return (
