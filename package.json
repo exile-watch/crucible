@@ -16,6 +16,24 @@
     "clean-invalid-data-files": "node features/encounters/scripts/clean-invalid-data-files.js",
     "data:encounters:update": "yarn extract:spells:tokens && yarn extract:encounters:tokens && yarn build:encounters:indexed-search && yarn build:encounters:paths"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,mdx,json}": "pretty-quick --staged",
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
     "classnames": "^2.2.6",
@@ -29,6 +47,8 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "@svgr/cli": "^5.5.0",
     "@types/classnames": "^2.2.11",
     "@types/lodash": "^4.14.168",
@@ -36,6 +56,9 @@
     "@types/react": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-react-app": "^6.0.0",
@@ -47,6 +70,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "fs": "^0.0.1-security",
+    "husky": "^6.0.0",
     "js-yaml": "^4.0.0",
     "prettier": "^2.2.1",
     "typescript": "^4.2.3"
