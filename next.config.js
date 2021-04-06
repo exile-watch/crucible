@@ -42,9 +42,11 @@ module.exports = {
     // and upload the source maps to sentry.
     // This is an alternative to manually uploading the source maps
     // Note: This is disabled in development mode.
-    if (NODE_ENV !== 'production') {
+    if (NODE_ENV === 'production') {
       config.plugins.push(
         new SentryWebpackPlugin({
+          org: process.env.SENTRY_ORG,
+          project: process.env.SENTRY_PROJECT,
           include: '.next',
           ignore: ['node_modules', '.yarn'],
           stripPrefix: ['webpack://_N_E/'],
