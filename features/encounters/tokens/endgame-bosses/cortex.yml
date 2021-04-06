@@ -1,0 +1,210 @@
+map: Cortex
+bosses:
+  - Fractal Gargantuan:
+      abilities:
+        - Slam:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/6c529d5927d5dbed3fcf03810a2cc2ca.mp4
+            about:
+              - ''
+        - V Slam:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/afb53cb46a4d7d48ea64c59113049a0b.mp4
+            about:
+              - ''
+        - Whip:
+            type: [physical]
+            tip: [dodge]
+            gif: ''
+            about:
+              - ''
+        - Beam:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/05a5c0ffe1e57c41813fac9de5b482fb.mp4
+            about:
+              - ''
+        - Beam Gun:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/d0583bb3c9d03c81cbcfef9338f690be.mp4
+            about:
+              - ''
+        - V Beam Gun:
+            type: [physical]
+            tip: [dodge]
+            gif: ''
+            about:
+              - ''
+        - Rotating Beam Gun:
+            type: [physical]
+            tip: [dodge]
+            gif: ''
+            about:
+              - ''
+  - Synthete Masterpiece:
+      abilities:
+        - Wormhole Slam:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/647b3ba530ff7077c341908c45e23f85.mp4
+            about:
+              - ''
+        - Concentrated Beam:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/261c2a9f78df032ef63297a474ba4956.mp4
+            about:
+              - ''
+        - Ice Spear:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/780576a3e5f3c32af25d3008826801e2.mp4
+            about:
+              - ''
+        - Mortar with Orbs:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/f51b9d55acfbd6c6dcc779bd6368276f.mp4
+            about:
+              - ''
+        - Projectiles:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/2da88be5aee66e3f483e00d2de3a9639.mp4
+            about:
+              - ''
+        - Pull of the Void:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/bc41aee8191a26a759c8aed2738f0363.mp4
+            about:
+              - ''
+        - Void Zone:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/9106ef658c0969b86418c650768df1df.mp4
+            about:
+              - ''
+  - Add Phase:
+      abilities:
+        - Beginning:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/d631d0b81da36d2f1d5b0342d60dfd8e.mp4
+            about:
+              - ''
+        - End:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/b8902c8b17086df1a178d0540d4aaf70.mp4
+            about:
+              - ''
+  - Fractal Titan:
+      abilities:
+        - V Slam:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/66ec162447037e2a88e5981b487c7ae4.mp4
+            about:
+              - ''
+        - Whip:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/b82fd6d9a8fa5a703764bda028364b1a.mp4
+            about:
+              - ''
+        - Beam:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/fc13aea3771b2413054efc27c6438c3b.mp4
+            about:
+              - ''
+        - Beam Gun:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/f1fc0041d7721b0abf7ede8d59fa9451.mp4
+            about:
+              - ''
+        - Rotating Beam Gun:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/d0cc8125e32d7e2520ed13caaad14d96.mp4
+            about:
+              - ''
+        - Expanding Pulse:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/e589e5b2247a25463ba44bf451870fc3.mp4
+            about:
+              - ''
+        - Empowered Expanding Pulse:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/6742d94ff3abb69115323214ec23aa2a.mp4
+            about:
+              - ''
+        - Void Zone:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/ed80a38fd324792d1db07b6efb402dd1.mp4
+            about:
+              - ''
+  - Synthete Nightmare:
+      abilities:
+        - Wormhole Slam:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/0ae5e57e06c64c6640de7ffd196836e1.mp4
+            about:
+              - ''
+        - Spinning Laser Slam:
+            type: [physical]
+            tip: [dodge]
+            gif: https://i.gyazo.com/d59a1a02ce2a070e181a575e8c974545.mp4
+            about:
+              - ''
+        - Concentrated Beam:
+            type: [cold]
+            tip: [avoid traps]
+            gif: ''
+            about:
+              - ''
+        - Ice Spear:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/24409d1d1934573359aed15f33a8ca43.mp4
+            about:
+              - ''
+        - Mortar with Orbs:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/ba4c48588cdab01413c6f353913934ae.mp4
+            about:
+              - ''
+        - Projectiles:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/adb09027914b8c7dd1952337e7ae3824.mp4
+            about:
+              - ''
+        - Pull of the Void:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/c7420ec9675259d2330e533a239b444e.mp4
+            about:
+              - ''
+        - Multiteleport Blackhole Projectile:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/a2f58d433447e92e2a836d0fb780ac64.mp4
+            about:
+              - ''
+        - Trigger Bombs:
+            type: [cold]
+            tip: [avoid traps]
+            gif: https://i.gyazo.com/1c5a28758f05e2007f053e068574cecd.mp4
+            about:
+              - ''
