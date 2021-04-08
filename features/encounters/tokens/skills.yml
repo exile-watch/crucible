@@ -10,6 +10,7 @@ DESECRATE: Desecrates the ground, summoning corpses and dealing chaos damage to 
 
 ### E ###
 ETHEREAL_KNIVES: Fires an arc of knives in front of the encounter which deals physical damage
+EXPLODING_POD: Spawns multiple pods. When ran through pods explode after a short delay
 
 ### F ###
 FIREBALL: Unleashes a ball of fire towards a target which explodes, damaging nearby foes
@@ -24,6 +25,8 @@ GHOST_ORB: Spawns orbs around the area that move in a stright line in random dir
 
 ### I ###
 ICE_NOVA: A chilling circle of ice expands from the caster. If the caster targets near their Frostbolt projectiles, it will expand from a number of those projectiles instead
+INVULNERABILITY_AT_30: Becomes untargettable when encounter reaches 30% hp
+INVULNERABILITY_END_ALL_BOSS_PRESENT: Becomes targetable once all 3 bosses are present
 
 ### L ###
 LACERATE: Slashes twice, releasing waves of force that damage enemies they hit. Enemies in the middle of the slashes can be hit by both slashes
