@@ -31,7 +31,8 @@ bosses:
               - /CONDUCTIVITY/
         - Shock Nova:
             type: [lightning]
-            tip: [dodge]
+            applies_ailments: [ shock ]
+            tip: [dodge, shock immunity]
             gif: https://i.gyazo.com/78ee7167607bbc2c1e32b5a913219210.mp4
             about:
               - /SHOCK_NOVA/

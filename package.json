@@ -23,7 +23,7 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{yml,json}": [
+    "*.{yml}": [
       "prettier --write",
       "git add"
     ]
