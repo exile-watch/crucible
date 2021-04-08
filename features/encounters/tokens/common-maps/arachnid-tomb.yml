@@ -3,19 +3,19 @@ bosses:
   - Hybrid Widow:
       abilities:
         - Web:
-            tip: [ Get Curse Immunity ]
+            tip: [Get Curse Immunity]
             gif: https://i.gyazo.com/de32a71b6ac778f1f9c2c2211d86c5f9.mp4
             about:
-              - ""
-        - Summonk Spiders:
-            type: [ fire ]
-            tip: [ dodge ]
+              - ''
+        - Summon Spiders:
+            type: [physical]
+            tip: [kill new spawns]
             gif: https://i.gyazo.com/f501b54696cc83a53d4113aec857ce7d.mp4
             about:
-              - ""
+              - /SUMMON_SPIDERS/
         - Cover in Spiders:
-            type: [ fire ]
-            tip: [ run to bonfire ]
+            type: [fire]
+            tip: [run to bonfire]
             gif: https://i.gyazo.com/e199da98a3fd4d772e3a28ab18fa50fd.mp4
             about:
-              - ""
+              - ''

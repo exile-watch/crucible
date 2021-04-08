@@ -1,8 +1,17 @@
-CLEAVE: Swings weapon (or both weapons if dual wielding) in an arc, damaging enemies in an area in front of them.
-ETHEREAL_KNIVES: Fires an arc of knives in front of the encounter which deals physical damage.
-FIREBALL: Unleashes a ball of fire towards a target which explodes, damaging nearby foes.
-FROSTBALL: Unleashes a ball of frost towards a target which explodes, damaging nearby foes.
-LEAP_SLAM: Jumps into the air, damaging and knocking back enemies with their weapon where they land. Enemies they would land on are pushed out of the way.
-LEAP_SLAM_FIRE_GROUND_EFFECT: Upon landing creates burning ground.
-WEB_MORTAR: Mortar projectile that leaves ground effect.
-WEB_MORTAR_GROUND_EFFECT: While standing in web your speed is reduced.
+CLEAVE: Swings weapon (or both weapons if dual wielding) in an arc, damaging enemies in an area in front of them
+CONDUCTIVITY: Curses all targets in an area, making them less resistant to lightning damage and gives damage hit more chance to shock
+ETHEREAL_KNIVES: Fires an arc of knives in front of the encounter which deals physical damage
+FLAMMABILITY: Curses all targets in an area, making them less resistant to fire damage and gives damage hit more chance to ignite
+FIREBALL: Unleashes a ball of fire towards a target which explodes, damaging nearby foes
+FIRE_BOMBS: Spawns multiple Fire Bombs around the arena that explode after a delay
+FIRESTORM: Rains numerous fiery bolts in an area
+FROSTBALL: Unleashes a ball of frost towards a target which explodes, damaging nearby foes
+LEAP_SLAM: Jumps into the air, damaging and knocking back enemies with their weapon where they land. Enemies they would land on are pushed out of the way
+LEAP_SLAM_FIRE_GROUND_EFFECT: Upon landing creates burning ground
+LIGHTNING_BOLT: Fires few Lightning Bolts at you
+LIGHTNING_BOMBS: Spawns multiple Lightning Bombs around the arena that explode after a delay
+SHOCK_NOVA: Deals lightning damage in an area around the caster, conjuring an initial ring followed by a larger circular area.
+SHOCK_NOVA_SHOCK: Has a high chance to shock
+SUMMON_SPIDERS: Summons spiders
+WEB_MORTAR: Mortar projectile that leaves ground effect
+WEB_MORTAR_GROUND_EFFECT: While standing in web your speed is reduced

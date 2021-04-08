@@ -12,7 +12,7 @@
               "tip": ["stand behind boss"],
               "gif": "https://i.gyazo.com/341e4c2e3705b4e495bf7c00169e9dae.mp4",
               "about": [
-                "Fires an arc of knives in front of the caster which deals physical damage."
+                "Fires an arc of knives in front of the encounter which deals physical damage"
               ]
             }
           },
@@ -22,8 +22,8 @@
               "tip": ["dodge", "move out when on web"],
               "gif": "https://i.gyazo.com/f488ef4d6e80e6f9bdd2c098527c2c6f.mp4",
               "about": [
-                "Mortar projectile that leaves ground effect.",
-                "While standing in web your speed is reduced."
+                "Mortar projectile that leaves ground effect",
+                "While standing in web your speed is reduced"
               ]
             }
           }

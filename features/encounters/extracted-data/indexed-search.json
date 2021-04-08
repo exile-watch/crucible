@@ -190,8 +190,8 @@
     "mapName": "Arachnid Tomb",
     "bossPath": "/encounters/common-maps/arachnid-tomb/hybrid-widow",
     "bossName": "Hybrid Widow",
-    "abilityPath": "/encounters/common-maps/arachnid-tomb/hybrid-widow?ability=summonk-spiders",
-    "abilityName": "Summonk Spiders"
+    "abilityPath": "/encounters/common-maps/arachnid-tomb/hybrid-widow?ability=summon-spiders",
+    "abilityName": "Summon Spiders"
   },
   {
     "mapPath": "/encounters/common-maps/arachnid-tomb",
