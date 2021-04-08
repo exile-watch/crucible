@@ -5,6 +5,9 @@ CLEAVE: Swings weapon (or both weapons if dual wielding) in an arc, damaging ene
 CONDUCTIVITY: Curses all targets in an area, making them less resistant to lightning damage and gives damage hit more chance to shock
 CYCLONE: Damages enemies around encounter, then performs a spinning series of attacks as it travels to a target location
 
+### D ###
+DESECRATE: Desecrates the ground, summoning corpses and dealing chaos damage to all enemies in the area. The corpses will be chosen from the monsters in the current are
+
 ### E ###
 ETHEREAL_KNIVES: Fires an arc of knives in front of the encounter which deals physical damage
 
@@ -15,6 +18,9 @@ FIRESTORM: Rains numerous fiery bolts in an area
 FLAMMABILITY: Curses all targets in an area, making them less resistant to fire damage and gives damage hit more chance to ignite
 FLAME_SURGE: Strikes enemies in front of encounter with a surge of flame. Deals more damage to Burning enemies
 FROSTBALL: Fires a slow-moving projectile that pierces through enemies, dealing cold damage
+
+### G ###
+GHOST_ORB: Spawns orbs around the area that move in a stright line in random direction
 
 ### I ###
 ICE_NOVA: A chilling circle of ice expands from the caster. If the caster targets near their Frostbolt projectiles, it will expand from a number of those projectiles instead
@@ -28,6 +34,9 @@ LEAP_SLAM_FIRE_GROUND_EFFECT: Upon landing creates burning ground
 LIGHTNING_BOLT: Fires few Lightning Bolts at you
 LIGHTNING_BOMBS: Spawns multiple Lightning Bombs around the arena that explode after a delay
 
+### R ###
+REVIVE_MINIONS: Revives minions
+
 ### S ###
 SHOCK_NOVA: Deals lightning damage in an area around the caster, conjuring an initial ring followed by a larger circular area.
 SHOCK_NOVA_SHOCK: Has a high chance to shock
@@ -40,3 +49,4 @@ WEB_MORTAR_GROUND_EFFECT: While standing in web your speed is reduced
 
 ### V ###
 VAAL_BURNING_ARROW: Fires an arrow that explodes, dealing fire damage to its target and other nearby enemies, with an increased chance of igniting them
+VAAL_SUMMON_SKELETONS: Summons an army of skeletal warriors, archers and mages, led by a powerful general

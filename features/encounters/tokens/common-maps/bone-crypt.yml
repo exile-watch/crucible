@@ -3,26 +3,25 @@ bosses:
   - Xixic, High Necromancer:
       abilities:
         - Ghost Orb:
-            type: [ physical ]
-            tip: [ dodge]
+            type: [ fire ]
+            tip: [ dodge ]
             gif: https://i.gyazo.com/7b20410b4e8fc477a342eb18023d3fd4.mp4
             about:
-              - ""
+              - /GHOST_ORB/
         - Desecrate:
-            type: [ cold ]
-            tip: [ avoid traps ]
+            type: [ chaos ]
+            tip: [ stand behind boss ]
             gif: https://i.gyazo.com/97602258c0a808dd71c2c58f77267196.mp4
             about:
-              - ""
+              - /DESECRATE/
         - Vaal Summon Skeletons:
-            type: [ lightning ]
-            tip: [ dodge ]
+            type: [ physical ]
+            tip: [ kill new spawns ]
             gif: https://i.gyazo.com/88692d4e56b858a6a3f0b5e501629e6a.mp4
             about:
-              - ""
+              - /VAAL_SUMMON_SKELETONS/
         - Revive Skeleton:
-            type: [ lightning ]
-            tip: [ dodge ]
+            tip: [ kill revived spawns ]
             gif: https://i.gyazo.com/5a9611675ead61a813c8c995c22c9d29.mp4
             about:
-              - ""
+              - /REVIVE_MINIONS/
