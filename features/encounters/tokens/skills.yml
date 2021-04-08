@@ -1,4 +1,5 @@
 ### C ###
+CHARGE: Charges at player's location. This knocks the encounter back and stuns it. Enemies in the way are pushed to the side. Damage and stun are proportional to distance travelled
 CHILLED_GROUND: Slows player's cast speed, attack speed and movement speed
 CLEAVE: Swings weapon (or both weapons if dual wielding) in an arc, damaging enemies in an area in front of them
 CONDUCTIVITY: Curses all targets in an area, making them less resistant to lightning damage and gives damage hit more chance to shock
