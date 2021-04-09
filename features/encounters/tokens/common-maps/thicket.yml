@@ -17,5 +17,3 @@ bosses:
             type: [ fire ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/4930e9e464f70700c5d848bec7257590.mp4
-            about:
-              - ""

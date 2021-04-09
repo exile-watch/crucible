@@ -30,8 +30,6 @@ bosses:
             type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/7d6efbfb065010e27a97ace5853dee5f.mp4
-            about:
-              - ""
         - Ambush:
             type: [ cold ]
             tip: [ avoid traps ]

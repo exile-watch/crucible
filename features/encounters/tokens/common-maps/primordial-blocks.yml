@@ -36,8 +36,6 @@ bosses:
             type: [ lightning ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/25e73b1534f40bc65770070117297482.mp4
-            about:
-              - ""
         - Rolling Stone:
             type: [ lightning ]
             tip: [ dodge ]

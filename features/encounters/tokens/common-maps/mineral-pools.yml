@@ -16,8 +16,6 @@ bosses:
         - Summon Lightning Warp Totem:
             tip: [ Get Curse Immunity ]
             gif: https://i.gyazo.com/56d3a283469b5452ef608ee48461365f.mp4
-            about:
-              - ""
         - Spark:
             type: [ fire ]
             tip: [ dodge ]

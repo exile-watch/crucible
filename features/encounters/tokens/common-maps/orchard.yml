@@ -18,8 +18,6 @@ bosses:
             type: [ lightning ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/ac379c60012a9f5e14cae5818d3035c9.mp4
-            about:
-              - ""
         - Offering of Judgement:
             type: [ lightning ]
             tip: [ dodge ]

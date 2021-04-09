@@ -34,8 +34,6 @@ bosses:
             type: [ fire ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/4ce7cc1245deccceafeb4a77e08bb657.mp4
-            about:
-              - ""
         - Fury:
             type: [ fire ]
             tip: [ dodge ]

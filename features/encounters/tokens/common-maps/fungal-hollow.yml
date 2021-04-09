@@ -24,8 +24,6 @@ bosses:
             type: [ cold ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/0aad206d23dd23f38d2f25d614ad85f3.mp4
-            about:
-              - ""
         - Enduring Cry:
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/cfac5e6020f932ec4ed38967c8f96965.mp4
@@ -34,5 +32,3 @@ bosses:
         - Summon Guards:
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/8ea2de78618469e5e51becebbb5efaf7.mp4
-            about:
-              - ""

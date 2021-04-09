@@ -24,5 +24,3 @@ bosses:
             type: [ lightning ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/d0fca3eee8ce6b455c26a75aaf0584d3.mp4
-            about:
-              - ""

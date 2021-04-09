@@ -30,8 +30,6 @@ bosses:
             type: [ physical ]
             tip: [ kill new spawns ]
             gif: https://i.gyazo.com/e6c158e49c034b45a2051fd86ced2b57.mp4
-            about:
-              - /SUMMON_MINIONS/
         - Teleport:
             gif: https://i.gyazo.com/8ca69535e6419ca0a6efff7b7d87d6d2.mp4
             about:

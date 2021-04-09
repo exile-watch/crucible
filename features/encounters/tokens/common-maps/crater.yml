@@ -18,5 +18,3 @@ bosses:
             type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/adcaba5f915028c5a61866b665e13027.mp4
-            about:
-              - ""

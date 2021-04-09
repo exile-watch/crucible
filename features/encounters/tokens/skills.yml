@@ -61,10 +61,6 @@ SPAWN_TOTEM: Spawns totem(s)
 SPLIT_ARROW: Fires multiple arrows at different targets
 STORM_BURST: Unleashes a stream of projectiles while encounter channels this spell, which pierce through enemies, dealing lightning damage. When encounter stops channelling, the projectiles explode, dealing significant damage in an area around them. Additional projectiles are added in sequence
 STORM_CALL: Sets a marker at a location. After a short duration, lightning strikes the marker, dealing damage around it. When this happens, it will also set off the lightning at any other markers encounter has cast
-SUMMON_BLOOD_RAVENS: Summons Blood Ravens
-SUMMON_MINIONS: Summon Minions
-SUMMON_SCORPIONS: Summons Scorpions
-SUMMON_SPIDERS: Summons Spiders
 
 ### T ###
 THROWN_SHIELD: Throws a spectral copy of encounters shield as a projectile which cannot pierce, and deals off-hand damage augmented by the defences of the shield. When it collides with something it will shatter, launching a number of smaller shards as projectiles in all directions

@@ -12,8 +12,6 @@ bosses:
             type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/9d896bf8e05aa449c2da6a2ff86ec184.mp4
-            about:
-              - ""
         - Mortar Projectile:
             type: [ lightning ]
             tip: [ dodge ]

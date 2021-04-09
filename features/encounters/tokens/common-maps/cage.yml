@@ -6,8 +6,6 @@ bosses:
             type: [ physical ]
             tip: [ kill new spawns ]
             gif: https://i.gyazo.com/491beefbb4062cad5da888cbc57c9162.mp4
-            about:
-              - /SUMMON_BLOOD_RAVENS/
         - Thrown Shield:
             type: [ physical ]
             tip: [ dodge ]

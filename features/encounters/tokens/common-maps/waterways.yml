@@ -6,8 +6,6 @@ bosses:
             type: [ physical ]
             tip: [ dodge]
             gif: https://i.gyazo.com/97dfa783146034734ff654c468a65db8.mp4
-            about:
-              - ""
         - Spear:
             type: [ cold ]
             tip: [ avoid traps ]

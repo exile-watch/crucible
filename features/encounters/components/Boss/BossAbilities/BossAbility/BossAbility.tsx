@@ -38,7 +38,7 @@ const BossAbility = ({ name, about, gif, tip }: PureBossAbilityType) => {
         <Video isActive={isActive} src={gif} abilityName={name} />
         <div className={styles.details}>
           <AbilityName name={name} />
-          <AboutAbility about={about} abilityName={name} />
+          {about && <AboutAbility about={about} abilityName={name} />}
           <AbilityTip tip={tip} />
         </div>
       </div>

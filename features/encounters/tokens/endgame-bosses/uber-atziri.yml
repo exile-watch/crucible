@@ -80,8 +80,6 @@ bosses:
             type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/110a0559efa643eba4d68c6b5550ce2f.mp4
-            about:
-              - ""
   - Vaal Temple Bosses:
       abilities:
         - Charge:

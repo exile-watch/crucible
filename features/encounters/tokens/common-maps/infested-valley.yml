@@ -12,8 +12,6 @@ bosses:
             type: [ cold ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/d013d59098e32d981e13241a9ec868f4.mp4
-            about:
-              - ""
         - Slide:
             type: [ cold ]
             tip: [ avoid traps ]

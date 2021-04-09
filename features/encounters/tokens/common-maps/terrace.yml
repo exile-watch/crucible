@@ -30,8 +30,6 @@ bosses:
             type: [ physical ]
             tip: [ dodge ]
             gif: https://i.gyazo.com/c992f8c44a6db9d62820637257093f37.mp4
-            about:
-              - ""
         - Tar Orbs:
             type: [ cold ]
             tip: [ avoid traps ]

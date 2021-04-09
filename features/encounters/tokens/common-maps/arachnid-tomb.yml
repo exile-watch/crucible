@@ -11,8 +11,6 @@ bosses:
             type: [physical]
             tip: [kill new spawns]
             gif: https://i.gyazo.com/f501b54696cc83a53d4113aec857ce7d.mp4
-            about:
-              - /SUMMON_SPIDERS/
         - Cover in Spiders:
             type: [fire]
             tip: [run to bonfire]

@@ -12,8 +12,6 @@ bosses:
             type: [ physical ]
             tip: [ kill new spawns ]
             gif: https://i.gyazo.com/03e2539d1098154a7ed392b0f5feb797.mp4
-            about:
-              - ""
         - Barrage:
             type: [ physical ]
             tip: [ dodge ]

@@ -30,8 +30,6 @@ bosses:
             type: [ physical ]
             tip: [ kill new spawns ]
             gif: https://i.gyazo.com/ce0d26c7a10d573061e834b03226e730.mp4
-            about:
-              - /SUMMON_SCORPIONS/
         - Ball Lightning:
             type: [ lightning ]
             tip: [ dodge ]

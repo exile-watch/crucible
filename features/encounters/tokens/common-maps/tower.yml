@@ -44,8 +44,6 @@ bosses:
             type: [ lightning ]
             tip: [ avoid traps ]
             gif: https://i.gyazo.com/9c2c5235eb9c12754d756cb89877d13f.mp4
-            about:
-              - ""
         - Books Discharge:
             type: [ physical ]
             tip: [ dodge ]
