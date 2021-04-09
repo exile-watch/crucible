@@ -46,7 +46,11 @@ SHOCK_NOVA: Deals lightning damage in an area around the caster, conjuring an in
 SHOCK_NOVA_SHOCK: Has a high chance to shock
 SPAWN_TOTEM: Spawns totem(s).
 SOUL_EATER: For each new spawn death near encounter, encounter gains more damage, cast speed and attack speed
-SUMMON_SPIDERS: Summons spiders
+SUMMON_BLOOD_RAVENS: Summons Blood Ravens
+SUMMON_SPIDERS: Summons Spiders
+
+### T ###
+THROWN_SHIELD: Throws a spectral copy of encounters shield as a projectile which cannot pierce, and deals off-hand damage augmented by the defences of the shield. When it collides with something it will shatter, launching a number of smaller shards as projectiles in all directions
 
 ### W ###
 WEB_MORTAR: Mortar projectile that leaves ground effect
