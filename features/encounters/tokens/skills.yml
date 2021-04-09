@@ -2,6 +2,7 @@
 BALL_LIGHTNING: Fires a slow-moving projectile that periodically damages enemies in an area around it with bolts of lightning
 BLADE_BLOSSOM: Creates knives on the ground which fly upwards after a short delay
 BLADE_FLURRY: Repeatedly hit enemies in a circle in front of encounter while channelling, dealing damage to and around the enemy. The damage is continually boosted while channelling. Encounter unleashes an additional hit for each stage reached once the channelling ends
+BOOKS_DISCHARGE: Sets a book marker at a location. After a short duration, lightning strikes the marker, dealing damage around it. When this happens, it will also set off the lightning at any other markers encounter has cast
 
 ### C ###
 CHARGE: Charges at player's location. This knocks the encounter back and stuns it. Enemies in the way are pushed to the side. Damage and stun are proportional to distance travelled
@@ -58,13 +59,16 @@ SMOKE_BOMB: Throws a trap that creates cloud of smoke that blinds everyone stand
 SOUL_EATER: For each new spawn death near encounter, encounter gains more damage, cast speed and attack speed
 SPAWN_TOTEM: Spawns totem(s)
 SPLIT_ARROW: Fires multiple arrows at different targets
+STORM_BURST: Unleashes a stream of projectiles while encounter channels this spell, which pierce through enemies, dealing lightning damage. When encounter stops channelling, the projectiles explode, dealing significant damage in an area around them. Additional projectiles are added in sequence
 STORM_CALL: Sets a marker at a location. After a short duration, lightning strikes the marker, dealing damage around it. When this happens, it will also set off the lightning at any other markers encounter has cast
 SUMMON_BLOOD_RAVENS: Summons Blood Ravens
+SUMMON_MINIONS: Summon Minions
 SUMMON_SCORPIONS: Summons Scorpions
 SUMMON_SPIDERS: Summons Spiders
 
 ### T ###
 THROWN_SHIELD: Throws a spectral copy of encounters shield as a projectile which cannot pierce, and deals off-hand damage augmented by the defences of the shield. When it collides with something it will shatter, launching a number of smaller shards as projectiles in all directions
+TELEPORT: Teleports encounter to random location in an area
 
 ### W ###
 WEB_MORTAR: Mortar projectile that leaves ground effect
