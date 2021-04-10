@@ -76,7 +76,7 @@ bosses:
         - Staff Degen Zone:
             type: [ physical ]
             tip: [ dodge ]
-            gif: https://i.gyazo.com/6900ac5fb8f189009ee75dd4c9fb4770.mp4
+            gif: https://i.gyazo.com/138b7bb6d28c5d21bd970de3a950585f.mp4
             about:
               - ""
         - Teleport Slam:
