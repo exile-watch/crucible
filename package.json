@@ -9,12 +9,23 @@
     "type-check": "tsc",
     "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
     "lint": "yarn eslint --fix",
-    "build:encounters:indexed-search": "node features/encounters/scripts/build-indexed-search.js",
-    "build:encounters:paths": "node features/encounters/scripts/build-paths.js",
-    "extract:encounters:tokens": "node features/encounters/scripts/extract-tokens.js",
-    "extract:spells:tokens": "node features/encounters/scripts/extract-skill-tokens.js",
+
     "clean-invalid-data-files": "node features/encounters/scripts/clean-invalid-data-files.js",
-    "data:encounters:update": "yarn extract:spells:tokens && yarn extract:encounters:tokens && yarn build:encounters:indexed-search && yarn build:encounters:paths",
+
+    "generate:encounters:indexed-search": "node features/encounters/scripts/build-indexed-search.js",
+    "generate:encounters:paths": "node features/encounters/scripts/build-paths.js",
+    "generate:sitemap": "node global-scripts/generateSitemap.js",
+    "generate:encounters": "yarn generate:encounters:indexed-search && yarn generate:encounters:paths && yarn generate:sitemap",
+    "generate:all": "yarn generate:encounters",
+
+    "extract:tokens:spells": "node features/encounters/scripts/extract-skill-tokens.js",
+    "extract:tokens:encounters": "node features/encounters/scripts/extract-tokens.js",
+    "extract:encounters": "yarn extract:tokens:spells && yarn extract:tokens:encounters",
+    "extract:all": "yarn extract:encounters",
+
+    "update:encounters": "yarn extract:encounters && yarn generate:encounters",
+    "update:all": "yarn extract:all && yarn generate:all",
+
     "postinstall": "husky install",
     "commit": "cz"
   },
@@ -64,6 +75,7 @@
     "babel-eslint": "^10.1.0",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
+    "date-fns": "^2.20.1",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-react-app": "^6.0.0",

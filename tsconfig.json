@@ -28,6 +28,9 @@
       "#components/*": [
         "components/*"
       ],
+      "#constants/*": [
+        "constants/*"
+      ],
       "#data/*": [
         "data/*"
       ],

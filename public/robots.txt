@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: TBD/sitemap.xml

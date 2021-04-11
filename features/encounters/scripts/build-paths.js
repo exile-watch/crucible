@@ -2,10 +2,11 @@ const { kebabCase } = require('lodash');
 const _ = require('lodash');
 const fs = require('fs');
 const getDirectories = require('../../../utils/getDirectories');
+const colorifyConsole = require('../../../utils/colorifyConsole');
 
-const rootPath = './features/encounters'
+const rootPath = './features/encounters';
 const tokensPath = `${rootPath}/tokens`;
-const extractedDataPath = `${rootPath}/extracted-data`
+const extractedDataPath = `${rootPath}/extracted-data`;
 const data = [];
 
 getDirectories(tokensPath).forEach((dir) => {
@@ -57,7 +58,7 @@ const mergeSameKeysInArr = (arr) =>
     .value();
 
 const buildPaths = async () => {
-  await console.time('Build Paths Time')
+  await console.time(colorifyConsole({ label: 'time', text: 'Generate Encounters Paths' }));
   const preparedPaths = await preparePathsData();
   const [paths] = await mergeSameKeysInArr(preparedPaths);
 
@@ -67,9 +68,9 @@ const buildPaths = async () => {
 buildPaths()
   .then(async (data) => {
     await fs.writeFileSync(`${extractedDataPath}/paths.json`, data);
-    await console.timeEnd('Build Paths Time')
+    await console.timeEnd(colorifyConsole({ label: 'time', text: 'Generate Encounters Paths' }));
   })
   .catch(async (err) => {
-    await console.log(err)
-    await console.timeEnd('Build Paths Time')
+    await console.log(err);
+    await console.timeEnd(colorifyConsole({ label: 'time', text: 'Generate Encounters Paths' }));
   });
