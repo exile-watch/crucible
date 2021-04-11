@@ -1968,7 +1968,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^14.14.37":
   version: 14.14.37
   resolution: "@types/node@npm:14.14.37"
   checksum: 5e2d9baf7594ebacaf016716515f30de0765169412787f981481c2fb8b468923149bb9e2e3219ee672399811672ceddc339a7372a61cf15bc656836a5494d991
@@ -4519,6 +4519,7 @@ __metadata:
     "@svgr/webpack": ^5.5.0
     "@types/classnames": ^2.2.11
     "@types/lodash": ^4.14.168
+    "@types/node": ^14.14.37
     "@types/react": ^17.0.3
     "@typescript-eslint/eslint-plugin": ^4.18.0
     "@typescript-eslint/parser": ^4.18.0

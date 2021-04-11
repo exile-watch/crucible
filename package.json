@@ -9,23 +9,18 @@
     "type-check": "tsc",
     "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
     "lint": "yarn eslint --fix",
-
     "clean-invalid-data-files": "node features/encounters/scripts/clean-invalid-data-files.js",
-
     "generate:encounters:indexed-search": "node features/encounters/scripts/build-indexed-search.js",
     "generate:encounters:paths": "node features/encounters/scripts/build-paths.js",
     "generate:sitemap": "node global-scripts/generateSitemap.js",
     "generate:encounters": "yarn generate:encounters:indexed-search && yarn generate:encounters:paths && yarn generate:sitemap",
     "generate:all": "yarn generate:encounters",
-
     "extract:tokens:spells": "node features/encounters/scripts/extract-skill-tokens.js",
     "extract:tokens:encounters": "node features/encounters/scripts/extract-tokens.js",
     "extract:encounters": "yarn extract:tokens:spells && yarn extract:tokens:encounters",
     "extract:all": "yarn extract:encounters",
-
     "update:encounters": "yarn extract:encounters && yarn generate:encounters",
     "update:all": "yarn extract:all && yarn generate:all",
-
     "postinstall": "husky install",
     "commit": "cz"
   },
@@ -68,6 +63,7 @@
     "@svgr/cli": "^5.5.0",
     "@types/classnames": "^2.2.11",
     "@types/lodash": "^4.14.168",
+    "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
