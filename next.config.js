@@ -11,7 +11,7 @@ module.exports = {
   },
   productionBrowserSourceMaps: true,
   webpack: (config, options) => {
-    if (options.isServer) {
+    if (options.isServer && NODE_ENV === 'production') {
       require('./global-scripts/generateSitemap');
     }
     // In `pages/_app.js`, Sentry is imported from @sentry/browser. While
