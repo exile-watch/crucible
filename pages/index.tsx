@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className={styles.g}>
           <div className={cx(styles.v, styles.v1)}>
-            <Video src="https://i.gyazo.com/e8752c9c1899b02a551a593e5a467c7b.mp4" />
+            <Video src="https://i.gyazo.com/41c10c1cc7d06c7d5fee3287cdf58724.mp4" />
           </div>
           <div className={cx(styles.v, styles.v2)}>
             <Video src="https://i.gyazo.com/533749402c4ef1e510627be5a3c3be2d.mp4" />
@@ -64,10 +64,10 @@ export default function Home() {
             <Video src="https://i.gyazo.com/7253f72da3642c889a24471ac8f0adca.mp4" />
           </div>
           <div className={cx(styles.v, styles.v6)}>
-            <Video src="https://i.gyazo.com/0ae5e57e06c64c6640de7ffd196836e1.mp4" />
+            <Video src="https://i.gyazo.com/f463b4ae782b0d3b95993e84501392b8.mp4" />
           </div>
           <div className={cx(styles.v, styles.v8)}>
-            <Video src="https://i.gyazo.com/0ae5e57e06c64c6640de7ffd196836e1.mp4" />
+            <Video src="https://i.gyazo.com/41c10c1cc7d06c7d5fee3287cdf58724.mp4" />
           </div>
           <div className={cx(styles.v, styles.v9)}>
             <Video src="https://i.gyazo.com/133891e728790ee87a2ff63574ba9146.mp4" />
