@@ -21,6 +21,11 @@
   grid-template-rows: 80px repeat(7, 1fr);
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 50px;
+
+  animation: fadeIn 1s forwards;
+  opacity: 0;
+  animation-delay: 13s;
+
   video {
     opacity: 0;
   }
@@ -36,6 +41,11 @@
   grid-template-rows: 80px repeat(7, 1fr);
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 50px;
+
+  animation: fadeIn 1s forwards;
+  opacity: 0;
+  animation-delay: 13s;
+
   video {
     padding-bottom: 20px;
     padding-right: 20px;
@@ -49,6 +59,7 @@
   width: 100%;
   height: 100%;
   background: black;
+  position: relative;
 
   video {
     height: 100%;
@@ -126,7 +137,6 @@
   grid-row: 8;
 }
 
-
 .bg {
   height: 100%;
   width: 100%;
@@ -139,4 +149,13 @@
 
 .text {
 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
