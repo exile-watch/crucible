@@ -40,6 +40,9 @@
       "#hooks/*": [
         "hooks/*"
       ],
+      "#store": [
+        "store/store.ts"
+      ],
       "#types": [
         "types/index.d.ts"
       ],
