@@ -1,6 +1,9 @@
 import { CookiesProvider } from 'react-cookie';
+import { Provider as StoreProvider } from 'react-redux';
 import type { AppProps } from 'next/app';
 import App from 'next/app';
+
+import { store } from '#store';
 
 import { initSentry } from '../sentry';
 
@@ -11,7 +14,9 @@ initSentry();
 function ExileWatch({ Component, pageProps }: AppProps) {
   return (
     <CookiesProvider>
-      <Component {...pageProps} />
+      <StoreProvider store={store}>
+        <Component {...pageProps} />
+      </StoreProvider>
     </CookiesProvider>
   );
 }

@@ -17,9 +17,9 @@ const Sidebar = () => {
 
   if (!activeModule) return null;
 
-  const ActiveSidebar = sidebarComponents.find((s) => s.name === activeModule)!.component;
+  const ActiveSidebar = sidebarComponents.find((s) => s.name === activeModule)?.component;
 
-  return (
+  return !ActiveSidebar ? null : (
     <div className={cx('theme-transition-scope pt-1', styles.sidebar)}>
       <ActiveSidebar />
     </div>

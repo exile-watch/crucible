@@ -12,6 +12,10 @@ const modules = [
     name: 'encounters',
     path: '/encounters',
   },
+  {
+    name: 'builds',
+    path: '/builds',
+  },
 ];
 
 const Modules = () => {
