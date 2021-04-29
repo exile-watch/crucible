@@ -10,6 +10,12 @@ const initialState = {
       title: '',
     },
   ],
+  introductionText: [
+    {
+      type: 'paragraph',
+      children: [{ text: '' }],
+    },
+  ],
 };
 
 export const buildSlice = createSlice({
@@ -31,6 +37,9 @@ export const buildSlice = createSlice({
     setActiveVariant: (state, { payload }) => {
       state.activeVariant = payload || null;
     },
+    changeIntroductionText: (state, { payload }) => {
+      state.introductionText = payload || initialState.introductionText;
+    },
   },
 });
 
@@ -40,10 +49,12 @@ export const {
   editVariantTitle,
   removeVoidVariant,
   setActiveVariant,
+  changeIntroductionText,
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;
 export const selectBuildVariants = (state: RootState) => state.build.variants;
 export const selectActiveVariant = (state: RootState) => state.build.activeVariant;
+export const selectIntroductionText = (state: RootState) => state.build.introductionText;
 
 export default buildSlice.reducer;
