@@ -17,3 +17,11 @@ html {
 .theme-transition-scope {
   transition: var(--transition-theme);
 }
+
+.s1 {
+  fill: var(--secondary-color)
+}
+
+.s2 {
+  fill: var(--primary-color)
+}
