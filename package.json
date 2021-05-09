@@ -8,6 +8,7 @@
     "start": "NODE_ENV=production node server.js",
     "type-check": "tsc",
     "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
+    "svgr:trees": "npx @svgr/cli --svgo-config .svgo.json -d features/builds/components/SkillTree/3.14/components features/builds/components/SkillTree/3.14/svg --typescript --memo",
     "lint": "yarn eslint --fix",
     "clean-invalid-data-files": "node features/encounters/scripts/clean-invalid-data-files.js",
     "generate:encounters:indexed-search": "node features/encounters/scripts/build-indexed-search.js",
@@ -59,7 +60,7 @@
     "react-dom": "17.0.1",
     "react-hook-form": "^7.3.3",
     "react-redux": "^7.2.4",
-    "sass": "^1.32.8",
+    "sass": "^1.32.12",
     "slate": "^0.62.0",
     "slate-history": "^0.62.0",
     "slate-react": "^0.62.0"
@@ -95,6 +96,7 @@
     "js-yaml": "^4.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   }
 }
