@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8906.13 -1745.135 1450 1450" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8906.13 -3195.135 1450 1450" {...props}>
       <g
         style={{
           transform: 'translate(calc(50% - 465px),calc(50% - 380px))',
@@ -13,45 +13,45 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-662-53884"
           className="in-53884-61871"
-          d="M-8278.904-1265.29l135.744 72.85"
+          d="M-8278.904-2715.29l135.744 72.85"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-662-61871"
           className="in-53884-61871"
-          d="M-8278.904-1265.29l-140.296-81"
+          d="M-8278.904-2715.29l-140.296-81"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-10635-39790"
           className="in-39790-61871"
-          d="M-8278.904-1427.29l135.564-72.39"
+          d="M-8278.904-2877.29l135.564-72.39"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-10635-61871"
           className="in-39790-61871"
-          d="M-8278.904-1427.29l-140.296 81"
+          d="M-8278.904-2877.29l-140.296 81"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-19417-27055"
           className="in-27055-43193"
-          d="M-8709.319-1178.79l-149.147 56.317"
+          d="M-8709.319-2628.79l-149.147 56.317"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-19417-43193"
           className="in-27055-43193"
-          d="M-8709.319-1178.79l149.823-86.5"
+          d="M-8709.319-2628.79l149.823-86.5"
         />
         <path
-          d="M-8906.13-1269.168a493 493 0 0047.664 146.695"
+          d="M-8906.13-2719.168a493 493 0 0047.664 146.695"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -59,7 +59,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
           className="in-13851-19417"
         />
         <path
-          d="M-8129.422-947.445a493 493 0 00149.488-175.028"
+          d="M-8129.422-2397.445a493 493 0 00149.488-175.028"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -71,24 +71,24 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-37486-53884"
           className="in-48214-53884"
-          d="M-7979.934-1122.473l-163.226-69.967"
+          d="M-7979.934-2572.473l-163.226-69.967"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-39790-57222"
           className="in-10635-57222"
-          d="M-8143.34-1499.68l163.406-70.427"
+          d="M-8143.34-2949.68l163.406-70.427"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-43193-61871"
           className="in-19417-61871"
-          d="M-8559.496-1265.29l140.296-81"
+          d="M-8559.496-2715.29l140.296-81"
         />
         <path
-          d="M-7979.934-1570.107a493 493 0 00-149.488-175.028"
+          d="M-7979.934-3020.107a493 493 0 00-149.488-175.028"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -100,18 +100,18 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-60769-40059"
           className="in-40059-61871"
-          d="M-8084.2-1346.29h158"
+          d="M-8084.2-2796.29h158"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-60769-61871"
           className="in-40059-61871"
-          d="M-8084.2-1346.29h-335"
+          d="M-8084.2-2796.29h-335"
         />
         <circle
           cx={-8278.904}
-          cy={-1265.29}
+          cy={-2715.29}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-662"
@@ -119,7 +119,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8278.904}
-          cy={-1427.29}
+          cy={-2877.29}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-10635"
@@ -127,7 +127,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8906.13}
-          cy={-1269.168}
+          cy={-2719.168}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-13851"
@@ -135,7 +135,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8709.319}
-          cy={-1178.79}
+          cy={-2628.79}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-19417"
@@ -143,7 +143,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8858.466}
-          cy={-1122.473}
+          cy={-2572.473}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-27055"
@@ -151,7 +151,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8129.422}
-          cy={-1745.135}
+          cy={-3195.135}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-32816"
@@ -159,7 +159,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-7979.934}
-          cy={-1122.473}
+          cy={-2572.473}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-37486"
@@ -167,7 +167,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8143.34}
-          cy={-1499.68}
+          cy={-2949.68}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-39790"
@@ -175,7 +175,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-7926.2}
-          cy={-1346.29}
+          cy={-2796.29}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-40059"
@@ -183,7 +183,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8559.496}
-          cy={-1265.29}
+          cy={-2715.29}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-43193"
@@ -191,7 +191,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8129.422}
-          cy={-947.445}
+          cy={-2397.445}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-48214"
@@ -199,7 +199,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8143.16}
-          cy={-1192.44}
+          cy={-2642.44}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-53884"
@@ -207,7 +207,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-7979.934}
-          cy={-1570.107}
+          cy={-3020.107}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-57222"
@@ -215,7 +215,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8084.2}
-          cy={-1346.29}
+          cy={-2796.29}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-60769"
@@ -223,7 +223,7 @@ function SvgInquisitor(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8419.2}
-          cy={-1346.29}
+          cy={-2796.29}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-61871"

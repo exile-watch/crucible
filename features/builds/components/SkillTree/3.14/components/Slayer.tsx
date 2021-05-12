@@ -2,14 +2,14 @@ import * as React from 'react';
 
 function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1940.795 8229.329 1450 1450" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-490.795 8229.329 1450 1450" {...props}>
       <g
         style={{
           transform: 'translate(calc(50% - 475px),calc(50% - 320px))',
         }}
       >
         <path
-          d="M-1008.529 8474.383a493 493 0 00-149.488-175.028"
+          d="M441.471 8474.383a493 493 0 00-149.488-175.028"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -21,10 +21,10 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-10143-45696"
           className="in-34215-45696"
-          d="M-1008.529 8474.383l-149.147 56.317"
+          d="M441.471 8474.383L292.324 8530.7"
         />
         <path
-          d="M-1600.14 8229.33a493 493 0 00-137.433 70.025"
+          d="M-150.14 8229.33a493 493 0 00-137.433 70.025"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -32,7 +32,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="in-3184-62817"
         />
         <path
-          d="M-1737.573 8299.355a493 493 0 00-149.488 175.028"
+          d="M-287.573 8299.355a493 493 0 00-149.488 175.028"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -44,45 +44,45 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-20954-38180"
           className="in-38180-33795"
-          d="M-1112.795 8698.2h158"
+          d="M337.205 8698.2h158"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-20954-33795"
           className="in-38180-33795"
-          d="M-1112.795 8698.2h-335"
+          d="M337.205 8698.2h-335"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-33795-42293"
           className="in-20954-42293-45696-61393-50845-50986"
-          d="M-1447.795 8698.2l-290.119-167.5"
+          d="M2.205 8698.2l-290.119-167.5"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-33795-45696"
           className="in-20954-42293-45696-61393-50845-50986"
-          d="M-1447.795 8698.2l290.119-167.5"
+          d="M2.205 8698.2l290.119-167.5"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-33795-61393"
           className="in-20954-42293-45696-61393-50845-50986"
-          d="M-1447.795 8698.2h-335"
+          d="M2.205 8698.2h-335"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-33795-50845"
           className="in-20954-42293-45696-61393-50845-50986"
-          d="M-1447.795 8698.2l290.119 167.5"
+          d="M2.205 8698.2l290.119 167.5"
         />
         <path
-          d="M-1158.017 8299.355a493 493 0 00-137.433-70.026"
+          d="M291.983 8299.355a493 493 0 00-137.433-70.026"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -94,24 +94,24 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-42293-62817"
           className="in-33795-62817"
-          d="M-1737.914 8530.7l-149.147-56.317"
+          d="M-287.914 8530.7l-149.147-56.317"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-50845-16306"
           className="in-16306-33795"
-          d="M-1157.676 8865.7l149.147 56.317"
+          d="M292.324 8865.7l149.147 56.317"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-61393-17315"
           className="in-17315-33795"
-          d="M-1782.795 8698.2h-158"
+          d="M-332.795 8698.2h-158"
         />
         <circle
-          cx={-1600.14}
+          cx={-150.14}
           cy={8229.329}
           r={50}
           fill="var(--secondary-bg)"
@@ -119,7 +119,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-15286 s0 in-15286"
         />
         <circle
-          cx={-1008.529}
+          cx={441.471}
           cy={8474.383}
           r={50}
           fill="var(--secondary-bg)"
@@ -127,7 +127,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-34215-45696 s0 in-34215-45696"
         />
         <circle
-          cx={-1737.573}
+          cx={-287.573}
           cy={8299.355}
           r={30}
           fill="var(--secondary-bg)"
@@ -135,7 +135,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-3184-62817 s0 in-3184-62817"
         />
         <circle
-          cx={-1008.529}
+          cx={441.471}
           cy={8922.017}
           r={50}
           fill="var(--secondary-bg)"
@@ -143,7 +143,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-50845 s0 in-50845"
         />
         <circle
-          cx={-1940.795}
+          cx={-490.795}
           cy={8698.2}
           r={50}
           fill="var(--secondary-bg)"
@@ -151,7 +151,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-61393 s0 in-61393"
         />
         <circle
-          cx={-1112.795}
+          cx={337.205}
           cy={8698.2}
           r={30}
           fill="var(--secondary-bg)"
@@ -159,7 +159,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-38180-33795 s0 in-38180-33795"
         />
         <circle
-          cx={-1447.795}
+          cx={2.205}
           cy={8698.2}
           r={30}
           fill="var(--secondary-bg)"
@@ -167,7 +167,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-42293-45696-20954-61393-50845-50986 s0 in-20954-42293-45696-61393-50845-50986 root"
         />
         <circle
-          cx={-1158.017}
+          cx={291.983}
           cy={8299.355}
           r={30}
           fill="var(--secondary-bg)"
@@ -175,7 +175,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-34484-10143 s0 in-10143-34484"
         />
         <circle
-          cx={-1295.45}
+          cx={154.55}
           cy={8229.329}
           r={50}
           fill="var(--secondary-bg)"
@@ -183,7 +183,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-34215 s0 in-34215"
         />
         <circle
-          cx={-954.795}
+          cx={495.205}
           cy={8698.2}
           r={50}
           fill="var(--secondary-bg)"
@@ -191,7 +191,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-20954 s0 in-20954"
         />
         <circle
-          cx={-1737.914}
+          cx={-287.914}
           cy={8530.7}
           r={30}
           fill="var(--secondary-bg)"
@@ -199,7 +199,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-62817-33795 s0 in-33795-62817"
         />
         <circle
-          cx={-1157.676}
+          cx={292.324}
           cy={8530.7}
           r={30}
           fill="var(--secondary-bg)"
@@ -207,7 +207,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-10143-33795 s0 in-10143-33795"
         />
         <circle
-          cx={-1157.676}
+          cx={292.324}
           cy={8865.7}
           r={30}
           fill="var(--secondary-bg)"
@@ -215,7 +215,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-16306-33795 s0 in-16306-33795"
         />
         <circle
-          cx={-1782.795}
+          cx={-332.795}
           cy={8698.2}
           r={30}
           fill="var(--secondary-bg)"
@@ -223,7 +223,7 @@ function SvgSlayer(props: React.SVGProps<SVGSVGElement>) {
           className="out-17315-33795 s0 in-17315-33795"
         />
         <circle
-          cx={-1887.061}
+          cx={-437.061}
           cy={8474.383}
           r={50}
           fill="var(--secondary-bg)"

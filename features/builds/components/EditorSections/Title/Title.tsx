@@ -16,18 +16,19 @@ import { useDispatch, useSelector } from '#hooks/useStore';
 
 import styles from './Title.module.scss';
 
+type Event = { target: { value: string } };
+
 const Title = () => {
   const title = useSelector(selectBuildTitle);
   const variants = useSelector(selectBuildVariants);
   const activeVariant = useSelector(selectActiveVariant);
   const dispatch = useDispatch();
 
-  const handleTitleChange = ({ target: { value } }) => {
+  const handleTitleChange = ({ target: { value } }: Event) => {
     dispatch(editTitle(value));
   };
-  const handleVariantTitleChange = ({ target: { value } }, variantId) => {
+  const handleVariantTitleChange = ({ target: { value } }: Event, variantId: number) => {
     dispatch(editVariantTitle({ value, variantId }));
-    dispatch(setActiveVariant(value));
 
     if (variants.length === 1) dispatch(addVoidVariant());
 
@@ -48,9 +49,8 @@ const Title = () => {
     }
   };
 
-  const handleVariantTitleClick = (variantTitle) => {
-    if (variantTitle.length === 0) return;
-    dispatch(setActiveVariant(variantTitle));
+  const handleVariantTitleClick = (variantId: number) => {
+    dispatch(setActiveVariant(variantId));
   };
 
   return (
@@ -91,6 +91,7 @@ const Title = () => {
                 <input
                   placeholder="Enter build variant title here"
                   className={cx('theme-transition-scope', styles.input)}
+                  onClick={() => handleVariantTitleClick(0)}
                   onChange={(e) => handleVariantTitleChange(e, 0)}
                 />
               </Heading>
@@ -105,13 +106,15 @@ const Title = () => {
                 placeholder="Enter build variant title here"
                 className={cx('theme-transition-scope', styles.input)}
                 value={variant.title}
-                onClick={() => handleVariantTitleClick(variant.title)}
+                onClick={() => handleVariantTitleClick(variantId)}
                 onChange={(e) => handleVariantTitleChange(e, variantId)}
               />
             </Heading>
           ))}
       </div>
-      {variants.length > 1 && <div>Currently adding content for {activeVariant}. </div>}
+      {variants.length > 1 && (
+        <div>Currently adding content for {variants[activeVariant].title}. </div>
+      )}
     </>
   );
 };

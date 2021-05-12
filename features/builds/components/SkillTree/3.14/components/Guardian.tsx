@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8419.2 -4733.22 1450 1450" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8419.2 -3283.22 1450 1450" {...props}>
       <g
         style={{
           transform: 'translate(calc(50% - 220px),calc(50% - 480px))',
@@ -13,38 +13,38 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-409-37419"
           className="in-37419-32364-46952-32992-40010-61525"
-          d="M-8419.2-4246.29l290.119-167.5"
+          d="M-8419.2-2796.29l290.119-167.5"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-409-32364"
           className="in-37419-32364-46952-32992-40010-61525"
-          d="M-8419.2-4246.29h335"
+          d="M-8419.2-2796.29h335"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-409-46952"
           className="in-37419-32364-46952-32992-40010-61525"
-          d="M-8419.2-4246.29l81-140.296"
+          d="M-8419.2-2796.29l81-140.296"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-409-32992"
           className="in-37419-32364-46952-32992-40010-61525"
-          d="M-8419.2-4246.29l81 140.296"
+          d="M-8419.2-2796.29l81 140.296"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-409-40010"
           className="in-37419-32364-46952-32992-40010-61525"
-          d="M-8419.2-4246.29l290.119 167.5"
+          d="M-8419.2-2796.29l290.119 167.5"
         />
         <path
-          d="M-8195.383-3807.024a493 493 0 00215.45-215.449"
+          d="M-8195.383-2357.024a493 493 0 00215.45-215.449"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -56,10 +56,10 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-4494-40010"
           className="in-16745-40010"
-          d="M-7979.934-4022.473l-149.147-56.317"
+          d="M-7979.934-2572.473l-149.147-56.317"
         />
         <path
-          d="M-8342.078-3759.36a493 493 0 00146.695-47.664"
+          d="M-8342.078-2309.36a493 493 0 00146.695-47.664"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -67,7 +67,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
           className="in-4494-19641"
         />
         <path
-          d="M-8195.383-4685.556a493 493 0 00-146.695-47.664"
+          d="M-8195.383-3235.556a493 493 0 00-146.695-47.664"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -75,7 +75,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
           className="in-64768-42264"
         />
         <path
-          d="M-7979.934-4470.107a493 493 0 00-215.449-215.45"
+          d="M-7979.934-3020.107a493 493 0 00-215.449-215.45"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -87,32 +87,32 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-32364-55146"
           className="in-409-55146"
-          d="M-8084.2-4246.29h158"
+          d="M-8084.2-2796.29h158"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-32992-39728"
           className="in-409-39728"
-          d="M-8338.2-4105.994l86.5 149.823"
+          d="M-8338.2-2655.994l86.5 149.823"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-37419-42264"
           className="in-409-42264"
-          d="M-8129.081-4413.79l149.147-56.317"
+          d="M-8129.081-2963.79l149.147-56.317"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-46952-61372"
           className="in-409-61372"
-          d="M-8338.2-4386.586l86.5-149.823"
+          d="M-8338.2-2936.586l86.5-149.823"
         />
         <circle
           cx={-8419.2}
-          cy={-4246.29}
+          cy={-2796.29}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-409"
@@ -120,7 +120,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-7979.934}
-          cy={-4022.473}
+          cy={-2572.473}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-4494"
@@ -128,7 +128,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8195.383}
-          cy={-3807.024}
+          cy={-2357.024}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-16745"
@@ -136,7 +136,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8342.078}
-          cy={-3759.36}
+          cy={-2309.36}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-19641"
@@ -144,7 +144,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8195.383}
-          cy={-4685.556}
+          cy={-3235.556}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-20050"
@@ -152,7 +152,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8084.2}
-          cy={-4246.29}
+          cy={-2796.29}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-32364"
@@ -160,7 +160,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8338.2}
-          cy={-4105.994}
+          cy={-2655.994}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-32992"
@@ -168,7 +168,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8129.081}
-          cy={-4413.79}
+          cy={-2963.79}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-37419"
@@ -176,7 +176,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8251.7}
-          cy={-3956.171}
+          cy={-2506.171}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-39728"
@@ -184,7 +184,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8129.081}
-          cy={-4078.79}
+          cy={-2628.79}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-40010"
@@ -192,7 +192,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-7979.934}
-          cy={-4470.107}
+          cy={-3020.107}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-42264"
@@ -200,7 +200,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8338.2}
-          cy={-4386.586}
+          cy={-2936.586}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-46952"
@@ -208,7 +208,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-7926.2}
-          cy={-4246.29}
+          cy={-2796.29}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-55146"
@@ -216,7 +216,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8251.7}
-          cy={-4536.409}
+          cy={-3086.409}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-61372"
@@ -224,7 +224,7 @@ function SvgGuardian(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8342.078}
-          cy={-4733.22}
+          cy={-3283.22}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-64768"

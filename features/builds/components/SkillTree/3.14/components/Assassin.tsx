@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="9151 -1784.566 1450 1450" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="9151 -3234.566 1450 1450" {...props}>
       <g
         style={{
           transform: 'translate(calc(50% - 475px),calc(50% - 450px))',
@@ -13,66 +13,66 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-1945-23024"
           className="in-23024-33954"
-          d="M9353.881-1512.8l-149.147-56.317"
+          d="M9353.881-2962.8l-149.147-56.317"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-1945-33954"
           className="in-23024-33954"
-          d="M9353.881-1512.8l149.823 86.5"
+          d="M9353.881-2962.8l149.823 86.5"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-4242-55686"
           className="in-55686-12850"
-          d="M9476.5-1055.181l-56.317 149.147"
+          d="M9476.5-2505.181l-56.317 149.147"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-4242-12850"
           className="in-55686-12850"
-          d="M9476.5-1055.181l86.5-149.823"
+          d="M9476.5-2505.181l86.5-149.823"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-6064-19083"
           className="in-19083-58229"
-          d="M9353.881-1177.8l-149.147 56.317"
+          d="M9353.881-2627.8l-149.147 56.317"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-6064-58229"
           className="in-19083-58229"
-          d="M9353.881-1177.8L9644-1345.3"
+          d="M9353.881-2627.8L9644-2795.3"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-9014-21264"
           className="in-21264-58229"
-          d="M9309-1345.3h-158"
+          d="M9309-2795.3h-158"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-9014-58229"
           className="in-21264-58229"
-          d="M9309-1345.3h335"
+          d="M9309-2795.3h335"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-12850-58229"
           className="in-4242-58229"
-          d="M9563-1205.004l81-140.296"
+          d="M9563-2655.004l81-140.296"
         />
         <path
-          d="M9420.183-1784.566a493 493 0 00-215.45 215.449"
+          d="M9420.183-3234.566a493 493 0 00-215.45 215.449"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -84,24 +84,24 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-33954-58229"
           className="in-1945-58229"
-          d="M9503.704-1426.3l140.296 81"
+          d="M9503.704-2876.3l140.296 81"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-43215-28782"
           className="in-28782-58229"
-          d="M9784.296-1264.3l346.634-3.878"
+          d="M9784.296-2714.3l346.634-3.878"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-43215-58229"
           className="in-28782-58229"
-          d="M9784.296-1264.3l-140.296-81"
+          d="M9784.296-2714.3l-140.296-81"
         />
         <path
-          d="M9420.183-906.034A493 493 0 009644-852.3"
+          d="M9420.183-2356.034A493 493 0 009644-2302.3"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -110,7 +110,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9353.881}
-          cy={-1512.8}
+          cy={-2962.8}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-1945"
@@ -118,7 +118,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9476.5}
-          cy={-1055.181}
+          cy={-2505.181}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-4242"
@@ -126,7 +126,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9353.881}
-          cy={-1177.8}
+          cy={-2627.8}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-6064"
@@ -134,7 +134,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9309}
-          cy={-1345.3}
+          cy={-2795.3}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-9014"
@@ -142,7 +142,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9563}
-          cy={-1205.004}
+          cy={-2655.004}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-12850"
@@ -150,7 +150,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9204.734}
-          cy={-1121.483}
+          cy={-2571.483}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-19083"
@@ -158,7 +158,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9420.183}
-          cy={-1784.566}
+          cy={-3234.566}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-19598"
@@ -166,7 +166,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9151}
-          cy={-1345.3}
+          cy={-2795.3}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-21264"
@@ -174,7 +174,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9204.734}
-          cy={-1569.117}
+          cy={-3019.117}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-23024"
@@ -182,7 +182,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={10130.93}
-          cy={-1268.178}
+          cy={-2718.178}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-28782"
@@ -190,7 +190,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9503.704}
-          cy={-1426.3}
+          cy={-2876.3}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-33954"
@@ -198,7 +198,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9784.296}
-          cy={-1264.3}
+          cy={-2714.3}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-43215"
@@ -206,7 +206,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9644}
-          cy={-852.3}
+          cy={-2302.3}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-48239"
@@ -214,7 +214,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9420.183}
-          cy={-906.034}
+          cy={-2356.034}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-55686"
@@ -222,7 +222,7 @@ function SvgAssassin(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={9644}
-          cy={-1345.3}
+          cy={-2795.3}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-58229"

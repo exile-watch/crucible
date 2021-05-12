@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8758.7 3818.114 1450 1450" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8758.7 2368.114 1450 1450" {...props}>
       <g
         style={{
           transform: 'translate(calc(50% - 400px),calc(50% - 460px))',
@@ -13,17 +13,17 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-982-5029"
           className="in-5029-24704"
-          d="M-8251.7 4547.499l56.317 149.147"
+          d="M-8251.7 3097.499l56.317 149.147"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-982-24704"
           className="in-5029-24704"
-          d="M-8251.7 4547.499l-167.5-290.119"
+          d="M-8251.7 3097.499l-167.5-290.119"
         />
         <path
-          d="M-8677.7 4715.956a162 162 0 00162 0"
+          d="M-8677.7 3265.956a162 162 0 00162 0"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -31,7 +31,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
           className="in-14996-42659"
         />
         <path
-          d="M-8758.7 4575.66a162 162 0 0081 140.296"
+          d="M-8758.7 3125.66a162 162 0 0081 140.296"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -43,73 +43,73 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-5643-31667"
           className="in-31667-24704"
-          d="M-8129.081 4424.88l149.147 56.317"
+          d="M-8129.081 2974.88l149.147 56.317"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-5643-24704"
           className="in-31667-24704"
-          d="M-8129.081 4424.88l-290.119-167.5"
+          d="M-8129.081 2974.88l-290.119-167.5"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-6028-53095"
           className="in-53095-24704"
-          d="M-8129.081 4089.88l149.147-56.317"
+          d="M-8129.081 2639.88l149.147-56.317"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-6028-24704"
           className="in-53095-24704"
-          d="M-8129.081 4089.88l-290.119 167.5"
+          d="M-8129.081 2639.88l-290.119 167.5"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-9190-48480"
           className="in-48480-24704"
-          d="M-8084.2 4257.38h158"
+          d="M-8084.2 2807.38h158"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-9190-24704"
           className="in-48480-24704"
-          d="M-8084.2 4257.38h-335"
+          d="M-8084.2 2807.38h-335"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-9971-50692"
           className="in-50692-24704"
-          d="M-8559.496 4338.38l-118.204 96.984"
+          d="M-8559.496 2888.38l-118.204 96.984"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-9971-24704"
           className="in-50692-24704"
-          d="M-8559.496 4338.38l140.296-81"
+          d="M-8559.496 2888.38l140.296-81"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-10238-61355"
           className="in-61355-24704"
-          d="M-8419.2 4419.38l-15.5 156.28"
+          d="M-8419.2 2969.38l-15.5 156.28"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-10238-24704"
           className="in-61355-24704"
-          d="M-8419.2 4419.38v-162"
+          d="M-8419.2 2969.38v-162"
         />
         <path
-          d="M-8515.7 4715.956a162 162 0 0081-140.296"
+          d="M-8515.7 3265.956a162 162 0 0081-140.296"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -121,10 +121,10 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-24704-47486"
           className="in-982-5643-6028-9190-9971-10238-47486-47175"
-          d="M-8419.2 4257.38l167.5-290.119"
+          d="M-8419.2 2807.38l167.5-290.119"
         />
         <path
-          d="M-8677.7 4435.364a162 162 0 00-81 140.296"
+          d="M-8677.7 2985.364a162 162 0 00-81 140.296"
           stroke="var(--secondary-bg)"
           fill="transparent"
           strokeWidth={30}
@@ -136,11 +136,11 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
           strokeWidth={30}
           id="skill-47486-32249"
           className="in-24704-32249"
-          d="M-8251.7 3967.261l56.317-149.147"
+          d="M-8251.7 2517.261l56.317-149.147"
         />
         <circle
           cx={-8251.7}
-          cy={4547.499}
+          cy={3097.499}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-982"
@@ -148,7 +148,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8677.7}
-          cy={4715.956}
+          cy={3265.956}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-1731"
@@ -156,7 +156,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8195.383}
-          cy={4696.646}
+          cy={3246.646}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-5029"
@@ -164,7 +164,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8129.081}
-          cy={4424.88}
+          cy={2974.88}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-5643"
@@ -172,7 +172,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8129.081}
-          cy={4089.88}
+          cy={2639.88}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-6028"
@@ -180,7 +180,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8084.2}
-          cy={4257.38}
+          cy={2807.38}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-9190"
@@ -188,7 +188,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8559.496}
-          cy={4338.38}
+          cy={2888.38}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-9971"
@@ -196,7 +196,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8419.2}
-          cy={4419.38}
+          cy={2969.38}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-10238"
@@ -204,7 +204,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8515.7}
-          cy={4715.956}
+          cy={3265.956}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-14996"
@@ -212,7 +212,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8419.2}
-          cy={4257.38}
+          cy={2807.38}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-24704"
@@ -220,7 +220,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-7979.934}
-          cy={4481.197}
+          cy={3031.197}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-31667"
@@ -228,7 +228,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8195.383}
-          cy={3818.114}
+          cy={2368.114}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-32249"
@@ -236,7 +236,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8758.7}
-          cy={4575.66}
+          cy={3125.66}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-42659"
@@ -244,7 +244,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8251.7}
-          cy={3967.261}
+          cy={2517.261}
           r={30}
           fill="var(--secondary-bg)"
           id="skill-47486"
@@ -252,7 +252,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-7926.2}
-          cy={4257.38}
+          cy={2807.38}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-48480"
@@ -260,7 +260,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8677.7}
-          cy={4435.364}
+          cy={2985.364}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-50692"
@@ -268,7 +268,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-7979.934}
-          cy={4033.563}
+          cy={2583.563}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-53095"
@@ -276,7 +276,7 @@ function SvgChieftain(props: React.SVGProps<SVGSVGElement>) {
         />
         <circle
           cx={-8434.7}
-          cy={4575.66}
+          cy={3125.66}
           r={50}
           fill="var(--secondary-bg)"
           id="skill-61355"

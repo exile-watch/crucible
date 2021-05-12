@@ -1,3 +1,4 @@
+export { default as AscendancyProgress } from './AscendancyProgress/AscendancyProgress';
 export { default as Changelog } from './Changelog/Changelog';
 export { default as Concept } from './Concept/Concept';
 export { default as Considerations } from './Considerations/Considerations';
