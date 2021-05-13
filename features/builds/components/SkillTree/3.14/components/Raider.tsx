@@ -12,28 +12,24 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-4849-27536"
-          className="in-27536-12146"
           d="M9644 2474.73v173"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-4849-12146"
-          className="in-27536-12146"
           d="M9644 2474.73v-158"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-5926-31364"
-          className="in-31364-58427"
           d="M9503.704 2890.73l-149.823 86.5"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-5926-58427"
-          className="in-31364-58427"
           d="M9503.704 2890.73l140.296-81"
         />
         <path
@@ -42,7 +38,6 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-11597-12146"
-          className="in-12146"
         />
         <path
           d="M9420.183 2370.464a493 493 0 00-215.45 215.449"
@@ -50,41 +45,35 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-15550-55509"
-          className="in-55509-33645"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-15550-33645"
-          className="in-55509-33645"
           d="M9204.734 2585.913l149.147 56.317"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-24432-33645"
-          className="in-33645-58427"
           d="M9503.704 2728.73l-149.823-86.5"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-24432-58427"
-          className="in-33645-58427"
           d="M9503.704 2728.73l140.296 81"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-27536-58427"
-          className="in-4849-58427"
           d="M9644 2647.73v162"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-31364-53421"
-          className="in-5926-53421"
           d="M9353.881 2977.23l-149.147 56.317"
         />
         <path
@@ -93,7 +82,6 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-53421-16848"
-          className="in-16848-31364"
         />
         <circle
           cx={9644}
@@ -101,7 +89,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-4849"
-          className="out-27536-12146 s0 in-27536-12146"
+          className="out-27536-12146 s0"
         />
         <circle
           cx={9503.704}
@@ -109,7 +97,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-5926"
-          className="out-31364-58427 s0 in-31364-58427"
+          className="out-31364-58427 s0"
         />
         <circle
           cx={9796.345}
@@ -117,7 +105,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-11597"
-          className="out-12146 s0 in-12146"
+          className="out-12146 s0"
         />
         <circle
           cx={9644}
@@ -125,7 +113,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-12146"
-          className="out-4849-11597 s0 in-4849-11597"
+          className="out-4849-11597 s0"
         />
         <circle
           cx={9204.734}
@@ -133,7 +121,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-15550"
-          className="out-55509-33645 s0 in-55509-33645"
+          className="out-55509-33645 s0"
         />
         <circle
           cx={9151}
@@ -141,7 +129,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-16848"
-          className="out-53421 s0 in-53421"
+          className="out-53421 s0"
         />
         <circle
           cx={9503.704}
@@ -149,7 +137,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-24432"
-          className="out-33645-58427 s0 in-33645-58427"
+          className="out-33645-58427 s0"
         />
         <circle
           cx={9644}
@@ -157,7 +145,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-27536"
-          className="out-4849-58427 s0 in-4849-58427"
+          className="out-4849-58427 s0"
         />
         <circle
           cx={9353.881}
@@ -165,7 +153,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-31364"
-          className="out-53421-5926 s0 in-5926-53421"
+          className="out-53421-5926 s0"
         />
         <circle
           cx={9353.881}
@@ -173,7 +161,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-33645"
-          className="out-15550-24432 s0 in-15550-24432"
+          className="out-15550-24432 s0"
         />
         <circle
           cx={9204.734}
@@ -181,7 +169,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-53421"
-          className="out-16848-31364 s0 in-16848-31364"
+          className="out-16848-31364 s0"
         />
         <circle
           cx={9420.183}
@@ -189,7 +177,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-55509"
-          className="out-15550 s0 in-15550"
+          className="out-15550 s0"
         />
         <circle
           cx={9644}
@@ -197,7 +185,7 @@ function SvgRaider(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-58427"
-          className="out-27536-5926-24432-50459 s0 in-5926-24432-27536-50459 root"
+          className="out-27536-5926-24432-50459 s0 root"
         />
       </g>
     </svg>

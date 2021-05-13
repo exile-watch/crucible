@@ -12,14 +12,12 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-1729-2872"
-          className="in-2872-56856"
           d="M9353.881 2642.23l-178.752 15.155"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-1729-56856"
-          className="in-2872-56856"
           d="M9353.881 2642.23L9644 2809.73"
         />
         <path
@@ -28,20 +26,17 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-2872-62136"
-          className="in-1729-62136"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-5082-61627"
-          className="in-61627-56856"
           d="M9644 2647.73v-173"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-5082-56856"
-          className="in-61627-56856"
           d="M9644 2647.73v162"
         />
         <path
@@ -50,27 +45,23 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-22852-23169"
-          className="in-23169-24848"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-22852-24848"
-          className="in-23169-24848"
           d="M9151 2809.73h158"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-24848-59837"
-          className="in-22852-59837"
           d="M9309 2809.73h173"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-26067-56134"
-          className="in-56134-62136-64028"
           d="M9491.655 2340.859l-15.155 178.752"
         />
         <path
@@ -79,7 +70,6 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-26067-62136"
-          className="in-56134-62136-64028"
         />
         <path
           d="M9721.122 2322.8a493 493 0 00-229.467 18.06"
@@ -87,20 +77,17 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-26067-64028"
-          className="in-56134-62136-64028"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-28995-45313"
-          className="in-45313-56856"
           d="M9811.5 2519.611l122.278-108.726"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-28995-56856"
-          className="in-45313-56856"
           d="M9811.5 2519.611L9644 2809.73"
         />
         <path
@@ -109,7 +96,6 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-45313-64028"
-          className="in-28995-64028"
         />
         <path
           d="M9353.881 2977.23a335 335 0 00122.619 122.619"
@@ -117,13 +103,11 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-53086-5443"
-          className="in-5443-56856"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-53086-56856"
-          className="in-5443-56856"
           d="M9353.881 2977.23L9644 2809.73"
         />
         <path
@@ -132,13 +116,11 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-55985-44482"
-          className="in-44482-56856"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-55985-56856"
-          className="in-44482-56856"
           d="M9563 2950.026l81-140.296"
         />
         <path
@@ -147,13 +129,11 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-56134-61627"
-          className="in-26067-61627"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-56856-59837"
-          className="in-1729-5082-28995-50459-53086-55985-59837"
           d="M9644 2809.73h-162"
         />
         <circle
@@ -162,7 +142,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-1729"
-          className="out-2872-56856 s0 in-2872-56856"
+          className="out-2872-56856 s0"
         />
         <circle
           cx={9175.129}
@@ -170,7 +150,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-2872"
-          className="out-62136-1729 s0 in-1729-62136"
+          className="out-62136-1729 s0"
         />
         <circle
           cx={9644}
@@ -178,7 +158,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-5082"
-          className="out-61627-56856 s0 in-61627-56856"
+          className="out-61627-56856 s0"
         />
         <circle
           cx={9476.5}
@@ -186,7 +166,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-5443"
-          className="out-53086 s0 in-53086"
+          className="out-53086 s0"
         />
         <circle
           cx={9151}
@@ -194,7 +174,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-22852"
-          className="out-23169-24848 s0 in-23169-24848"
+          className="out-23169-24848 s0"
         />
         <circle
           cx={9204.734}
@@ -202,7 +182,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-23169"
-          className="out-22852 s0 in-22852"
+          className="out-22852 s0"
         />
         <circle
           cx={9309}
@@ -210,7 +190,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-24848"
-          className="out-22852-59837 s0 in-22852-59837"
+          className="out-22852-59837 s0"
         />
         <circle
           cx={9491.655}
@@ -218,7 +198,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-26067"
-          className="out-56134-62136-64028 s0 in-56134-62136-64028"
+          className="out-56134-62136-64028 s0"
         />
         <circle
           cx={9811.5}
@@ -226,7 +206,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-28995"
-          className="out-45313-56856 s0 in-45313-56856"
+          className="out-45313-56856 s0"
         />
         <circle
           cx={9725}
@@ -234,7 +214,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-44482"
-          className="out-55985 s0 in-55985"
+          className="out-55985 s0"
         />
         <circle
           cx={9933.778}
@@ -242,7 +222,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-45313"
-          className="out-64028-28995 s0 in-28995-64028"
+          className="out-64028-28995 s0"
         />
         <circle
           cx={9353.881}
@@ -250,7 +230,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-53086"
-          className="out-5443-56856 s0 in-5443-56856"
+          className="out-5443-56856 s0"
         />
         <circle
           cx={9563}
@@ -258,7 +238,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-55985"
-          className="out-44482-56856 s0 in-44482-56856"
+          className="out-44482-56856 s0"
         />
         <circle
           cx={9476.5}
@@ -266,7 +246,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-56134"
-          className="out-26067-61627 s0 in-26067-61627"
+          className="out-26067-61627 s0"
         />
         <circle
           cx={9644}
@@ -274,7 +254,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-56856"
-          className="out-5082-55985-28995-53086-59837-1729-50459 s0 in-1729-5082-28995-50459-53086-55985-59837 root"
+          className="out-5082-55985-28995-53086-59837-1729-50459 s0 root"
         />
         <circle
           cx={9482}
@@ -282,7 +262,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-59837"
-          className="out-24848-56856 s0 in-24848-56856"
+          className="out-24848-56856 s0"
         />
         <circle
           cx={9644}
@@ -290,7 +270,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-61627"
-          className="out-56134-5082 s0 in-5082-56134"
+          className="out-56134-5082 s0"
         />
         <circle
           cx={9295.396}
@@ -298,7 +278,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-62136"
-          className="out-26067-2872 s0 in-2872-26067"
+          className="out-26067-2872 s0"
         />
         <circle
           cx={9721.122}
@@ -306,7 +286,7 @@ function SvgDeadeye(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-64028"
-          className="out-26067-45313 s0 in-26067-45313"
+          className="out-26067-45313 s0"
         />
       </g>
     </svg>

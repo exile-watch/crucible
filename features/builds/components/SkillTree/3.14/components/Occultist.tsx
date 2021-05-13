@@ -12,70 +12,60 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-6728-62504"
-          className="in-62504-18378"
           d="M288.284-8164.5l178.752-15.155"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-6728-18378"
-          className="in-62504-18378"
           d="M288.284-8164.5L-1.835-8332"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-17018-31344"
-          className="in-31344-18378"
           d="M-291.954-8164.5l-178.752-15.155"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-17018-18378"
-          className="in-31344-18378"
           d="M-291.954-8164.5L-1.835-8332"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-18378-48124"
-          className="in-6728-17018-48124-31984-32417-54447"
           d="M-1.835-8332l167.5 290.119"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-18378-31984"
-          className="in-6728-17018-48124-31984-32417-54447"
           d="M-1.835-8332l-167.5 290.119"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-18378-32417"
-          className="in-6728-17018-48124-31984-32417-54447"
           d="M-1.835-8332v162"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-27096-31316"
-          className="in-31316-43242-32417"
           d="M-1.835-7997l-77.122 151.93"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-27096-43242"
-          className="in-31316-43242-32417"
           d="M-1.835-7997l77.122 151.93"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-27096-32417"
-          className="in-31316-43242-32417"
           d="M-1.835-7997v-173"
         />
         <path
@@ -84,13 +74,11 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-31316-25309"
-          className="in-25309-27096"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-31984-37127"
-          className="in-18378-37127"
           d="M-169.335-8041.881l-231.345-.341"
         />
         <path
@@ -99,13 +87,11 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-43242-47630"
-          className="in-27096-47630"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-48124-37492"
-          className="in-18378-37492"
           d="M165.665-8041.881l231.345-.341"
         />
         <circle
@@ -114,7 +100,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-6728"
-          className="out-62504-18378 s0 in-62504-18378"
+          className="out-62504-18378 s0"
         />
         <circle
           cx={-291.954}
@@ -122,7 +108,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-17018"
-          className="out-31344-18378 s0 in-31344-18378"
+          className="out-31344-18378 s0"
         />
         <circle
           cx={-1.835}
@@ -130,7 +116,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-18378"
-          className="out-48124-6728-31984-32417-17018-54447 s0 in-6728-17018-48124-31984-32417-54447 root"
+          className="out-48124-6728-31984-32417-17018-54447 s0 root"
         />
         <circle
           cx={-225.652}
@@ -138,7 +124,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-25309"
-          className="out-31316 s0 in-31316"
+          className="out-31316 s0"
         />
         <circle
           cx={-1.835}
@@ -146,7 +132,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-27096"
-          className="out-31316-43242-32417 s0 in-31316-43242-32417"
+          className="out-31316-43242-32417 s0"
         />
         <circle
           cx={-78.957}
@@ -154,7 +140,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-31316"
-          className="out-25309-27096 s0 in-25309-27096"
+          className="out-25309-27096 s0"
         />
         <circle
           cx={-470.706}
@@ -162,7 +148,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-31344"
-          className="out-17018 s0 in-17018"
+          className="out-17018 s0"
         />
         <circle
           cx={-169.335}
@@ -170,7 +156,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-31984"
-          className="out-37127-18378 s0 in-18378-37127"
+          className="out-37127-18378 s0"
         />
         <circle
           cx={-1.835}
@@ -178,7 +164,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-32417"
-          className="out-27096-18378 s0 in-18378-27096"
+          className="out-27096-18378 s0"
         />
         <circle
           cx={-400.68}
@@ -186,7 +172,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-37127"
-          className="out-31984 s0 in-31984"
+          className="out-31984 s0"
         />
         <circle
           cx={397.01}
@@ -194,7 +180,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-37492"
-          className="out-48124 s0 in-48124"
+          className="out-48124 s0"
         />
         <circle
           cx={75.287}
@@ -202,7 +188,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-43242"
-          className="out-47630-27096 s0 in-27096-47630"
+          className="out-47630-27096 s0"
         />
         <circle
           cx={221.982}
@@ -210,7 +196,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-47630"
-          className="out-43242 s0 in-43242"
+          className="out-43242 s0"
         />
         <circle
           cx={165.665}
@@ -218,7 +204,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-48124"
-          className="out-37492-18378 s0 in-18378-37492"
+          className="out-37492-18378 s0"
         />
         <circle
           cx={467.036}
@@ -226,7 +212,7 @@ function SvgOccultist(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-62504"
-          className="out-6728 s0 in-6728"
+          className="out-6728 s0"
         />
       </g>
     </svg>

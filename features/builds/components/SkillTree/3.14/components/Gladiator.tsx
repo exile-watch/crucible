@@ -12,14 +12,12 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-1675-8419"
-          className="in-8419-32730"
           d="M-138.091 8617.2l-298.97-142.817"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-1675-32730"
-          className="in-8419-32730"
           d="M-138.091 8617.2l140.296 81"
         />
         <path
@@ -28,13 +26,11 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-3651-52575"
-          className="in-52575-32730"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-3651-32730"
-          className="in-52575-32730"
           d="M-165.295 8408.081L2.205 8698.2"
         />
         <path
@@ -43,7 +39,6 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-8419-24538"
-          className="in-1675-24538-37623"
         />
         <path
           d="M2.205 8205.2a493 493 0 00-439.266 269.183"
@@ -51,7 +46,6 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-8419-37623"
-          className="in-1675-24538-37623"
         />
         <path
           d="M-332.795 8698.2a335 335 0 0044.881 167.5"
@@ -59,13 +53,11 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-14726-758"
-          className="in-758-32730"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-14726-32730"
-          className="in-758-32730"
           d="M-332.795 8698.2h335"
         />
         <path
@@ -74,13 +66,11 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-15616-33179"
-          className="in-33179-48760"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-15616-48760"
-          className="in-33179-48760"
           d="M337.205 8698.2h-173"
         />
         <path
@@ -89,13 +79,11 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-24538-2598"
-          className="in-2598-8419"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-32730-48760"
-          className="in-1675-3651-14726-48760-50986"
           d="M2.205 8698.2h162"
         />
         <path
@@ -104,7 +92,6 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-33179-27864"
-          className="in-15616-27864"
         />
         <path
           d="M226.022 8258.934A493 493 0 002.205 8205.2"
@@ -112,7 +99,6 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-37623-63490"
-          className="in-8419-63490"
         />
         <circle
           cx={-287.914}
@@ -120,7 +106,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-758"
-          className="out-14726 s0 in-14726"
+          className="out-14726 s0"
         />
         <circle
           cx={-138.091}
@@ -128,7 +114,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-1675"
-          className="out-8419-32730 s0 in-8419-32730"
+          className="out-8419-32730 s0"
         />
         <circle
           cx={-484.725}
@@ -136,7 +122,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-2598"
-          className="out-24538 s0 in-24538"
+          className="out-24538 s0"
         />
         <circle
           cx={-165.295}
@@ -144,7 +130,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-3651"
-          className="out-52575-32730 s0 in-52575-32730"
+          className="out-52575-32730 s0"
         />
         <circle
           cx={-437.061}
@@ -152,7 +138,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-8419"
-          className="out-24538-37623-1675 s0 in-1675-24538-37623"
+          className="out-24538-37623-1675 s0"
         />
         <circle
           cx={-332.795}
@@ -160,7 +146,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-14726"
-          className="out-758-32730 s0 in-758-32730"
+          className="out-758-32730 s0"
         />
         <circle
           cx={337.205}
@@ -168,7 +154,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-15616"
-          className="out-33179-48760 s0 in-33179-48760"
+          className="out-33179-48760 s0"
         />
         <circle
           cx={-484.725}
@@ -176,7 +162,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-24538"
-          className="out-2598-8419 s0 in-2598-8419"
+          className="out-2598-8419 s0"
         />
         <circle
           cx={169.705}
@@ -184,7 +170,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-27864"
-          className="out-33179 s0 in-33179"
+          className="out-33179 s0"
         />
         <circle
           cx={2.205}
@@ -192,7 +178,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-32730"
-          className="out-3651-1675-48760-14726-50986 s0 in-1675-3651-14726-48760-50986 root"
+          className="out-3651-1675-48760-14726-50986 s0 root"
         />
         <circle
           cx={292.324}
@@ -200,7 +186,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-33179"
-          className="out-27864-15616 s0 in-15616-27864"
+          className="out-27864-15616 s0"
         />
         <circle
           cx={2.205}
@@ -208,7 +194,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-37623"
-          className="out-63490-8419 s0 in-8419-63490"
+          className="out-63490-8419 s0"
         />
         <circle
           cx={164.205}
@@ -216,7 +202,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-48760"
-          className="out-15616-32730 s0 in-15616-32730"
+          className="out-15616-32730 s0"
         />
         <circle
           cx={2.205}
@@ -224,7 +210,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-52575"
-          className="out-3651 s0 in-3651"
+          className="out-3651 s0"
         />
         <circle
           cx={226.022}
@@ -232,7 +218,7 @@ function SvgGladiator(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-63490"
-          className="out-37623 s0 in-37623"
+          className="out-37623 s0"
         />
       </g>
     </svg>

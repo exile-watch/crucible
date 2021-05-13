@@ -12,49 +12,42 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-869-28535"
-          className="in-28535-18635"
           d="M9476.5-3085.419l-122.278-108.726"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-869-18635"
-          className="in-28535-18635"
           d="M9476.5-3085.419L9644-2795.3"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-18635-25167"
-          className="in-869-25167-63135-64842-41081-44683"
           d="M9644-2795.3h-335"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-18635-63135"
-          className="in-869-25167-63135-64842-41081-44683"
           d="M9644-2795.3v-162"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-18635-64842"
-          className="in-869-25167-63135-64842-41081-44683"
           d="M9644-2795.3l-140.296 81"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-18635-41081"
-          className="in-869-25167-63135-64842-41081-44683"
           d="M9644-2795.3l-290.119-167.5"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-25167-51462"
-          className="in-18635-51462"
           d="M9309-2795.3l-151.93-77.122"
         />
         <path
@@ -63,7 +56,6 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-26446-38918"
-          className="in-38918-28535"
         />
         <path
           d="M9491.655-3264.17a493 493 0 00-137.433 70.025"
@@ -71,13 +63,11 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-26446-28535"
-          className="in-38918-28535"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-41081-16940"
-          className="in-16940-18635"
           d="M9353.881-2962.8l-149.147-56.317"
         />
         <path
@@ -86,7 +76,6 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-47366-39834"
-          className="in-39834-51462"
         />
         <path
           d="M9157.07-2872.422a493 493 0 000 154.244"
@@ -94,20 +83,17 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           fill="transparent"
           strokeWidth={30}
           id="skill-47366-51462"
-          className="in-39834-51462"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-63135-14103"
-          className="in-14103-18635"
           d="M9644-2957.3v-173"
         />
         <path
           stroke="var(--secondary-bg)"
           strokeWidth={30}
           id="skill-64842-5087"
-          className="in-5087-18635"
           d="M9503.704-2714.3l-149.823 86.5"
         />
         <circle
@@ -116,7 +102,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-869"
-          className="out-28535-18635 s0 in-28535-18635"
+          className="out-28535-18635 s0"
         />
         <circle
           cx={9353.881}
@@ -124,7 +110,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-5087"
-          className="out-64842 s0 in-64842"
+          className="out-64842 s0"
         />
         <circle
           cx={9644}
@@ -132,7 +118,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-14103"
-          className="out-63135 s0 in-63135"
+          className="out-63135 s0"
         />
         <circle
           cx={9204.734}
@@ -140,7 +126,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-16940"
-          className="out-41081 s0 in-41081"
+          className="out-41081 s0"
         />
         <circle
           cx={9644}
@@ -148,7 +134,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-18635"
-          className="out-25167-63135-64842-41081-869-44683 s0 in-869-25167-63135-64842-41081-44683 root"
+          className="out-25167-63135-64842-41081-869-44683 s0 root"
         />
         <circle
           cx={9309}
@@ -156,7 +142,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-25167"
-          className="out-51462-18635 s0 in-18635-51462"
+          className="out-51462-18635 s0"
         />
         <circle
           cx={9491.655}
@@ -164,7 +150,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-26446"
-          className="out-38918-28535 s0 in-38918-28535"
+          className="out-38918-28535 s0"
         />
         <circle
           cx={9354.222}
@@ -172,7 +158,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-28535"
-          className="out-26446-869 s0 in-869-26446"
+          className="out-26446-869 s0"
         />
         <circle
           cx={9644}
@@ -180,7 +166,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-38918"
-          className="out-26446 s0 in-26446"
+          className="out-26446 s0"
         />
         <circle
           cx={9204.734}
@@ -188,7 +174,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-39834"
-          className="out-47366 s0 in-47366"
+          className="out-47366 s0"
         />
         <circle
           cx={9353.881}
@@ -196,7 +182,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-41081"
-          className="out-16940-18635 s0 in-16940-18635"
+          className="out-16940-18635 s0"
         />
         <circle
           cx={9157.07}
@@ -204,7 +190,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-47366"
-          className="out-39834-51462 s0 in-39834-51462"
+          className="out-39834-51462 s0"
         />
         <circle
           cx={9157.07}
@@ -212,7 +198,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={50}
           fill="var(--secondary-bg)"
           id="skill-51462"
-          className="out-47366-25167 s0 in-25167-47366"
+          className="out-47366-25167 s0"
         />
         <circle
           cx={9644}
@@ -220,7 +206,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-63135"
-          className="out-14103-18635 s0 in-14103-18635"
+          className="out-14103-18635 s0"
         />
         <circle
           cx={9503.704}
@@ -228,7 +214,7 @@ function SvgSaboteur(props: React.SVGProps<SVGSVGElement>) {
           r={30}
           fill="var(--secondary-bg)"
           id="skill-64842"
-          className="out-5087-18635 s0 in-5087-18635"
+          className="out-5087-18635 s0"
         />
       </g>
     </svg>
