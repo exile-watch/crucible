@@ -52,7 +52,6 @@ const higlightNodes = ({ selector, nodes }: HighlightNodesTypes) => {
     //   document.getElementById(`skill-${outNode}`)?.classList.contains('root');
 
     path.style.stroke = 'var(--secondary-bg)';
-
     nodes.find((node) => {
       const [, skill] = node.skill.split('-');
       if (path.id.includes(skill)) {
@@ -80,13 +79,12 @@ function usePassiveTreeHighlight({
   const activeVariant = useSelector(selectActiveVariant);
 
   useEffect(() => {
-    if (isWindow) {
+    if (isWindow && document?.querySelector(`${selector} circle.root`)) {
       const { classList, id: skill }: any = document?.querySelector(`${selector} circle.root`);
       const [outNodes] = classList;
       const possibleOutNodes = outNodes.split('-').slice(1);
 
       if (classList.contains('s0')) {
-        console.log(activeVariant);
         dispatch(action({ skill, possibleOutNodes, labirynth }));
       }
     }

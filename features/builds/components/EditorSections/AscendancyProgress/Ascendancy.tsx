@@ -25,7 +25,7 @@ const Ascendancy = ({ labirynth, nodes }: AscendancyTypes) => {
   });
 
   const handleNodeClick = ({ target: { id } }: Event) => {
-    const [outNodes, , , root]: any = document.getElementById(id)?.classList;
+    const [outNodes, , root]: any = document.getElementById(id)?.classList;
     const possibleOutNodes = outNodes.split('-').slice(1);
 
     !root && dispatch(toggleAscendancyNode({ skill: id, possibleOutNodes, labirynth }));

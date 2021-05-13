@@ -23,6 +23,9 @@ const initialState: BuildSlice = {
         [Labirynth.Merciless]: [],
         [Labirynth.Eternal]: [],
       },
+      leveling: {
+        tree: [],
+      },
     },
   ],
   introductionText: [
@@ -69,7 +72,7 @@ export const buildSlice = createSlice({
     toggleAscendancyNode: (state, { payload }) => {
       if (
         state.variants[state.activeVariant].ascendancy[payload.labirynth].find(
-          (a, i) => a.skill === payload.skill
+          (a) => a.skill === payload.skill
         )
       ) {
         state.variants[state.activeVariant].ascendancy[payload.labirynth] = state.variants[
@@ -80,7 +83,26 @@ export const buildSlice = createSlice({
 
       state.variants[state.activeVariant].ascendancy[payload.labirynth] = [
         ...state.variants[state.activeVariant].ascendancy[payload.labirynth],
-        omit(payload, ['labirynth', 'activeVariant']),
+        omit(payload, ['labirynth']),
+      ];
+    },
+
+    /**
+     * Leveling
+     */
+    toggleLevelingNode: (state, { payload }) => {
+      if (
+        state.variants[state.activeVariant].leveling.tree.find((a) => a.skill === payload.skill)
+      ) {
+        state.variants[state.activeVariant].leveling.tree = state.variants[
+          state.activeVariant
+        ].leveling.tree.filter((a) => a.skill !== payload.skill);
+        return;
+      }
+
+      state.variants[state.activeVariant].leveling.tree = [
+        ...state.variants[state.activeVariant].leveling.tree,
+        payload,
       ];
     },
   },
@@ -88,6 +110,7 @@ export const buildSlice = createSlice({
 
 export const {
   toggleAscendancyNode,
+  toggleLevelingNode,
   addVoidVariant,
   editTitle,
   editVariantTitle,
@@ -108,5 +131,7 @@ export const selectMercilessAscendancyNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].ascendancy[Labirynth.Merciless];
 export const selectEternalAscendancyNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].ascendancy[Labirynth.Eternal];
+export const selectLevelingTreeNodes = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].leveling.tree;
 
 export default buildSlice.reducer;
