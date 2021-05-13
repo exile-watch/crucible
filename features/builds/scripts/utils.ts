@@ -34,28 +34,22 @@ const generateSkillNodes = async ({ nodes, constants, groups, ascendancy }: Gene
     if (!node.isMastery) {
       const supportedJewels = ['Large Jewel Socket', 'Basic Jewel Socket'];
       sortedNodes.push(node);
+      const id = `skill-${node.skill}`;
+      const outNodes = ['out', ...uniqBy(node.out, (v) => +v)].join('-');
+      const rootClass = node.isAscendancyStart ? ' root ' : '';
 
       if (supportedJewels.includes(node.name)) {
         const dimensions = 50;
+        const x = node.x - dimensions / 2;
+        const y = node.y - dimensions / 2;
+
         circles.push(
-          ` <rect x="${node.x - dimensions / 2}" y="${
-            node.y - dimensions / 2
-          }" width="${dimensions}" height="${dimensions}" id="skill-${node.skill}" class="${[
-            'out',
-            ...uniqBy(node.out, (v) => +v),
-          ].join('-')} s0 ${['in', ...uniqBy(node.in, (v) => +v)].join('-')}" />`
+          ` <rect x="${x}" y="${y}" width="${dimensions}" height="${dimensions}" id="${id}" class="${outNodes} s0" />`
         );
       } else {
         const radius = !node.isRegular2 || node.isKeystone ? 50 : 30;
         circles.push(
-          `  <circle cx='${node.x}' cy="${
-            node.y
-          }" r="${radius}" fill="var(--secondary-bg)" id="skill-${node.skill}" class="${[
-            'out',
-            ...uniqBy(node.out, (v) => +v),
-          ].join('-')} s0 ${['in', ...uniqBy(node.in, (v) => +v)].join('-')}${
-            node.isAscendancyStart ? ' root ' : ''
-          } "/>`
+          `  <circle cx='${node.x}' cy="${node.y}" r="${radius}" fill="var(--secondary-bg)" id="${id}" class="${outNodes} s0 ${rootClass}"/>`
         );
       }
     }
@@ -134,6 +128,7 @@ const generateSkillPaths = async ({ nodes, constants, groups, ascendancy }: Gene
         duplicates.push({ connectedNodeId: connectedNode.skill, nodeId: node.skill });
         reversedPairs.push([+node.skill, +nodeOutId].sort((a, b) => a > b));
         const strokeWidth = 30;
+        const id = `skill-${node.skill}-${nodeOutId}`;
         if (node.group === connectedNode.group && node.orbit === connectedNode.orbit) {
           const r = constants.orbitRadii[node.orbit];
 
@@ -141,29 +136,19 @@ const generateSkillPaths = async ({ nodes, constants, groups, ascendancy }: Gene
             (node.arc - connectedNode.arc > 0 && node.arc - connectedNode.arc <= Math.PI) ||
             node.arc - connectedNode.arc < -Math.PI
           ) {
+            const d = `M ${node.x} ${node.y} A ${r} ${r} 0 0 0 ${connectedNode.x} ${connectedNode.y}`;
             lines.push(
-              `  <path d='M ${node.x} ${node.y} A ${r} ${r} 0 0 0 ${connectedNode.x} ${
-                connectedNode.y
-              }' stroke='var(--secondary-bg)' fill='transparent' stroke-width='${strokeWidth}' id="skill-${
-                node.skill
-              }-${nodeOutId}" class="${['in', ...uniqBy(node.in, (v) => +v)].join('-')}"/>`
+              `  <path d='${d}' stroke='var(--secondary-bg)' fill='transparent' stroke-width='${strokeWidth}' id='${id}' />`
             );
           } else {
+            const d = `M ${connectedNode.x} ${connectedNode.y} A ${r} ${r} 0 0 0 ${node.x} ${node.y}`;
             lines.push(
-              `  <path d='M ${connectedNode.x} ${connectedNode.y} A ${r} ${r} 0 0 0 ${node.x} ${
-                node.y
-              }' stroke='var(--secondary-bg)' fill='transparent' stroke-width='${strokeWidth}' id="skill-${
-                node.skill
-              }-${nodeOutId}" class="${['in', ...uniqBy(node.in, (v) => +v)].join('-')}"/>`
+              `  <path d='${d}' stroke='var(--secondary-bg)' fill='transparent' stroke-width='${strokeWidth}' id='${id}'/>`
             );
           }
         } else {
           lines.push(
-            `  <line x1='${node.x}' y1='${node.y}' x2='${connectedNode.x}' y2='${
-              connectedNode.y
-            }' stroke='var(--secondary-bg)' stroke-width='${strokeWidth}' id="skill-${
-              node.skill
-            }-${nodeOutId}" class="${['in', ...uniqBy(node.in, (v) => +v)].join('-')}"/>`
+            `  <line x1='${node.x}' y1='${node.y}' x2='${connectedNode.x}' y2='${connectedNode.y}' stroke='var(--secondary-bg)' stroke-width='${strokeWidth}' id="${id}" />`
           );
         }
       });
