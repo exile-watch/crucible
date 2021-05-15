@@ -3,7 +3,7 @@ import { HistoryEditor } from 'slate-history';
 import { ReactEditor } from 'slate-react';
 
 export type ElementTypes =
-  | 'block-quote'
+  | 'quote'
   | 'bulleted-list'
   | 'heading-one'
   | 'heading-two'
@@ -14,8 +14,6 @@ export type ElementTypes =
 export type EmphasisTypes = 'bold' | 'italic' | 'underline' | 'code';
 
 export type CustomElement = { type: ElementTypes; children: CustomText[] };
-
-export type ToolbarButtonProps = { format: ElementTypes | EmphasisTypes; icon: string };
 
 type CustomText = { text: string; bold?: boolean; italic?: boolean; code?: boolean };
 
