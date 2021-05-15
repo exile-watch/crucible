@@ -7,7 +7,7 @@
     "build": "next build && next export",
     "start": "NODE_ENV=production node server.js",
     "type-check": "tsc",
-    "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
+    "svgr:icons": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
     "svgr:trees": "npx @svgr/cli --svgo-config .svgo.json -d features/builds/components/SkillTree/3.14/components features/builds/components/SkillTree/3.14/svg --typescript --memo",
     "lint": "yarn eslint --fix",
     "clean-invalid-data-files": "node features/encounters/scripts/clean-invalid-data-files.js",
