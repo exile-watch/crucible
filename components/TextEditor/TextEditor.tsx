@@ -8,6 +8,8 @@ import { toggleMark } from '#components/TextEditor/ToolbarComponents/MarkButton/
 
 import { Element, Leaf, Toolbar } from './ToolbarComponents';
 
+import styles from './TextEditor.module.scss';
+
 const HOTKEYS: Record<string, string> = {
   'mod+b': 'bold',
   'mod+i': 'italic',
@@ -34,6 +36,7 @@ const RichTextExample = ({ value, onChange }: RichTextExampleProps) => {
     <Slate editor={editor} value={value} onChange={handleChange}>
       <Toolbar />
       <Editable
+        className={styles.editor}
         renderElement={renderElement}
         renderLeaf={renderLeaf}
         placeholder="Enter some rich text…"

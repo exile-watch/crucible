@@ -9,7 +9,7 @@ type ElementProps = {
 
 const Element = ({ attributes, children, element }: ElementProps) => {
   switch (element.type) {
-    case 'block-quote':
+    case 'quote':
       return <blockquote {...attributes}>{children}</blockquote>;
     case 'bulleted-list':
       return <ul {...attributes}>{children}</ul>;
