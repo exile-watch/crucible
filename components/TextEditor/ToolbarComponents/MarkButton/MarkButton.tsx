@@ -1,23 +1,51 @@
 import { MouseEvent } from 'react';
+import cx from 'classnames';
 import { useSlate } from 'slate-react';
 
-import { ToolbarButtonProps } from '#types/slate';
+import {
+  FormatBoldIcon,
+  FormatCodeIcon,
+  FormatItalicIcon,
+  FormatUnderlineIcon,
+} from '#assets/icons';
+import { EmphasisTypes } from '#types/slate';
 
 import { isMarkActive, toggleMark } from './utils';
 
-const MarkButton = ({ format, icon }: ToolbarButtonProps) => {
+import styles from '../ToolbarComponents.module.scss';
+
+type MarkButtonTypes = {
+  format: EmphasisTypes;
+};
+
+const MarkButton = ({ format }: MarkButtonTypes) => {
   const editor = useSlate();
   const isActive = isMarkActive(editor, format);
 
+  const Icon = () => {
+    switch (format) {
+      case 'bold':
+        return <FormatBoldIcon />;
+      case 'italic':
+        return <FormatItalicIcon />;
+      case 'underline':
+        return <FormatUnderlineIcon />;
+      case 'code':
+        return <FormatCodeIcon />;
+      default:
+        return <p>{format}</p>;
+    }
+  };
+
   return (
     <button
-      // active={isActive}
       onMouseDown={(event: MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
         toggleMark(editor, format);
       }}
+      className={cx(styles.button, isActive && styles.isActive)}
     >
-      <i>{icon}</i>
+      <Icon />
     </button>
   );
 };

@@ -1,11 +1,25 @@
 import { MouseEvent } from 'react';
+import cx from 'classnames';
 import { useSlate } from 'slate-react';
 
-import { ToolbarButtonProps } from '#types/slate';
+import {
+  FormatBulletedListIcon,
+  FormatHeadingOneIcon,
+  FormatHeadingTwoIcon,
+  FormatNumberedListIcon,
+  FormatQuoteIcon,
+} from '#assets/icons';
+import { ElementTypes } from '#types/slate';
 
 import { isBlockActive, toggleBlock } from './utils';
 
-const BlockButton = ({ format, icon }: ToolbarButtonProps) => {
+import styles from '#components/TextEditor/ToolbarComponents/ToolbarComponents.module.scss';
+
+type BlockButtonTypes = {
+  format: ElementTypes;
+};
+
+const BlockButton = ({ format }: BlockButtonTypes) => {
   const editor = useSlate();
   const isActive = isBlockActive(editor, format);
 
@@ -14,9 +28,29 @@ const BlockButton = ({ format, icon }: ToolbarButtonProps) => {
     toggleBlock(editor, format);
   };
 
+  const Icon = () => {
+    switch (format) {
+      case 'numbered-list':
+        return <FormatNumberedListIcon />;
+      case 'bulleted-list':
+        return <FormatBulletedListIcon />;
+      case 'heading-one':
+        return <FormatHeadingOneIcon />;
+      case 'heading-two':
+        return <FormatHeadingTwoIcon />;
+      case 'quote':
+        return <FormatQuoteIcon />;
+      default:
+        return <i>{format}</i>;
+    }
+  };
+
   return (
-    <button active={isActive} onMouseDown={handleMouseDown}>
-      <i>{icon}</i>
+    <button
+      className={cx(styles.button, isActive && styles.isActive)}
+      onMouseDown={handleMouseDown}
+    >
+      <Icon />
     </button>
   );
 };
