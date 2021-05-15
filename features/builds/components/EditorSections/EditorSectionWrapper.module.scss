@@ -5,17 +5,23 @@
 .editorSectionWrapper {
   width: 400px;
   height: 500px;
-  border: 1px solid white;
 }
 
 .heading {
   position: relative;
 
   &:before {
-    width: 100%;
+    width: calc(100% - 1em);
     height: 1px;
     position: absolute;
     content: '';
     background: var(--primary-color);
+    top: calc(50% + 1px);
+  }
+
+  span {
+    position: relative;
+    background: var(--primary-bg);
+    padding-right: 1em;
   }
 }

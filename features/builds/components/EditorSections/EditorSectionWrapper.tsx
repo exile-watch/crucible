@@ -11,10 +11,12 @@ type EditorSectionWrapperProps = {
 
 const EditorSectionWrapper = ({ children, section, ...props }: EditorSectionWrapperProps) => {
   return (
-    <div className={styles.editorSectionWrapper} {...props}>
-      <Heading className={styles.heading}>{section}</Heading>
+    <section className={styles.editorSectionWrapper} {...props}>
+      <Heading className={styles.heading}>
+        <span>{section}</span>
+      </Heading>
       {children}
-    </div>
+    </section>
   );
 };
 

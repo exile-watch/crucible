@@ -8,10 +8,16 @@ import { RootState } from '#store';
 const initialState: BuildSlice = {
   title: 'test',
   activeVariant: 0,
+  introductionText: [
+    {
+      type: 'paragraph',
+      children: [{ text: '' }],
+    },
+  ],
   variants: [
     {
       title: '',
-      introductionText: [
+      conceptText: [
         {
           type: 'paragraph',
           children: [{ text: '' }],
@@ -26,12 +32,6 @@ const initialState: BuildSlice = {
       leveling: {
         tree: [],
       },
-    },
-  ],
-  introductionText: [
-    {
-      type: 'paragraph',
-      children: [{ text: '' }],
     },
   ],
 };
@@ -64,6 +64,14 @@ export const buildSlice = createSlice({
      */
     changeIntroductionText: (state, { payload }) => {
       state.introductionText = payload || initialState.introductionText;
+    },
+
+    /**
+     * Concept
+     */
+    changeConceptText: (state, { payload }) => {
+      state.variants[state.activeVariant].conceptText =
+        payload || initialState.variants[state.activeVariant].conceptText;
     },
 
     /**
@@ -117,12 +125,15 @@ export const {
   removeVoidVariant,
   setActiveVariant,
   changeIntroductionText,
+  changeConceptText,
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;
 export const selectBuildVariants = (state: RootState) => state.build.variants;
 export const selectActiveVariant = (state: RootState) => state.build.activeVariant;
 export const selectIntroductionText = (state: RootState) => state.build.introductionText;
+export const selectConceptText = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].conceptText;
 export const selectNormalAscendancyNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].ascendancy[Labirynth.Normal];
 export const selectCruelAscendancyNodes = (state: RootState) =>
