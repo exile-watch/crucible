@@ -25,18 +25,18 @@ const EditorSections = () => {
     <div className={cx('mt-5 pr-3', styles.sections)}>
       <Introduction />
       <Concept />
-      <Kudos />
-      <FAQ />
-      <Gear />
-      <Changelog />
-      <DetrimentalMapMods />
       <ProsAndCons />
+      <DetrimentalMapMods />
       <Benchmarks />
       <PassivesTree />
-      <Pantheon />
+      <Changelog />
+      <Kudos />
+      <FAQ />
       <Skills />
-      <AscendancyTree />
       <Bandits />
+      <Gear />
+      <AscendancyTree />
+      <Pantheon />
     </div>
   );
 };

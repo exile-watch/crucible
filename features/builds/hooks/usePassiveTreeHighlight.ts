@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 
-import { Labirynth } from '#enums/labirynth';
 import { selectActiveVariant } from '#features/builds/slices/buildSlice';
 import { useDispatch, useSelector } from '#hooks/useStore';
 
@@ -9,7 +8,6 @@ type UsePassiveTreeHighlightTypes = {
   selector: string;
   nodes: { skill: string; possibleOutNodes: string[] }[];
   action: ActionCreatorWithPayload<any, string>;
-  labirynth?: Labirynth;
 };
 
 type HighlightNodesTypes = Omit<UsePassiveTreeHighlightTypes, 'action'>;
@@ -68,12 +66,7 @@ const higlightNodes = ({ selector, nodes }: HighlightNodesTypes) => {
   });
 };
 
-function usePassiveTreeHighlight({
-  selector,
-  nodes,
-  action,
-  labirynth,
-}: UsePassiveTreeHighlightTypes) {
+function usePassiveTreeHighlight({ selector, nodes, action }: UsePassiveTreeHighlightTypes) {
   const dispatch = useDispatch();
   const isWindow = typeof window !== 'undefined';
   const activeVariant = useSelector(selectActiveVariant);
@@ -85,7 +78,7 @@ function usePassiveTreeHighlight({
       const possibleOutNodes = outNodes.split('-').slice(1);
 
       if (classList.contains('s0')) {
-        dispatch(action({ skill, possibleOutNodes, labirynth }));
+        dispatch(action({ skill, possibleOutNodes }));
       }
     }
   }, [action, dispatch, isWindow, activeVariant]);
@@ -94,7 +87,7 @@ function usePassiveTreeHighlight({
     if (isWindow) {
       higlightNodes({ selector, nodes });
     }
-  }, [isWindow, nodes, labirynth, selector]);
+  }, [isWindow, nodes, selector]);
 }
 
 export default usePassiveTreeHighlight;

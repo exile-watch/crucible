@@ -4,8 +4,8 @@ import * as Trees314 from '#features/builds/components/SkillTree/3.14/components
 import usePassiveTreeHighlight from '#features/builds/hooks/usePassiveTreeHighlight';
 import {
   selectActiveVariant,
-  selectLevelingTreeNodes,
-  toggleLevelingNode,
+  selectPassivesTreeNodes,
+  togglePassivesTreeNode,
 } from '#features/builds/slices/buildSlice';
 import useRouter from '#hooks/useRouter';
 import { useDispatch, useSelector } from '#hooks/useStore';
@@ -23,7 +23,7 @@ const PassivesTree = () => {
   } = useRouter();
   const activeVariant = useSelector(selectActiveVariant);
   const PassivesTree: any = Trees314['Tree'];
-  const nodes = useSelector(selectLevelingTreeNodes);
+  const nodes: any = useSelector(selectPassivesTreeNodes);
   const selector = `v${activeVariant}_leveling`;
 
   useEffect(() => {
@@ -31,21 +31,21 @@ const PassivesTree = () => {
       const startingNode = startingNodes[poe_class].id;
       const [outNodes]: any = document.getElementById(`skill-${startingNode}`)?.classList;
       const possibleOutNodes = outNodes.split('-').slice(1);
-      dispatch(toggleLevelingNode({ skill: `skill-${startingNode}`, possibleOutNodes }));
+      dispatch(togglePassivesTreeNode({ skill: `skill-${startingNode}`, possibleOutNodes }));
     }
   }, [isWindow]);
 
   usePassiveTreeHighlight({
     selector: `#${selector}`,
     nodes,
-    action: toggleLevelingNode,
+    action: togglePassivesTreeNode,
   });
 
   const handleNodeClick = ({ target: { id } }: Event) => {
     const [outNodes, , , root]: any = document.getElementById(id)?.classList;
     const possibleOutNodes = outNodes.split('-').slice(1);
 
-    !root && dispatch(toggleLevelingNode({ skill: id, possibleOutNodes }));
+    !root && dispatch(togglePassivesTreeNode({ skill: id, possibleOutNodes }));
   };
 
   return (

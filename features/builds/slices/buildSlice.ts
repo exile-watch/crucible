@@ -1,7 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import omit from 'lodash/omit';
 
-import { Labirynth } from '#enums/labirynth';
 import { BuildSlice } from '#features/builds/types/Store';
 import { RootState } from '#store';
 
@@ -9,6 +7,12 @@ const initialState: BuildSlice = {
   title: 'test',
   activeVariant: 0,
   introductionText: [
+    {
+      type: 'paragraph',
+      children: [{ text: '' }],
+    },
+  ],
+  kudosText: [
     {
       type: 'paragraph',
       children: [{ text: '' }],
@@ -24,12 +28,9 @@ const initialState: BuildSlice = {
         },
       ],
       ascendancy: {
-        [Labirynth.Normal]: [],
-        [Labirynth.Cruel]: [],
-        [Labirynth.Merciless]: [],
-        [Labirynth.Eternal]: [],
+        tree: [],
       },
-      leveling: {
+      passives: {
         tree: [],
       },
     },
@@ -77,48 +78,53 @@ export const buildSlice = createSlice({
     /**
      * AscendancyProgress
      */
-    toggleAscendancyNode: (state, { payload }) => {
+    toggleAscendancyTreeNode: (state, { payload }) => {
       if (
-        state.variants[state.activeVariant].ascendancy[payload.labirynth].find(
-          (a) => a.skill === payload.skill
-        )
+        state.variants[state.activeVariant].ascendancy.tree.find((a) => a.skill === payload.skill)
       ) {
-        state.variants[state.activeVariant].ascendancy[payload.labirynth] = state.variants[
+        state.variants[state.activeVariant].ascendancy.tree = state.variants[
           state.activeVariant
-        ].ascendancy[payload.labirynth].filter((a) => a.skill !== payload.skill);
+        ].ascendancy.tree.filter((a) => a.skill !== payload.skill);
         return;
       }
 
-      state.variants[state.activeVariant].ascendancy[payload.labirynth] = [
-        ...state.variants[state.activeVariant].ascendancy[payload.labirynth],
-        omit(payload, ['labirynth']),
+      state.variants[state.activeVariant].ascendancy.tree = [
+        ...state.variants[state.activeVariant].ascendancy.tree,
+        payload,
       ];
     },
 
     /**
      * Leveling
      */
-    toggleLevelingNode: (state, { payload }) => {
+    togglePassivesTreeNode: (state, { payload }) => {
       if (
-        state.variants[state.activeVariant].leveling.tree.find((a) => a.skill === payload.skill)
+        state.variants[state.activeVariant].passives.tree.find((a) => a.skill === payload.skill)
       ) {
-        state.variants[state.activeVariant].leveling.tree = state.variants[
+        state.variants[state.activeVariant].passives.tree = state.variants[
           state.activeVariant
-        ].leveling.tree.filter((a) => a.skill !== payload.skill);
+        ].passives.tree.filter((a) => a.skill !== payload.skill);
         return;
       }
 
-      state.variants[state.activeVariant].leveling.tree = [
-        ...state.variants[state.activeVariant].leveling.tree,
+      state.variants[state.activeVariant].passives.tree = [
+        ...state.variants[state.activeVariant].passives.tree,
         payload,
       ];
+    },
+
+    /**
+     * Kudos
+     */
+    changeKudosText: (state, { payload }) => {
+      state.kudosText = payload || initialState.kudosText;
     },
   },
 });
 
 export const {
-  toggleAscendancyNode,
-  toggleLevelingNode,
+  toggleAscendancyTreeNode,
+  togglePassivesTreeNode,
   addVoidVariant,
   editTitle,
   editVariantTitle,
@@ -126,23 +132,19 @@ export const {
   setActiveVariant,
   changeIntroductionText,
   changeConceptText,
+  changeKudosText,
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;
 export const selectBuildVariants = (state: RootState) => state.build.variants;
 export const selectActiveVariant = (state: RootState) => state.build.activeVariant;
 export const selectIntroductionText = (state: RootState) => state.build.introductionText;
+export const selectKudosText = (state: RootState) => state.build.kudosText;
 export const selectConceptText = (state: RootState) =>
   state.build.variants[state.build.activeVariant].conceptText;
-export const selectNormalAscendancyNodes = (state: RootState) =>
-  state.build.variants[state.build.activeVariant].ascendancy[Labirynth.Normal];
-export const selectCruelAscendancyNodes = (state: RootState) =>
-  state.build.variants[state.build.activeVariant].ascendancy[Labirynth.Cruel];
-export const selectMercilessAscendancyNodes = (state: RootState) =>
-  state.build.variants[state.build.activeVariant].ascendancy[Labirynth.Merciless];
-export const selectEternalAscendancyNodes = (state: RootState) =>
-  state.build.variants[state.build.activeVariant].ascendancy[Labirynth.Eternal];
-export const selectLevelingTreeNodes = (state: RootState) =>
-  state.build.variants[state.build.activeVariant].leveling.tree;
+export const selectAscendancyTreeNodes = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].ascendancy.tree;
+export const selectPassivesTreeNodes = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].passives.tree;
 
 export default buildSlice.reducer;
