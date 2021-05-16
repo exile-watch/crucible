@@ -33,6 +33,7 @@ const initialState: BuildSlice = {
       passives: {
         tree: [],
       },
+      bandit: null,
     },
   ],
 };
@@ -119,6 +120,14 @@ export const buildSlice = createSlice({
     changeKudosText: (state, { payload }) => {
       state.kudosText = payload || initialState.kudosText;
     },
+
+    /**
+     * Bandits
+     */
+    changeBandit: (state, { payload }) => {
+      state.variants[state.activeVariant].bandit =
+        payload || initialState.variants[state.activeVariant].bandit;
+    },
   },
 });
 
@@ -133,6 +142,7 @@ export const {
   changeIntroductionText,
   changeConceptText,
   changeKudosText,
+  changeBandit,
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;
@@ -146,5 +156,7 @@ export const selectAscendancyTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].ascendancy.tree;
 export const selectPassivesTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].passives.tree;
+export const selectBandit = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].bandit;
 
 export default buildSlice.reducer;

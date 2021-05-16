@@ -9,6 +9,7 @@ type Variant = {
   passives: {
     tree: string[];
   };
+  bandit: number | null;
 };
 
 export type BuildSlice = {
