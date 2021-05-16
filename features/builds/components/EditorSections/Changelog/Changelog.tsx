@@ -3,7 +3,7 @@ import React from 'react';
 import EditorSectionWrapper from '../EditorSectionWrapper';
 
 const Changelog = () => {
-  return <EditorSectionWrapper>changelog</EditorSectionWrapper>;
+  return <EditorSectionWrapper section="Changelog">changelog</EditorSectionWrapper>;
 };
 
 export default Changelog;

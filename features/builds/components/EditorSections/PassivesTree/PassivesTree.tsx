@@ -13,9 +13,9 @@ import { useDispatch, useSelector } from '#hooks/useStore';
 import EditorSectionWrapper from '../EditorSectionWrapper';
 import { startingNodes } from './starting-nodes';
 
-import styles from './Leveling.module.scss';
+import styles from './PassivesTree.module.scss';
 
-const Leveling = () => {
+const PassivesTree = () => {
   const isWindow = typeof window !== 'undefined';
   const dispatch = useDispatch();
   const {
@@ -49,7 +49,7 @@ const Leveling = () => {
   };
 
   return (
-    <EditorSectionWrapper section="Leveling progress">
+    <EditorSectionWrapper section="Passives Tree">
       <div className={styles.treeSvg}>
         <PassivesTree id={selector} onClick={handleNodeClick} />
       </div>
@@ -57,4 +57,4 @@ const Leveling = () => {
   );
 };
 
-export default Leveling;
+export default PassivesTree;

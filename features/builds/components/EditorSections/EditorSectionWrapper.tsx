@@ -1,5 +1,8 @@
 import React, { ReactNode } from 'react';
+import cx from 'classnames';
+import { kebabCase } from 'lodash';
 
+import Card from '#components/Card/Card';
 import Heading from '#components/Heading/Heading';
 
 import styles from './EditorSectionWrapper.module.scss';
@@ -9,14 +12,16 @@ type EditorSectionWrapperProps = {
   section: string;
 };
 
-const EditorSectionWrapper = ({ children, section, ...props }: EditorSectionWrapperProps) => {
+const EditorSectionWrapper = ({ children, section }: EditorSectionWrapperProps) => {
   return (
-    <section className={styles.editorSectionWrapper} {...props}>
-      <Heading className={styles.heading}>
-        <span>{section}</span>
-      </Heading>
+    <Card
+      as="section"
+      className={styles.editorSectionWrapper}
+      style={{ gridArea: kebabCase(section) }}
+    >
+      <Heading className={cx('pb-3 mb-3', styles.heading)}>{section}</Heading>
       {children}
-    </section>
+    </Card>
   );
 };
 

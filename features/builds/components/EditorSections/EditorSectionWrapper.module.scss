@@ -1,27 +1,22 @@
 .sections {
-  display: flex;
+  display: grid;
+  grid-template-columns: 400px 400px 400px 1fr 1fr 1fr;
+  grid-template-rows: minmax(min-content, 300px) 300px 300px 300px;
+  gap: 1em 1em;
+  grid-template-areas:
+    "introduction concept pros-and-cons benchmarks-videos passives-tree passives-tree"
+    "introduction concept detrimental-map-mods benchmarks-videos passives-tree passives-tree"
+    "changelog faq skills gear gear ascendancy-tree"
+    "kudos faq bandits gear gear pantheon";
+  overflow: auto;
+  height: calc(100% - 60px - 3em);
 }
 
 .editorSectionWrapper {
-  width: 400px;
-  height: 500px;
+  //max-height: 600px;
 }
 
 .heading {
   position: relative;
-
-  &:before {
-    width: calc(100% - 1em);
-    height: 1px;
-    position: absolute;
-    content: '';
-    background: var(--primary-color);
-    top: calc(50% + 1px);
-  }
-
-  span {
-    position: relative;
-    background: var(--primary-bg);
-    padding-right: 1em;
-  }
+  border-bottom: 1px solid var(--secondary-color)
 }
