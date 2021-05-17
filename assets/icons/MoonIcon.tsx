@@ -1,8 +1,15 @@
 import * as React from 'react';
 
-function SvgMoonIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgMoonIcon(props: React.SVGProps<SVGSVGElement>, svgRef?: React.Ref<SVGSVGElement>) {
   return (
-    <svg width={24} height={24} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={24}
+      height={24}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      ref={svgRef}
+      {...props}
+    >
       <mask id="MoonIcon_svg__a" fill="#fff">
         <path
           fillRule="evenodd"
@@ -19,5 +26,6 @@ function SvgMoonIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-const MemoSvgMoonIcon = React.memo(SvgMoonIcon);
-export default MemoSvgMoonIcon;
+const ForwardRef = React.forwardRef(SvgMoonIcon);
+const MemoForwardRef = React.memo(ForwardRef);
+export default MemoForwardRef;

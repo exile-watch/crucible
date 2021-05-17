@@ -1,8 +1,18 @@
 import * as React from 'react';
 
-function SvgFormatNumberedListIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgFormatNumberedListIcon(
+  props: React.SVGProps<SVGSVGElement>,
+  svgRef?: React.Ref<SVGSVGElement>
+) {
   return (
-    <svg width={24} height={24} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={24}
+      height={24}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      ref={svgRef}
+      {...props}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -13,5 +23,6 @@ function SvgFormatNumberedListIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-const MemoSvgFormatNumberedListIcon = React.memo(SvgFormatNumberedListIcon);
-export default MemoSvgFormatNumberedListIcon;
+const ForwardRef = React.forwardRef(SvgFormatNumberedListIcon);
+const MemoForwardRef = React.memo(ForwardRef);
+export default MemoForwardRef;

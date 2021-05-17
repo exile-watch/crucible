@@ -1,3 +1,4 @@
+export { default as ArrowDownIcon } from './ArrowDownIcon';
 export { default as ArrowRightIcon } from './ArrowRightIcon';
 export { default as FormatBoldIcon } from './FormatBoldIcon';
 export { default as FormatBulletedListIcon } from './FormatBulletedListIcon';

@@ -1,8 +1,18 @@
 import * as React from 'react';
 
-function SvgFormatBulletedListIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgFormatBulletedListIcon(
+  props: React.SVGProps<SVGSVGElement>,
+  svgRef?: React.Ref<SVGSVGElement>
+) {
   return (
-    <svg width={24} height={24} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={24}
+      height={24}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      ref={svgRef}
+      {...props}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -13,5 +23,6 @@ function SvgFormatBulletedListIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-const MemoSvgFormatBulletedListIcon = React.memo(SvgFormatBulletedListIcon);
-export default MemoSvgFormatBulletedListIcon;
+const ForwardRef = React.forwardRef(SvgFormatBulletedListIcon);
+const MemoForwardRef = React.memo(ForwardRef);
+export default MemoForwardRef;

@@ -1,8 +1,18 @@
 import * as React from 'react';
 
-function SvgFormatCodeIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgFormatCodeIcon(
+  props: React.SVGProps<SVGSVGElement>,
+  svgRef?: React.Ref<SVGSVGElement>
+) {
   return (
-    <svg width={24} height={24} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={24}
+      height={24}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      ref={svgRef}
+      {...props}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -13,5 +23,6 @@ function SvgFormatCodeIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-const MemoSvgFormatCodeIcon = React.memo(SvgFormatCodeIcon);
-export default MemoSvgFormatCodeIcon;
+const ForwardRef = React.forwardRef(SvgFormatCodeIcon);
+const MemoForwardRef = React.memo(ForwardRef);
+export default MemoForwardRef;
