@@ -3,6 +3,7 @@ import { Descendant } from 'slate';
 type Variant = {
   title: string;
   conceptText: Descendant[];
+  detrimentalMapMods: { label: string; value: string }[];
   ascendancy: {
     tree: string[];
   };

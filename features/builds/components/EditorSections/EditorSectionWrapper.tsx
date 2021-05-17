@@ -14,11 +14,7 @@ type EditorSectionWrapperProps = {
 
 const EditorSectionWrapper = ({ children, section }: EditorSectionWrapperProps) => {
   return (
-    <Card
-      as="section"
-      className={styles.editorSectionWrapper}
-      style={{ gridArea: kebabCase(section) }}
-    >
+    <Card as="section" style={{ gridArea: kebabCase(section) }}>
       <Heading className={cx('pb-3 mb-3', styles.heading)}>{section}</Heading>
       {children}
     </Card>

@@ -1,6 +1,6 @@
 .sections {
   display: grid;
-  grid-template-columns: 400px 400px 400px 1fr 1fr 1fr;
+  grid-template-columns: 400px 400px 400px 400px 1fr 1fr;
   grid-template-rows: minmax(min-content, 300px) 300px 300px 300px;
   gap: 1em 1em;
   grid-template-areas:
@@ -10,10 +10,6 @@
     "kudos faq bandits gear gear pantheon";
   overflow: auto;
   height: calc(100% - 60px - 3em);
-}
-
-.editorSectionWrapper {
-  //max-height: 600px;
 }
 
 .heading {

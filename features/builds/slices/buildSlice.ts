@@ -27,6 +27,7 @@ const initialState: BuildSlice = {
           children: [{ text: '' }],
         },
       ],
+      detrimentalMapMods: [],
       ascendancy: {
         tree: [],
       },
@@ -74,6 +75,22 @@ export const buildSlice = createSlice({
     changeConceptText: (state, { payload }) => {
       state.variants[state.activeVariant].conceptText =
         payload || initialState.variants[state.activeVariant].conceptText;
+    },
+
+    /**
+     * Detrimental Map Mods
+     */
+    addDetrimentalMapMod: (state, { payload }) => {
+      state.variants[state.activeVariant].detrimentalMapMods = [
+        ...state.variants[state.activeVariant].detrimentalMapMods,
+        payload,
+      ];
+    },
+
+    removeDetrimentalMapMod: (state, { payload }) => {
+      state.variants[state.activeVariant].detrimentalMapMods = state.variants[
+        state.activeVariant
+      ].detrimentalMapMods.filter((mapMod) => mapMod.value !== payload);
     },
 
     /**
@@ -143,6 +160,8 @@ export const {
   changeConceptText,
   changeKudosText,
   changeBandit,
+  addDetrimentalMapMod,
+  removeDetrimentalMapMod,
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;
@@ -152,6 +171,8 @@ export const selectIntroductionText = (state: RootState) => state.build.introduc
 export const selectKudosText = (state: RootState) => state.build.kudosText;
 export const selectConceptText = (state: RootState) =>
   state.build.variants[state.build.activeVariant].conceptText;
+export const selectDetrimentalMapMods = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].detrimentalMapMods;
 export const selectAscendancyTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].ascendancy.tree;
 export const selectPassivesTreeNodes = (state: RootState) =>
