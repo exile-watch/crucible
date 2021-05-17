@@ -14,6 +14,11 @@ html {
   color: var(--primary-color);
 }
 
+body {
+  // Due to downshift's a11y-status-message element at the bottom of document
+  overflow-x: hidden;
+}
+
 .theme-transition-scope {
   transition: var(--transition-theme);
 }
