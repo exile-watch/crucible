@@ -9,7 +9,20 @@
     "changelog faq skills gear gear ascendancy-tree"
     "kudos faq bandits gear gear pantheon";
   overflow: auto;
-  height: calc(100% - 60px - 3em);
+  height: calc(100% - 60px - 4em);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    transition: var(--transition-theme);
+
+    &-track {
+      background: var(--secondary-bg);
+    }
+
+    &-thumb {
+      background: var(--primary-color);
+    }
+  }
 }
 
 .heading {
