@@ -1,0 +1,14 @@
+.input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 1fr;
+
+  color: var(--tertiary-bg);
+  border-bottom: 1px solid var(--tertiary-bg);
+
+  &:active, &:focus {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+}
