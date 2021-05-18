@@ -1,0 +1,31 @@
+.faqList {
+  height: calc(380px - 1em);
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+
+    &-track {
+      background: var(--secondary-color);
+    }
+
+    &-thumb {
+      background: var(--primary-color);
+    }
+  }
+}
+
+.variantListWrapper {
+  border: 1px solid var(--secondary-color);
+  position: relative;
+}
+
+.variantListHeader {
+  position: absolute;
+  top: -13px;
+  background: var(--primary-bg);
+
+  span {
+    color: var(--tertiary-bg)
+  }
+}

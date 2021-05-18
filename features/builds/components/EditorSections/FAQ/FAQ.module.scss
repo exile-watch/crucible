@@ -1,0 +1,16 @@
+.faq {
+  overflow: auto;
+  height: calc(543px - 1em);
+
+  &::-webkit-scrollbar {
+    width: 4px;
+
+    &-track {
+      background: var(--secondary-color);
+    }
+
+    &-thumb {
+      background: var(--primary-color);
+    }
+  }
+}
