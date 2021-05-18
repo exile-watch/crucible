@@ -1,6 +1,12 @@
 import { Descendant } from 'slate';
 
-type Variant = {
+type FAQType = {
+  id: number;
+  q: string;
+  a: string;
+};
+
+type VariantType = {
   title: string;
   conceptText: Descendant[];
   detrimentalMapMods: { label: string; value: string }[];
@@ -10,6 +16,7 @@ type Variant = {
   passives: {
     tree: string[];
   };
+  faq: FAQType[];
   bandit: number | null;
 };
 
@@ -18,5 +25,6 @@ export type BuildSlice = {
   activeVariant: number;
   introductionText: Descendant[];
   kudosText: Descendant[];
-  variants: Variant[];
+  faq: FAQType[];
+  variants: VariantType[];
 };

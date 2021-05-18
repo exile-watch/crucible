@@ -18,6 +18,7 @@ const initialState: BuildSlice = {
       children: [{ text: '' }],
     },
   ],
+  faq: [],
   variants: [
     {
       title: '',
@@ -35,6 +36,7 @@ const initialState: BuildSlice = {
         tree: [],
       },
       bandit: null,
+      faq: [],
     },
   ],
 };
@@ -94,7 +96,7 @@ export const buildSlice = createSlice({
     },
 
     /**
-     * AscendancyProgress
+     * Ascendancy Passive Tree
      */
     toggleAscendancyTreeNode: (state, { payload }) => {
       if (
@@ -113,7 +115,7 @@ export const buildSlice = createSlice({
     },
 
     /**
-     * Leveling
+     * Passive Tree
      */
     togglePassivesTreeNode: (state, { payload }) => {
       if (
@@ -145,6 +147,32 @@ export const buildSlice = createSlice({
       state.variants[state.activeVariant].bandit =
         payload || initialState.variants[state.activeVariant].bandit;
     },
+
+    /**
+     * FAQ
+     */
+    addFAQ: (state, { payload }) => {
+      if (payload.isVariantOnly) {
+        state.variants[state.activeVariant].faq = [
+          ...state.variants[state.activeVariant].faq,
+          payload.qna || initialState.variants[state.activeVariant].faq,
+        ];
+        return;
+      }
+
+      state.faq = [...state.faq, payload.qna || initialState.faq];
+    },
+
+    removeFAQ: (state, { payload }) => {
+      if (payload.isVariantOnly) {
+        state.variants[state.activeVariant].faq = state.variants[state.activeVariant].faq.filter(
+          (f) => f.id !== payload.id
+        );
+        return;
+      }
+
+      state.faq = state.faq.filter((f) => f.id !== payload.id);
+    },
   },
 });
 
@@ -162,11 +190,15 @@ export const {
   changeBandit,
   addDetrimentalMapMod,
   removeDetrimentalMapMod,
+  addFAQ,
+  removeFAQ,
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;
 export const selectBuildVariants = (state: RootState) => state.build.variants;
 export const selectActiveVariant = (state: RootState) => state.build.activeVariant;
+export const selectActiveVariantTitle = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].title;
 export const selectIntroductionText = (state: RootState) => state.build.introductionText;
 export const selectKudosText = (state: RootState) => state.build.kudosText;
 export const selectConceptText = (state: RootState) =>
@@ -179,5 +211,8 @@ export const selectPassivesTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].passives.tree;
 export const selectBandit = (state: RootState) =>
   state.build.variants[state.build.activeVariant].bandit;
+export const selectFAQ = (state: RootState) => state.build.faq;
+export const selectVariantFAQ = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].faq;
 
 export default buildSlice.reducer;
