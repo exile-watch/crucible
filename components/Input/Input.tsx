@@ -5,7 +5,9 @@ import styles from './Input.module.scss';
 type InputProps = {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   id: string;
-  value: string | number;
+  value?: string | number;
+  type?: string;
+  checked?: boolean;
 };
 
 const Input = ({ onChange, value, id, ...props }: InputProps) => {

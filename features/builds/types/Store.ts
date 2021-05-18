@@ -1,6 +1,6 @@
 import { Descendant } from 'slate';
 
-type FAQType = {
+export type FAQType = {
   id: number;
   q: string;
   a: string;
