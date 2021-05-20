@@ -1,83 +1,32 @@
-@import '../variables/spacing';
-$grid-breakpoints: (
-  xs: $grid-breakpoints-xs,
-  sm: $grid-breakpoints-sm,
-  md: $grid-breakpoints-md,
-  lg: $grid-breakpoints-lg,
-);
 $spacers: (
   0: 0,
-  1: $spacing-xs,
-  2: $spacing-sm,
-  3: $spacing-md,
-  4: $spacing-lg,
-  5: $spacing-xl,
+  1: var(--spacing-xs),
+  2: var(--spacing-sm),
+  3: var(--spacing-md),
+  4: var(--spacing-lg),
+  5: var(--spacing-xl),
 );
 
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
-}
-
-@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
-}
-
-@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
-    @media only screen and (min-width: $min) {
-      @content;
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $length in $spacers {
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
     }
-  } @else {
-    @content;
-  }
-}
-
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-    @each $prop, $abbrev in (margin: m, padding: p) {
-      @each $size, $length in $spacers {
-        .#{$abbrev}#{$infix}-#{$size} {
-          #{$prop}: $length !important;
-        }
-        .#{$abbrev}t#{$infix}-#{$size},
-        .#{$abbrev}y#{$infix}-#{$size} {
-          #{$prop}-top: $length !important;
-        }
-        .#{$abbrev}r#{$infix}-#{$size},
-        .#{$abbrev}x#{$infix}-#{$size} {
-          #{$prop}-right: $length !important;
-        }
-        .#{$abbrev}b#{$infix}-#{$size},
-        .#{$abbrev}y#{$infix}-#{$size} {
-          #{$prop}-bottom: $length !important;
-        }
-        .#{$abbrev}l#{$infix}-#{$size},
-        .#{$abbrev}x#{$infix}-#{$size} {
-          #{$prop}-left: $length !important;
-        }
-      }
+    .#{$abbrev}t-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
     }
-    .m#{$infix}-auto {
-      margin: auto !important;
+    .#{$abbrev}r-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length !important;
     }
-    .mt#{$infix}-auto,
-    .my#{$infix}-auto {
-      margin-top: auto !important;
+    .#{$abbrev}b-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-bottom: $length !important;
     }
-    .mr#{$infix}-auto,
-    .mx#{$infix}-auto {
-      margin-right: auto !important;
-    }
-    .mb#{$infix}-auto,
-    .my#{$infix}-auto {
-      margin-bottom: auto !important;
-    }
-    .ml#{$infix}-auto,
-    .mx#{$infix}-auto {
-      margin-left: auto !important;
+    .#{$abbrev}l-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-left: $length !important;
     }
   }
 }

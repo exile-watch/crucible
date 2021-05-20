@@ -1,0 +1,61 @@
+
+/* Breakpoint media queries
+   ----------------------------------------------------------------- */
+
+/* Extra small
+   - 320px devices ONLY
+   - for the really rare instances where minor tweaks are needed to support iPhone 5/SE
+   ----------------------------------------------------------------- */
+@mixin screen-extra-small-only {
+  @media (max-width: var(--breakpoints-xs-max)) {
+    @content;
+  }
+}
+
+/* Small (slim, reduced gutter)
+   - 360px devices ONLY
+   - basically just reducing the gutter on the grid from 15px to 10px
+   - so the 360px Android devices have the same experience as 375px iPhone devices
+   ----------------------------------------------------------------- */
+//@mixin screen-small-slim-only {
+//  @media (min-width: $small-reduced-gutter-min) and (max-width: $small-reduced-gutter-max) {
+//    @content;
+//  }
+//}
+
+/* Small
+   - 375px devices AND DOWN
+   - basically styles for all of the small screens: 320px, 360px, and 375px
+   ----------------------------------------------------------------- */
+@mixin screen-small {
+  @media (max-width: var(--breakpoints-sm-max)) {
+    @content;
+  }
+}
+
+/* Medium
+   - 720px devices AND UP
+   ----------------------------------------------------------------- */
+@mixin screen-medium {
+  @media (min-width: var(--breakpoints-md-min)) {
+    @content;
+  }
+}
+
+/* Large
+   - 1020px devices AND UP
+   ----------------------------------------------------------------- */
+@mixin screen-large {
+  @media (min-width: var(--breakpoints-lg-min)) {
+    @content;
+  }
+}
+
+/* Extra Large
+   - 1260px devices AND UP
+   ----------------------------------------------------------------- */
+@mixin screen-extra-large {
+  @media (min-width: var(--breakpoints-xl-min)) {
+    @content;
+  }
+}

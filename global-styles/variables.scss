@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  /**
+   * Fonts
+   */
+  font-family: 'Lato', sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 28px;
+
+  --font-line-height-sm: 18px;
+  --font-line-height-md: 20px;
+  --font-line-height-lg: 22px;
+  --font-line-height-xl: 34px;
+  --font-line-height-2xl: 36px;
+
+  --font-weight-thin: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 900;
+
+  /**
+   * Breakpoints
+   */
+  // extra-small
+  --breakpoint-xs-min: 320px;
+  --breakpoint-xs-max: 359px;
+  // small
+  --breakpoint-sm-min: 375px;
+  --breakpoint-sm-max: 719px;
+  // medium
+  --breakpoint-md-min: 720px;
+  --breakpoint-md-max: 1019px;
+  // large
+  --breakpoint-lg-min: 1020px;
+  --breakpoint-lg-max: 1259px;
+  // extra large
+  --breakpoint-xl-max: 1260px;
+
+  /**
+   * Spacing
+   */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
+
+  /**
+   * Transitions
+   */
+  --transition-duration: .4s;
+  --transition-theme: all ease var(--transition-duration);
+
+  /**
+   * z-index
+   */
+  --z-index-1: 1;
+  --z-index-10: 10;
+  --z-index-100: 100;
+}

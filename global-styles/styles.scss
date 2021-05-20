@@ -1,10 +1,8 @@
-@import 'reset';
-@import 'variables/spacing';
-@import 'variables/colors';
-@import 'variables/typography';
-@import 'variables/z-index';
-@import 'variables/transitions';
-@import 'mixins/spacing';
+@use 'reset';
+@use 'variables';
+@use 'colors';
+@use 'mixins/spacing';
+@use 'mixins/breakpoints';
 
 #__next {
   height: 100%;
