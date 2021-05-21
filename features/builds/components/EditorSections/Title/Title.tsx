@@ -2,6 +2,7 @@ import cx from 'classnames';
 import Link from 'next/link';
 
 import Heading from '#components/Heading/Heading';
+import Message from '#components/Message/Message';
 import {
   addVoidVariant,
   editTitle,
@@ -112,8 +113,14 @@ const Title = () => {
             </Heading>
           ))}
       </div>
-      {variants.length > 1 && (
-        <div>Currently adding content for {variants[activeVariant].title}. </div>
+      {variants.length > 1 && variants[activeVariant].title.length > 0 && (
+        <Message type="info" className="mt-3">
+          Currently adding content for
+          <b className="p-1">
+            <u>{variants[activeVariant].title}</u>
+          </b>
+          variation.
+        </Message>
       )}
     </>
   );
