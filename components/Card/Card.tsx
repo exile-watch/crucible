@@ -8,11 +8,12 @@ type CardTypes = {
   children: ReactNode;
   className?: string;
   style?: any;
+  locked?: boolean;
 };
 
-const Card = ({ children, as: T = 'div', className, style }: CardTypes) => {
+const Card = ({ children, as: T = 'div', className, style, locked }: CardTypes) => {
   return (
-    <T className={cx('p-3', styles.card, className)} style={style}>
+    <T className={cx('p-3', styles.card, locked && styles.locked, className)} style={style}>
       {children}
     </T>
   );

@@ -16,7 +16,7 @@ const Kudos = () => {
   };
 
   return (
-    <EditorSectionWrapper section="kudos">
+    <EditorSectionWrapper section="kudos" locked>
       <TextEditor value={value} onChange={handleChange} />
     </EditorSectionWrapper>
   );

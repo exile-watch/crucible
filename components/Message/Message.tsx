@@ -1,14 +1,15 @@
 import React, { ReactNode } from 'react';
 import cx from 'classnames';
 
-import { ErrorIcon, InfoIcon, WarningIcon } from '#assets/icons';
+import { ErrorIcon, InfoIcon, LockedIcon, WarningIcon } from '#assets/icons';
 
 import styles from './Message.module.scss';
 
 type MessageProps = {
-  type: 'info' | 'success' | 'warning' | 'error';
+  type: 'info' | 'locked' | 'success' | 'warning' | 'error';
   children: ReactNode;
   className?: string;
+  size?: 'small' | 'medium';
 };
 
 const Icon = ({ type, ...props }: any) => {
@@ -22,10 +23,28 @@ const Icon = ({ type, ...props }: any) => {
   }
 };
 
-const Message = ({ type, children, className }: MessageProps) => (
-  <div className={cx('p-3', styles.container, styles[type], className)}>
-    <Icon type={type} className="mr-3" />
-    <p>{children}</p>
+const Message = ({ type, children, size = 'medium', className }: MessageProps) => (
+  <div
+    className={cx(styles.container, styles[type], className, {
+      ...(size === 'small' && { 'p-1': true, [styles.small]: true }),
+      ...(size === 'medium' && { 'p-3': true }),
+    })}
+  >
+    <Icon
+      type={type}
+      className={cx({
+        ...(size === 'small' && { 'mr-1': true }),
+        ...(size === 'medium' && { 'mr-3': true }),
+      })}
+    />
+    <p
+      className={cx({
+        ...(size === 'small' && { 'pl-2': true }),
+        ...(size === 'medium' && { 'pl-3': true }),
+      })}
+    >
+      {children}
+    </p>
   </div>
 );
 

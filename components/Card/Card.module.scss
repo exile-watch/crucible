@@ -1,3 +1,7 @@
 .card {
   border:1px solid var(--secondary-color);
 }
+
+.locked {
+  box-shadow: 0 0 10px inset #004d40;
+}

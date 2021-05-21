@@ -15,7 +15,7 @@ const Introduction = () => {
   };
 
   return (
-    <EditorSectionWrapper section="introduction">
+    <EditorSectionWrapper section="introduction" locked>
       <TextEditor value={value} onChange={handleChange} />
     </EditorSectionWrapper>
   );
