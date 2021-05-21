@@ -6,6 +6,26 @@ html {
   --primary-bg: #181818;
   --secondary-bg: #212121;
   --tertiary-bg: #aaaaaa;
+
+  /**
+   * Messages
+   */
+  --message-info-bg-primary: #1a237e;
+  --message-info-bg-secondary: var(--primary-bg);
+  --message-info-color: #90caf9;
+
+  --message-success-bg-primary: #1b5e20;
+  --message-success-bg-secondary: var(--primary-bg);
+  --message-success-color: #a5d6a7;
+
+  --message-warning-bg-primary: #e65100;
+  --message-warning-bg-secondary: var(--primary-bg);
+  --message-warning-color: #ffe0b2;
+
+  --message-error-bg-primary: #b71c1c;
+  --message-error-bg-secondary: var(--primary-bg);
+  --message-error-color: #ffcdd2;
+
 }
 
 html:not(.dark) {
@@ -16,4 +36,11 @@ html:not(.dark) {
   --primary-bg: #FFFAEB;
   --secondary-bg: #FCEFC7;
   --tertiary-bg: #C99A2E;
+
+  /**
+   * Messages
+   */
+  --message-info-bg-primary: #1a237e;
+  --message-info-bg-secondary: #1a237e;
+  --message-info-color: #90caf9;
 }

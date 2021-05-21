@@ -1,0 +1,35 @@
+$gradient_degree: 135deg;
+
+.container {
+  border: 1px solid;
+  display: flex;
+
+  path {
+    fill: currentColor;
+  }
+}
+
+.info {
+  background: linear-gradient($gradient_degree, var(--message-info-bg-primary), var(--message-info-bg-secondary));
+  border-color: var(--message-info-color);
+  color: var(--message-info-color);
+}
+
+.success {
+  background: linear-gradient($gradient_degree, var(--message-success-bg-primary), var(--message-success-bg-secondary));
+  border-color: var(--message-success-color);
+  color: var(--message-success-color);
+}
+
+.warning {
+  background: linear-gradient($gradient_degree, var(--message-warning-bg-primary), var(--message-info-bg-secondary));
+  border-color: var(--message-warning-color);
+  color: var(--message-warning-color);
+}
+
+.error {
+  background: linear-gradient($gradient_degree, var(--message-error-bg-primary), var(--message-success-bg-secondary));
+  border-color: var(--success-error-color);
+  color: var(--message-error-color);
+}
+
