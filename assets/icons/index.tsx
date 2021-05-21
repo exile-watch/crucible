@@ -1,5 +1,6 @@
 export { default as ArrowDownIcon } from './ArrowDownIcon';
 export { default as ArrowRightIcon } from './ArrowRightIcon';
+export { default as ErrorIcon } from './ErrorIcon';
 export { default as FormatBoldIcon } from './FormatBoldIcon';
 export { default as FormatBulletedListIcon } from './FormatBulletedListIcon';
 export { default as FormatCodeIcon } from './FormatCodeIcon';
@@ -9,8 +10,10 @@ export { default as FormatItalicIcon } from './FormatItalicIcon';
 export { default as FormatNumberedListIcon } from './FormatNumberedListIcon';
 export { default as FormatQuoteIcon } from './FormatQuoteIcon';
 export { default as FormatUnderlineIcon } from './FormatUnderlineIcon';
+export { default as InfoIcon } from './InfoIcon';
 export { default as MoonIcon } from './MoonIcon';
 export { default as RedirectIcon } from './RedirectIcon';
 export { default as SearchIcon } from './SearchIcon';
 export { default as SunIcon } from './SunIcon';
 export { default as VerticalMenuIcon } from './VerticalMenuIcon';
+export { default as WarningIcon } from './WarningIcon';
