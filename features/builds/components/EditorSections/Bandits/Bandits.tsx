@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 
+import Message from '#components/Message/Message';
 import EditorSectionWrapper from '#features/builds/components/EditorSections/EditorSectionWrapper';
 import { changeBandit, selectBandit } from '#features/builds/slices/buildSlice';
 import { useDispatch, useSelector } from '#hooks/useStore';
@@ -21,6 +22,13 @@ const Bandits = () => {
 
   return (
     <EditorSectionWrapper section="Bandits">
+      <Message type="info" className="mb-3" size="small">
+        Only{' '}
+        <b>
+          <u>1</u>
+        </b>{' '}
+        option can be selected.
+      </Message>
       <ul className={styles.bandits}>
         {BANDIT_OPTIONS.map((bandit) => (
           <li
