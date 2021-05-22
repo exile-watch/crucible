@@ -1,8 +1,21 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: inherit;
+
+  &:focus-within {
+    label {
+      transform: translate(0, 5px) scale(0.8);
+    }
+  }
+}
+
 .input {
   background: transparent;
   border: 0;
   outline: 0;
-  width: 1fr;
+  width: inherit;
 
   color: var(--tertiary-bg);
   border-bottom: 1px solid var(--tertiary-bg);
@@ -11,4 +24,28 @@
     color: var(--primary-color);
     border-color: var(--primary-color);
   }
+}
+
+.medium {
+  line-height: var(--font-line-height-xlg);
+}
+
+.large {
+  line-height: var(--font-line-height-2xl);
+}
+
+.label {
+  position: absolute;
+  transform: translate(0, 26px) scale(1);
+  transform-origin: top left;
+  transition: all 0.2s ease-out;
+  color: #999;
+  pointer-events: none;
+  top: -20px;
+  left: 3px;
+  line-height: var(--font-line-height-lg);
+}
+
+.isActive {
+  transform: translate(0, 5px) scale(0.8);
 }
