@@ -1,5 +1,6 @@
 import cx from 'classnames';
 
+import SidebarBuildsDesktop from '#features/builds/components/Sidebar/SidebarBuildsDesktop';
 import SidebarEncountersDesktop from '#features/encounters/components/Sidebar/SidebarEncountersDesktop';
 import useActiveFeature from '#hooks/useActiveFeature';
 
@@ -9,6 +10,10 @@ const sidebarComponents = [
   {
     name: 'encounters',
     component: SidebarEncountersDesktop,
+  },
+  {
+    name: 'builds',
+    component: SidebarBuildsDesktop,
   },
 ];
 
