@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import Link from 'next/link';
 
 import * as icons from '#assets/icons';
 import Heading from '#components/Heading/Heading';
@@ -19,6 +20,11 @@ const Icon = ({ icon }: IconProps) => {
 const SidebarBuildsDesktop = () => {
   return (
     <nav className={cx('px-3', styles.buildsSidebar)}>
+      <div className="user">
+        <Link href="/users/FooBarThron">
+          <a className={cx('theme-transition-scope')}>FooBarThron</a>
+        </Link>
+      </div>
       <div className={cx('pt-3', styles.classes)}>
         <Heading as="h4" className={cx('mb-3', styles.header)}>
           CLASS BUILDS

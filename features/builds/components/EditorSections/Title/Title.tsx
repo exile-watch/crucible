@@ -1,7 +1,7 @@
 import cx from 'classnames';
-import Link from 'next/link';
 
 import Heading from '#components/Heading/Heading';
+import Input from '#components/Input/Input';
 import Message from '#components/Message/Message';
 import {
   addVoidVariant,
@@ -55,63 +55,29 @@ const Title = () => {
   };
 
   return (
-    <>
-      <Heading as="h4">
-        <span className={cx('theme-transition-scope', styles.author)}>
-          by{'  '}
-          <Link href="/users/FooBarThron">
-            <a className={cx('theme-transition-scope', styles.active)}>FooBarThron</a>
-          </Link>{' '}
-          {variants.length > 1 && (
-            <>
-              {' '}
-              •{' '}
-              <input
-                placeholder="Enter build title here"
-                className={cx('theme-transition-scope', styles.input)}
-                value={title}
-                onChange={handleTitleChange}
-              />
-            </>
-          )}
-        </span>
-      </Heading>
+    <div>
+      <input
+        placeholder="Enter build title here"
+        className={cx('theme-transition-scope', styles.input)}
+        value={title}
+        onChange={handleTitleChange}
+      />
       <div className={styles.titleWrapper}>
-        {variants.length === 1 && (
-          <>
-            <Heading as="h2">
-              <input
-                placeholder="Enter build title here"
-                className={cx('theme-transition-scope', styles.input)}
-                value={title}
-                onChange={handleTitleChange}
-              />
-            </Heading>
-            {title.length > 0 && (
-              <Heading as="h2">
-                <input
-                  placeholder="Enter build variant title here"
-                  className={cx('theme-transition-scope', styles.input)}
-                  onClick={() => handleVariantTitleClick(0)}
-                  onChange={(e) => handleVariantTitleChange(e, 0)}
-                />
-              </Heading>
-            )}
-          </>
-        )}
-
-        {variants.length >= 2 &&
-          variants.map((variant, variantId) => (
-            <Heading as="h2" key={`variantTitle_${variantId}`}>
-              <input
-                placeholder="Enter build variant title here"
-                className={cx('theme-transition-scope', styles.input)}
-                value={variant.title}
-                onClick={() => handleVariantTitleClick(variantId)}
-                onChange={(e) => handleVariantTitleChange(e, variantId)}
-              />
-            </Heading>
-          ))}
+        {variants.map((variant, variantId) => (
+          <Heading as="h2" key={`variantTitle_${variantId}`}>
+            <Input
+              placeholder="Enter build variant title here"
+              className={cx(
+                'theme-transition-scope',
+                styles.input,
+                activeVariant !== variantId && styles.activeInput
+              )}
+              value={variant.title}
+              onClick={() => handleVariantTitleClick(variantId)}
+              onChange={(e) => handleVariantTitleChange(e, variantId)}
+            />
+          </Heading>
+        ))}
       </div>
       {variants.length > 1 && variants[activeVariant].title.length > 0 && (
         <Message type="info" className="mt-3">
@@ -122,7 +88,7 @@ const Title = () => {
           variation.
         </Message>
       )}
-    </>
+    </div>
   );
 };
 
