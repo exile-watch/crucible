@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import Message from '#components/Message/Message';
 import Select from '#components/Select/Select';
 import {
   addDetrimentalMapMod,
@@ -33,10 +34,24 @@ const DetrimentalMapMods = () => {
 
   const handleItemSelect = (item) => dispatch(addDetrimentalMapMod(item.selectedItem));
   const handleItemDeselect = (item) => dispatch(removeDetrimentalMapMod(item));
-
+  const msgType = () => {
+    if (selectedItems.length === 4) return 'warning';
+    if (selectedItems.length === 5) return 'error';
+    return 'info';
+  };
   return (
     <EditorSectionWrapper section="Detrimental Map Mods">
-      You can select up to 5 detrimental map mods. ({selectedItems.length}/5)
+      <Message type={msgType()} size="small" className="mb-3">
+        You can select up to{' '}
+        <b>
+          <u>5</u>
+        </b>{' '}
+        map mods. (
+        <b>
+          <u>{selectedItems.length}</u>
+        </b>
+        /5)
+      </Message>
       <Select
         id="detrimental-map-mods-select"
         items={Object.values(data)}
