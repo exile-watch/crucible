@@ -5,6 +5,7 @@ import { RootState } from '#store';
 
 const initialState: BuildSlice = {
   title: 'test',
+  pob: '',
   activeVariant: 0,
   introductionText: [
     {
@@ -62,6 +63,13 @@ export const buildSlice = createSlice({
     },
     setActiveVariant: (state, { payload }) => {
       state.activeVariant = payload;
+    },
+
+    /**
+     * Pob
+     */
+    changePob: (state, { payload }) => {
+      state.pob = payload;
     },
 
     /**
@@ -177,6 +185,7 @@ export const buildSlice = createSlice({
 });
 
 export const {
+  changePob,
   toggleAscendancyTreeNode,
   togglePassivesTreeNode,
   addVoidVariant,
@@ -195,6 +204,7 @@ export const {
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;
+export const selectBuildPob = (state: RootState) => state.build.pob;
 export const selectBuildVariants = (state: RootState) => state.build.variants;
 export const selectActiveVariant = (state: RootState) => state.build.activeVariant;
 export const selectActiveVariantTitle = (state: RootState) =>

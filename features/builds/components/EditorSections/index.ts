@@ -13,3 +13,4 @@ export { default as Pantheon } from './Pantheon/Pantheon';
 export { default as Title } from './Title/Title';
 export { default as Skills } from './Skills/Skills';
 export { default as Bandits } from './Bandits/Bandits';
+export { default as Pob } from './Pob/Pob';

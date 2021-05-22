@@ -22,6 +22,7 @@ type VariantType = {
 
 export type BuildSlice = {
   title: string;
+  pob: string;
   activeVariant: number;
   introductionText: Descendant[];
   kudosText: Descendant[];

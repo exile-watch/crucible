@@ -1,8 +1,10 @@
 import cx from 'classnames';
 
-import Heading from '#components/Heading/Heading';
+import { TrashIcon } from '#assets/icons';
 import Input from '#components/Input/Input';
+import InputGroup from '#components/InputGroup/InputGroup';
 import Message from '#components/Message/Message';
+import { Pob } from '#features/builds/components/EditorSections';
 import {
   addVoidVariant,
   editTitle,
@@ -28,64 +30,72 @@ const Title = () => {
   const handleTitleChange = ({ target: { value } }: Event) => {
     dispatch(editTitle(value));
   };
+
   const handleVariantTitleChange = ({ target: { value } }: Event, variantId: number) => {
     dispatch(editVariantTitle({ value, variantId }));
-
-    if (variants.length === 1) dispatch(addVoidVariant());
-
-    if (
-      variantId > 0 &&
-      variants?.[variantId + 1]?.title?.length !== 0 &&
-      variants?.[variants.length - 1]?.title?.length !== 0
-    ) {
-      dispatch(addVoidVariant());
-    }
-    if (value === '') {
-      if (variants.length === 1) return;
-
-      if (variants?.[variantId + 1]?.title?.length !== 0) dispatch(removeVoidVariant(variantId));
-
-      if (variants?.[variantId + 1]?.title?.length === 0)
-        dispatch(removeVoidVariant(variantId + 1));
-    }
   };
 
   const handleVariantTitleClick = (variantId: number) => {
     dispatch(setActiveVariant(variantId));
   };
 
+  const handleAddNewVariantClick = () => dispatch(addVoidVariant());
+
+  const handleRemoveVariantClick = () =>
+    activeVariant !== 0 && dispatch(removeVoidVariant(activeVariant));
+
   return (
     <div>
-      <input
-        placeholder="Enter build title here"
-        className={cx('theme-transition-scope', styles.input)}
-        value={title}
-        onChange={handleTitleChange}
-      />
+      <div className={styles.heading}>
+        <Input
+          label="Build title"
+          className={cx('theme-transition-scope mb-3', styles.input)}
+          value={title}
+          onChange={handleTitleChange}
+        />
+        <div className={styles.actions}>
+          <div>
+            <Pob />
+          </div>
+          <div>preview</div>
+          <div>comments</div>
+          <div onClick={handleRemoveVariantClick}>remove variant</div>
+          <div>Create</div>
+        </div>
+      </div>
       <div className={styles.titleWrapper}>
         {variants.map((variant, variantId) => (
-          <Heading as="h2" key={`variantTitle_${variantId}`}>
-            <Input
-              placeholder="Enter build variant title here"
-              className={cx(
-                'theme-transition-scope',
-                styles.input,
-                activeVariant !== variantId && styles.activeInput
-              )}
-              value={variant.title}
-              onClick={() => handleVariantTitleClick(variantId)}
-              onChange={(e) => handleVariantTitleChange(e, variantId)}
-            />
-          </Heading>
+          <>
+            {variantId !== 0 && <span className={cx('mx-3', styles.separator)}>•</span>}
+            <InputGroup>
+              <Input
+                key={`variantTitle_${variantId}`}
+                label={`Variant ${variantId + 1}`}
+                className={cx(styles.input, activeVariant !== variantId && styles.activeInput)}
+                value={variant.title}
+                onClick={() => handleVariantTitleClick(variantId)}
+                size="large"
+                onChange={(e) => handleVariantTitleChange(e, variantId)}
+              />
+              <InputGroup.Append disabled={false}>
+                <TrashIcon onClick={handleRemoveVariantClick} />
+              </InputGroup.Append>
+            </InputGroup>
+          </>
         ))}
+        <p onClick={handleAddNewVariantClick}>+ Add another variant</p>
       </div>
-      {variants.length > 1 && variants[activeVariant].title.length > 0 && (
+      {variants.length > 1 && (
         <Message type="info" className="mt-3">
           Currently adding content for
           <b className="p-1">
-            <u>{variants[activeVariant].title}</u>
+            <u>
+              {variants[activeVariant].title.length > 0
+                ? variants[activeVariant].title
+                : `Variant ${activeVariant + 1}`}
+            </u>
           </b>
-          variation.
+          variant.
         </Message>
       )}
     </div>
