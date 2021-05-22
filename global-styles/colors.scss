@@ -30,6 +30,16 @@ html {
   --message-error-bg-secondary: var(--primary-bg);
   --message-error-color: #ffcdd2;
 
+  /**
+   * Classes
+   */
+  --classes-duelist: #ff9800;
+  --classes-marauder: #f44336;
+  --classes-ranger: #4caf50;
+  --classes-scion: #fff59d;
+  --classes-shadow: #009688;
+  --classes-templar: #ce93d8;
+  --classes-witch: #2196f3;
 }
 
 html:not(.dark) {
