@@ -10,7 +10,7 @@ type InputGroupComposition = {
   Append?: InputGroupAppendProps;
 };
 
-type InputGroupProps = {
+export type InputGroupProps = {
   children?: ReactNode;
 } & InputGroupComposition;
 
