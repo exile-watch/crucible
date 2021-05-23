@@ -5,12 +5,10 @@ const common = {
   brandUrl: 'https://example.com',
 }
 
-
 const colorPrimaryDark = '#e6e2af';
 const colorSecondaryDark = '#3e3e34';
 const bgPrimaryDark = '#181818';
 const bgSecondaryDark = '#212121';
-const bgTertiaryDark = '#aaaaaa';
 
 export default create({
   ...common,
@@ -21,7 +19,7 @@ export default create({
 
   appBg: bgSecondaryDark,
   appContentBg: bgPrimaryDark,
-  appBorderColor: bgTertiaryDark,
+  appBorderColor: colorSecondaryDark,
 
   textColor: colorPrimaryDark,
 

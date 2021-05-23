@@ -13,4 +13,4 @@ export default {
 
 const Template: Story<BadgeProps> = (args) => <Badge {...args}>Neat badge</Badge>;
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});
