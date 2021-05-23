@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import styles from './Badge.module.scss';
 
-type BadgeProps = {
+export type BadgeProps = {
   children: ReactNode;
   onClick?: () => any;
   className?: string;
