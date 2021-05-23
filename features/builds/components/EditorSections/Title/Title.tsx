@@ -26,7 +26,6 @@ const Title = () => {
   const variants = useSelector(selectBuildVariants);
   const activeVariant = useSelector(selectActiveVariant);
   const dispatch = useDispatch();
-
   const handleTitleChange = ({ target: { value } }: Event) => {
     dispatch(editTitle(value));
   };
@@ -39,10 +38,16 @@ const Title = () => {
     dispatch(setActiveVariant(variantId));
   };
 
-  const handleAddNewVariantClick = () => dispatch(addVoidVariant());
+  const handleAddNewVariantClick = () => {
+    dispatch(addVoidVariant());
+    dispatch(setActiveVariant(variants.length));
+  };
 
-  const handleRemoveVariantClick = () =>
-    activeVariant !== 0 && dispatch(removeVoidVariant(activeVariant));
+  const handleRemoveVariantClick = (variantId: number) => {
+    activeVariant !== variantId && dispatch(setActiveVariant(variantId));
+    variantId !== 0 && dispatch(removeVoidVariant(variantId));
+    dispatch(setActiveVariant(variantId + 1 < variants.length ? variantId + 1 : variantId - 1));
+  };
 
   return (
     <div>
@@ -59,30 +64,41 @@ const Title = () => {
           </div>
           <div>preview</div>
           <div>comments</div>
-          <div onClick={handleRemoveVariantClick}>remove variant</div>
           <div>Create</div>
         </div>
       </div>
       <div className={styles.titleWrapper}>
-        {variants.map((variant, variantId) => (
-          <>
-            {variantId !== 0 && <span className={cx('mx-3', styles.separator)}>•</span>}
-            <InputGroup>
-              <Input
-                key={`variantTitle_${variantId}`}
-                label={`Variant ${variantId + 1}`}
-                className={cx(styles.input, activeVariant !== variantId && styles.activeInput)}
-                value={variant.title}
-                onClick={() => handleVariantTitleClick(variantId)}
-                size="large"
-                onChange={(e) => handleVariantTitleChange(e, variantId)}
-              />
-              <InputGroup.Append disabled={false}>
-                <TrashIcon onClick={handleRemoveVariantClick} />
-              </InputGroup.Append>
-            </InputGroup>
-          </>
-        ))}
+        {variants.map((variant, variantId) =>
+          variantId === 0 ? (
+            <Input
+              key={`variantTitle_${variantId}`}
+              label={`Variant ${variantId + 1}`}
+              className={cx(styles.input, activeVariant !== variantId && styles.activeInput)}
+              value={variant.title}
+              onClick={() => handleVariantTitleClick(variantId)}
+              size="large"
+              onChange={(e) => handleVariantTitleChange(e, variantId)}
+            />
+          ) : (
+            <>
+              <span className={cx('mx-3', styles.separator)}>•</span>
+              <InputGroup>
+                <Input
+                  key={`variantTitle_${variantId}`}
+                  label={`Variant ${variantId + 1}`}
+                  className={cx(styles.input, activeVariant !== variantId && styles.activeInput)}
+                  value={variant.title}
+                  onClick={() => handleVariantTitleClick(variantId)}
+                  size="large"
+                  onChange={(e) => handleVariantTitleChange(e, variantId)}
+                />
+                <InputGroup.Append disabled={false}>
+                  <TrashIcon onClick={() => handleRemoveVariantClick(variantId)} />
+                </InputGroup.Append>
+              </InputGroup>
+            </>
+          )
+        )}
         <p onClick={handleAddNewVariantClick}>+ Add another variant</p>
       </div>
       {variants.length > 1 && (
