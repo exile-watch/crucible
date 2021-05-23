@@ -16,17 +16,17 @@ const HOTKEYS: Record<string, string> = {
   'mod+`': 'code',
 };
 
-type RichTextExampleProps = {
+export type TextEditorProps = {
   value: Descendant[];
   onChange: (v: Descendant[]) => void;
 };
 
-const RichTextExample = ({ value, onChange }: RichTextExampleProps) => {
+const RichTextExample = ({ value, onChange }: TextEditorProps) => {
   const renderElement = useCallback((props) => <Element {...props} />, []);
   const renderLeaf = useCallback((props) => <Leaf {...props} />, []);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
 
-  const handleChange = (v) => {
+  const handleChange = (v: any) => {
     if (JSON.stringify(value) === JSON.stringify(v)) return;
     onChange(v);
   };
