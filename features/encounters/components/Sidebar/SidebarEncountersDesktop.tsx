@@ -3,8 +3,8 @@ import cx from 'classnames';
 import { kebabCase, upperCase } from 'lodash';
 import Link from 'next/link';
 
-import { ArrowRightIcon } from '#assets/icons';
 import { Heading } from '#design-system/components';
+import { ArrowRightIcon } from '#design-system/icons';
 import useLoadSidebarData from '#hooks/useLoadSidebarData';
 import useRouter from '#hooks/useRouter';
 import { AtomPathData } from '#types';

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import cx from 'classnames';
 import { useCombobox } from 'downshift';
 
-import { ArrowDownIcon } from '#assets/icons';
+import { ArrowDownIcon } from '#design-system/icons';
 
 import styles from './Select.module.scss';
 

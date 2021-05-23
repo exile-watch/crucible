@@ -1,8 +1,8 @@
 import cx from 'classnames';
 import Link from 'next/link';
 
-import * as icons from '#assets/icons';
 import { Heading } from '#design-system/components';
+import * as icons from '#design-system/icons';
 
 import styles from './SidebarBuildsDesktop.module.scss';
 

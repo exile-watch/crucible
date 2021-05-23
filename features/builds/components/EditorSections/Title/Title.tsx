@@ -1,7 +1,7 @@
 import cx from 'classnames';
 
-import { TrashIcon } from '#assets/icons';
 import { Input, InputGroup, Message } from '#design-system/components';
+import { TrashIcon } from '#design-system/icons';
 import { Pob } from '#features/builds/components/EditorSections';
 import {
   addVoidVariant,

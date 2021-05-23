@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 
-import { LinkIcon } from '#assets/icons';
 import { Input, InputGroup } from '#design-system/components';
+import { LinkIcon } from '#design-system/icons';
 import { changePob, selectBuildPob } from '#features/builds/slices/buildSlice';
 import { useDispatch, useSelector } from '#hooks/useStore';
 

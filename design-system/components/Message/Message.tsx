@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import cx from 'classnames';
 
-import { ErrorIcon, InfoIcon, WarningIcon } from '#assets/icons';
+import { ErrorIcon, InfoIcon, WarningIcon } from '#design-system/icons';
 
 import styles from './Message.module.scss';
 

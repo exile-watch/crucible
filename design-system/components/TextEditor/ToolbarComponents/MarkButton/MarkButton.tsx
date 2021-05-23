@@ -7,7 +7,7 @@ import {
   FormatCodeIcon,
   FormatItalicIcon,
   FormatUnderlineIcon,
-} from '#assets/icons';
+} from '#design-system/icons';
 import { EmphasisTypes } from '#types/slate';
 
 import { isMarkActive, toggleMark } from './utils';

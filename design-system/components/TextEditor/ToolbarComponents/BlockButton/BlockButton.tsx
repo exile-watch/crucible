@@ -8,7 +8,7 @@ import {
   FormatHeadingTwoIcon,
   FormatNumberedListIcon,
   FormatQuoteIcon,
-} from '#assets/icons';
+} from '#design-system/icons';
 import { ElementTypes } from '#types/slate';
 
 import { isBlockActive, toggleBlock } from './utils';

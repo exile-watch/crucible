@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import startCase from 'lodash/startCase';
 
-import { RedirectIcon } from '#assets/icons';
+import { RedirectIcon } from '#design-system/icons';
 import useRouter from '#hooks/useRouter';
 
 import styles from './MissingContent.module.scss';

@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import cx from 'classnames';
 import startCase from 'lodash/startCase';
 
-import { SearchIcon } from '#assets/icons';
 import { Badge, Loader } from '#design-system/components';
+import { SearchIcon } from '#design-system/icons';
 import useOnClickOutside from '#hooks/useOnClickOutside';
 import useRouter from '#hooks/useRouter';
 import { IndexedSearchResultsProps } from '#types';

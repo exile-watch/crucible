@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import { VerticalMenuIcon } from '#assets/icons';
+import { VerticalMenuIcon } from '#design-system/icons';
 import { removeFAQ } from '#features/builds/slices/buildSlice';
 import { FAQType } from '#features/builds/types/Store';
 import { useDispatch } from '#hooks/useStore';
