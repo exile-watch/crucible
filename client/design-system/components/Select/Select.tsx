@@ -11,7 +11,7 @@ type SelectOptionTypes = {
   value: string | number;
 }[];
 
-type SelectProps = {
+export type SelectProps = {
   id: string;
   itemsLimit?: number;
   selectedItems: SelectOptionTypes;
