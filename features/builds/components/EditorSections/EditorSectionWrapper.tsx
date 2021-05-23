@@ -2,9 +2,7 @@ import React, { ReactNode } from 'react';
 import cx from 'classnames';
 import { kebabCase } from 'lodash';
 
-import Card from '#components/Card/Card';
-import Heading from '#components/Heading/Heading';
-import Message from '#components/Message/Message';
+import { Card, Heading, Message } from '#design-system/components';
 
 import styles from './EditorSectionWrapper.module.scss';
 

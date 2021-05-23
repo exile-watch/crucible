@@ -1,8 +1,7 @@
 import React, { ChangeEvent, Dispatch, useState } from 'react';
 import cx from 'classnames';
 
-import Input from '#components/Input/Input';
-import Textarea from '#components/Textarea/Textarea';
+import { Input, Textarea } from '#design-system/components';
 import { addFAQ } from '#features/builds/slices/buildSlice';
 import { useDispatch } from '#hooks/useStore';
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import toLower from 'lodash/toLower';
 
-import Result from '#components/InputWithResults/Results/Result';
 import { IndexedSearchResultsProps } from '#types';
+
+import Result from './Result';
 
 import styles from './Results.module.scss';
 

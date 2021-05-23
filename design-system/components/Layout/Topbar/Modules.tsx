@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import Link from 'next/link';
 
-import Heading from '#components/Heading/Heading';
+import { Heading } from '#design-system/components';
 import useActiveFeature from '#hooks/useActiveFeature';
 
 import styles from './TopbarDesktop.module.scss';

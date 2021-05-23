@@ -4,7 +4,7 @@ import { kebabCase, upperCase } from 'lodash';
 import Link from 'next/link';
 
 import { ArrowRightIcon } from '#assets/icons';
-import Heading from '#components/Heading/Heading';
+import { Heading } from '#design-system/components';
 import useLoadSidebarData from '#hooks/useLoadSidebarData';
 import useRouter from '#hooks/useRouter';
 import { AtomPathData } from '#types';

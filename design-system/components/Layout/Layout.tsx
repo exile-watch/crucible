@@ -2,9 +2,9 @@ import { ReactNode } from 'react';
 import cx from 'classnames';
 import Head from 'next/head';
 
-import Sidebar from '#components/Layout/Sidebar/Sidebar';
 import useActiveFeature from '#hooks/useActiveFeature';
 
+import Sidebar from './Sidebar/Sidebar';
 import TopbarDesktop from './Topbar/TopbarDesktop';
 
 import styles from './Layout.module.scss';

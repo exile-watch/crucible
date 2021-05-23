@@ -13,7 +13,7 @@ import { ElementTypes } from '#types/slate';
 
 import { isBlockActive, toggleBlock } from './utils';
 
-import styles from '#components/TextEditor/ToolbarComponents/ToolbarComponents.module.scss';
+import styles from '../ToolbarComponents.module.scss';
 
 type BlockButtonTypes = {
   format: ElementTypes;

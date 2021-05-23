@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ThemeSwitcher from '#components/ThemeSwitcher/ThemeSwitcher';
+import { ThemeSwitcher } from '#design-system/components';
 
 import styles from './TopbarDesktop.module.scss';
 

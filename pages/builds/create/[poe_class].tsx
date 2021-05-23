@@ -1,4 +1,4 @@
-import Layout from '#components/Layout/Layout';
+import { Layout } from '#design-system/components';
 import { Title } from '#features/builds/components/EditorSections';
 import EditorSections from '#features/builds/components/EditorSections/EditorSections';
 

@@ -1,6 +1,6 @@
 import { Descendant } from 'slate';
 
-import TextEditor from '#components/TextEditor/TextEditor';
+import { TextEditor } from '#design-system/components';
 import { changeIntroductionText, selectIntroductionText } from '#features/builds/slices/buildSlice';
 import { useDispatch, useSelector } from '#hooks/useStore';
 

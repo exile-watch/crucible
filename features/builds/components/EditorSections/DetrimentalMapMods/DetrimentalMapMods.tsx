@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import Message from '#components/Message/Message';
-import Select from '#components/Select/Select';
+import { Message, Select } from '#design-system/components';
 import {
   addDetrimentalMapMod,
   removeDetrimentalMapMod,

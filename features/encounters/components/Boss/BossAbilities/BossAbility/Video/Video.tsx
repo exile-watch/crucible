@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-import Loader from '#components/Loader/Loader';
-import MissingContent from '#components/MissingContent/MissingContent';
+import { Loader, MissingContent } from '#design-system/components';
 import useOnScreen from '#hooks/useOnScreen';
 
 import styles from './Video.module.scss';

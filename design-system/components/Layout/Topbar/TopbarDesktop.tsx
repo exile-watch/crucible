@@ -1,9 +1,9 @@
 import cx from 'classnames';
 import Link from 'next/link';
 
-import InputWithResults from '#components/InputWithResults/InputWithResults';
-import Icons from '#components/Layout/Topbar/Icons';
+import { InputWithResults } from '#design-system/components';
 
+import Icons from './Icons';
 import Modules from './Modules';
 
 import styles from './TopbarDesktop.module.scss';

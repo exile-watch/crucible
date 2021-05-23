@@ -4,9 +4,8 @@ import { createEditor, Descendant } from 'slate';
 import { withHistory } from 'slate-history';
 import { Editable, Slate, withReact } from 'slate-react';
 
-import { toggleMark } from '#components/TextEditor/ToolbarComponents/MarkButton/utils';
-
 import { Element, Leaf, Toolbar } from './ToolbarComponents';
+import { toggleMark } from './ToolbarComponents/MarkButton/utils';
 
 import styles from './TextEditor.module.scss';
 

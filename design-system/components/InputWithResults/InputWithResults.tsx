@@ -3,8 +3,7 @@ import cx from 'classnames';
 import startCase from 'lodash/startCase';
 
 import { SearchIcon } from '#assets/icons';
-import Badge from '#components/Badge/Badge';
-import Loader from '#components/Loader/Loader';
+import { Badge, Loader } from '#design-system/components';
 import useOnClickOutside from '#hooks/useOnClickOutside';
 import useRouter from '#hooks/useRouter';
 import { IndexedSearchResultsProps } from '#types';

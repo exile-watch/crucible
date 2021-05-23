@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import Link from 'next/link';
 
-import Badge from '#components/Badge/Badge';
+import { Badge } from '#design-system/components';
 import { IndexedSearchResultsBossProps } from '#types';
 
 import styles from './Results.module.scss';

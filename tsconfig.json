@@ -36,6 +36,9 @@
       "#constants/*": [
         "constants/*"
       ],
+      "#design-system/*": [
+        "design-system/*"
+      ],
       "#data/*": [
         "data/*"
       ],

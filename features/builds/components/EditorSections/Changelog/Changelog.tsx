@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Message from '#components/Message/Message';
+import { Message } from '#design-system/components';
 
 import EditorSectionWrapper from '../EditorSectionWrapper';
 

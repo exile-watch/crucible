@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 
-import Message from '#components/Message/Message';
+import { Message } from '#design-system/components';
 import EditorSectionWrapper from '#features/builds/components/EditorSections/EditorSectionWrapper';
 import { changeBandit, selectBandit } from '#features/builds/slices/buildSlice';
 import { useDispatch, useSelector } from '#hooks/useStore';

@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { kebabCase } from 'lodash';
 import Link from 'next/link';
 
-import Heading from '#components/Heading/Heading';
+import { Heading } from '#design-system/components';
 import useRouter from '#hooks/useRouter';
 import { MapType } from '#types';
 

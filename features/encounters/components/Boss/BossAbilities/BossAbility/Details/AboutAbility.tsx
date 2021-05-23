@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MissingContent from '#components/MissingContent/MissingContent';
+import { MissingContent } from '#design-system/components';
 
 import DetailRow from './DetailRow';
 

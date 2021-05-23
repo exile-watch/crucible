@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
 import { startCase } from 'lodash';
 
-import Heading from '#components/Heading/Heading';
-import PageLoader from '#components/PageLoader/PageLoader';
+import { Heading, PageLoader } from '#design-system/components';
 import useRouter from '#hooks/useRouter';
 import { DataType } from '#types';
 

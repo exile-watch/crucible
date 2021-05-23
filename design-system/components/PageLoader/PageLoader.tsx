@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Loader from '#components/Loader/Loader';
+import { Loader } from '#design-system/components';
 
 import styles from './PageLoader.module.scss';
 

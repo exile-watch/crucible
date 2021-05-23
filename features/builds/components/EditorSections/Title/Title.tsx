@@ -1,9 +1,7 @@
 import cx from 'classnames';
 
 import { TrashIcon } from '#assets/icons';
-import Input from '#components/Input/Input';
-import InputGroup from '#components/InputGroup/InputGroup';
-import Message from '#components/Message/Message';
+import { Input, InputGroup, Message } from '#design-system/components';
 import { Pob } from '#features/builds/components/EditorSections';
 import {
   addVoidVariant,

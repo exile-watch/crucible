@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import Layout from '#components/Layout/Layout';
 import { POE_CLASSES } from '#constants/classes';
+import { Layout } from '#design-system/components';
 import useRouter from '#hooks/useRouter';
 
 const CreateBuild = () => {

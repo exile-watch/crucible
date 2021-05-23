@@ -1,7 +1,7 @@
 import React from 'react';
 import { Descendant } from 'slate';
 
-import TextEditor from '#components/TextEditor/TextEditor';
+import { TextEditor } from '#design-system/components';
 import { changeConceptText, selectConceptText } from '#features/builds/slices/buildSlice';
 import { useDispatch, useSelector } from '#hooks/useStore';
 
