@@ -46,7 +46,8 @@ const Title = () => {
   const handleRemoveVariantClick = (variantId: number) => {
     activeVariant !== variantId && dispatch(setActiveVariant(variantId));
     variantId !== 0 && dispatch(removeVoidVariant(variantId));
-    dispatch(setActiveVariant(variantId + 1 < variants.length ? variantId + 1 : variantId - 1));
+    const newActiveVariant = variantId + 1 < variants.length ? variantId : variantId - 1;
+    dispatch(setActiveVariant(newActiveVariant));
   };
 
   return (
