@@ -5,7 +5,7 @@ import { ErrorIcon, InfoIcon, WarningIcon } from '#design-system/icons';
 
 import styles from './Message.module.scss';
 
-type MessageProps = {
+export type MessageProps = {
   type: 'info' | 'locked' | 'success' | 'warning' | 'error';
   children: ReactNode;
   className?: string;
