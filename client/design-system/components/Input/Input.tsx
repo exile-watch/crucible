@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import styles from './Input.module.scss';
 
-type InputProps = {
+export type InputProps = {
   label?: string;
   size?: 'medium' | 'large';
   value: string;
