@@ -1,7 +1,7 @@
 import { create } from '@storybook/theming';
 
 const common = {
-  brandTitle: 'poe.watch',
+  brandTitle: 'IDK',
   brandUrl: 'https://example.com',
 }
 

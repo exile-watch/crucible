@@ -3,8 +3,8 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   stories: [
-    "../design-system/components/**/*.stories.mdx",
-    "../design-system/components/**/*.stories.tsx"
+    "../design-system/components/**/*.stories.tsx",
+    "../design-system/icons/**/*.stories.tsx"
   ],
   addons: [
     {
@@ -18,8 +18,7 @@ module.exports = {
       }
     },
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "storybook-addon-pseudo-states"
+    "@storybook/addon-essentials"
   ],
   typescript: {
     check: false,
@@ -27,9 +26,16 @@ module.exports = {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
-      // propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
-      propFilter: {
-        skipPropsWithName: ['as', 'id', 'className', 'style'],
+      propFilter: (prop) => {
+        if (prop.declarations !== undefined && prop.declarations.length > 0) {
+          const hasPropAdditionalDescription = prop.declarations.find((declaration) => {
+            return !declaration.fileName.includes("node_modules");
+          });
+
+          return Boolean(hasPropAdditionalDescription);
+        }
+
+        return true;
       },
     },
   },
