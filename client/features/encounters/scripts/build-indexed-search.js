@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { kebabCase } = require('lodash');
-const getDirectories = require('../../../utils/getDirectories');
-const colorifyConsole = require('../../../utils/colorifyConsole');
+const getDirectories = require('../../../build-tools/utils/getDirectories');
+const colorifyConsole = require('../../../build-tools/utils/colorifyConsole');
 
 const rootPath = './features/encounters';
 const tokensPath = `${rootPath}/tokens`;

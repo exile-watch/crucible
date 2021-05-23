@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { SkillTreeData } from '../components/SkillTree/models/SkillTreeData';
 import data from '../skill-tree-data/data.json';
-const colorifyConsole = require('#utils/colorifyConsole');
+const colorifyConsole = require('../../../build-tools/utils/colorifyConsole');
 import {
   ascendancyDimensions,
   CURRENT_VERSION,

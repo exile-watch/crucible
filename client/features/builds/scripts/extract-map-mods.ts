@@ -1,6 +1,6 @@
 import fs from 'fs';
 import yaml from 'js-yaml';
-import colorifyConsole from '../../../utils/colorifyConsole';
+import colorifyConsole from '../../../build-tools/utils/colorifyConsole';
 
 const rootPath = './features/builds';
 const tokensPath = `${rootPath}/tokens`;

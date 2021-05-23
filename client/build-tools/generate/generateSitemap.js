@@ -3,11 +3,11 @@ const fs = require('fs');
 const colorifyConsole = require('../utils/colorifyConsole');
 const getDirectories = require('../utils/getDirectories');
 const generateXmlUrl = require('../utils/generateXmlUrl');
-const SITEMAP_PRIORITY = require('../constants/sitemapPriority');
+const SITEMAP_PRIORITY = require('../../constants/sitemapPriority');
 const {
   encounterCategoriesSitemapUrls,
   encountersMapsBossesAndAbilitiesSitemapUrls,
-} = require('../features/encounters/scripts/prepare-encounters-sitemap.js');
+} = require('../../features/encounters/scripts/prepare-encounters-sitemap.js');
 
 const domain = 'https://TBD';
 const rootPath = './features';

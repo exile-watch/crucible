@@ -1,7 +1,7 @@
 import { SkillTreeData } from '../components/SkillTree/models/SkillTreeData';
 import * as fs from 'fs';
 
-const colorifyConsole = require('#utils/colorifyConsole');
+const colorifyConsole = require('../../../build-tools/utils/colorifyConsole');
 import data from '../skill-tree-data/data.json';
 import { CURRENT_VERSION, generateEntry, generateSkillNodes, generateSkillPaths } from './utils';
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const next = require('next');
 const cookieParser = require('cookie-parser');
-const colorifyConsole = require('./utils/colorifyConsole');
+const colorifyConsole = require('./build-tools/utils/colorifyConsole');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
