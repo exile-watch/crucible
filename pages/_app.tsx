@@ -7,7 +7,7 @@ import { store } from '#store';
 
 import { initSentry } from '../sentry';
 
-import '../global-styles/styles.scss';
+import '#design-system/styles/styles.scss';
 
 initSentry();
 

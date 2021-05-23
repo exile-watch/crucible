@@ -24,9 +24,6 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "#global-styles/*": [
-        "global-styles/*"
-      ],
       "#assets/*": [
         "assets/*"
       ],
