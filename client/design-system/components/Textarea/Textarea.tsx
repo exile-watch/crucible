@@ -1,16 +1,12 @@
-import React, { ChangeEvent } from 'react';
+import React, { DetailedHTMLProps, TextareaHTMLAttributes } from 'react';
 
 import styles from './Textarea.module.scss';
 
-type TextareaProps = {
-  onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
-  id: string;
-  value: string | number;
-  placeholder?: string;
-};
+export type TextareaProps = DetailedHTMLProps<
+  TextareaHTMLAttributes<HTMLTextAreaElement>,
+  HTMLTextAreaElement
+>;
 
-const Textarea = ({ onChange, value, id, placeholder, ...props }: TextareaProps) => (
-  <textarea id={id} className={styles.textarea} onChange={onChange} value={value} {...props} />
-);
+const Textarea = (props: TextareaProps) => <textarea className={styles.textarea} {...props} />;
 
 export default Textarea;
