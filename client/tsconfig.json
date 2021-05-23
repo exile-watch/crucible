@@ -1,0 +1,58 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "es2017", "dom.iterable"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "baseUrl": "../client",
+    "paths": {
+      "#constants/*": [
+        "constants/*"
+      ],
+      "#design-system/*": [
+        "design-system/*"
+      ],
+      "#data/*": [
+        "data/*"
+      ],
+      "#enums/*": [
+        "enums/*"
+      ],
+      "#features/*": [
+        "features/*"
+      ],
+      "#hooks/*": [
+        "hooks/*"
+      ],
+      "#store": [
+        "store/store.ts"
+      ],
+      "#types/*": [
+        "types/*"
+      ],
+      "#utils/*": [
+        "utils/*"
+      ]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"]
+}
