@@ -7,9 +7,9 @@ import { SearchIcon } from '#design-system/icons';
 import useOnClickOutside from '#hooks/useOnClickOutside';
 import useRouter from '#hooks/useRouter';
 import { IndexedSearchResultsProps } from '#types';
-import importDataOnDemand from '#utils/importDataOnDemand';
 
 import Results from './Results/Results';
+import importDataOnDemand from './utils/importDataOnDemand';
 
 import styles from './InputWithResults.module.scss';
 
