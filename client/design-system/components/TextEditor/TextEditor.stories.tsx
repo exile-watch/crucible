@@ -15,5 +15,5 @@ export const Default: Story<TextEditorProps> = (args) => {
       children: [{ text: 'Some text editor value' }],
     },
   ]);
-  return <TextEditor {...args} value={value} onChange={setValue}  />;
+  return <TextEditor {...args} value={value} onChange={setValue} />;
 };
