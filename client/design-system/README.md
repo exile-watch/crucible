@@ -15,7 +15,7 @@ design-system
 ├─ components                     React components that are shared accross different modules
 │  ├─ ComponentA                  React component directory
 │  │  ├─ ComponentA.tsx           React component that shares the same name as directory
-│  │  ├─ ComponentA.stories.tsx   [ComponentA Storybook stories](https://storybook.js.org/docs/react/writing-stories/introduction)
+│  │  ├─ ComponentA.stories.tsx   ComponentA Storybook stories | See: https://storybook.js.org/docs/react/writing-stories/introduction
 │  │  ├─ ComponentA.module.scss   ComponentA Styles
 │  └─ ComponentB
 ├─ icons                          Icons that are shared accross different modules
@@ -26,7 +26,7 @@ design-system
 │  └─ IconB.tsx
 └─ styles                         Global styles shared accross different modules
    ├─ styles.scss                 "index" scss file imported in `_app.tsx`
-   ├─ mixins                      [scss mixins](https://sass-lang.com/documentation/at-rules/mixin)
+   ├─ mixins                      scss mixins | See: https://sass-lang.com/documentation/at-rules/mixin
    │   └─ mixinA.scss
    ├─ colors.scss                 List of all color variables (including light and dark themes)
    ├─ reset.scss                  Common approach to reset styles to avoid browser-specific issues and have a common styling ground
