@@ -1,7 +1,7 @@
 import React, { ChangeEvent, Dispatch, useState } from 'react';
 import cx from 'classnames';
 
-import { Input, Textarea } from '#design-system/components';
+import { Button, Input, Textarea } from '#design-system/components';
 import { addFAQ } from '#features/builds/slices/buildSlice';
 import { useDispatch } from '#hooks/useStore';
 
@@ -59,9 +59,9 @@ const FAQCreate = () => {
             onChange={handleCheckboxChange}
           />
         </div>
-        <button onClick={handleSubmit} disabled={question.length === 0 || answer.length === 0}>
+        <Button onClick={handleSubmit} disabled={question.length === 0 || answer.length === 0}>
           Add FAQ
-        </button>
+        </Button>
       </div>
     </div>
   );
