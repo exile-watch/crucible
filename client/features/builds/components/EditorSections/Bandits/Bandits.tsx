@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 
-import { Message } from '#design-system/components';
+import { Button, Message } from '#design-system/components';
 import EditorSectionWrapper from '#features/builds/components/EditorSections/EditorSectionWrapper';
 import { changeBandit, selectBandit } from '#features/builds/slices/buildSlice';
 import { useDispatch, useSelector } from '#hooks/useStore';
@@ -31,17 +31,16 @@ const Bandits = () => {
       </Message>
       <ul className={styles.bandits}>
         {BANDIT_OPTIONS.map((bandit) => (
-          <li
-            className={cx(styles.bandit, {
-              [styles.active]: selectedBandit === bandit.value,
-              [styles.inactive]: selectedBandit && selectedBandit !== bandit.value,
-            })}
-            key={bandit.label}
-            onClick={() => handleBanditClick(bandit.value)}
-            onMouseEnter={() => handleBanditToggle(bandit.value)}
-            onMouseLeave={() => handleBanditToggle(selectedBandit || null)}
-          >
-            {bandit.label}
+          <li className={cx(styles.bandit)} key={bandit.label}>
+            <Button
+              variant="secondary"
+              onClick={() => handleBanditClick(bandit.value)}
+              onMouseEnter={() => handleBanditToggle(bandit.value)}
+              onMouseLeave={() => handleBanditToggle(selectedBandit || null)}
+              inactive={!!(selectedBandit && selectedBandit !== bandit.value) || !selectedBandit}
+            >
+              {bandit.label}
+            </Button>
           </li>
         ))}
       </ul>

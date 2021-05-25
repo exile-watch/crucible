@@ -4,35 +4,11 @@
 
 .bandit {
   margin-right: 1em;
-  padding: .3em;
   white-space: nowrap;
-  color: var(--tertiary-bg);
-  border: 1px solid var(--tertiary-bg);
-  cursor: pointer;
-
-  &:hover {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
 
   &:last-child {
     margin-right: 0;
   }
-}
-
-.inactive {
-  color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
-
-  &:hover {
-    color: var(--tertiary-bg);
-    border: 1px solid var(--tertiary-bg);
-  }
-}
-
-.active {
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
 }
 
 .rewards {
