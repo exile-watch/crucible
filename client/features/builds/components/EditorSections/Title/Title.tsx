@@ -1,6 +1,6 @@
 import cx from 'classnames';
 
-import { Input, InputGroup, Message } from '#design-system/components';
+import { Button, Input, InputGroup, Message } from '#design-system/components';
 import { TrashIcon } from '#design-system/icons';
 import { Pob } from '#features/builds/components/EditorSections';
 import {
@@ -49,7 +49,7 @@ const Title = () => {
   };
 
   return (
-    <div>
+    <div className="mt-3">
       <div className={styles.heading}>
         <Input
           label="Build title"
@@ -61,9 +61,13 @@ const Title = () => {
           <div>
             <Pob />
           </div>
-          <div>preview</div>
-          <div>comments</div>
-          <div>Create</div>
+          <Button className="ml-3" variant="secondary">
+            Preview
+          </Button>
+          <Button className="ml-3" variant="secondary">
+            Comments
+          </Button>
+          <Button className="ml-3">Create</Button>
         </div>
       </div>
       <div className={styles.titleWrapper}>
