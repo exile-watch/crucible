@@ -30,7 +30,7 @@ const Modules = () => {
         >
           <Link href={path}>
             <a className="px-3">
-              <Heading as="h4">{name}</Heading>
+              <Heading as="h5">{name}</Heading>
             </a>
           </Link>
         </li>
