@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import omit from 'lodash/omit';
 
 import { BuildSlice } from '#features/builds/types/Store';
 import { RootState } from '#store';
@@ -29,6 +30,10 @@ const initialState: BuildSlice = {
           children: [{ text: '' }],
         },
       ],
+      prosAndCons: {
+        pros: [],
+        cons: [],
+      },
       detrimentalMapMods: [],
       ascendancy: {
         tree: [],
@@ -85,6 +90,36 @@ export const buildSlice = createSlice({
     changeConceptText: (state, { payload }) => {
       state.variants[state.activeVariant].conceptText =
         payload || initialState.variants[state.activeVariant].conceptText;
+    },
+
+    /**
+     * Pros and Cons
+     */
+    addProOrCon: (state, { payload }) => {
+      const { type, ...rest } = payload;
+      if (type === 'pro') {
+        state.variants[state.activeVariant].prosAndCons.pros = [
+          ...state.variants[state.activeVariant].prosAndCons.pros,
+          rest,
+        ];
+      } else {
+        state.variants[state.activeVariant].prosAndCons.cons = [
+          ...state.variants[state.activeVariant].prosAndCons.cons,
+          rest,
+        ];
+      }
+    },
+
+    removeProOrCon: (state, { payload }) => {
+      if (payload.type === 'pro') {
+        state.variants[state.activeVariant].prosAndCons.pros = state.variants[
+          state.activeVariant
+        ].prosAndCons.pros.filter((pro) => pro.id !== payload.id);
+      } else {
+        state.variants[state.activeVariant].prosAndCons.cons = state.variants[
+          state.activeVariant
+        ].prosAndCons.cons.filter((con) => con.id !== payload.id);
+      }
     },
 
     /**
@@ -195,6 +230,8 @@ export const {
   setActiveVariant,
   changeIntroductionText,
   changeConceptText,
+  addProOrCon,
+  removeProOrCon,
   changeKudosText,
   changeBandit,
   addDetrimentalMapMod,
@@ -213,6 +250,8 @@ export const selectIntroductionText = (state: RootState) => state.build.introduc
 export const selectKudosText = (state: RootState) => state.build.kudosText;
 export const selectConceptText = (state: RootState) =>
   state.build.variants[state.build.activeVariant].conceptText;
+export const selectProsAndCons = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].prosAndCons;
 export const selectDetrimentalMapMods = (state: RootState) =>
   state.build.variants[state.build.activeVariant].detrimentalMapMods;
 export const selectAscendancyTreeNodes = (state: RootState) =>

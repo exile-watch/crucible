@@ -9,6 +9,10 @@ export type FAQType = {
 type VariantType = {
   title: string;
   conceptText: Descendant[];
+  prosAndCons: {
+    pros: { label: string; id: string }[];
+    cons: { label: string; id: string }[];
+  };
   detrimentalMapMods: { label: string; value: string }[];
   ascendancy: {
     tree: string[];

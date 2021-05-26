@@ -16,12 +16,15 @@ $lg-min: 1020px;
 $lg-max: 1259px;
 
 $xl-min: 1260px;
-$xl-max: 1439px;
+$xl-max: 1770px;
 
-$xxl-min: 1440px;
+$xxl-min: 1771px;
 $xxl-max: 1919px;
 
 $xxxl-min: 1920px;
+$xxxl-max: 2539px;
+
+$k2-min: 2540px;
 
 /* Breakpoint media queries
    ----------------------------------------------------------------- */
@@ -98,6 +101,15 @@ $xxxl-min: 1920px;
    ----------------------------------------------------------------- */
 @mixin screen-desktop {
   @media (min-width: $xxxl-min) {
+    @content;
+  }
+}
+
+/* Desktop 2k
+   - 2540px devices AND UP
+   ----------------------------------------------------------------- */
+@mixin screen-2k {
+  @media (min-width: $k2-min) {
     @content;
   }
 }

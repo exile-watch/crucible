@@ -1,0 +1,58 @@
+.inputWrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.pro,
+.con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    cursor: pointer;
+    path {
+      stroke: var(--tertiary-bg);
+    }
+
+    &:hover {
+      path {
+        stroke: red;
+      }
+    }
+  }
+
+  &:hover {
+    background: var(--secondary-bg);
+  }
+}
+
+.pro {
+  color: var(--message-success-color);
+}
+
+.proInput {
+  border-bottom: 1px solid var(--message-success-color);
+  color: var(--message-success-color);
+
+  &:active,
+  &:focus {
+    border-bottom: 1px solid var(--message-success-color);
+    color: var(--message-success-color);
+  }
+}
+
+.con {
+  color: var(--message-error-color);
+}
+
+.conInput {
+  border-bottom: 1px solid var(--message-error-color);
+  color: var(--message-error-color);
+
+  &:active,
+  &:focus {
+    border-bottom: 1px solid var(--message-error-color);
+    color: var(--message-error-color);
+  }
+}
