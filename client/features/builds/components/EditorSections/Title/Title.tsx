@@ -62,9 +62,12 @@ const Title = () => {
             <Pob />
           </div>
           <Button className="ml-3" variant="secondary">
-            Preview
+            Leveling
           </Button>
           <Button className="ml-3" variant="secondary">
+            Preview
+          </Button>
+          <Button className="ml-3" variant="secondary" disabled>
             Comments
           </Button>
           <Button className="ml-3">Create</Button>
@@ -102,7 +105,9 @@ const Title = () => {
             </>
           )
         )}
-        <p onClick={handleAddNewVariantClick}>+ Add another variant</p>
+        <Button onClick={handleAddNewVariantClick} size="large" variant="tertiary" className="ml-3">
+          + Add another variant
+        </Button>
       </div>
       {variants.length > 1 && (
         <Message type="info" className="mt-3">
