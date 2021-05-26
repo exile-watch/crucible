@@ -50,7 +50,7 @@ const formats = [
 
 const infos = ['InfoIcon', 'SuccessIcon', 'WarningIcon', 'ErrorIcon'];
 
-const fillMisc = ['MoonIcon', 'SunIcon', 'VerticalMenuIcon'];
+const fillMisc = ['MoonIcon', 'SunIcon', 'VerticalMenuIcon', 'PreviewIcon'];
 
 const strokeMisc = [
   'ArrowDownIcon',
@@ -59,6 +59,9 @@ const strokeMisc = [
   'RedirectIcon',
   'SearchIcon',
   'TrashIcon',
+  'AddIcon',
+  'CommentsIcon',
+  'CrossIcon',
 ];
 
 const filterBy = (arr: any) => Object.entries(icons).filter(([k]) => arr.includes(k));
@@ -101,7 +104,7 @@ const Icons = () => (
     <Group group="Format" icons={formatIcons} />
     <Group group="Info" icons={infoIcons} />
     <Group group="Fill Misc" icons={fillMiscIcons} />
-    <Group group="Fill Stroke" icons={strokeMiscIcons} className="stroke" />
+    <Group group="Stroke Misc" icons={strokeMiscIcons} className="stroke" />
   </>
 );
 
