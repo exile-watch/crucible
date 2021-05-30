@@ -1,9 +1,3 @@
-/**
- * Colors console
- * @param {('time' | 'info')} [label]
- * @param {string} [text]
- * @returns {string}
- */
 const colorifyConsole = ({ label, text }) => {
   switch (label) {
     case 'time':
