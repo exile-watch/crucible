@@ -62,6 +62,7 @@ const strokeMisc = [
   'AddIcon',
   'CommentsIcon',
   'CrossIcon',
+  'EditIcon',
 ];
 
 const filterBy = (arr: any) => Object.entries(icons).filter(([k]) => arr.includes(k));

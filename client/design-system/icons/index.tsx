@@ -10,6 +10,7 @@ export { default as CommentsIcon } from './CommentsIcon';
 export { default as CrossIcon } from './CrossIcon';
 export { default as DeadeyeIcon } from './DeadeyeIcon';
 export { default as DuelistIcon } from './DuelistIcon';
+export { default as EditIcon } from './EditIcon';
 export { default as ElementalistIcon } from './ElementalistIcon';
 export { default as ErrorIcon } from './ErrorIcon';
 export { default as FormatBoldIcon } from './FormatBoldIcon';
