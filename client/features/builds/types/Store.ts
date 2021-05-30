@@ -1,5 +1,7 @@
 import { Descendant } from 'slate';
 
+import { SkillsType } from '#features/builds/types/Gems';
+
 export type FAQType = {
   id: number;
   q: string;
@@ -20,6 +22,7 @@ type VariantType = {
   passives: {
     tree: string[];
   };
+  skills: SkillsType;
   faq: FAQType[];
   bandit: number | null;
 };

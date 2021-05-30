@@ -1,0 +1,20 @@
+.socketsContainer {
+  display: grid;
+  grid-template-rows: repeat(9, 3em);
+  grid-gap: 1em;
+  grid-template-columns: 3em 1fr;
+  grid-template-areas:
+  ". skills-mainhand-s-1"
+  "skills-mainhand skills-mainhand-s-2"
+  "skills-mainhand skills-mainhand-s-3"
+  ". skills-mainhand-s-4"
+  "skills-body skills-body-s-1"
+  "skills-body skills-body-s-2"
+  "skills-helmet skills-helmet-s"
+  "skills-gloves skills-gloves-s"
+  "skills-boots skills-boots-s";
+}
+
+.armor {
+  border: 1px solid var(--secondary-color);
+}

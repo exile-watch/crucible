@@ -1,8 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
-import omit from 'lodash/omit';
 
+import { SocketsType } from '#features/builds/types/Gems';
 import { BuildSlice } from '#features/builds/types/Store';
 import { RootState } from '#store';
+
+const emptySockets = [...Array(6)].fill({ id: null, level: 0, quality: 0 });
+const defaultSockets = [
+  emptySockets,
+  emptySockets,
+  emptySockets,
+  emptySockets,
+  emptySockets,
+  emptySockets,
+] as unknown as SocketsType;
 
 const initialState: BuildSlice = {
   title: 'test',
@@ -40,6 +50,25 @@ const initialState: BuildSlice = {
       },
       passives: {
         tree: [],
+      },
+      skills: {
+        mainhand: {
+          primary: defaultSockets,
+          secondary: defaultSockets,
+          tertiary: defaultSockets,
+          quaternary: defaultSockets,
+        },
+        offhand: {
+          primary: defaultSockets,
+          secondary: defaultSockets,
+        },
+        body: {
+          primary: defaultSockets,
+          secondary: defaultSockets,
+        },
+        helmet: defaultSockets,
+        gloves: defaultSockets,
+        boots: defaultSockets,
       },
       bandit: null,
       faq: [],
@@ -177,6 +206,15 @@ export const buildSlice = createSlice({
     },
 
     /**
+     * Skills
+     */
+    // payload.type: mainhand | offhand | body | helmet | gloves | boots
+    // payload.row: primary | secondary | tertiary | q
+    // addSkill: (state, { payload }) => {
+    //   // state.variants[state.activeVariant].skills[payload.type][payload.row] = payload.skills;
+    // },
+
+    /**
      * Kudos
      */
     changeKudosText: (state, { payload }) => {
@@ -258,6 +296,8 @@ export const selectAscendancyTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].ascendancy.tree;
 export const selectPassivesTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].passives.tree;
+export const selectSkills = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].skills;
 export const selectBandit = (state: RootState) =>
   state.build.variants[state.build.activeVariant].bandit;
 export const selectFAQ = (state: RootState) => state.build.faq;

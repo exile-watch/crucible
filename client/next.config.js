@@ -9,6 +9,9 @@ module.exports = {
   future: {
     webpack5: true,
   },
+  images: {
+    domains: ['web.poecdn.com'],
+  },
   productionBrowserSourceMaps: true,
   webpack: (config, options) => {
     if (options.isServer && NODE_ENV === 'production') {

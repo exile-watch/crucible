@@ -1,0 +1,22 @@
+.optionsContainer {
+  display: grid;
+  grid-template-rows: repeat(9, 3em);
+  grid-gap: 1em;
+}
+
+.options {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  height: 100%;
+
+  button {
+    height: 100%;
+
+    svg {
+      path {
+        stroke: currentColor;
+      }
+    }
+  }
+}

@@ -79,12 +79,13 @@
 
   @include screen-2k {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: minmax(min-content, 300px) 300px 300px 300px;
+    grid-template-rows: min-content 300px min-content 300px 300px;
     grid-template-areas:
     "introduction concept pros-and-cons benchmarks-videos passives-tree passives-tree"
     "introduction concept detrimental-map-mods benchmarks-videos passives-tree passives-tree"
-    "changelog faq skills gear gear ascendancy-tree"
-    "kudos faq bandits gear gear pantheon";
+    "skills skills skills gear gear ascendancy-tree"
+    "changelog kudos faq bandits pantheon pantheon"
+    "changelog kudos faq bandits pantheon pantheon"
   }
 }
 
