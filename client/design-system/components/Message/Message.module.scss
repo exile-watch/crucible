@@ -4,21 +4,23 @@ $gradient_degree: 135deg;
   border: 1px solid;
   display: flex;
   align-items: center;
+  height: 39px;
 
   path {
     fill: currentColor;
+  }
+
+  p {
+    border-left: 1px solid;
   }
 }
 
 .small {
   font-size: var(--font-size-sm);
+  height: 34px;
 
   svg {
     transform: scale(.8)
-  }
-
-  p {
-    border-left: 1px solid;
   }
 }
 

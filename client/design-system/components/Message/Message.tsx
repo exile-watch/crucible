@@ -27,7 +27,7 @@ const Message = ({ type, children, size = 'medium', className }: MessageProps) =
   <div
     className={cx(styles.container, styles[type], className, {
       ...(size === 'small' && { 'p-1': true, [styles.small]: true }),
-      ...(size === 'medium' && { 'p-2': true }),
+      ...(size === 'medium' && { 'px-1': true }),
     })}
   >
     <Icon
