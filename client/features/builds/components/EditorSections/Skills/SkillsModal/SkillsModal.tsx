@@ -29,7 +29,7 @@ const SkillsModal = ({ isOpen, toggleModal }: SkillsModalProps) => {
           <Message type="success" className="mb-5">
             Adding skills for <b>{activeVariant}</b> variant{' '}
           </Message>
-          <SocketsContainer />
+          <SocketsContainer inModal />
         </div>
         <SkillsList />
       </div>

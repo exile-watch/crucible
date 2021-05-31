@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { backdrop, modal } from './animations';
 import Backdrop from './Backdrop/Backdrop';
