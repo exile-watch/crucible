@@ -1,10 +1,11 @@
 import React from 'react';
+import cx from 'classnames';
 
-import { Message } from '#design-system/components';
+import { Heading, Message } from '#design-system/components';
 import Modal from '#design-system/components/Modal/Modal';
 import SkillsList from '#features/builds/components/EditorSections/Skills/SkillsModal/SkillsList/SkillsList';
 import SocketsContainer from '#features/builds/components/EditorSections/Skills/SocketsContainer/SocketsContainer';
-import { selectActiveVariantTitle } from '#features/builds/slices/buildSlice';
+import { selectSkillsActiveRow } from '#features/builds/slices/buildSlice';
 import { useSelector } from '#hooks/useStore';
 
 import styles from './SkillsModal.module.scss';
@@ -15,7 +16,7 @@ type SkillsModalProps = {
 };
 
 const SkillsModal = ({ isOpen, toggleModal }: SkillsModalProps) => {
-  const activeVariant = useSelector(selectActiveVariantTitle);
+  const activeSkillsRow = useSelector(selectSkillsActiveRow);
   return (
     <Modal isOpen={isOpen} toggleModal={toggleModal} title="Editing Skills">
       <Message type="info" size="small" className="mb-3">
@@ -26,10 +27,16 @@ const SkillsModal = ({ isOpen, toggleModal }: SkillsModalProps) => {
       </Message>
       <div className={styles.body}>
         <div>
-          <Message type="success" className="mb-5">
-            Adding skills for <b>{activeVariant}</b> variant{' '}
-          </Message>
+          <Heading className={cx('mb-3', styles.skillsRowHeading)}>
+            Select any skills row below <br />
+            to add gems into it
+          </Heading>
           <SocketsContainer inModal />
+          {activeSkillsRow && (
+            <p>
+              Adding skills to <b>{activeSkillsRow}</b>
+            </p>
+          )}
         </div>
         <SkillsList />
       </div>

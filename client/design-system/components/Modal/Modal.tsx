@@ -31,11 +31,11 @@ const Modal = ({ isOpen = false, toggleModal, title, children, dataId }: ModalPr
           data-cy={dataId}
           className={styles.container}
         >
-          <Backdrop onClick={toggleModal} />
           <motion.div variants={modal} className={styles.modal}>
             {title && <ModalHeader>{title}</ModalHeader>}
             {children}
           </motion.div>
+          <Backdrop onClick={toggleModal} />
         </motion.div>
       )}
     </AnimatePresence>

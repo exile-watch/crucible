@@ -52,6 +52,7 @@ const initialState: BuildSlice = {
         tree: [],
       },
       skills: {
+        activeSkillsRow: null,
         mainhand: {
           primary: defaultSockets,
           secondary: defaultSockets,
@@ -213,6 +214,9 @@ export const buildSlice = createSlice({
     // addSkill: (state, { payload }) => {
     //   // state.variants[state.activeVariant].skills[payload.type][payload.row] = payload.skills;
     // },
+    setActiveSkillsRow: (state, { payload }) => {
+      state.variants[state.activeVariant].skills.activeSkillsRow = payload;
+    },
 
     /**
      * Kudos
@@ -276,6 +280,7 @@ export const {
   removeDetrimentalMapMod,
   addFAQ,
   removeFAQ,
+  setActiveSkillsRow,
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;
@@ -296,6 +301,8 @@ export const selectAscendancyTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].ascendancy.tree;
 export const selectPassivesTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].passives.tree;
+export const selectSkillsActiveRow = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].skills.activeSkillsRow;
 export const selectSkills = (state: RootState) =>
   state.build.variants[state.build.activeVariant].skills;
 export const selectBandit = (state: RootState) =>

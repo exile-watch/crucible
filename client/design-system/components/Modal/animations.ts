@@ -7,11 +7,9 @@ export const backdrop = {
 
 export const modal = {
   hidden: {
-    y: '-200px',
     opacity: 0,
   },
   visible: {
-    y: 0,
     opacity: 1,
   },
 };
