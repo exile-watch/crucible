@@ -26,25 +26,18 @@ export type GemsDataType = {
 export type AttributeTypes = 'Dexterity' | 'Intelligence' | 'Strength';
 export type AttributeAbbrTypes = 'dex' | 'int' | 'str';
 
-type BuildGemType = { id: string | null; level: number; quality: number };
+export type MainSlotTypes = 'mainhand' | 'offhand' | 'mainhandSwap' | 'offhandSwap' | 'body'
+
+export type BuildGemType = { gem: string; level: number; quality: number };
 export type SocketsType = BuildGemType[];
 
 export type SkillsType = {
-  mainhand: {
-    primary: SocketsType;
-    secondary: SocketsType;
-    tertiary?: SocketsType;
-    quaternary?: SocketsType;
-  };
-  offhand: {
-    primary: SocketsType;
-    secondary: SocketsType;
-  };
-  body: {
-    primary: SocketsType;
-    secondary: SocketsType;
-  };
-  helmet: SocketsType;
-  gloves: SocketsType;
-  boots: SocketsType;
+  mainhand?: Array<SocketsType>;
+  mainhandSwap?: Array<SocketsType>;
+  offhand?: Array<SocketsType>;
+  offhandSwap?: Array<SocketsType>;
+  body?: Array<SocketsType>;
+  helmet?: SocketsType;
+  gloves?: SocketsType;
+  boots?: SocketsType;
 };

@@ -1,0 +1,23 @@
+.rowInputs {
+  display: grid;
+  grid-template-columns: 20px 200px 60px 60px 30px;
+  grid-gap: 1em;
+  grid-template-areas:
+    'skill-row-modal-number skill-row-modal-gemInput skill-row-modal-levelInput skill-row-modal-qualityInput skill-row-modal-remove'
+}
+.button{
+  svg {
+    height: 100%;
+    width: 100%;
+
+    path {
+      stroke: var(--tertiary-bg);
+    }
+  }
+
+  &:hover {
+    svg path {
+      stroke: var(--primary-color)
+    }
+  }
+}

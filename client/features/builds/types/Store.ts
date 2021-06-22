@@ -22,9 +22,8 @@ type VariantType = {
   passives: {
     tree: string[];
   };
-  skills: {
-    activeSkillsRow: string | null;
-  } & SkillsType;
+  draftSkills: SkillsType;
+  skills: SkillsType;
   faq: FAQType[];
   bandit: number | null;
 };

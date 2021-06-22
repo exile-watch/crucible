@@ -1,18 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { SocketsType } from '#features/builds/types/Gems';
 import { BuildSlice } from '#features/builds/types/Store';
 import { RootState } from '#store';
 
-const emptySockets = [...Array(6)].fill({ id: null, level: 0, quality: 0 });
-const defaultSockets = [
-  emptySockets,
-  emptySockets,
-  emptySockets,
-  emptySockets,
-  emptySockets,
-  emptySockets,
-] as unknown as SocketsType;
+const defaultSkill = {
+  gem: '',
+  level: '',
+  quality: '',
+};
 
 const initialState: BuildSlice = {
   title: 'test',
@@ -51,26 +46,8 @@ const initialState: BuildSlice = {
       passives: {
         tree: [],
       },
-      skills: {
-        activeSkillsRow: null,
-        mainhand: {
-          primary: defaultSockets,
-          secondary: defaultSockets,
-          tertiary: defaultSockets,
-          quaternary: defaultSockets,
-        },
-        offhand: {
-          primary: defaultSockets,
-          secondary: defaultSockets,
-        },
-        body: {
-          primary: defaultSockets,
-          secondary: defaultSockets,
-        },
-        helmet: defaultSockets,
-        gloves: defaultSockets,
-        boots: defaultSockets,
-      },
+      draftSkills: {},
+      skills: {},
       bandit: null,
       faq: [],
     },
@@ -208,14 +185,117 @@ export const buildSlice = createSlice({
 
     /**
      * Skills
+     * payload.slot: mainhand | offhand | body | helmet | gloves | boots
+     * payload.ordinalNumber: 0 (primary) | 1 (secondary) | 2 (tertiary) | 3 (quaternary)
+     * payload.index: 0 - 5
+     * payload: gem | level | quality
      */
-    // payload.type: mainhand | offhand | body | helmet | gloves | boots
-    // payload.row: primary | secondary | tertiary | q
-    // addSkill: (state, { payload }) => {
-    //   // state.variants[state.activeVariant].skills[payload.type][payload.row] = payload.skills;
-    // },
-    setActiveSkillsRow: (state, { payload }) => {
-      state.variants[state.activeVariant].skills.activeSkillsRow = payload;
+    addVoidSlot: ({ variants, activeVariant }, { payload }) => {
+      variants[activeVariant].draftSkills = {
+        ...variants[activeVariant].draftSkills,
+        [payload]: [[defaultSkill]],
+      };
+    },
+
+    editDraftSkillRow: (
+      { variants, activeVariant }: RootState,
+      { payload: { slot, ordinalNumber, index, level, quality, gem } }
+    ) => {
+      const skill = variants[activeVariant].draftSkills[slot][ordinalNumber][index];
+
+      variants[activeVariant].draftSkills[slot][ordinalNumber][index] = {
+        gem: gem === '' ? '' : gem || skill?.gem,
+        level: level === '' ? '' : level || skill?.level,
+        quality: quality === '' ? '' : quality || skill?.quality,
+      };
+    },
+
+    addDraftSkillRow: (
+      { variants, activeVariant }: RootState,
+      { payload: { slot, ordinalNumber } }
+    ) => {
+      variants[activeVariant].draftSkills[slot][ordinalNumber] = [
+        ...variants[activeVariant].draftSkills[slot][ordinalNumber],
+        defaultSkill,
+      ];
+    },
+
+    removeDraftSkillSlot: ({ variants, activeVariant }: RootState, { payload }) => {
+      const { [payload]: filteredSlot, ...filteredDraftSkills } =
+        variants[activeVariant].draftSkills;
+      variants[activeVariant].draftSkills = filteredDraftSkills;
+    },
+
+    removeDraftSkillRow: (
+      { variants, activeVariant }: RootState,
+      { payload: { index, slot, ordinalNumber } }
+    ) => {
+      /**
+       * Edge case #1
+       * Removing skill row with only one slot and one row should remove current slot
+       */
+      if (
+        variants[activeVariant].draftSkills[slot].length === 1 &&
+        variants[activeVariant].draftSkills[slot][ordinalNumber].length === 1
+      ) {
+        const { [slot]: filteredSlot, ...filteredDraftSkills } =
+          variants[activeVariant].draftSkills;
+        variants[activeVariant].draftSkills = filteredDraftSkills;
+        return;
+      }
+
+      /**
+       * Edge case #2
+       * Removing skill row with one row should remove current ordinal number
+       */
+      if (variants[activeVariant].draftSkills[slot][ordinalNumber].length === 1) {
+        variants[activeVariant].draftSkills[slot][ordinalNumber] = [defaultSkill];
+
+        /**
+         * Edge case #3
+         * Removing skill row with only one ordinal number should remove current ordinal number
+         */
+        if (variants[activeVariant].draftSkills[slot].length > 1) {
+          variants[activeVariant].draftSkills[slot] = variants[activeVariant].draftSkills[
+            slot
+          ].filter((_, i: number) => i !== ordinalNumber);
+        }
+        return;
+      }
+
+      variants[activeVariant].draftSkills[slot][ordinalNumber] = variants[
+        activeVariant
+      ].draftSkills[slot][ordinalNumber].filter((_, i: number) => i !== index);
+    },
+
+    addDraftSkillOrdinalNumber: ({ variants, activeVariant }: RootState, { payload: { slot } }) => {
+      variants[activeVariant].draftSkills[slot] = [
+        ...variants[activeVariant].draftSkills[slot],
+        [defaultSkill],
+      ];
+    },
+
+    removeDraftSkillOrdinalNumber: (
+      { variants, activeVariant }: RootState,
+      { payload: { slot, ordinalNumber } }
+    ) => {
+      /**
+       * Edge case #1
+       * Removing skill row with only one slot should remove current slot
+       */
+      if (variants[activeVariant].draftSkills[slot].length === 1) {
+        const { [slot]: filteredSlot, ...filteredDraftSkills } =
+          variants[activeVariant].draftSkills;
+        variants[activeVariant].draftSkills = filteredDraftSkills;
+        return;
+      }
+      variants[activeVariant].draftSkills[slot] = variants[activeVariant].draftSkills[slot].filter(
+        (_, i: number) => i !== ordinalNumber
+      );
+    },
+
+    saveDraftSkills: ({ variants, activeVariant }, { payload }) => {
+      variants[activeVariant].skills = variants[activeVariant].draftSkills;
     },
 
     /**
@@ -228,19 +308,18 @@ export const buildSlice = createSlice({
     /**
      * Bandits
      */
-    changeBandit: (state, { payload }) => {
-      state.variants[state.activeVariant].bandit =
-        payload || initialState.variants[state.activeVariant].bandit;
+    changeBandit: ({ variants, activeVariant }, { payload }) => {
+      variants[activeVariant].bandit = payload || initialState.variants[activeVariant].bandit;
     },
 
     /**
      * FAQ
      */
-    addFAQ: (state, { payload }) => {
+    addFAQ: ({ variants, activeVariant, ...state }, { payload }) => {
       if (payload.isVariantOnly) {
-        state.variants[state.activeVariant].faq = [
-          ...state.variants[state.activeVariant].faq,
-          payload.qna || initialState.variants[state.activeVariant].faq,
+        variants[activeVariant].faq = [
+          ...variants[activeVariant].faq,
+          payload.qna || initialState.variants[activeVariant].faq,
         ];
         return;
       }
@@ -280,7 +359,13 @@ export const {
   removeDetrimentalMapMod,
   addFAQ,
   removeFAQ,
-  setActiveSkillsRow,
+  addVoidSlot,
+  editDraftSkillRow,
+  addDraftSkillRow,
+  removeDraftSkillRow,
+  addDraftSkillOrdinalNumber,
+  removeDraftSkillOrdinalNumber,
+  removeDraftSkillSlot,
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;
@@ -301,8 +386,8 @@ export const selectAscendancyTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].ascendancy.tree;
 export const selectPassivesTreeNodes = (state: RootState) =>
   state.build.variants[state.build.activeVariant].passives.tree;
-export const selectSkillsActiveRow = (state: RootState) =>
-  state.build.variants[state.build.activeVariant].skills.activeSkillsRow;
+export const selectDraftSkills = (state: RootState) =>
+  state.build.variants[state.build.activeVariant].draftSkills;
 export const selectSkills = (state: RootState) =>
   state.build.variants[state.build.activeVariant].skills;
 export const selectBandit = (state: RootState) =>

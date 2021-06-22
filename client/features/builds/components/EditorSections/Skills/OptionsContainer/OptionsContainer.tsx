@@ -43,17 +43,7 @@ const OptionsContainer = () => {
   return (
     <>
       <div className={cx('ml-3', styles.optionsContainer)}>
-        <Options category={skills.mainhand.primary} handleModalToggle={handleModalToggle} />
-        <Options category={skills.mainhand.secondary} handleModalToggle={handleModalToggle} />
-        <Options category={skills.mainhand.tertiary} handleModalToggle={handleModalToggle} />
-        <Options category={skills.mainhand.quaternary} handleModalToggle={handleModalToggle} />
-
-        <Options category={skills.body.primary} handleModalToggle={handleModalToggle} />
-        <Options category={skills.body.secondary} handleModalToggle={handleModalToggle} />
-
-        <Options category={skills.helmet} handleModalToggle={handleModalToggle} />
-        <Options category={skills.gloves} handleModalToggle={handleModalToggle} />
-        <Options category={skills.boots} handleModalToggle={handleModalToggle} />
+        <Options category={[{}]} handleModalToggle={handleModalToggle} />
       </div>
       <SkillsModal isOpen={isModalOpen} toggleModal={handleModalToggle} />
     </>
