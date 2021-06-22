@@ -4,7 +4,7 @@ import cx from 'classnames';
 import styles from './Card.module.scss';
 
 export type CardProps = {
-  as: 'div' | 'section';
+  as: 'div' | 'section' | 'ul';
   children: ReactNode;
   className?: string;
   style?: any;
