@@ -6,7 +6,8 @@ import styles from './Input.module.scss';
 export type InputProps = {
   label?: string;
   size?: 'medium' | 'large';
-  value: string;
+  value: string | number;
+  wrapperProps?: any;
 } & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, 'size'>;
 
 const Input = ({
@@ -16,12 +17,13 @@ const Input = ({
   label,
   className,
   size = 'medium',
+  wrapperProps,
   ...props
 }: InputProps) => {
-  const isActive = value?.length > 0;
+  const isActive = value?.toString().length > 0;
 
   return (
-    <div className={cx('theme-transition-scope', styles.inputWrapper)}>
+    <div className={cx('theme-transition-scope', styles.inputWrapper)} {...wrapperProps}>
       <input
         value={value}
         placeholder={placeholder}
