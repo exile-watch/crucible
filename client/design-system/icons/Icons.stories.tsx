@@ -36,6 +36,8 @@ const ascendancies = [
   'SaboteurIcon',
 ];
 
+const slots = ['MainhandIcon', 'OffhandIcon', 'BodyIcon', 'HelmetIcon', 'GlovesIcon', 'BootsIcon'];
+
 const formats = [
   'FormatBoldIcon',
   'FormatItalicIcon',
@@ -69,6 +71,7 @@ const filterBy = (arr: any) => Object.entries(icons).filter(([k]) => arr.include
 
 const classIcons = filterBy(classes);
 const ascendancyIcons = filterBy(ascendancies);
+const slotIcons = filterBy(slots);
 const formatIcons = filterBy(formats);
 const infoIcons = filterBy(infos);
 const fillMiscIcons = filterBy(fillMisc);
@@ -102,6 +105,7 @@ const Icons = () => (
   <>
     <Group group="Class" icons={classIcons} className="rounded" />
     <Group group="Ascendancy" icons={ascendancyIcons} className="rounded" />
+    <Group group="Slot" icons={slotIcons} />
     <Group group="Format" icons={formatIcons} />
     <Group group="Info" icons={infoIcons} />
     <Group group="Fill Misc" icons={fillMiscIcons} />
