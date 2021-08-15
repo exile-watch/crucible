@@ -3,6 +3,11 @@
   height: 100%;
   overflow: auto;
 
+  > svg {
+    width: 100px;
+    height: 100px;
+  }
+
   &::-webkit-scrollbar {
     width: 8px;
     transition: var(--transition-theme);
@@ -20,10 +25,18 @@
 .skillWrapper {
   display: flex;
   flex-direction: column;
+}
 
-  svg {
-    width: 100px;
-    height: 100px;
+.rowInputs {
+  > div,
+  > li {
+    display: grid;
+    grid-template-columns: 20px 200px 60px 60px 30px;
+    grid-column-gap: 1em;
+    align-items: center;
+    grid-template-areas:
+    '. skill-row-modal-gemHeading skill-row-modal-levelHeading skill-row-modal-qualityHeading .'
+    'skill-row-modal-number skill-row-modal-gemInput skill-row-modal-levelInput skill-row-modal-qualityInput skill-row-modal-remove'
   }
 }
 
@@ -34,6 +47,15 @@
 
 .inputsWrapper {
   display: flex;
+
+  > svg {
+    width: 100px;
+    height: 100px;
+
+    path {
+      fill: var(--secondary-color)
+    }
+  }
 }
 
 .ordinalNumberWrapper {
@@ -52,6 +74,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  svg {
+    height: 100%;
+    width: 100%;
+
+    path {
+      stroke: var(--tertiary-bg);
+    }
+  }
+
+  button:hover {
+    path {
+      stroke: currentColor;
+    }
+  }
 }
 
 .ordinalNumber {

@@ -3,9 +3,7 @@ import cx from 'classnames';
 
 import { Button } from '#design-system/components';
 import { AddIcon, CrossIcon, EditIcon } from '#design-system/icons';
-import { selectSkills } from '#features/builds/slices/buildSlice';
 import { SocketsType } from '#features/builds/types/Gems';
-import { useSelector } from '#hooks/useStore';
 
 import SkillsModal from '../SkillsModal/SkillsModal';
 
@@ -36,7 +34,6 @@ const Options = ({ category, handleModalToggle }: OptionsProps) => (
 );
 
 const OptionsContainer = () => {
-  const skills = useSelector(selectSkills);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleModalToggle = () => setIsModalOpen((isOpen) => !isOpen);
 

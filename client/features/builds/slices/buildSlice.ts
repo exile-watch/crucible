@@ -1,5 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+import xmlToJSON from '#build-tools/utils/xmlToJson';
+import pako from 'pako';
+import { SkillTreeData } from '#features/builds/components/SkillTree/models/SkillTreeData';
+import { nonSupportedJewels } from '#features/builds/scripts/utils';
+import data from '#features/builds/skill-tree-data/data.json';
 import { BuildSlice } from '#features/builds/types/Store';
 import { RootState } from '#store';
 
@@ -54,6 +58,108 @@ const initialState: BuildSlice = {
   ],
 };
 
+const Uint8ArrayToBase64 = (arr: Uint8Array): string => {
+  return btoa(Array.prototype.map.call(arr, (c: number) => String.fromCharCode(c)).join(''))
+    .replace(/\+/gi, '-')
+    .replace(/\//gi, '_');
+};
+
+const Base64ToUint8Array = (str: string): Uint8Array => {
+  str = atob(str.replace(/-/gi, '+').replace(/_/gi, '/'));
+  const charData = str.split('').map((x) => x.charCodeAt(0));
+  return new Uint8Array(charData);
+};
+
+const decodeURL = (encoding: string): SkillTreeDefinition => {
+  const xml = Base64ToUint8Array(encoding);
+  const inflatedXml = pako.inflate(xml, { to: 'string' });
+  // const strData = String.fromCharCode.apply(null, new Uint8Array(data));
+  // console.log();)
+  // const parsedXml = new XMLParser().parseFromString(inflatedXml)
+  // console.log(inflatedXml);
+  // console.log(xmlToJSON);
+  console.log(xmlToJSON.parseString(inflatedXml, {}));
+  // console.log(parsedXml);
+  // console.log(JSON.stringify(xmlToJson(inflatedXml)));
+  // console.log({encoding, bytes});
+  // skillTreeDefinition.Version = (bytes[0] << 24) | (bytes[1] << 16) | (bytes[2] << 8) | bytes[3];
+  // skillTreeDefinition.Class = bytes[4];
+  // skillTreeDefinition.Ascendancy = bytes[5];
+  // // console.log(bytes[5] << 24, bytes[5] << 16, bytes[5] << 8, bytes[5]);
+  //
+  // const { nodes } = new SkillTreeData(data as any, skillTreeDefinition.Version);
+  //
+  // for (let i = skillTreeDefinition.Version > 3 ? 7 : 6; i < bytes.length; i += 2) {
+  //   const id = (bytes[i] << 8) | bytes[i + 1];
+  //   const node = nodes[id];
+  //   // let reversedPairs = [];
+  //   // let duplicates = [];
+  //   if(node !== undefined) {
+  //     skillTreeDefinition.Nodes.push({
+  //       skill: `skill-${node.skill}`,
+  //       possibleOutNodes: node.out,
+  //       // [
+  //       // ...skillTreeDefinition.Nodes.find((s) => s.skill === node.skill)
+  //       //   .possibleOutNodes,
+  //       // nodeOutId,
+  //       // ],
+  //     });
+  //   }
+  // if (node !== undefined) {
+  //   for (const n in nodes) {
+  //     let node: any = nodes[n];
+  //
+  //     if (node.out && node?.group) {
+  //       node.out.map((nodeOutId) => {
+  //         const connectedNode = Object.values(nodes).find(
+  //           (nodeToConnect) => +nodeToConnect.skill === +nodeOutId
+  //         );
+  //         if (!connectedNode?.skill) return nodeOutId;
+  //
+  //         if (
+  //           reversedPairs.some(
+  //             (pair) =>
+  //               (pair[0] === +node.skill || pair[0] === +nodeOutId) &&
+  //               (pair[1] === +node.skill || pair[1] === +nodeOutId)
+  //           )
+  //         )
+  //           return nodeOutId;
+  //
+  //         if (
+  //           !!duplicates.find(
+  //             (p) => p.connectedNodeId === connectedNode.skill && p.nodeId === node.skill
+  //           ) ||
+  //           +connectedNode.skill === +node.skill
+  //         )
+  //           return nodeOutId;
+  //
+  //         if (
+  //           (node.ascendancyName !== '' && connectedNode.ascendancyName === '') ||
+  //           (node?.ascendancyName === '' && connectedNode.ascendancyName !== '')
+  //         )
+  //           return nodeOutId;
+  //
+  //         if (connectedNode.classStartIndex) return nodeOutId;
+  //
+  //         duplicates.push({ connectedNodeId: connectedNode.skill, nodeId: node.skill });
+  //         reversedPairs.push([+node.skill, +nodeOutId].sort((a, b) => a > b));
+  //
+  //         skillTreeDefinition.Nodes.push({
+  //           skill: `skill-${node.skill}`,
+  //           possibleOutNodes: [
+  //             // ...skillTreeDefinition.Nodes.find((s) => s.skill === node.skill)
+  //             //   .possibleOutNodes,
+  //             nodeOutId,
+  //           ],
+  //         });
+  //       });
+  //     }
+  //   }
+  // }
+  // }
+  // return skillTreeDefinition;
+};
+
 export const buildSlice = createSlice({
   name: 'build',
   initialState,
@@ -81,7 +187,23 @@ export const buildSlice = createSlice({
      * Pob
      */
     changePob: (state, { payload }) => {
-      state.pob = payload;
+      // let str = "";
+      // let s = atob(payload.replace(/-/gi, '+').replace(/_/gi, '/'));
+      // console.log(inflate);
+      // const f = lzstring.decompressFromUint8Array(payload);
+      // let s = [];
+      // console.log(btoa(payload));
+      let s = decodeURL(payload);
+      // console.log(s);
+      // console.log(f);
+      console.log(s);
+      // state.variants[state.activeVariant].passives.tree = s.Nodes;
+      // console.log(v);
+      // console.log(v);
+      // console.log(JSON.parse(atob(b64arr)));
+      // console.log(str);
+      // console.log(JSON.parse(str));
+      // state.pob = payload;
     },
 
     /**
@@ -294,7 +416,11 @@ export const buildSlice = createSlice({
       );
     },
 
-    saveDraftSkills: ({ variants, activeVariant }, { payload }) => {
+    resetDraftSkills: ({ variants, activeVariant }) => {
+      variants[activeVariant].draftSkills = variants[activeVariant].skills;
+    },
+
+    saveDraftSkills: ({ variants, activeVariant }) => {
       variants[activeVariant].skills = variants[activeVariant].draftSkills;
     },
 
@@ -366,6 +492,8 @@ export const {
   addDraftSkillOrdinalNumber,
   removeDraftSkillOrdinalNumber,
   removeDraftSkillSlot,
+  resetDraftSkills,
+  saveDraftSkills,
 } = buildSlice.actions;
 
 export const selectBuildTitle = (state: RootState) => state.build.title;

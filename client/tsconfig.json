@@ -23,7 +23,11 @@
     "strict": true,
     "target": "esnext",
     "baseUrl": "../client",
+    "removeComments": true,
     "paths": {
+      "#build-tools/*": [
+        "build-tools/*"
+      ],
       "#constants/*": [
         "constants/*"
       ],

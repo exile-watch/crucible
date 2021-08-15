@@ -1,26 +1,30 @@
 import React from 'react';
+import cx from 'classnames';
 
 import { Button, Heading } from '#design-system/components';
 import Modal from '#design-system/components/Modal/Modal';
 import SkillsRow from '#features/builds/components/EditorSections/Skills/SkillsModal/SkillsRow/SkillsRow';
+import { resetDraftSkills, saveDraftSkills } from '#features/builds/slices/buildSlice';
+import { useDispatch } from '#hooks/useStore';
 
 import AddSlot from './AddSlot/AddSlot';
 
 import styles from './SkillsModal.module.scss';
-import cx from 'classnames';
 
 type SkillsModalProps = {
   isOpen: boolean;
   toggleModal: () => void;
 };
 
-const SkillsModalTitle = () => {
-  return (
-    <div><p>Editing Skills</p></div>
-  )
-}
-
 const SkillsModal = ({ isOpen, toggleModal }: SkillsModalProps) => {
+  const dispatch = useDispatch();
+
+  const handleCancelClick = () => {
+    dispatch(saveDraftSkills());
+    dispatch(resetDraftSkills());
+    toggleModal();
+  };
+
   return (
     <Modal isOpen={isOpen} toggleModal={toggleModal} title="Editing Skills">
       <div className={styles.body}>
@@ -34,9 +38,10 @@ const SkillsModal = ({ isOpen, toggleModal }: SkillsModalProps) => {
         <SkillsRow />
       </div>
       <div className={cx(styles.footer, 'pt-3')}>
-        <Button variant='tertiary' className='mr-3'>Cancel</Button>
-        <Button variant='secondary' className='mr-3'>Reset</Button>
-        <Button>Save</Button>
+        <Button variant="tertiary" className="mr-3" onClick={toggleModal}>
+          Cancel
+        </Button>
+        <Button onClick={handleCancelClick}>Save</Button>
       </div>
     </Modal>
   );

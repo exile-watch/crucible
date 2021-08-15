@@ -92,33 +92,33 @@ const SkillsRow = () => {
                         {ordinalNumber === 1 && <p>Secondary</p>}
                         {ordinalNumber === 2 && <p>Tertiary</p>}
                         {ordinalNumber === 3 && <p>Quaternary</p>}
-                        <div>
-                          <Button
-                            variant="tertiary"
-                            className="px-1"
-                            onClick={() => handleRemoveOrdinalNumberClick({ slot, ordinalNumber })}
-                          >
-                            <TrashIcon />
-                          </Button>
-                        </div>
+                        <Button
+                          variant="tertiary"
+                          className="px-1"
+                          onClick={() => handleRemoveOrdinalNumberClick({ slot, ordinalNumber })}
+                        >
+                          <TrashIcon />
+                        </Button>
                       </div>
                       <div className={cx('mt-1', styles.divider)} />
-                      <div className='mt-3'>
-                        <p style={{ gridArea: 'skill-row-modal-gemHeading' }}>Gem</p>
-                        <p style={{ gridArea: 'skill-row-modal-levelHeading' }}>Level</p>
-                        <p style={{ gridArea: 'skill-row-modal-qualityHeading' }}>Quality</p>
+                      <div className={styles.rowInputs}>
+                        <div className="mt-3">
+                          <div style={{ gridArea: 'skill-row-modal-gemHeading' }}>Gem</div>
+                          <div style={{ gridArea: 'skill-row-modal-levelHeading' }}>Level</div>
+                          <div style={{ gridArea: 'skill-row-modal-qualityHeading' }}>Quality</div>
+                        </div>
+                        {ordinalNumberSkills.map((ordinalNumberSkill, i) => (
+                          <SkillRowInputs
+                            key={`skills-modal-draft-${slot}-${ordinalNumber}-${i}-input`}
+                            slot={slot}
+                            index={i}
+                            onChange={handleInputChange}
+                            ordinalNumber={ordinalNumber}
+                            ordinalNumberSkill={ordinalNumberSkill}
+                            onRemove={handleRemoveClick}
+                          />
+                        ))}
                       </div>
-                      {ordinalNumberSkills.map((ordinalNumberSkill, i) => (
-                        <SkillRowInputs
-                          key={`skills-modal-draft-${slot}-${ordinalNumber}-${i}-input`}
-                          slot={slot}
-                          index={i}
-                          onChange={handleInputChange}
-                          ordinalNumber={ordinalNumber}
-                          ordinalNumberSkill={ordinalNumberSkill}
-                          onRemove={handleRemoveClick}
-                        />
-                      ))}
                     </Card>
                   )
                 )}

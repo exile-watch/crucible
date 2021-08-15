@@ -28,7 +28,7 @@ const SkillRowInputs = ({
   ordinalNumberSkill,
   index,
 }: SkillRowInputsProps) => (
-  <li className={styles.rowInputs}>
+  <li className='mt-2'>
     <span style={{ gridArea: 'skill-row-modal-number' }}>#{index + 1}</span>
     <Input
       wrapperProps={{ style: { gridArea: 'skill-row-modal-gemInput' } }}
@@ -55,7 +55,7 @@ const SkillRowInputs = ({
       variant="tertiary"
       onClick={() => onRemove({ slot, ordinalNumber, index })}
     >
-      <CrossIcon />
+      <CrossIcon className={styles.icon} />
     </Button>
   </li>
 );
