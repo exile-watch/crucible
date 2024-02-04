@@ -81,7 +81,7 @@ You can browse existing issues to find something that needs help!
 ## Working in the sbsrnt/poe-watch repository
 Here's some information that might be helpful while working on a poe-watch PR:
 
-- [Development](/client/docsnt/docs/development.md) - This short guide describes how to get this app running on your local machine.
+- [Development](/docsnt/docs/development.md) - This short guide describes how to get this app running on your local machine.
 
 ## Reviewing
 We review every single PR.

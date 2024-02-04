@@ -1,17 +1,17 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-client/node_modules
-client/.pnp
-client/.pnp.js
-client/.yarn*
+node_modules
+.pnp
+.pnp.js
+.yarn*
 
 # next.js
-client/.next/
-client/out/
+.next/
+out/
 
 # production
-client/build
+build
 
 # misc
 .DS_Store
