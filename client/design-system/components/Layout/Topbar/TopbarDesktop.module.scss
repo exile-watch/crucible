@@ -5,6 +5,7 @@
   grid-template-columns: 250px repeat(2, 1fr);
   background: var(--secondary-bg);
   color: var(--primary-color);
+  z-index: var(--z-index-100);
 }
 
 .moduleList {

@@ -11,6 +11,10 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "lib": ["es5","dom", "es2017", "dom.iterable"],
     "module": "esnext",
     "moduleResolution": "node",
@@ -52,8 +56,14 @@
       "#types/*": [
         "types/*"
       ]
-    }
+    },
+    "incremental": true
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

@@ -12,7 +12,7 @@ const TopbarDesktop = () => {
   return (
     <nav className={cx('theme-transition-scope', styles.topbar)}>
       <div className="px-3 py-2">
-        <Link href="/">exile.watch</Link>
+        <Link href="/" legacyBehavior>exile.watch</Link>
       </div>
       <Modules />
       <InputWithResults />

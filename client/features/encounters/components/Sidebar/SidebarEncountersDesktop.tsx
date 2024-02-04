@@ -71,7 +71,7 @@ const SidebarEncountersDesktop = () => {
                   <li key={`sidebar_${label}`}>
                     {category === 'common-maps' && startingChar(self, i)}
                     <>
-                      <Link href={path}>
+                      <Link href={path} legacyBehavior>
                         <a
                           className={cx(
                             'px-3 py-1 mx-3',

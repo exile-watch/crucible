@@ -30,7 +30,7 @@ const BossAbility = ({ name, about, gif, tip }: PureBossAbilityType) => {
   }, [isActive]);
 
   return (
-    <Link href={redirect}>
+    <Link href={redirect} legacyBehavior>
       <div
         className={cx('mx-5', styles.ability, activeClassname)}
         ref={isActive ? activeAbilityRef : null}
