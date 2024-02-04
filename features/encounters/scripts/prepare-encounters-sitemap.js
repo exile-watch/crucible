@@ -2,8 +2,8 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const { toLower, kebabCase } = require('lodash');
 
-const getDirectories = require('../../../utils/getDirectories.js');
-const generateXmlUrl = require('../../../utils/generateXmlUrl.js');
+const getDirectories = require('../../../build-tools/utils/getDirectories.js');
+const generateXmlUrl = require('../../../build-tools/utils/generateXmlUrl.js');
 const SITEMAP_PRIORITY = require('../../../constants/sitemapPriority.js');
 
 const domain = 'https://TBD';

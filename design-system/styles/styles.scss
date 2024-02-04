@@ -1,0 +1,30 @@
+@use 'reset';
+@use 'variables';
+@use 'colors';
+@use 'mixins/spacing';
+@use 'mixins/breakpoints';
+
+#__next {
+  height: 100%;
+}
+
+html {
+  color: var(--primary-color);
+}
+
+body {
+  // Due to downshift's a11y-status-message element at the bottom of document
+  overflow-x: hidden;
+}
+
+.theme-transition-scope {
+  transition: var(--transition-theme);
+}
+
+.s1 {
+  fill: var(--secondary-color)
+}
+
+.s2 {
+  fill: var(--primary-color)
+}

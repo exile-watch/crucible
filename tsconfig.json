@@ -1,4 +1,9 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
   "compilerOptions": {
     "allowJs": true,
     "alwaysStrict": true,
@@ -6,10 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["es5","dom", "es2017", "dom.iterable"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -21,21 +23,22 @@
     "strict": true,
     "target": "esnext",
     "baseUrl": ".",
+    "removeComments": true,
     "paths": {
-      "#global-styles/*": [
-        "global-styles/*"
-      ],
-      "#assets/*": [
-        "assets/*"
-      ],
-      "#components/*": [
-        "components/*"
+      "#build-tools/*": [
+        "build-tools/*"
       ],
       "#constants/*": [
         "constants/*"
       ],
+      "#design-system/*": [
+        "design-system/*"
+      ],
       "#data/*": [
         "data/*"
+      ],
+      "#enums/*": [
+        "enums/*"
       ],
       "#features/*": [
         "features/*"
@@ -43,11 +46,11 @@
       "#hooks/*": [
         "hooks/*"
       ],
-      "#types": [
-        "types/index.d.ts"
+      "#store": [
+        "store/store.ts"
       ],
-      "#utils/*": [
-        "utils/*"
+      "#types/*": [
+        "types/*"
       ]
     },
     "incremental": true

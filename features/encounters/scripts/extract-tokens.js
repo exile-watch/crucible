@@ -2,9 +2,9 @@ const fs = require('fs');
 const { toLower, kebabCase } = require('lodash');
 const yaml = require('js-yaml');
 
-const getDirectories = require('../../../utils/getDirectories');
-const colorifyConsole = require('../../../utils/colorifyConsole');
-const skills = require('../../../features/encounters/extracted-data/skills.json');
+const getDirectories = require('../../../build-tools/utils/getDirectories');
+const colorifyConsole = require('../../../build-tools/utils/colorifyConsole');
+const skills = require('../extracted-data/skills.json');
 const rootPath = './features/encounters';
 const tokensPath = `${rootPath}/tokens`;
 const extractedDataPath = `${rootPath}/extracted-data`;

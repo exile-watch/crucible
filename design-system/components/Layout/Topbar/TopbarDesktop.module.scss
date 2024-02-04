@@ -1,0 +1,52 @@
+.topbar {
+  grid-area: topbar;
+  display: grid;
+  position: relative;
+  grid-template-columns: 250px repeat(2, 1fr);
+  background: var(--secondary-bg);
+  color: var(--primary-color);
+  z-index: var(--z-index-100);
+}
+
+.moduleList {
+  display: flex;
+}
+
+.module {
+  height: 100%;
+
+  a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    color: var(--tertiary-bg);
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    text-decoration: none;
+    transition: all ease 0.4s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.activeModule {
+  a {
+    &:active,
+    &:hover,
+    &:visited,
+    &:link {
+      color: var(--primary-color);
+      border-bottom-color: var(--primary-color);
+      background: var(--secondary-color);
+    }
+  }
+}
+
+.icons {
+  justify-self: right;
+  align-self: center;
+}

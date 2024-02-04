@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
 
-import Layout from '#components/Layout/Layout';
+import { Layout } from '#design-system/components';
 import BossContainer from '#features/encounters/components/Boss/BossContainer';
 import Map from '#features/encounters/components/Map/Map';
 import { BossAbilityWithNameType, DataType } from '#types';
@@ -19,7 +19,7 @@ const Boss = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    import(`../../../../features/encounters/extracted-data/${category}/${map}.json`)
+    import(`../../../../../features/encounters/extracted-data/${category}/${map}.json`)
       .then((d) => {
         setData(d.default);
         setIsLoading(false);

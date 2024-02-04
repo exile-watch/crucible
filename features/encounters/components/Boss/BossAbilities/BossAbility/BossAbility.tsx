@@ -6,7 +6,7 @@ import Link from 'next/link';
 import useRouter from '#hooks/useRouter';
 import { PureBossAbilityType } from '#types';
 
-import { AbilityName, AbilityTip, AboutAbility } from './Details';
+import { AbilityName, AbilityTip, AboutAbility } from './Details/index';
 import Video from './Video/Video';
 
 import styles from './BossAbility.module.scss';

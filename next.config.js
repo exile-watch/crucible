@@ -6,13 +6,10 @@ process.env.SENTRY_DSN = SENTRY_DSN;
 const basePath = '';
 
 module.exports = {
-  future: {
-    webpack5: true,
-  },
   productionBrowserSourceMaps: true,
   webpack: (config, options) => {
     if (options.isServer && NODE_ENV === 'production') {
-      require('./global-scripts/generateSitemap');
+      require('./build-tools/generate/generateSitemap');
     }
     // In `pages/_app.js`, Sentry is imported from @sentry/browser. While
     // @sentry/node will run in a Node.js environment. @sentry/node will use

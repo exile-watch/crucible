@@ -1,6 +1,6 @@
 import cx from 'classnames';
 
-import Layout from '#components/Layout/Layout';
+import { Layout } from '#design-system/components';
 import Video from '#features/encounters/components/Boss/BossAbilities/BossAbility/Video/Video';
 
 import styles from './styles.module.scss';

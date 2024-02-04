@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    {
+      "prefixIds": false
+    },
+    {
+      "convertStyleToAttrs": false
+    },
+    {
+      "cleanupIDs": false
+    },
+    {
+      "convertTransform": false
+    },
+    {
+      "removeViewBox": false
+    }
+  ]
+}

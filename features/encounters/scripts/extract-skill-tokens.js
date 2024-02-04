@@ -1,6 +1,6 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
-const colorifyConsole = require('../../../utils/colorifyConsole');
+const colorifyConsole = require('../../../build-tools/utils/colorifyConsole');
 
 const rootPath = './features/encounters';
 const tokensPath = `${rootPath}/tokens`;

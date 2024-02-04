@@ -2,9 +2,10 @@ import { CookiesProvider } from 'react-cookie';
 import type { AppProps } from 'next/app';
 import App from 'next/app';
 
+
 import { initSentry } from '../sentry';
 
-import '../global-styles/styles.scss';
+import '../design-system/styles/styles.scss';
 
 initSentry();
 
