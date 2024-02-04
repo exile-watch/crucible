@@ -33,7 +33,7 @@ const Categories = () => {
               <ul>
                 {ent.map((e) => (
                   <li key={`content_${e.label}`}>
-                    <Link href={e.path}>{e.label}</Link>
+                    <Link href={e.path} legacyBehavior>{e.label}</Link>
                   </li>
                 ))}
               </ul>

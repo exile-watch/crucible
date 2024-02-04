@@ -25,7 +25,7 @@ const Result = ({
 
   if (isMap) {
     return (
-      <Link href={mapPath}>
+      <Link href={mapPath} legacyBehavior>
         <a href={mapPath} className={cx('px-2 py-1', styles.result)} onClick={onClick}>
           {mapName}
           <Badge>map</Badge>
@@ -36,7 +36,7 @@ const Result = ({
 
   if (isBoss) {
     return (
-      <Link href={bossPath}>
+      <Link href={bossPath} legacyBehavior>
         <a href={bossPath} className={cx('px-2 py-1', styles.result)} onClick={onClick}>
           <div className={styles.labelWrapper}>
             <span>{bossName}</span>
@@ -53,7 +53,7 @@ const Result = ({
   }
 
   return (
-    <Link href={abilityPath}>
+    <Link href={abilityPath} legacyBehavior>
       <a href={abilityPath} className={cx('px-2 py-1', styles.result)} onClick={onClick}>
         <div className={styles.labelWrapper}>
           <span className={styles.label}>{abilityName}</span>

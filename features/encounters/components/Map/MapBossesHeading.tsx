@@ -30,7 +30,7 @@ const MapBossesHeading = ({ data }: MapBossesHeadingProps) => {
 
         return (
           <Heading as="h2" key={`mapBossesHeading_${bossName}`}>
-            <Link href={redirect}>
+            <Link href={redirect} legacyBehavior>
               <a className={cx(isActive ? styles.active : undefined, styles.link)}>{bossName}</a>
             </Link>
           </Heading>

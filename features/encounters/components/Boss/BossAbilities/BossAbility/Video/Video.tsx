@@ -8,23 +8,24 @@ import styles from './Video.module.scss';
 
 type VideoProps = {
   src?: string;
-  isActive: boolean;
+  isActive?: boolean;
   abilityName?: string;
+  speed?: number;
 };
 
 // @ts-ignore
-const Video = ({ src, isActive, abilityName }: VideoProps) => {
+const Video = ({ src, isActive, abilityName, speed }: VideoProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoContainerRef = useRef<HTMLDivElement>(null);
-  const isVisible = useOnScreen<HTMLDivElement | null>(videoContainerRef.current);
+  // const isVisible = useOnScreen<HTMLDivElement | null>(videoContainerRef.current);
   const setPlayBack = () => {
-    if (videoRef.current) videoRef.current.playbackRate = 1.5;
+    if (videoRef.current) videoRef.current.playbackRate = speed || 1.5;
   };
 
-  useEffect(() => {
-    if (videoRef.current && isVisible) videoRef.current.play();
-    if (videoRef.current && !isVisible) videoRef.current.pause();
-  }, [isVisible]);
+  // useEffect(() => {
+  //   if (videoRef.current && isVisible) videoRef.current.play();
+  //   if (videoRef.current && !isVisible) videoRef.current.pause();
+  // }, [isVisible]);
 
   // const play = () => {
   //   if(ref.current) ref.current.play();
@@ -42,7 +43,7 @@ const Video = ({ src, isActive, abilityName }: VideoProps) => {
           <Loader className={styles.loader} size={40} />
           <video
             className={styles.video}
-            autoPlay={isVisible}
+            autoPlay
             muted
             loop
             playsInline

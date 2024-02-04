@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build && next export",
-    "start": "NODE_ENV=production node server.js",
+    "start": "cross-env NODE_ENV=production node server.js",
     "type-check": "tsc",
     "svgr": "npx @svgr/cli -d assets/icons assets/icons/svg --typescript --memo",
     "lint": "yarn eslint --fix",
@@ -52,9 +52,9 @@
     "express": "^4.17.1",
     "lodash": "^4.17.21",
     "next": "latest",
-    "react": "17.0.1",
+    "react": "^18.2.0",
     "react-cookie": "^4.0.3",
-    "react-dom": "17.0.1",
+    "react-dom": "^18.2.0",
     "sass": "^1.32.8"
   },
   "devDependencies": {
@@ -69,6 +69,7 @@
     "@typescript-eslint/parser": "^4.18.0",
     "babel-eslint": "^10.1.0",
     "commitizen": "^4.2.3",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "date-fns": "^2.20.1",
     "eslint": "^7.22.0",

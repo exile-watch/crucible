@@ -24,7 +24,7 @@ const Modules = () => {
           className={cx(styles.module, activeModule === name && styles.activeModule)}
           key={`topbar_module_${name}`}
         >
-          <Link href={path}>
+          <Link href={path} legacyBehavior>
             <a className="px-3">
               <Heading as="h4">{name}</Heading>
             </a>
