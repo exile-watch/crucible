@@ -1,10 +1,11 @@
-const { kebabCase } = require('lodash');
 const fs = require('fs');
+const { kebabCase } = require('lodash');
 const getDirectories = require('../../../utils/getDirectories');
+const colorifyConsole = require('../../../utils/colorifyConsole');
 
-const rootPath = './features/encounters'
+const rootPath = './features/encounters';
 const tokensPath = `${rootPath}/tokens`;
-const extractedDataPath = `${rootPath}/extracted-data`
+const extractedDataPath = `${rootPath}/extracted-data`;
 const data = [];
 
 getDirectories(tokensPath).forEach((dir) => {
@@ -69,7 +70,9 @@ const prepareIndexedSearchData = () =>
   }, []);
 
 const buildIndexedSearch = async () => {
-  await console.time('Indexed Search Time')
+  await console.time(
+    colorifyConsole({ label: 'time', text: 'Generate Encounters Indexed Search' })
+  );
   const preparedIndexedSearchData = await prepareIndexedSearchData();
   return JSON.stringify(preparedIndexedSearchData);
 };
@@ -77,9 +80,13 @@ const buildIndexedSearch = async () => {
 buildIndexedSearch()
   .then(async (data) => {
     await fs.writeFileSync(`${extractedDataPath}/indexed-search.json`, data);
-    await console.timeEnd('Indexed Search Time')
+    await console.timeEnd(
+      colorifyConsole({ label: 'time', text: 'Generate Encounters Indexed Search' })
+    );
   })
   .catch(async (err) => {
-    await console.log(err)
-    await console.timeEnd('Indexed Search Time')
+    await console.log(err);
+    await console.timeEnd(
+      colorifyConsole({ label: 'time', text: 'Generate Encounters Indexed Search' })
+    );
   });

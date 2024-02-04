@@ -1,11 +1,13 @@
 const fs = require('fs');
 const { toLower, kebabCase } = require('lodash');
 const yaml = require('js-yaml');
+
 const getDirectories = require('../../../utils/getDirectories');
+const colorifyConsole = require('../../../utils/colorifyConsole');
 const skills = require('../../../features/encounters/extracted-data/skills.json');
-const rootPath = './features/encounters'
+const rootPath = './features/encounters';
 const tokensPath = `${rootPath}/tokens`;
-const extractedDataPath = `${rootPath}/extracted-data`
+const extractedDataPath = `${rootPath}/extracted-data`;
 
 /**
  * Replaces `/SKILL/` value to matched key/value in `tokens/skills.yml`
@@ -27,15 +29,16 @@ const extractedDataPath = `${rootPath}/extracted-data`
  *      - does something specific to this boss's ability
  *      - and something else
  */
-const replaceTokenWithValue = arr => arr.map(about => {
-  // See more at https://github.com/sbsrnt/poe-watch/tree/main/tokens/README.md
-  const IS_SKILL_TOKEN = about && about.charAt && about.charAt(0) === '/'
-  if(IS_SKILL_TOKEN) {
-    const [, skill] = about.split('/');
-    about = skills[skill];
-  }
-  return about;
-})
+const replaceTokenWithValue = (arr) =>
+  arr.map((about) => {
+    // See more at https://github.com/sbsrnt/poe-watch/tree/main/tokens/README.md
+    const IS_SKILL_TOKEN = about && about.charAt && about.charAt(0) === '/';
+    if (IS_SKILL_TOKEN) {
+      const [, skill] = about.split('/');
+      about = skills[skill];
+    }
+    return about;
+  });
 
 const injectAllAbilityDamageTypesToBoss = (data) => {
   const bosses = data.bosses.map((d) => {
@@ -43,13 +46,12 @@ const injectAllAbilityDamageTypesToBoss = (data) => {
     const [bossName, { abilities }] = Object.entries(d)[0];
     abilities.map((ability) => {
       const [a] = Object.values(ability);
-      if(a.type ) {
+      if (a.type) {
         damageTypes.push(a.type);
       }
 
-
-      if(a.about) {
-        a.about = replaceTokenWithValue(a.about)
+      if (a.about) {
+        a.about = replaceTokenWithValue(a.about);
       }
     });
 
@@ -68,13 +70,15 @@ const injectAllAbilityDamageTypesToBoss = (data) => {
 };
 
 const getExtractedData = async () => {
-  await console.time('Data Extract Time')
+  await console.time(colorifyConsole({ label: 'time', text: 'Extract Encounters' }));
   let data = [];
   await getDirectories(tokensPath).forEach((dir) => {
     try {
       fs.readdirSync(`${tokensPath}/${dir}`).forEach((file) => {
         try {
-          const convertedDataToJson = yaml.load(fs.readFileSync(`${tokensPath}/${dir}/${file}`, 'utf8'));
+          const convertedDataToJson = yaml.load(
+            fs.readFileSync(`${tokensPath}/${dir}/${file}`, 'utf8')
+          );
           const dataWithBossDamageTypes = injectAllAbilityDamageTypesToBoss(convertedDataToJson);
 
           const dataWithDir = { category: dir, ...dataWithBossDamageTypes };
@@ -90,7 +94,7 @@ const getExtractedData = async () => {
   return data;
 };
 
-getExtractedData().then(async (extractedData)=> {
+getExtractedData().then(async (extractedData) => {
   await extractedData.forEach((data) => {
     const [bossName] = Object.keys(data.bosses[0]);
     const fileName = data.map
@@ -99,5 +103,5 @@ getExtractedData().then(async (extractedData)=> {
 
     fs.writeFileSync(`${extractedDataPath}/${data.category}/${fileName}`, JSON.stringify(data));
   });
-  await console.timeEnd('Data Extract Time')
+  await console.timeEnd(colorifyConsole({ label: 'time', text: 'Extract Encounters' }));
 });

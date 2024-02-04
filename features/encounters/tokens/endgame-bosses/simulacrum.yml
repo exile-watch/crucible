@@ -1,0 +1,28 @@
+map: Simulacrum
+bosses:
+  - Omniphobia, Fear Manifest:
+      abilities:
+        - Cleave:
+            type: [ fire ]
+            tip: [ dodge]
+            gif: https://i.gyazo.com/bba8f78ac7719c2f3d87a1f34427a789.mp4
+            about:
+              - ""
+        - Mortar:
+            type: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/d2299e75be79bca5b0418220bbad86bd.mp4
+            about:
+              - ""
+        - Ground Slam Combo:
+            type: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/988d6936e07d40a12ba29b6c2d0d5bc5.mp4
+            about:
+              - ""
+        - Slash:
+            type: [ cold ]
+            tip: [ avoid traps ]
+            gif: https://i.gyazo.com/4ec1882b45bad42b6a66b33a02852d9a.mp4
+            about:
+              - ""

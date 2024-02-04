@@ -29,10 +29,16 @@ bosses:
             about:
               - ""
 
+        - Damage Reduction Phase:
+            tip: [ dodge ]
+            gif: https://i.gyazo.com/b2e9a89ba051d6723c30ca9c6eae1f3b.mp4
+            about:
+              - ""
+
         - Rumble Slam:
             type: [ physical, chaos ]
             tip: [ dodge ]
-            gif: https://i.gyazo.com/64b1a2e190f8664714bbdff6345be094.mp4
+            gif: https://i.gyazo.com/e1a7eb987e3740e319832497b77be119.mp4
             about:
               - ""
 
