@@ -7,7 +7,7 @@
     "build": "client/node_modules/.bin/next build && next export",
     "start": "NODE_ENV=production node server.js",
     "type-check": "client/node_modules/.bin/tsc",
-    "svgr:icons": "npx @svgr/cli --svgo-config .svgo.json -d design-system/icons design-system/icons/svg --typescript --memo --ref",
+    "svgr:icons": "npx @svgr/cli --svgo-config ../writ/packages/writ-icons/.svgo.json -d design-system/icons design-system/icons/svg --typescript --memo --ref",
     "svgr:trees": "npx @svgr/cli --svgo-config .svgo.trees.json -d features/builds/components/SkillTree/3.14/components features/builds/components/SkillTree/3.14/svg --typescript --memo",
     "lint": "yarn client/node_modules/.bin/eslint --fix",
     "clean-invalid-data-files": "node client/features/encounters/scripts/clean-invalid-data-files.js",
@@ -49,7 +49,7 @@
     }
   },
   "dependencies": {
-    "@exile-watch/writ-react": "^0.1.4",
+    "@exile-watch/writ-react": "^0.1.10",
     "@sentry/browser": "^6.4.1",
     "@sentry/integrations": "^6.4.1",
     "@sentry/node": "^6.4.1",
@@ -75,7 +75,7 @@
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@exile-watch/typescript-config": "^0.1.19",
-    "@exile-watch/writ-icons": "^0.2.3",
+    "@exile-watch/writ-icons": "^0.3.2",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-docs": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",

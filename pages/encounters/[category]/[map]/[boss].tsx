@@ -19,7 +19,7 @@ const Boss = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    import(`../../../../../features/encounters/extracted-data/${category}/${map}.json`)
+    import(`../../../../features/encounters/extracted-data/${category}/${map}.json`)
       .then((d) => {
         setData(d.default);
         setIsLoading(false);
