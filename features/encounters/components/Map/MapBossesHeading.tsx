@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { kebabCase } from 'lodash';
 import Link from 'next/link';
 
-import { Heading } from '#design-system/components';
+import { Heading } from '@exile-watch/writ-react';
 import useRouter from '#hooks/useRouter';
 import { MapType } from '#types';
 

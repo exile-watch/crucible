@@ -9,7 +9,7 @@ const {
   encountersMapsBossesAndAbilitiesSitemapUrls,
 } = require('../../features/encounters/scripts/prepare-encounters-sitemap.js');
 
-const domain = 'https://TBD';
+const domain = 'https://exile.watch';
 const rootPath = './features';
 
 const featuresSitemapUrls = async () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout } from '#design-system/components';
+import { Layout } from '#components';
 
 const Encounters = () => {
   return <Layout>encounters index page</Layout>;

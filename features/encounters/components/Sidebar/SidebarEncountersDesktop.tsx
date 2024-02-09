@@ -3,8 +3,8 @@ import cx from 'classnames';
 import { kebabCase, upperCase } from 'lodash';
 import Link from 'next/link';
 
-import { Heading } from '#design-system/components';
-import { ArrowRightIcon } from '#design-system/icons';
+import { Heading } from '@exile-watch/writ-react';
+import { ArrowRightIcon } from '@exile-watch/writ-icons';
 import useLoadSidebarData from '#hooks/useLoadSidebarData';
 import useRouter from '#hooks/useRouter';
 import { AtomPathData } from '#types';

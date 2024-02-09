@@ -31,8 +31,8 @@
       "#constants/*": [
         "constants/*"
       ],
-      "#design-system/*": [
-        "design-system/*"
+      "#components": [
+        "components"
       ],
       "#data/*": [
         "data/*"
@@ -49,8 +49,8 @@
       "#store": [
         "store/store.ts"
       ],
-      "#types/*": [
-        "types/*"
+      "#types": [
+        "types"
       ]
     },
     "incremental": true

@@ -1,6 +1,3 @@
-import { NextRouter } from 'next/router';
-import { ParsedUrlQuery } from 'querystring';
-
 /**
  * pageDir = all available page directories under {dirName} in `/pages/[dirName]/[fileName].json` path
  * fileName = all available pages under {fileName} in `/pages/[dirName]/[fileName].json` path
@@ -54,7 +51,7 @@ export type RouterType = {
     boss?: string;
     ability?: string;
   };
-} & Omit<ParsedUrlQuery | NextRouter>;
+};
 
 export type AtomPathData = Array<{
   label: string;

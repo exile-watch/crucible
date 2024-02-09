@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-import { Loader, MissingContent } from '#design-system/components';
+import { Loader, MissingContent } from '@exile-watch/writ-react';
 import useOnScreen from '#hooks/useOnScreen';
 
 import styles from './Video.module.scss';

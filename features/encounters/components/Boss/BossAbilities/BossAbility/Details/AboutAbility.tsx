@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MissingContent } from '#design-system/components';
+import { MissingContent } from '@exile-watch/writ-react';
 
 import DetailRow from './DetailRow';
 

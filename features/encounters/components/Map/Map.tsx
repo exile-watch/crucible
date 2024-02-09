@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { startCase } from 'lodash';
 
-import { Heading, PageLoader } from '#design-system/components';
+import { Heading, PageLoader } from '@exile-watch/writ-react';
 import useRouter from '#hooks/useRouter';
 import { DataType } from '#types';
 

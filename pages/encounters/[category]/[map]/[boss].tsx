@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
 
-import { Layout } from '#design-system/components';
+import { Layout } from '#components';
 import BossContainer from '#features/encounters/components/Boss/BossContainer';
 import Map from '#features/encounters/components/Map/Map';
 import { BossAbilityWithNameType, DataType } from '#types';

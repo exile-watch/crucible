@@ -1,10 +1,4 @@
-@import 'reset';
-@import 'variables/spacing';
-@import 'variables/colors';
-@import 'variables/typography';
-@import 'variables/z-index';
-@import 'variables/transitions';
-@import 'mixins/spacing';
+@use '@exile-watch/writ-react/dist/main.css';
 
 #__next {
   height: 100%;

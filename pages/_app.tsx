@@ -5,8 +5,6 @@ import App from 'next/app';
 
 import { initSentry } from '../sentry';
 
-import '../design-system/styles/styles.scss';
-
 initSentry();
 
 function ExileWatch({ Component, pageProps }: AppProps) {
