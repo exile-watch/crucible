@@ -7,7 +7,7 @@ import styles from './TopbarDesktop.module.scss';
 const Icons = () => {
   return (
     <div className={styles.icons}>
-      <ThemeSwitcher />
+      {/*<ThemeSwitcher />*/}
     </div>
   );
 };
