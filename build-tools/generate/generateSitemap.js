@@ -7,7 +7,7 @@ const SITEMAP_PRIORITY = require('../../constants/sitemapPriority');
 const {
   encounterCategoriesSitemapUrls,
   encountersMapsBossesAndAbilitiesSitemapUrls,
-} = require('../../features/encounters/scripts/prepare-encounters-sitemap.js');
+} = require('../../../splinters/packages/encounter-data/scripts/prepare-encounters-sitemap.js');
 
 const domain = 'https://exile.watch';
 const rootPath = './features';
