@@ -11,10 +11,10 @@ export type useImportDataProps = {
 export type IndexedSearchResultsBossProps = {
   mapPath: string;
   mapName: string;
-  bossPath: string;
-  bossName: string;
-  abilityPath: string;
-  abilityName: string;
+  encounterPath: string;
+  encounterName: string;
+  encounterAbilityPath: string;
+  encounterAbilityName: string;
 };
 
 export type IndexedSearchResultsProps = Array<IndexedSearchResultsBossProps> | null;

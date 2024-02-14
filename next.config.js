@@ -6,6 +6,13 @@ process.env.SENTRY_DSN = SENTRY_DSN;
 const basePath = '';
 
 module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'avatars.githubusercontent.com',
+      }
+    ]
+  },
   productionBrowserSourceMaps: true,
   webpack: (config, options) => {
     if (options.isServer && NODE_ENV === 'production') {

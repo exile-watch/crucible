@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import useActiveFeature from '#hooks/useActiveFeature';
 import { PathDataType } from '#types';
-
+import {paths} from '@exile-watch/encounter-data'
 function useLoadSidebarData() {
   const feature = useActiveFeature();
   const [data, setData] = useState<PathDataType | undefined>(undefined);
@@ -11,17 +11,8 @@ function useLoadSidebarData() {
   useEffect(() => {
     if (feature) {
       setIsLoading(true);
-
-      import(`../features/${feature}/extracted-data/paths.json`)
-        .then((importedData) => {
-          setData(importedData.default);
-          setIsLoading(false);
-        })
-        .catch((err) => {
-          setIsLoading(false);
-          setData(undefined);
-          throw new Error(err);
-        });
+      setData(paths);
+      setIsLoading(false);
     }
   }, [feature]);
 

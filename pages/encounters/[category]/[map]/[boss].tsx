@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { kebabCase } from 'lodash';
+import {camelCase, kebabCase} from 'lodash';
 import { useRouter } from 'next/router';
 
 import { Layout } from '#components';
@@ -19,9 +19,9 @@ const Boss = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    import(`../../../../features/encounters/extracted-data/${category}/${map}.json`)
+    import(`@exile-watch/encounter-data`)
       .then((d) => {
-        setData(d.default);
+        setData(d[camelCase(map)]);
         setIsLoading(false);
       })
       .catch(() => {

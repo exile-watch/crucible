@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.bg} />
+      {/*<div className={styles.bg} />*/}
       <div className={styles.text}></div>
     </Layout>
   );

@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { kebabCase, upperCase } from 'lodash';
 import Link from 'next/link';
 
-import { Heading } from '@exile-watch/writ-react';
+import { Title } from '@exile-watch/writ-react';
 import { ArrowRightIcon } from '@exile-watch/writ-icons';
 import useLoadSidebarData from '#hooks/useLoadSidebarData';
 import useRouter from '#hooks/useRouter';
@@ -52,9 +52,9 @@ const SidebarEncountersDesktop = () => {
               id={`sidebar_${category}`}
             >
               <div className={cx('px-3', styles.categoryTitle)}>
-                <Heading as="h5" className="my-0">
+                <Title order={5} className="my-0">
                   {upperCase(category)}
-                </Heading>
+                </Title>
                 <ArrowRightIcon
                   className={cx(
                     { [styles.arrowIconActive]: activeCategory === `sidebar_${category}` },

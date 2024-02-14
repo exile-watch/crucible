@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { kebabCase } from 'lodash';
 import Link from 'next/link';
 
-import { Heading } from '@exile-watch/writ-react';
+import { Title } from '@exile-watch/writ-react';
 import useRouter from '#hooks/useRouter';
 import { MapType } from '#types';
 
@@ -29,11 +29,11 @@ const MapBossesHeading = ({ data }: MapBossesHeadingProps) => {
           : `/encounters/${category}/${kebabCase(bossName)}`;
 
         return (
-          <Heading as="h2" key={`mapBossesHeading_${bossName}`}>
+          <Title order={2} key={`mapBossesHeading_${bossName}`}>
             <Link href={redirect} legacyBehavior>
               <a className={cx(isActive ? styles.active : undefined, styles.link)}>{bossName}</a>
             </Link>
-          </Heading>
+          </Title>
         );
       })}
     </div>

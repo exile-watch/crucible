@@ -1,50 +1,70 @@
 import React from 'react';
 import toLower from 'lodash/toLower';
 
-import { IndexedSearchResultsProps } from '#types';
-
 import Result from './Result';
 
-import styles from './Results.module.scss';
+import {Combobox} from "@mantine/core";
+import {indexedSearch} from "@exile-watch/encounter-data";
 
 type ResultsProps = {
-  data: IndexedSearchResultsProps;
   inputValue: string;
-  onClick: () => any;
 };
 
-const Results = ({ data, inputValue, onClick }: ResultsProps) => {
-  const results = data?.filter(({ mapName, bossName, abilityName }) => {
+const filterResults = (inputValue: string) => Object.entries(indexedSearch)?.map(([category, data]) => {
+  const filteredData = data.filter(({mapName, encounterName, encounterAbilityName}) => {
     const loweredInputValue = toLower(inputValue);
     const loweredMapName = toLower(mapName);
-    const loweredBossName = toLower(bossName);
-    const loweredAbilityName = toLower(abilityName);
+    const loweredEncounterName = toLower(encounterName);
+    const loweredEncounterAbilityName = toLower(encounterAbilityName);
 
-    return [loweredMapName, loweredBossName, loweredAbilityName].some((name) =>
+    return [loweredMapName, loweredEncounterName, loweredEncounterAbilityName].some((name) =>
       name.includes(loweredInputValue)
     );
-  });
-  const resultsSortedByKeyLength = results?.sort(
-    (a, b) => Object.keys(a).length - Object.keys(b).length
-  );
-  const resultsLength = resultsSortedByKeyLength?.length || 0;
+  })
+
+  return {[category]: filteredData}
+})
+
+const GroupLabel = ({label, length}) => {
+  const limitedResults = length > 5 ? '(showing 5)' : '';
+  const pluralResults = length > 1 ? 'results' : 'result';
+  return `${label} - ${length} ${pluralResults} ${limitedResults}`
+}
+
+const Results = ({ inputValue }: ResultsProps) => {
+  const results = filterResults(inputValue)
 
   return (
-    <div className={styles.resultsWrapper}>
-      {resultsLength > 0 && (
-        <div className="px-1">
-          {resultsLength} result{resultsLength > 1 && 's'}
-        </div>
+    <Combobox.Dropdown>
+      {results?.map((data, i) => {
+        const mapsLength = data.maps?.length;
+        const encountersLength = data.encounters?.length;
+        const encounterAbilitiesLength = data.encounterAbilities?.length;
+
+        return (
+        <Combobox.Options key={`indexed-search-option-${i}`}>
+          {mapsLength > 0 && (
+            <Combobox.Group label={<GroupLabel label="Maps" length={mapsLength} />}>
+              {data.maps.slice(0, 5).map(d => <Result key={d.mapPath} {...d}/>)}
+            </Combobox.Group>
+          )}
+
+          {encountersLength > 0 && (
+            <Combobox.Group label={<GroupLabel label="Encounters" length={encountersLength} />}>
+              {data.encounters.slice(0, 5).map(d => <Result key={d.encounterPath} {...d}/>)}
+            </Combobox.Group>
+          )}
+
+          {encounterAbilitiesLength > 0 && (
+            <Combobox.Group label={<GroupLabel label="Encounters' abilities" length={encounterAbilitiesLength} />}>
+              {data.encounterAbilities.slice(0, 5).map(d => <Result key={d.encounterAbilityPath} {...d}/>)}
+            </Combobox.Group>
+          )}
+        </Combobox.Options>
       )}
-      {resultsLength === 0 && <div className="px-1">No results found</div>}
-      <ul className={styles.results}>
-        {resultsSortedByKeyLength?.map((d, i) => (
-          <li key={`indexed_search_${i}`}>
-            <Result {...d} onClick={onClick} />
-          </li>
-        ))}
-      </ul>
-    </div>
+      )}
+
+    </Combobox.Dropdown>
   );
 };
 

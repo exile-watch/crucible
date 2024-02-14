@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { startCase } from 'lodash';
 
-import { Heading, PageLoader } from '@exile-watch/writ-react';
+import { Title, PageLoader } from '@exile-watch/writ-react';
 import useRouter from '#hooks/useRouter';
 import { DataType } from '#types';
 
@@ -24,9 +24,9 @@ const Map = ({ children, isLoading, data }: MapProps) => {
       {isLoading && <PageLoader />}
       {!isLoading && data && (
         <>
-          <Heading as="h4">
+          <Title order={4}>
             {startCase(heading)} {subheading && `* ${subheading}`}
-          </Heading>
+          </Title>
           <MapBossesHeading data={data} />
           {children}
         </>
