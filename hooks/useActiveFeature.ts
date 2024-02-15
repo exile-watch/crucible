@@ -1,6 +1,5 @@
 import isEmpty from 'lodash/isEmpty';
-
-import useRouter from '#hooks/useRouter';
+import {useRouter} from "next/router";
 
 function useActiveFeature() {
   const { route } = useRouter();

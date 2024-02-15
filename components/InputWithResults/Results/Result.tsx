@@ -58,7 +58,7 @@ const Result = ({
             <Text size="sm">{encounterAbilityName}</Text>
             <Text c="dimmed" size="xs" fs="italic">{encounterName}{mapName && ` - ${mapName}`}</Text>
           </Stack>
-        <Badge size="xs">ability</Badge>
+        <Badge size="xs" color="blue">ability</Badge>
         </Group>
       </Combobox.Option>
     </Link>

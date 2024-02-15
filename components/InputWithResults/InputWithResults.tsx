@@ -32,7 +32,7 @@ const InputWithResults = () => {
           onClick={() => {
             combobox.toggleDropdown()
           }}
-          w="300px"
+          w="400px"
         />
       </Combobox.Target>
       <Results inputValue={search} />

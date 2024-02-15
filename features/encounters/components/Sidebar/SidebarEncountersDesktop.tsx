@@ -1,25 +1,21 @@
-import { MouseEvent, useEffect, useState } from 'react';
+import React, { MouseEvent, useEffect, useState } from 'react';
 import cx from 'classnames';
-import { kebabCase, upperCase } from 'lodash';
+import { kebabCase, startCase } from 'lodash';
 import Link from 'next/link';
 
-import { Title } from '@exile-watch/writ-react';
 import { ArrowRightIcon } from '@exile-watch/writ-icons';
 import useLoadSidebarData from '#hooks/useLoadSidebarData';
 import useRouter from '#hooks/useRouter';
 import { AtomPathData } from '#types';
 
 import styles from './SidebarEncountersDesktop.module.scss';
+import {Divider, Group, Stack, Text} from "@mantine/core";
 
 const startingChar = (entities: AtomPathData, i: number) => {
   const firstChar = entities[i].label.charAt(0);
   const prevEntityChar = i > 0 && entities[i - 1].label.charAt(0);
 
-  return firstChar === prevEntityChar ? null : (
-    <div className={styles.firstChar}>
-      <span className="px-3">{firstChar}</span>
-    </div>
-  );
+  return firstChar === prevEntityChar ? null : <Divider label={firstChar} color="dimmed" labelPosition="center" className={styles.divider}/>
 };
 
 const SidebarEncountersDesktop = () => {
@@ -30,6 +26,9 @@ const SidebarEncountersDesktop = () => {
   } = useRouter();
 
   const handleCategoryClick = (e: MouseEvent<HTMLLIElement>) => {
+    if(activeCategory === e.currentTarget.id) {
+      return setActiveCategory('');
+    }
     setActiveCategory(e.currentTarget.id);
   };
 
@@ -43,7 +42,7 @@ const SidebarEncountersDesktop = () => {
     <nav>
       {isLoading && 'loading'}
       {!isLoading && data && (
-        <ul>
+        <Stack gap="xs" component="ul" className={styles.list}>
           {Object.entries(data).map(({ 0: category, 1: entities }) => (
             <li
               key={`sidebar_${category}`}
@@ -51,45 +50,39 @@ const SidebarEncountersDesktop = () => {
               onClick={handleCategoryClick}
               id={`sidebar_${category}`}
             >
-              <div className={cx('px-3', styles.categoryTitle)}>
-                <Title order={5} className="my-0">
-                  {upperCase(category)}
-                </Title>
+              <Group justify="space-between" className={styles.categoryContainer}>
+                <Text size="lg">
+                  {startCase(category)}
+                </Text>
                 <ArrowRightIcon
                   className={cx(
                     { [styles.arrowIconActive]: activeCategory === `sidebar_${category}` },
                     styles.arrowIcon
                   )}
                 />
-              </div>
+              </Group>
               <ul
-                className={
-                  activeCategory === `sidebar_${category}` ? styles.active : styles.inactive
-                }
+                className={cx(styles.sublist, {
+                  [styles.active]: activeCategory === `sidebar_${category}`,
+                  [styles.inactive]: activeCategory !== `sidebar_${category}`,
+                })}
               >
                 {entities.map(({ label, path }, i, self) => (
                   <li key={`sidebar_${label}`}>
                     {category === 'common-maps' && startingChar(self, i)}
-                    <>
-                      <Link href={path} legacyBehavior>
-                        <a
-                          className={cx(
-                            'px-3 py-1 mx-3',
-                            styles.boss,
-                            (boss === kebabCase(label) || map === kebabCase(label)) &&
-                              styles.activeBoss
-                          )}
-                        >
-                          <span>{label}</span>
-                        </a>
-                      </Link>
-                    </>
+                    <Link href={path} className={cx(
+                      styles.boss,
+                      (boss === kebabCase(label) || map === kebabCase(label)) &&
+                      styles.activeBoss
+                    )}>
+                        <Text>{label}</Text>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </li>
           ))}
-        </ul>
+        </Stack>
       )}
     </nav>
   );
