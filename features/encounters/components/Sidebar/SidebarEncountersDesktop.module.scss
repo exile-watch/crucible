@@ -1,6 +1,6 @@
 .list {
   padding: 0;
-  margin-left: 16px;
+  margin: 16px;
 
   li {
     margin-inline: 0;
@@ -50,9 +50,6 @@
 
 .categoryContainer {
   cursor: pointer;
-  &:hover {
-    color: var(--mantine-color-sand-2);
-  }
 }
 
 .arrowIcon {
@@ -106,7 +103,12 @@
       color: var(--mantine-color-sand-2);
       text-decoration: underline;
       border-left: 4px solid var(--mantine-color-sand-3);
-      background: var(--mantine-color-dark-5);
+      background: linear-gradient(to right, var(--mantine-color-dark-5), var(--mantine-color-dark-6));
+    }
+  }
+  &:hover {
+    p {
+      background: linear-gradient(to right, var(--mantine-color-dark-5), var(--mantine-color-dark-5));
     }
   }
 }

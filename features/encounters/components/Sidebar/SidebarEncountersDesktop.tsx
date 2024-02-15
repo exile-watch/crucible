@@ -51,7 +51,7 @@ const SidebarEncountersDesktop = () => {
               id={`sidebar_${category}`}
             >
               <Group justify="space-between" className={styles.categoryContainer}>
-                <Text size="lg">
+                <Text size="lg" c="sand.2">
                   {startCase(category)}
                 </Text>
                 <ArrowRightIcon
