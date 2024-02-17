@@ -3,13 +3,11 @@ import type { AppProps } from 'next/app';
 import App from 'next/app';
 import '@mantine/core/styles.css'
 
-import { initSentry } from '../sentry';
 import {WritProvider} from "@exile-watch/writ-react";
 import {createTheme, MantineColorsTuple, MantineProvider} from "@mantine/core";
 import localFont from 'next/font/local'
 
 const font = localFont({ src: '../fonts/Fontin-Regular.ttf' })
-initSentry();
 
 const sand: MantineColorsTuple = [
   "#fff9e6",

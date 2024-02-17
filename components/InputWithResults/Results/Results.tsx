@@ -10,8 +10,8 @@ type ResultsProps = {
   inputValue: string;
 };
 
-const filterResults = (inputValue: string) => Object.entries(indexedSearch)?.map(([category, data]) => {
-  const filteredData = data.filter(({mapName, encounterName, encounterAbilityName}) => {
+const filterResults = (inputValue: string) => Object.entries(indexedSearch)?.map(([category, data]: any) => {
+  const filteredData = data.filter(({mapName, encounterName, encounterAbilityName}: any) => {
     const loweredInputValue = toLower(inputValue);
     const loweredMapName = toLower(mapName);
     const loweredEncounterName = toLower(encounterName);
@@ -25,7 +25,7 @@ const filterResults = (inputValue: string) => Object.entries(indexedSearch)?.map
   return {[category]: filteredData}
 })
 
-const GroupLabel = ({label, length}) => {
+const GroupLabel = ({label, length}: any) => {
   const limitedResults = length > 5 ? '(showing 5)' : '';
   const pluralResults = length > 1 ? 'results' : 'result';
   return `${label} - ${length} ${pluralResults} ${limitedResults}`
@@ -36,7 +36,7 @@ const Results = ({ inputValue }: ResultsProps) => {
 
   return (
     <Combobox.Dropdown>
-      {results?.map((data, i) => {
+      {results?.map((data: any, i) => {
         const mapsLength = data.maps?.length;
         const encountersLength = data.encounters?.length;
         const encounterAbilitiesLength = data.encounterAbilities?.length;
@@ -45,19 +45,19 @@ const Results = ({ inputValue }: ResultsProps) => {
         <Combobox.Options key={`indexed-search-option-${i}`}>
           {mapsLength > 0 && (
             <Combobox.Group label={<GroupLabel label="Maps" length={mapsLength} />}>
-              {data.maps.slice(0, 5).map(d => <Result key={d.mapPath} {...d}/>)}
+              {data.maps.slice(0, 5).map((d: any) => <Result key={d.mapPath} {...d}/>)}
             </Combobox.Group>
           )}
 
           {encountersLength > 0 && (
             <Combobox.Group label={<GroupLabel label="Encounters" length={encountersLength} />}>
-              {data.encounters.slice(0, 5).map(d => <Result key={d.encounterPath} {...d}/>)}
+              {data.encounters.slice(0, 5).map((d: any) => <Result key={d.encounterPath} {...d}/>)}
             </Combobox.Group>
           )}
 
           {encounterAbilitiesLength > 0 && (
             <Combobox.Group label={<GroupLabel label="Encounters' abilities" length={encounterAbilitiesLength} />}>
-              {data.encounterAbilities.slice(0, 5).map(d => <Result key={d.encounterAbilityPath} {...d}/>)}
+              {data.encounterAbilities.slice(0, 5).map((d: any) => <Result key={d.encounterAbilityPath} {...d}/>)}
             </Combobox.Group>
           )}
         </Combobox.Options>

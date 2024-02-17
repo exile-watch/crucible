@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 import { ArrowRightIcon } from '@exile-watch/writ-icons';
 import useLoadSidebarData from '#hooks/useLoadSidebarData';
-import useRouter from '#hooks/useRouter';
 import { AtomPathData } from '#types';
 
 import styles from './SidebarEncountersDesktop.module.scss';
 import {Divider, Group, Stack, Text} from "@mantine/core";
+import {useRouter} from "next/router";
 
 const startingChar = (entities: AtomPathData, i: number) => {
   const firstChar = entities[i].label.charAt(0);
