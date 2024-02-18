@@ -33,3 +33,8 @@ yarn-error.log*
 
 # IDE
 .idea
+
+.nx/cache
+
+# Next.js
+.next
