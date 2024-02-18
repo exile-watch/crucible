@@ -6,7 +6,10 @@ const nextConfig = {
     remotePatterns: [
       {
         hostname: 'avatars.githubusercontent.com',
-      }
+      },
+      {
+        hostname: 'images.unsplash.com',
+      },
     ]
   },
   typescript: {

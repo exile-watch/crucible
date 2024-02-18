@@ -2,23 +2,9 @@
   border-color: orangered;
 }
 
-.abilityName {
-  font-size: var(--font-size-lg);
-}
-
 .label {
-  position: relative;
-  color: var(--tertiary-bg);
   width: 100%;
-  font-size: var(--font-size-xs);
   text-transform: uppercase;
-  font-weight: bold;
-  opacity: .8;
-
-  i {
-    position: relative;
-    background: var(--primary-bg);
-  }
 }
 
 .missingContent {

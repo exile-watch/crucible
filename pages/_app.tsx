@@ -35,7 +35,7 @@ const sapphire: MantineColorsTuple = [
 ]
 
 const theme = createTheme({
-  primaryColor: 'sand',
+  primaryColor: 'sapphire',
   colors: {
     sand,
     sapphire
@@ -45,11 +45,11 @@ const theme = createTheme({
 
 function ExileWatch({ Component, pageProps }: AppProps) {
   return (
-      <MantineProvider forceColorScheme="dark" theme={theme}>
-        <CookiesProvider>
-          <Component className={font.className} {...pageProps}  />
-        </CookiesProvider>
-      </MantineProvider>
+    <MantineProvider forceColorScheme="dark" theme={theme}>
+      <CookiesProvider>
+        <Component className={font.className} {...pageProps}  />
+      </CookiesProvider>
+    </MantineProvider>
   );
 }
 

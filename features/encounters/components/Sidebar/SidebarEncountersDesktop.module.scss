@@ -1,6 +1,6 @@
 .list {
   padding: 0;
-  margin: 16px;
+  margin: 16px 8px;
 
   li {
     margin-inline: 0;
@@ -46,6 +46,19 @@
 
 .category {
   position: relative;
+  &:hover {
+    svg {
+      margin-right: -8px;
+    }
+  }
+}
+
+.categoryOpen {
+  &:hover {
+    svg {
+      margin-right: 0;
+    }
+  }
 }
 
 .categoryContainer {

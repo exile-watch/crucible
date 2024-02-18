@@ -24,7 +24,7 @@ const Map = ({ children, isLoading, data }: MapProps) => {
       {isLoading && <PageLoader />}
       {!isLoading && data && (
         <>
-          <Title order={4}>
+          <Title order={4} c="dimmed">
             {startCase(heading)} {subheading && `* ${subheading}`}
           </Title>
           <MapBossesHeading data={data} />

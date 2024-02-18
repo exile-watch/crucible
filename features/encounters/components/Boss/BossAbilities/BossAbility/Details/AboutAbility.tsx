@@ -1,17 +1,19 @@
 import React from 'react';
 
-import { MissingContent } from '@exile-watch/writ-react';
+import { MissingContent } from '#components';
 
 import DetailRow from './DetailRow';
 
 import styles from './Details.module.scss';
+import {Text} from "@mantine/core";
 
 type AboutAbilityProps = {
   about: string[];
   abilityName?: string;
+  isEven?: boolean;
 };
 
-const AboutAbility = ({ about, abilityName }: AboutAbilityProps) => {
+const AboutAbility = ({ about, abilityName, isEven }: AboutAbilityProps) => {
   return (
     <DetailRow label="About" withBottomMargin>
       {about.map((about, i) =>
@@ -21,9 +23,10 @@ const AboutAbility = ({ about, abilityName }: AboutAbilityProps) => {
             missingContentType="About"
             className={styles.missingContent}
             key={`bossAboutAbility_${i}`}
+            isEven={isEven}
           />
         ) : (
-          <p key={`bossAboutAbility_${i}`}>{about}</p>
+          <Text c="sand.2" key={`bossAboutAbility_${i}`}>{about}</Text>
         )
       )}
     </DetailRow>

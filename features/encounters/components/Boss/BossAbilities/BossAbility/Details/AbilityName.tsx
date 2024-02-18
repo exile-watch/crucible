@@ -2,14 +2,14 @@ import React from 'react';
 
 import DetailRow from './DetailRow';
 
-import styles from './Details.module.scss';
+import {Text} from "@mantine/core";
 type AbilityNameProps = {
   name?: string;
 };
 
 const AbilityName = ({ name }: AbilityNameProps) => (
   <DetailRow label="Ability" withBottomMargin>
-    <p className={styles.abilityName}>{name}</p>
+    <Text c="sand.2">{name}</Text>
   </DetailRow>
 );
 

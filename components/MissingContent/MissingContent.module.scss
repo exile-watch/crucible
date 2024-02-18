@@ -1,0 +1,15 @@
+.missingContent {
+  color: orangered;
+}
+
+.anchor {
+  display: flex;
+  align-items: center;
+
+  svg {
+    scale: 0.8;
+    path {
+      stroke: var(--mantine-color-anchor);
+    }
+  }
+}

@@ -86,6 +86,7 @@ export type PureBossAbilityType = {
   aboutChallenge?: string;
   type?: string;
   name?: string;
+  isEven?: boolean;
 };
 
 export type BossAbilityType = {

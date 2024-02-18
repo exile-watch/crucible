@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import styles from './Details.module.scss';
+import {Stack, Text} from '@mantine/core'
 
 type DetailRowType = {
   withBottomMargin?: boolean;
@@ -10,10 +11,10 @@ type DetailRowType = {
 
 const DetailRow = ({ withBottomMargin, children, label }: DetailRowType) => {
   return (
-    <div className={withBottomMargin ? 'mb-3' : ''}>
-      <div className={styles.label}>{label}</div>
+    <Stack gap={0} mb={withBottomMargin ? 'md' : 0}>
+      <Text c="dimmed" className={styles.label} size="xs"><b>{label}</b></Text>
       {children}
-    </div>
+    </Stack>
   );
 };
 
