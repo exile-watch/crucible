@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { startCase } from 'lodash';
 
-import { Title, PageLoader } from '@exile-watch/writ-react';
+import { Title } from '@exile-watch/writ-react';
 import useRouter from '#hooks/useRouter';
 import { DataType } from '#types';
 
@@ -21,7 +21,7 @@ const Map = ({ children, isLoading, data }: MapProps) => {
   const subheading = category !== 'common-maps' && data?.map;
   return (
     <>
-      {isLoading && <PageLoader />}
+      {isLoading && <div>loading</div>}
       {!isLoading && data && (
         <>
           <Title order={4} c="dimmed">
