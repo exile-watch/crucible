@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import App from 'next/app';
 import '@mantine/core/styles.css'
 
@@ -45,6 +46,7 @@ function ExileWatch({ Component, pageProps }: AppProps) {
   return (
     <MantineProvider forceColorScheme="dark" theme={theme}>
       <Component className={font.className} {...pageProps}  />
+      <SpeedInsights />
     </MantineProvider>
   );
 }

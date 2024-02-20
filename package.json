@@ -29,6 +29,7 @@
     "@mantine/core": "^7.5.2",
     "@mantine/hooks": "^7.5.2",
     "@tabler/icons-react": "^2.47.0",
+    "@vercel/speed-insights": "^1.0.10",
     "classnames": "^2.3.1",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
