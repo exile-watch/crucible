@@ -1,9 +1,7 @@
-import { CookiesProvider } from 'react-cookie';
 import type { AppProps } from 'next/app';
 import App from 'next/app';
 import '@mantine/core/styles.css'
 
-import {WritProvider} from "@exile-watch/writ-react";
 import {createTheme, MantineColorsTuple, MantineProvider} from "@mantine/core";
 import localFont from 'next/font/local'
 
@@ -46,9 +44,7 @@ const theme = createTheme({
 function ExileWatch({ Component, pageProps }: AppProps) {
   return (
     <MantineProvider forceColorScheme="dark" theme={theme}>
-      <CookiesProvider>
-        <Component className={font.className} {...pageProps}  />
-      </CookiesProvider>
+      <Component className={font.className} {...pageProps}  />
     </MantineProvider>
   );
 }

@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Results from './Results/Results';
 import {Combobox, InputBase, useCombobox} from "@mantine/core";
 import {IconSearch} from '@tabler/icons-react'
+import {useRouter} from "next/router";
+import {startCase} from "lodash";
 
 const InputWithResults = () => {
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
   });
+  const {query} = useRouter();
+  const { boss, map, ability} = query;
   const [search, setSearch] = useState('');
 
   return (

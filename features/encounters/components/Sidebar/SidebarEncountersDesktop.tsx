@@ -27,9 +27,6 @@ const SidebarEncountersDesktop = () => {
 
 
   const handleCategoryClick = (e: MouseEvent<HTMLLIElement>) => {
-    if(activeCategory === e.currentTarget.id) {
-      return setActiveCategory('');
-    }
     setActiveCategory(e.currentTarget.id);
   };
 
