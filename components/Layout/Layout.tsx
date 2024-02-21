@@ -5,6 +5,7 @@ import SidebarEncountersDesktop from "#features/encounters/components/Sidebar/Si
 import styles from './styles.module.scss'
 import {useRouter} from "next/router";
 import {useDisclosure} from "@mantine/hooks";
+import {useIsMobile} from "#hooks/useIsMobile";
 
 type LayoutProps = {
   children?: ReactNode;
@@ -13,6 +14,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   const [isOpen, {toggle}] = useDisclosure(false)
+  const {isMobile} = useIsMobile()
   const {pathname} = useRouter();
   const isHomepage = pathname === '/'
 
@@ -21,8 +23,8 @@ const Layout = ({ children }: LayoutProps) => {
       <AppShell.Header bg="dark.6"><Header isOpen={isOpen} toggle={toggle} /></AppShell.Header>
       <AppShell.Navbar bg="dark.6"><SidebarEncountersDesktop isOpen={isOpen} toggle={toggle} /></AppShell.Navbar>
       <AppShell.Main mt="md" ml="md" pr="md" className={styles.main}>
-        <Flex className={styles.announcement} align="center">
-          <Text ml={4}>🚧 This website is currently work in progress. Missing data is expected.</Text>
+        <Flex className={styles.announcement} align="center" mr="md">
+          <Text ml={4} size={isMobile ? 'xs' : 'md'}>🚧 This website is currently work in progress. Missing data is expected.</Text>
         </Flex>
         <div className={isHomepage ? styles.content : styles.contentSmallMargin}>{children}</div>
       </AppShell.Main>
