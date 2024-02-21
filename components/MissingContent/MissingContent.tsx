@@ -4,6 +4,7 @@ import cx from 'classnames';
 import {RedirectIcon} from '@exile-watch/writ-icons';
 import styles from './MissingContent.module.scss';
 import {Anchor, Group, Stack, Text} from "@mantine/core";
+import {useIsMobile} from "#hooks/useIsMobile";
 
 type MissingContentProps = {
   abilityName?: string;
@@ -22,6 +23,7 @@ const MissingContent = ({
   redirect,
   isEven
 }: MissingContentProps) => {
+  const {isLaptop} = useIsMobile();
   // const redirect = `https://github.com/sbsrnt/poe-watch/issues?q=${startCase(boss)} > ${abilityName}`
   // const issueTitle = map
   //   ? `[Invalid Ability Data][Missing ${missingContentType}]: ${startCase(map)} > ${startCase(
@@ -33,11 +35,11 @@ const MissingContent = ({
   const rel = 'noreferrer noopener';
 
   return (
-    <Stack className={cx(styles.missingContent, className)} gap={0} align={isEven ? 'end' : 'start'}>
-      <Text>
+    <Stack className={cx(styles.missingContent, className)} gap={0}>
+      <Text >
         There is missing <i>{missingContentType}</i> section for this ability.
       </Text>
-      <Group gap={4} align="center">
+      <Group gap={4} justify={isLaptop ? 'center' : isEven ? 'flex-end' : 'flex-start'}>
         <Text>Before reporting an issue, </Text>
         <Anchor
           href={redirect}
@@ -49,7 +51,7 @@ const MissingContent = ({
           check if it already exists <RedirectIcon />
         </Anchor>
       </Group>
-      <Group gap={4}>
+      <Group gap={4} justify={isLaptop ? 'center' : isEven ? 'flex-end' : 'flex-start'}>
         <Text>If you can't find desired issue then</Text>
         <Anchor underline="always" href={issueSrc} target={target} rel={rel} className={styles.anchor}>
           create a new issue <RedirectIcon />

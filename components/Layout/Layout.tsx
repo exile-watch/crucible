@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import SidebarEncountersDesktop from "#features/encounters/components/Sidebar/SidebarEncountersDesktop";
 import styles from './styles.module.scss'
 import {useRouter} from "next/router";
+import {useDisclosure} from "@mantine/hooks";
 
 type LayoutProps = {
   children?: ReactNode;
@@ -11,14 +12,15 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  const [isOpen, {toggle}] = useDisclosure(false)
   const {pathname} = useRouter();
   const isHomepage = pathname === '/'
 
   return (
-    <AppShell header={{height: 60}} navbar={{breakpoint: 'xs', width: 250}} withBorder={false}>
-      <AppShell.Header bg="dark.6"><Header /></AppShell.Header>
-      <AppShell.Navbar bg="dark.6"><SidebarEncountersDesktop /></AppShell.Navbar>
-      <AppShell.Main mt="md" ml="md" className={styles.main}>
+    <AppShell header={{height: 60}} navbar={{breakpoint: 'md', width: 250, collapsed: { mobile: !isOpen }}} withBorder={false}>
+      <AppShell.Header bg="dark.6"><Header isOpen={isOpen} toggle={toggle} /></AppShell.Header>
+      <AppShell.Navbar bg="dark.6"><SidebarEncountersDesktop isOpen={isOpen} toggle={toggle} /></AppShell.Navbar>
+      <AppShell.Main mt="md" ml="md" pr="md" className={styles.main}>
         <Flex className={styles.announcement} align="center">
           <Text ml={4}>🚧 This website is currently work in progress. Missing data is expected.</Text>
         </Flex>

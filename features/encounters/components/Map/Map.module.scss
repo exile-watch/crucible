@@ -1,5 +1,20 @@
 .bosses {
   display: flex;
+  white-space: nowrap;
+  overflow: auto;
+  padding-bottom: 8px;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+
+    &-track {
+      background: var(--mantine-color-dark-5);
+    }
+
+    &-thumb {
+      background: var(--mantine-color-sand-2);
+    }
+  }
 
   h2 {
     margin-right: 1rem;
@@ -31,8 +46,8 @@
   }
 
   &:hover {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--mantine-color-sand-2);
+    border-color: var(--mantine-color-sand-2);
   }
 }
 

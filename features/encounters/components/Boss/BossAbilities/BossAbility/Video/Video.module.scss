@@ -8,16 +8,28 @@
 .videoWrapper,
 .video {
   position: relative;
-  width: 800px;
+  width: 795px;
+
+  @media (min-width: 88em) {
+    min-width: 795px;
+  }
 }
 
 .videoWrapper {
   height: 450px;
   overflow: hidden;
   box-shadow: 0 5px 20px black;
+
+  @media (max-width: 45em) {
+    height: 45vw;
+  }
 }
 
 .video {
   transform: scale(1.4);
   z-index: var(--z-index-10);
+
+  @media (max-width: 45em) {
+    width: 100%
+  }
 }

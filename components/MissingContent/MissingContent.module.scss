@@ -1,5 +1,10 @@
 .missingContent {
   color: orangered;
+  justify-content: center;
+
+  @media (min-width: 88em) {
+    justify-content: inherit;
+  }
 }
 
 .anchor {

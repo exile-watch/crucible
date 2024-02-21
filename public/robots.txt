@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: TBD/sitemap.xml
+Sitemap: https://www.exile.watch/sitemap.xml
