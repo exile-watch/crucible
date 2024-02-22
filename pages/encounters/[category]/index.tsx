@@ -1,12 +1,13 @@
 import React from 'react';
 import { startCase } from 'lodash';
 import Link from 'next/link';
-import {paths} from '@exile-watch/encounter-data'
+import paths from '@exile-watch/encounter-data'
+import {Layout} from "#components";
 
 const Categories = () => {
 
   return (
-    <div>
+    <Layout>
       {paths &&
         Object.entries(paths).map(({ 0: cat, 1: ent }) => (
           <ul key={`content_${cat}`}>
@@ -22,7 +23,7 @@ const Categories = () => {
             </li>
           </ul>
         ))}
-    </div>
+    </Layout>
   );
 };
 

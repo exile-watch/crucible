@@ -10,3 +10,8 @@
 User facing website
 </p>
 
+
+### Contributing
+Encountered a bug or have a suggestion? Have an idea for a new feature? 
+
+Head over to exile.watch's [hideout](https://github.com/exile-watch/hideout)

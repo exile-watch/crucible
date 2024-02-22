@@ -1,12 +1,21 @@
 import {Burger, Group, Text} from "@mantine/core";
 import Link from "next/link";
 import {InputWithResults} from "#components";
-import Image from "next/image";
+import dynamic from 'next/dynamic'
+const Image = dynamic(() => import('next/image'))
 import styles from './Header.module.scss'
 import {useIsMobile} from "#hooks/useIsMobile";
+import {useEffect, useState} from "react";
 
 const Header = ({isOpen, toggle}) => {
   const {isMobile} = useIsMobile()
+  // hydration issues...
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
 
   return (
     <Group h="100%" px="xs" justify="space-between">
@@ -19,7 +28,7 @@ const Header = ({isOpen, toggle}) => {
           </Group>
         </Link>
       </Group>
-      {!isMobile && <InputWithResults toggle={toggle} />}
+      {isMounted && !isMobile && <InputWithResults isOpen={isOpen} toggle={toggle} />}
       <div />
     </Group>
   );

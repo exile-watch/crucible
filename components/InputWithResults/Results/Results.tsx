@@ -4,26 +4,28 @@ import toLower from 'lodash/toLower';
 import Result from './Result';
 
 import {Combobox} from "@mantine/core";
-import {indexedSearch} from "@exile-watch/encounter-data";
 
 type ResultsProps = {
   inputValue: string;
+  indexedSearch: JSON
 };
 
-const filterResults = (inputValue: string) => Object.entries(indexedSearch)?.map(([category, data]: any) => {
-  const filteredData = data.filter(({mapName, encounterName, encounterAbilityName}: any) => {
-    const loweredInputValue = toLower(inputValue);
-    const loweredMapName = toLower(mapName);
-    const loweredEncounterName = toLower(encounterName);
-    const loweredEncounterAbilityName = toLower(encounterAbilityName);
+const filterResults = (inputValue: string, indexedSearch: JSON) => {
+  return Object.entries(indexedSearch)?.map(([category, data]: any) => {
+    const filteredData = data.filter(({mapName, encounterName, encounterAbilityName}: any) => {
+      const loweredInputValue = toLower(inputValue);
+      const loweredMapName = toLower(mapName);
+      const loweredEncounterName = toLower(encounterName);
+      const loweredEncounterAbilityName = toLower(encounterAbilityName);
 
-    return [loweredMapName, loweredEncounterName, loweredEncounterAbilityName].some((name) =>
-      name.includes(loweredInputValue)
-    );
+      return [loweredMapName, loweredEncounterName, loweredEncounterAbilityName].some((name) =>
+        name.includes(loweredInputValue)
+      );
+    })
+
+    return {[category]: filteredData}
   })
-
-  return {[category]: filteredData}
-})
+}
 
 const GroupLabel = ({label, length}: any) => {
   const limitedResults = length > 5 ? '(showing 5)' : '';
@@ -31,8 +33,8 @@ const GroupLabel = ({label, length}: any) => {
   return `${label} - ${length} ${pluralResults} ${limitedResults}`
 }
 
-const Results = ({ inputValue }: ResultsProps) => {
-  const results = filterResults(inputValue)
+const Results = ({ inputValue, indexedSearch }: ResultsProps) => {
+  const results = filterResults(inputValue, indexedSearch)
 
   return (
     <Combobox.Dropdown>

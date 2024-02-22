@@ -5,33 +5,31 @@ import Link from 'next/link';
 
 import { Title } from '@exile-watch/writ-react';
 import useRouter from '#hooks/useRouter';
-import { MapType } from '#types';
 
 import styles from './Map.module.scss';
+import {useEncounterData} from "#hooks/useEncounterData";
 
-type MapBossesHeadingProps = {
-  data: MapType;
-};
-
-const MapBossesHeading = ({ data }: MapBossesHeadingProps) => {
+const MapBossesHeading = () => {
   const {
     query: { category, map, boss: queryBoss },
   } = useRouter();
 
+  const {data, isMap} = useEncounterData()
+
   return (
-    <div className={cx('', styles.bosses)}>
+    <div className={styles.bosses}>
       {data?.bosses?.map((boss) => {
         const [bossName] = Object.keys(boss);
-        const isMap = !!data.map;
-        const isActive = isMap ? kebabCase(bossName) === queryBoss : kebabCase(bossName) === map;
+        const kebabCasedEncounterName = kebabCase(bossName);
+        const isActive = isMap ? kebabCasedEncounterName === queryBoss : kebabCasedEncounterName === map;
         const redirect = isMap
-          ? `/encounters/${category}/${map}/${kebabCase(bossName)}`
-          : `/encounters/${category}/${kebabCase(bossName)}`;
+          ? `/encounters/${category}/${map}/${kebabCasedEncounterName}`
+          : `/encounters/${category}/${kebabCasedEncounterName}`;
 
         return (
           <Title order={2} key={`mapBossesHeading_${bossName}`}>
-            <Link href={redirect} legacyBehavior>
-              <a className={cx(isActive ? styles.active : undefined, styles.link)}>{bossName}</a>
+            <Link href={redirect} className={cx(isActive ? styles.active : undefined, styles.link)}>
+              {bossName}
             </Link>
           </Title>
         );

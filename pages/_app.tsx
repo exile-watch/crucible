@@ -51,9 +51,4 @@ function ExileWatch({ Component, pageProps }: AppProps) {
   );
 }
 
-ExileWatch.getInitialProps = async (appContext: any) => {
-  const appProps = await App.getInitialProps(appContext);
-  return { ...appProps };
-};
-
 export default ExileWatch;

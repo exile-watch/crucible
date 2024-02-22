@@ -2,32 +2,25 @@ import { ReactNode } from 'react';
 import { startCase } from 'lodash';
 
 import { Title } from '@exile-watch/writ-react';
-import useRouter from '#hooks/useRouter';
-import { DataType } from '#types';
 
 import MapBossesHeading from './MapBossesHeading';
+import {useEncounterData} from "#hooks/useEncounterData";
 
 type MapProps = {
   children?: ReactNode;
-  isLoading: boolean;
-  data: DataType;
 };
 
-const Map = ({ children, isLoading, data }: MapProps) => {
-  const {
-    query: { category, map },
-  } = useRouter();
-  const heading = category === 'common-maps' ? map : category;
-  const subheading = category !== 'common-maps' && data?.map;
+const Map = ({ children }: MapProps) => {
+  const {isLoading, data, heading, subheading} = useEncounterData()
+
   return (
     <>
-      {isLoading && <div>loading</div>}
       {!isLoading && data && (
         <>
           <Title order={4} c="dimmed">
-            {startCase(heading)} {subheading && `* ${subheading}`}
+            {startCase(heading as string)} {subheading && `* ${subheading}`}
           </Title>
-          <MapBossesHeading data={data} />
+          <MapBossesHeading />
           {children}
         </>
       )}

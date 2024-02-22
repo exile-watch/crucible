@@ -2,6 +2,7 @@ import React, { MouseEvent, useEffect, useState } from 'react';
 import cx from 'classnames';
 import { kebabCase, startCase } from 'lodash';
 import Link from 'next/link';
+import dynamic from 'next/dynamic'
 
 import { ArrowRightIcon } from '@exile-watch/writ-icons';
 import { AtomPathData } from '#types';
@@ -9,7 +10,6 @@ import { AtomPathData } from '#types';
 import styles from './SidebarEncountersDesktop.module.scss';
 import {Center, Divider, Group, Stack, Text} from "@mantine/core";
 import {useRouter} from "next/router";
-import {paths} from "@exile-watch/encounter-data";
 import {InputWithResults} from "#components";
 import {useIsMobile} from "#hooks/useIsMobile";
 
@@ -21,6 +21,8 @@ const startingChar = (entities: AtomPathData, i: number) => {
 };
 
 const SidebarEncountersDesktop = ({isOpen, toggle}) => {
+  const [isDataLoaded, setIsDataLoaded] = useState(false)
+  const [data, setData] = useState<any>(null)
   const {
     query: { category, map, boss },
   } = useRouter();
@@ -38,6 +40,22 @@ const SidebarEncountersDesktop = ({isOpen, toggle}) => {
     }
   }, [map, category]);
 
+  useEffect(() => {
+    import(`@exile-watch/encounter-data/dist/extracted-data/paths.esm` as string)
+      .then((d) => {
+        setData(d.default);
+        setIsDataLoaded(true);
+      })
+      .catch(() => {
+        setData(null);
+        setIsDataLoaded(false);
+      });
+  }, []);
+
+  if(!isDataLoaded) {
+    return null
+  }
+
   return (
     <Stack gap={0}>
       {isMobile && <>
@@ -48,7 +66,7 @@ const SidebarEncountersDesktop = ({isOpen, toggle}) => {
       </>
       }
       <Stack gap="xs" component="ul" className={styles.list}>
-        {Object.entries(paths).map(({ 0: category, 1: entities }) => (
+        {Object.entries(data).map(({ 0: category, 1: entities }) => (
           <li
             key={`sidebar_${category}`}
             className={cx(styles.category, activeCategory === `sidebar_${category}` && styles.categoryOpen)}

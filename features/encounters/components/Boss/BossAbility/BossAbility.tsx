@@ -1,28 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 import cx from 'classnames';
 import kebabCase from 'lodash/kebabCase';
-import Link from 'next/link';
 
 import { PureBossAbilityType } from '#types';
 
-import { AbilityName, AbilityTip, AboutAbility } from './Details/index';
+import { AbilityName, AbilityTip, AboutAbility } from './Details';
 import Video from './Video/Video';
 
 import styles from './BossAbility.module.scss';
 import {useRouter} from "next/router";
 
 const BossAbility = ({ name, about, gif, tip, isEven }: PureBossAbilityType) => {
-  const { query, pathname } = useRouter();
+  const { query } = useRouter();
   const activeAbilityRef = useRef<HTMLDivElement>(null);
   const isActive = query.ability === kebabCase(name);
   const activeClassname = isActive ? styles.activeAbility : query.ability && styles.inactiveAbility;
-  // const redirect = {
-  //   pathname,
-  //   query: {
-  //     ...query,
-  //     ability: isActive ? undefined : kebabCase(name),
-  //   },
-  // };
 
   useEffect(() => {
     if (activeAbilityRef.current)

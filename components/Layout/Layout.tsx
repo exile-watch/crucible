@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
+import dynamic from 'next/dynamic';
 import {AppShell, Flex, Text} from "@mantine/core";
-import Header from "./Header/Header";
-import SidebarEncountersDesktop from "#features/encounters/components/Sidebar/SidebarEncountersDesktop";
+const Header = dynamic(() => import("./Header/Header")) ;
+const SidebarEncountersDesktop = dynamic(() => import("#features/encounters/components/Sidebar/SidebarEncountersDesktop"));
 import styles from './styles.module.scss'
 import {useRouter} from "next/router";
 import {useDisclosure} from "@mantine/hooks";
