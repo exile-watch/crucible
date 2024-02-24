@@ -7,11 +7,11 @@
   Crucible
 </h1>
 <p align="center">
-User facing website
+User facing website <a href="https://exile.watch">https://docs.exile.watch/projects/crucible</a>
 </p>
 
 
 ### Contributing
-Encountered a bug or have a suggestion? Have an idea for a new feature? 
+Encountered a bug or have a question? Have an idea for a new feature? 
 
 Head over to exile.watch's [hideout](https://github.com/exile-watch/hideout)
