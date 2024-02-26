@@ -7,16 +7,6 @@
     "build": "nx build",
     "start": "node server.js"
   },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{yml}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
@@ -42,8 +32,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
+    "@exile-watch/lefthook-config": "^0.3.7",
     "@exile-watch/postcss-config": "^0.2.0",
     "@exile-watch/typescript-config": "^0.3.0",
     "@nx/next": "18.0.4",
@@ -51,13 +40,10 @@
     "@types/node": "^14.17.0",
     "@types/react": "^18.2.52",
     "babel-loader": "^8.2.2",
-    "commitizen": "^4.2.4",
     "css-loader": "^5.2.5",
-    "cz-conventional-changelog": "^3.3.0",
     "date-fns": "^2.21.3",
     "fork-ts-checker-webpack-plugin": "^6.2.10",
     "fs": "^0.0.1-security",
-    "lint-staged": "^11.0.0",
     "nx": "18.0.4",
     "sass-loader": "^10",
     "style-loader": "^2.0.0",
