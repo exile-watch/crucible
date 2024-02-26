@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
-    "@exile-watch/lefthook-config": "^0.3.7",
+    "@exile-watch/lefthook-config": "^0.3.8",
     "@exile-watch/postcss-config": "^0.2.0",
     "@exile-watch/typescript-config": "^0.3.0",
     "@nx/next": "18.0.4",
