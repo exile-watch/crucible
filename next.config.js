@@ -16,7 +16,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
   basePath,
 };
 

@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "node server.js",
     "build": "nx build",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "exit 0",
+    "lint:apply": "exit 0",
+    "format": "exit 0"
   },
   "config": {
     "commitizen": {
