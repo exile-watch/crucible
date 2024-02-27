@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      time: "06:00"
+      timezone: "Europe/Warsaw"
+    groups:
+      exile-watch-build-tools:
+        patterns:
+          - "@exile-watch/biome-config"
+          - "@exile-watch/conventional-changelog-config"
+          - "@exile-watch/lefthook-config"
+          - "@exile-watch/postcss-config"
+          - "@exile-watch/rollup-config"
+          - "@exile-watch/typescript-config"
+      exile-watch-design-system:
+        patterns:
+          - "@exile-watch/writ-icons"
+          - "@exile-watch/writ-react"
+      exile-watch-data:
+        patterns:
+          - "@exile-watch/encounter-data"
