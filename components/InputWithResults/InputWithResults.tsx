@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Results from './Results/Results'
-import {Combobox, InputBase, useCombobox} from "@mantine/core";
+import {Combobox, InputBase, useCombobox, Loader} from "@mantine/core";
 import {IconSearch} from '@tabler/icons-react'
 import {useIsMobile} from "#hooks/useIsMobile";
 
@@ -8,16 +8,17 @@ const InputWithResults = ({isOpen, toggle}) => {
   const {isMobile} = useIsMobile()
   const [firstTimeClicked, setFirstTimeClicked] = useState(false)
   const [indexedSearch, setIndexedSearch] = useState([])
-  const [isDataLoaded, setIsDataLoaded] = useState(false)
+  const [isDataLoading, setIsDataLoading] = useState(false)
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
   });
   const [search, setSearch] = useState('');
 
   const loadData = async () => {
+    setIsDataLoading(true)
     const indexedSearch = await import((`@exile-watch/encounter-data/dist/extracted-data/indexed-search.esm` as string));
     setIndexedSearch(indexedSearch.default)
-    setIsDataLoaded(true)
+    setIsDataLoading(false)
   }
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const InputWithResults = ({isOpen, toggle}) => {
         <InputBase
           pointer
           leftSection={<IconSearch size={14} />}
-          rightSection={<Combobox.Chevron />}
+          rightSection={isDataLoading ? <Loader size="xs" color="sand.2" /> : <Combobox.Chevron />}
           rightSectionPointerEvents="none"
           placeholder="Arcade, Eradicator, Storm..."
           value={search}
@@ -52,10 +53,10 @@ const InputWithResults = ({isOpen, toggle}) => {
             combobox.toggleDropdown()
           }}
           p={isMobile ? 8 : 0}
-          w={isMobile ? "100%" : "400px"}
+          w={isMobile ? "100%" : "350px"}
         />
       </Combobox.Target>
-      {isDataLoaded && <Results inputValue={search} indexedSearch={indexedSearch} />}
+      {!isDataLoading && <Results inputValue={search} indexedSearch={indexedSearch} />}
     </Combobox>
   )
 };

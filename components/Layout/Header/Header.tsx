@@ -6,6 +6,7 @@ const Image = dynamic(() => import('next/image'))
 import styles from './Header.module.scss'
 import {useIsMobile} from "#hooks/useIsMobile";
 import {useEffect, useState} from "react";
+import {IconBrandGithub, IconBrandDiscord} from "@tabler/icons-react";
 
 const Header = ({isOpen, toggle}) => {
   const {isMobile} = useIsMobile()
@@ -29,7 +30,11 @@ const Header = ({isOpen, toggle}) => {
         </Link>
       </Group>
       {isMounted && !isMobile && <InputWithResults isOpen={isOpen} toggle={toggle} />}
-      <div />
+      <Group>
+        <Link href="https://docs.exile.watch" target="_blank">docs</Link>
+        <Link href="https://github.com/exile-watch" target="_blank"><IconBrandGithub /></Link>
+        <Link href="https://discord.gg/U3kXS4ej" target="_blank"><IconBrandDiscord /></Link>
+      </Group>
     </Group>
   );
 };

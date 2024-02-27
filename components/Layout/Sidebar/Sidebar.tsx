@@ -9,10 +9,7 @@ const sidebarComponents = [
   {
     name: 'encounters',
     component: SidebarEncountersDesktop,
-  },
-  {
-    name: 'builds',
-  },
+  }
 ];
 
 const Sidebar = () => {
