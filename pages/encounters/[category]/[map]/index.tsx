@@ -1,16 +1,44 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-import useRouter from '#hooks/useRouter';
-
-import Boss from './[boss]';
+import {HomepageCard, Layout} from "#components";
+import {kebabCase, startCase} from "lodash";
+import {SimpleGrid} from "@mantine/core";
+import {useRouter} from "next/router";
+import Boss from "./[boss]";
 
 const Map = () => {
+  const { query: {category, map}, asPath } = useRouter();
+  const [data, setData] = useState(null)
   const {
     query: { boss },
   } = useRouter();
-  if (!boss) return <Boss />;
 
-  return <div>map index page</div>;
+  useEffect(() => {
+    import(`@exile-watch/encounter-data/dist/extracted-data/${category}/${map}.esm` as string)
+      .then((d) => {
+        setData(d.default);
+      })
+      .catch(() => {
+        setData(null);
+      });
+  }, [map]);
+
+  if (category !== 'common-maps') return <Boss />;
+
+  return (
+    <Layout title={startCase(map)}>
+      <SimpleGrid cols={{xxxl: 6, xxl: 5, xl: 4, lg: 3, md: 2, sm: 2, xs: 1}}>
+        {data?.bosses.map(data => {
+          const [encounterName] = Object.keys(data)
+          const [abilities] = Object.values(data)
+          const [ability] = Object.values(abilities.abilities.pop())
+          const path = `${asPath}/${kebabCase(encounterName)}`
+
+          return <HomepageCard key={path} name={encounterName} gif={ability?.gif} path={path} isCategory={false}/>
+        })}
+      </SimpleGrid>
+    </Layout>
+  );
 };
 
 export default Map;

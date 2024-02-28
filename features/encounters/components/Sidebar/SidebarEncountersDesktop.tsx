@@ -112,8 +112,8 @@ const SidebarEncountersDesktop = ({isOpen, toggle}) => {
         <Divider />
         <Group justify="center">
           <Link href="https://docs.exile.watch/legal" target="_blank"><Text size="xs">Legal</Text></Link>
-          {/*<Divider orientation="vertical" />*/}
-          {/*<Link href="https://docs.exile.watch/legal" target="_blank"><Text size="xs">Privacy Policy</Text></Link>*/}
+          <Divider orientation="vertical" />
+          <Link href="https://docs.exile.watch/legal/privacy-policy" target="_blank"><Text size="xs">Privacy Policy</Text></Link>
         </Group>
         <Divider />
         <Text size="xs" ta="center" mb="md" c="dimmed">This product isn't affiliated with or endorsed by Grinding Gear Games in any way.</Text>
