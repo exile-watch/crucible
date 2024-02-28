@@ -57,6 +57,7 @@ const InputWithResults = ({isOpen, toggle}) => {
         />
       </Combobox.Target>
       {!isDataLoading && <Results inputValue={search} indexedSearch={indexedSearch} />}
+
     </Combobox>
   )
 };

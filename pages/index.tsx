@@ -1,9 +1,10 @@
 import { Layout } from '#components';
+import EncountersList from "#features/homepage/EncountersList/EncountersList";
 
 export default function Home() {
   return (
     <Layout>
-      Some ambitious homepage is being cooked (true and real). In the meantime, take a look at the sidebar on the left or search input above.
+      <EncountersList />
     </Layout>
   );
 }

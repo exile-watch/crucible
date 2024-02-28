@@ -1,0 +1,40 @@
+.videoWrapper {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 45em) {
+    height: 45vw;
+  }
+}
+
+.videoWrapper,
+.video {
+  position: relative;
+  width: 100%;
+
+  //@media (min-width: 88em) {
+  //  min-width: 795px;
+  //}
+}
+
+.skeleton {
+  position: absolute;
+  z-index: 1;
+}
+
+.video {
+  position: relative;
+  transform: scale(2);
+  z-index: 10;
+}
+
+.videoWrapperInCategory {
+  height: 100px;
+}
+
+.videoInCategory {
+  height: 50px;
+  transform: scale(4);
+  margin-top: 40px;
+}

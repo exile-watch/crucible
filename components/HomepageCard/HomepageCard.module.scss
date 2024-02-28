@@ -1,0 +1,13 @@
+.card {
+  position: relative;
+  background: color-mix(in srgb, var(--mantine-color-dimmed) 10%, transparent);
+
+  &:hover {
+    color: var(--mantine-color-sand-2);
+    background: color-mix(in srgb, var(--mantine-color-sand-2) 10%, transparent);
+  }
+
+  &:active {
+    top: 2px;
+  }
+}

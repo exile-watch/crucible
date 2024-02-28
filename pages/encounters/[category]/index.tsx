@@ -1,11 +1,10 @@
 import React from 'react';
 import { startCase } from 'lodash';
 import Link from 'next/link';
-import paths from '@exile-watch/encounter-data'
+import {paths} from '@exile-watch/encounter-data'
 import {Layout} from "#components";
 
 const Categories = () => {
-
   return (
     <Layout>
       {paths &&

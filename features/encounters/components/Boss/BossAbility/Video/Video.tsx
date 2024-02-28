@@ -1,22 +1,23 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 
-import { Loader, MissingContent } from '@exile-watch/writ-react';
+// import { Loader, MissingContent } from '@exile-watch/writ-react';
 
 import styles from './Video.module.scss';
-import {useIntersection} from "@mantine/hooks";
 import {useIntersectionObserver} from "#hooks/useIntersectionObserver";
+import {MissingContent} from "#components";
+import {Loader} from "@mantine/core";
+import cx from "classnames";
 
 type VideoProps = {
   src?: string;
   isActive?: boolean;
   abilityName?: string;
   speed?: number;
+  isOnHomepage?: boolean;
 };
 
-
-
 // @ts-ignore
-const Video = ({ src, isActive, abilityName, speed }: VideoProps) => {
+const Video = ({ src, isActive, abilityName, speed, isOnHomepage }: VideoProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoContainerRef = useRef<HTMLDivElement>(null);
   // const isVisible = useOnScreen<HTMLDivElement | null>(videoContainerRef.current);
@@ -58,7 +59,7 @@ const Video = ({ src, isActive, abilityName, speed }: VideoProps) => {
         <>
           <Loader className={styles.loader} size={40} />
           <video
-            className={styles.video}
+            className={cx(styles.video, {[styles.videoOnHomepage]: isOnHomepage})}
             autoPlay={isVisible}
             muted
             loop

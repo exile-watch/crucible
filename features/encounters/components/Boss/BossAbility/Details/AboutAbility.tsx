@@ -18,13 +18,14 @@ const AboutAbility = ({ about, abilityName, isEven }: AboutAbilityProps) => {
     <DetailRow label="About" withBottomMargin>
       {about.map((about, i) =>
         about.length === 0 ? (
-          <MissingContent
-            abilityName={abilityName}
-            missingContentType="About"
-            className={styles.missingContent}
-            key={`bossAboutAbility_${i}`}
-            isEven={isEven}
-          />
+          // <MissingContent
+          //   abilityName={abilityName}
+          //   missingContentType="About"
+          //   className={styles.missingContent}
+          //   key={`bossAboutAbility_${i}`}
+          //   isEven={isEven}
+          // />
+          <Text c="dimmed" key={`bossAboutAbility_${i}`}>This section has no data yet</Text>
         ) : (
           <Text c="sand.2" key={`bossAboutAbility_${i}`}>{about}</Text>
         )
