@@ -1,15 +1,15 @@
-import {Burger, Group, Text} from "@mantine/core";
+import {Burger, Group, Text} from "@exile-watch/writ-react";
 import Link from "next/link";
 import {InputWithResults} from "#components";
 import dynamic from 'next/dynamic'
 const Image = dynamic(() => import('next/image'))
 import styles from './Header.module.scss'
-import {useIsMobile} from "#hooks/useIsMobile";
+import {useMediaQuery} from "@exile-watch/writ-react";
 import {useEffect, useState} from "react";
 import {IconBrandGithub, IconBrandDiscord} from "@tabler/icons-react";
 
 const Header = ({isOpen, toggle}) => {
-  const {isMobile} = useIsMobile()
+  const {isMobile} = useMediaQuery()
   // hydration issues...
   const [isMounted, setIsMounted] = useState(false);
 

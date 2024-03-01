@@ -1,5 +1,5 @@
 import {HomepageCard} from "#components";
-import {SimpleGrid, Stack, Title} from "@mantine/core";
+import {SimpleGrid, Stack, Title} from "@exile-watch/writ-react";
 import React, {useEffect, useState} from "react";
 
 const EncountersList = () => {

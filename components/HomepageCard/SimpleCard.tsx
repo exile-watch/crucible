@@ -1,6 +1,6 @@
 import styles from "./HomepageCard.module.scss";
 import Link from "next/link";
-import {Card, Text} from "@mantine/core";
+import {Card, Text} from "@exile-watch/writ-react";
 import React from "react";
 
 interface CardTextProps {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import {Badge, Combobox, Group, Stack, Text} from '@mantine/core';
+import {Badge, Combobox, Group, Stack, Text} from '@exile-watch/writ-react';
 import { IndexedSearchResultsBossProps } from '#types';
 
 import styles from './Results.module.scss';

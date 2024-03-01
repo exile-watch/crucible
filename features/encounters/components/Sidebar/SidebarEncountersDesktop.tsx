@@ -8,11 +8,9 @@ import { ArrowRightIcon } from '@exile-watch/writ-icons';
 import { AtomPathData } from '#types';
 
 import styles from './SidebarEncountersDesktop.module.scss';
-import {Center, Divider, Group, Stack, Text} from "@mantine/core";
+import {Center, Divider, Group, Stack, Text, useMediaQuery} from "@exile-watch/writ-react";
 import {useRouter} from "next/router";
 import {InputWithResults} from "#components";
-import {useIsMobile} from "#hooks/useIsMobile";
-
 const startingChar = (entities: AtomPathData, i: number) => {
   const firstChar = entities[i].label.charAt(0);
   const prevEntityChar = i > 0 && entities[i - 1].label.charAt(0);
@@ -28,7 +26,7 @@ const SidebarEncountersDesktop = ({isOpen, toggle}) => {
   } = useRouter();
   const [activeCategory, setActiveCategory] = useState(`sidebar_${category}`);
 
-  const {isMobile} = useIsMobile()
+  const {isMobile} = useMediaQuery()
 
   const handleCategoryClick = (e: MouseEvent<HTMLLIElement>) => {
     setActiveCategory(e.currentTarget.id);

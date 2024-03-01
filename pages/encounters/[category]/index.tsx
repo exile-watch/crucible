@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { startCase } from 'lodash';
 import {SimpleCard, HomepageCard, Layout} from "#components";
 import {useRouter} from "next/router";
-import {SimpleGrid} from "@mantine/core";
+import {SimpleGrid} from "@exile-watch/writ-react";
 
 const Categories = () => {
   const { query: {category} } = useRouter();

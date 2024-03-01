@@ -5,7 +5,7 @@ import { MissingContent } from '#components';
 import DetailRow from './DetailRow';
 
 import styles from './Details.module.scss';
-import {Text} from "@mantine/core";
+import {Text} from "@exile-watch/writ-react";
 
 type AboutAbilityProps = {
   about: string[];

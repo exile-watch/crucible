@@ -5,7 +5,7 @@ import React, {useEffect, useRef} from 'react';
 import styles from './Video.module.scss';
 import {useIntersectionObserver} from "#hooks/useIntersectionObserver";
 import {MissingContent} from "#components";
-import {Loader} from "@mantine/core";
+import {Loader} from "@exile-watch/writ-react";
 import cx from "classnames";
 
 type VideoProps = {

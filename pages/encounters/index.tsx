@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import {HomepageCard, Layout} from '#components';
-import {SimpleGrid} from "@mantine/core";
+import {SimpleGrid} from "@exile-watch/writ-react";
 
 const Encounters = () => {
   const [data, setData] = useState([])

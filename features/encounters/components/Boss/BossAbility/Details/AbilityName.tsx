@@ -2,7 +2,7 @@ import React from 'react';
 
 import DetailRow from './DetailRow';
 
-import {Text} from "@mantine/core";
+import {Text} from "@exile-watch/writ-react";
 type AbilityNameProps = {
   name?: string;
 };

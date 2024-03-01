@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import styles from './Details.module.scss';
-import {Stack, Text} from '@mantine/core'
+import {Stack, Text} from '@exile-watch/writ-react'
 
 type DetailRowType = {
   withBottomMargin?: boolean;

@@ -1,12 +1,10 @@
 import { ReactNode } from 'react';
 import dynamic from 'next/dynamic';
-import {AppShell, Flex, Text, Title} from "@mantine/core";
+import {AppShell, Flex, Text, Title, useMediaQuery, useDisclosure} from "@exile-watch/writ-react";
 const Header = dynamic(() => import("./Header/Header")) ;
 const SidebarEncountersDesktop = dynamic(() => import("#features/encounters/components/Sidebar/SidebarEncountersDesktop"));
 import styles from './styles.module.scss'
 import {useRouter} from "next/router";
-import {useDisclosure} from "@mantine/hooks";
-import {useIsMobile} from "#hooks/useIsMobile";
 
 type LayoutProps = {
   children?: ReactNode;
@@ -15,7 +13,7 @@ type LayoutProps = {
 
 const Layout = ({ children, title }: LayoutProps) => {
   const [isOpen, {toggle}] = useDisclosure(false)
-  const {isMobile} = useIsMobile()
+  const {isMobile} = useMediaQuery()
   const {pathname, query} = useRouter();
   const isWip = pathname === '/'|| pathname === '/encounters' || !!query?.category
 

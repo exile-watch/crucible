@@ -3,8 +3,7 @@ import cx from 'classnames';
 
 import {RedirectIcon} from '@exile-watch/writ-icons';
 import styles from './MissingContent.module.scss';
-import {Anchor, Group, Stack, Text} from "@mantine/core";
-import {useIsMobile} from "#hooks/useIsMobile";
+import {Anchor, Group, Stack, Text, useMediaQuery} from "@exile-watch/writ-react";
 
 type MissingContentProps = {
   abilityName?: string;
@@ -23,7 +22,7 @@ const MissingContent = ({
   redirect,
   isEven
 }: MissingContentProps) => {
-  const {isLaptop} = useIsMobile();
+  const {isLaptop} = useMediaQuery();
   // const redirect = `https://github.com/sbsrnt/poe-watch/issues?q=${startCase(boss)} > ${abilityName}`
   // const issueTitle = map
   //   ? `[Invalid Ability Data][Missing ${missingContentType}]: ${startCase(map)} > ${startCase(

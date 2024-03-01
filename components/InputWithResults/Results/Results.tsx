@@ -3,7 +3,7 @@ import toLower from 'lodash/toLower';
 
 import Result from './Result';
 
-import {Combobox, Text} from "@mantine/core";
+import {Combobox, Text} from "@exile-watch/writ-react";
 
 type ResultsProps = {
   inputValue: string;

@@ -3,15 +3,16 @@
   overflow: hidden;
   position: relative;
 
-  @media (max-width: 45em) {
-    height: 45vw;
-  }
+  //@media (max-width: 45em) {
+  //  height: 45vw;
+  //}
 }
 
 .videoWrapper,
 .video {
   position: relative;
   width: 100%;
+  height: 200px
 
   //@media (min-width: 88em) {
   //  min-width: 795px;

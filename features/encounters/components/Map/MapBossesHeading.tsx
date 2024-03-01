@@ -4,10 +4,10 @@ import { kebabCase } from 'lodash';
 import Link from 'next/link';
 
 import { Title } from '@exile-watch/writ-react';
-import useRouter from '#hooks/useRouter';
 
 import styles from './Map.module.scss';
 import {useEncounterData} from "#hooks/useEncounterData";
+import {useRouter} from "next/router";
 
 const MapBossesHeading = () => {
   const {

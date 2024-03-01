@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import Results from './Results/Results'
-import {Combobox, InputBase, useCombobox, Loader} from "@mantine/core";
+import {Combobox, InputBase, useCombobox, Loader, useMediaQuery} from "@exile-watch/writ-react";
 import {IconSearch} from '@tabler/icons-react'
-import {useIsMobile} from "#hooks/useIsMobile";
 
 const InputWithResults = ({isOpen, toggle}) => {
-  const {isMobile} = useIsMobile()
+  const {isMobile} = useMediaQuery()
   const [firstTimeClicked, setFirstTimeClicked] = useState(false)
   const [indexedSearch, setIndexedSearch] = useState([])
   const [isDataLoading, setIsDataLoading] = useState(false)

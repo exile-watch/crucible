@@ -1,14 +1,15 @@
-import {Card, SimpleGrid, Text} from "@mantine/core";
+import {Card, Text} from "@exile-watch/writ-react";
 import styles from './HomepageCard.module.scss'
 import Link from "next/link";
-import HomepageVideo from "./HomepageVideo/HomepageVideo";
-import {useState, useCallback, useEffect} from "react";
+import React, {useState, useCallback, useEffect} from "react";
 import {debounce} from 'lodash'
+import HomepageThumbnail from "./HomepageThumbnail/HomepageThumbnail";
+import HomepageVideoCard from "./HomepageVideoCard/HomepageVideoCard";
 interface HomepageCardProps {
 
 }
 
-const HomepageCard = ({name, gif, path, isCategory = true}) => {
+const HomepageCard = ({name, gif, path, thumbnail = '', isCategory = true}) => {
   const [isHovering, setIsHovering]=useState(false);
   const DELAY = 1000;
 
@@ -32,12 +33,12 @@ const HomepageCard = ({name, gif, path, isCategory = true}) => {
   }, [handleMouseOver]);
 
   return (
-    <Card className={styles.card} shadow="md" component={Link} href={path ?? "#"} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-      {(!gif || gif.length === 0) && <Card.Section><Text ta="center" mt="md">This encounter has no gif source</Text></Card.Section>}
-      {!!gif && <Card.Section>
-        {isCategory && Array.isArray(gif) ? <SimpleGrid cols={2} spacing={4}>{gif?.map(src => <HomepageVideo key={src} src={src} isCategory isParentHovering={isHovering} />)}</SimpleGrid> : <HomepageVideo src={gif} isParentHovering={isHovering} />}
+    <Card className={styles.card} padding={0} shadow="md" component={Link} href={path ?? "#"} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+      <Card.Section>
+        {thumbnail && !isHovering && <HomepageThumbnail thumbnail={thumbnail} isCategory={isCategory}/>}
+        {gif && isHovering && <HomepageVideoCard gif={gif} isHovering={isHovering} isCategory={isCategory}/>}
+        {/*{gif && <HomepageVideoCard gif={gif} isHovering={isHovering} isCategory={isCategory}/>}*/}
       </Card.Section>
-      }
       <Card.Section mt="md">
         <Text ta="center" mb="md">{name}</Text>
       </Card.Section>

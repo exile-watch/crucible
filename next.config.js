@@ -9,6 +9,9 @@ const nextConfig = {
         hostname: 'avatars.githubusercontent.com',
       },
       {
+        hostname: 'raw.githubusercontent.com',
+      },
+      {
         hostname: 'images.unsplash.com',
       },
     ]

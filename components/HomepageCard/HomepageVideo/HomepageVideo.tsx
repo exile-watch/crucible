@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import styles from "./HomepageVideo.module.scss";
-import {Skeleton} from "@mantine/core";
+import {Skeleton} from "@exile-watch/writ-react";
 import cx from "classnames";
 
 const HomepageVideo = ({src, isParentHovering, isCategory}) => {

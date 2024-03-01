@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import {HomepageCard, Layout} from "#components";
 import {kebabCase, startCase} from "lodash";
-import {SimpleGrid} from "@mantine/core";
+import {SimpleGrid} from "@exile-watch/writ-react";
 import {useRouter} from "next/router";
 import Boss from "./[boss]";
 
