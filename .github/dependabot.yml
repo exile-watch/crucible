@@ -3,7 +3,7 @@ registries:
   github:
     type: npm-registry
     url: https://npm.pkg.github.com
-    token: ${{ secrets.GH_ACCESS_TOKEN }}
+    token: ${{ secrets.GH_TOKEN }}
 updates:
   - package-ecosystem: "npm"
     directory: "/"
@@ -11,7 +11,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "saturday"
-      time: "10:31"
+      time: "10:35"
       timezone: "Europe/Warsaw"
     groups:
       exile-watch-build-tools:
