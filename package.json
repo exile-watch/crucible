@@ -33,7 +33,7 @@
     "@exile-watch/lefthook-config": "^0.3.8",
     "@exile-watch/postcss-config": "^0.2.0",
     "@exile-watch/typescript-config": "^0.3.0",
-    "@nx/next": "18.0.4",
+    "@nx/next": "18.0.6",
     "@types/lodash": "^4.14.168",
     "@types/node": "^14.17.0",
     "@types/react": "^18.2.52",
