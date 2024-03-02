@@ -10,7 +10,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "saturday"
-      time: "10:00"
+      time: "10:05"
       timezone: "Europe/Warsaw"
     groups:
       exile-watch-build-tools:
