@@ -1,13 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
+import Link from "next/link";
+import React from "react";
 
-import {Badge, Combobox, Group, Stack, Text} from '@exile-watch/writ-react';
-import { IndexedSearchResultsBossProps } from '#types';
+import { Badge, Combobox, Group, Stack, Text } from "@exile-watch/writ-react";
+import { IndexedSearchResultsBossProps } from "#types";
 
-import styles from './Results.module.scss';
+import styles from "./Results.module.scss";
 
 type ResultProps = {
-  onClick: () => any;
+  onClick: () => void;
 } & IndexedSearchResultsBossProps;
 
 const Result = ({
@@ -27,7 +27,9 @@ const Result = ({
         <Combobox.Option value={mapName}>
           <Group justify="space-between">
             {mapName}
-            <Badge color="orange" size="xs">map</Badge>
+            <Badge color="orange" size="xs">
+              map
+            </Badge>
           </Group>
         </Combobox.Option>
       </Link>
@@ -41,9 +43,15 @@ const Result = ({
           <Group justify="space-between">
             <Stack gap={0}>
               <Text size="sm">{encounterName}</Text>
-              {mapName && <Text c="dimmed" size="xs" fs="italic">{mapName}</Text>}
+              {mapName && (
+                <Text c="dimmed" size="xs" fs="italic">
+                  {mapName}
+                </Text>
+              )}
             </Stack>
-            <Badge color="teal" size="xs">boss</Badge>
+            <Badge color="teal" size="xs">
+              boss
+            </Badge>
           </Group>
         </Combobox.Option>
       </Link>
@@ -56,9 +64,14 @@ const Result = ({
         <Group justify="space-between">
           <Stack gap={0}>
             <Text size="sm">{encounterAbilityName}</Text>
-            <Text c="dimmed" size="xs" fs="italic">{encounterName}{mapName && ` - ${mapName}`}</Text>
+            <Text c="dimmed" size="xs" fs="italic">
+              {encounterName}
+              {mapName && ` - ${mapName}`}
+            </Text>
           </Stack>
-        <Badge size="xs" color="blue">ability</Badge>
+          <Badge size="xs" color="blue">
+            ability
+          </Badge>
         </Group>
       </Combobox.Option>
     </Link>

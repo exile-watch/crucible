@@ -1,2 +1,2 @@
-const sharedPostCSSconfig = require('@exile-watch/postcss-config')
-module.exports = sharedPostCSSconfig
+const sharedPostCSSconfig = require("@exile-watch/postcss-config");
+module.exports = sharedPostCSSconfig;

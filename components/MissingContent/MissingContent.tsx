@@ -1,13 +1,19 @@
-import React from 'react';
-import cx from 'classnames';
+import cx from "classnames";
+import React from "react";
 
-import {RedirectIcon} from '@exile-watch/writ-icons';
-import styles from './MissingContent.module.scss';
-import {Anchor, Group, Stack, Text, useMediaQuery} from "@exile-watch/writ-react";
+import { RedirectIcon } from "@exile-watch/writ-icons";
+import {
+  Anchor,
+  Group,
+  Stack,
+  Text,
+  useMediaQuery,
+} from "@exile-watch/writ-react";
+import styles from "./MissingContent.module.scss";
 
 type MissingContentProps = {
   abilityName?: string;
-  missingContentType: 'Video Source' | 'About' | 'Player Interaction tip';
+  missingContentType: "Video Source" | "About" | "Player Interaction tip";
   className?: string;
   issueTitle?: string;
   redirect?: string;
@@ -20,9 +26,9 @@ const MissingContent = ({
   className,
   issueTitle,
   redirect,
-  isEven
+  isEven,
 }: MissingContentProps) => {
-  const {isLaptop} = useMediaQuery();
+  const { isLaptop } = useMediaQuery();
   // const redirect = `https://github.com/sbsrnt/poe-watch/issues?q=${startCase(boss)} > ${abilityName}`
   // const issueTitle = map
   //   ? `[Invalid Ability Data][Missing ${missingContentType}]: ${startCase(map)} > ${startCase(
@@ -30,15 +36,18 @@ const MissingContent = ({
   //     )} > ${abilityName}`
   //   : `[Invalid Ability Data][Missing ${missingContentType}]: ${startCase(boss)} > ${abilityName}`;
   const issueSrc = `https://github.com/sbsrnt/poe-watch/issues/new?template=invalid-ability-data.md&labels=invalid%2Fmissing+data&title=${issueTitle}`;
-  const target = '_blank';
-  const rel = 'noreferrer noopener';
+  const target = "_blank";
+  const rel = "noreferrer noopener";
 
   return (
     <Stack className={cx(styles.missingContent, className)} gap={0}>
-      <Text >
+      <Text>
         There is missing <i>{missingContentType}</i> section for this ability.
       </Text>
-      <Group gap={4} justify={isLaptop ? 'center' : isEven ? 'flex-end' : 'flex-start'}>
+      <Group
+        gap={4}
+        justify={isLaptop ? "center" : isEven ? "flex-end" : "flex-start"}
+      >
         <Text>Before reporting an issue, </Text>
         <Anchor
           href={redirect}
@@ -50,9 +59,18 @@ const MissingContent = ({
           check if it already exists <RedirectIcon />
         </Anchor>
       </Group>
-      <Group gap={4} justify={isLaptop ? 'center' : isEven ? 'flex-end' : 'flex-start'}>
+      <Group
+        gap={4}
+        justify={isLaptop ? "center" : isEven ? "flex-end" : "flex-start"}
+      >
         <Text>If you can't find desired issue then</Text>
-        <Anchor underline="always" href={issueSrc} target={target} rel={rel} className={styles.anchor}>
+        <Anchor
+          underline="always"
+          href={issueSrc}
+          target={target}
+          rel={rel}
+          className={styles.anchor}
+        >
           create a new issue <RedirectIcon />
         </Anchor>
       </Group>
@@ -60,4 +78,4 @@ const MissingContent = ({
   );
 };
 
-export {MissingContent};
+export { MissingContent };

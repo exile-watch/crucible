@@ -15,5 +15,5 @@ declare module "./react-xml-parser" {
     public getElementsByTagName(tagName: string): XMLElement[];
   }
 
-  export = XMLParser
+  export = XMLParser;
 }

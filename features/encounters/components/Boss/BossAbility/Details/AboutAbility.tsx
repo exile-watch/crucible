@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import { MissingContent } from '#components';
+import DetailRow from "./DetailRow";
 
-import DetailRow from './DetailRow';
-
-import styles from './Details.module.scss';
-import {Text} from "@exile-watch/writ-react";
+import { Text } from "@exile-watch/writ-react";
 
 type AboutAbilityProps = {
   about: string[];
@@ -16,7 +13,7 @@ type AboutAbilityProps = {
 const AboutAbility = ({ about, abilityName, isEven }: AboutAbilityProps) => {
   return (
     <DetailRow label="About" withBottomMargin>
-      {about.map((about, i) =>
+      {about.map((about) =>
         about.length === 0 ? (
           // <MissingContent
           //   abilityName={abilityName}
@@ -25,10 +22,14 @@ const AboutAbility = ({ about, abilityName, isEven }: AboutAbilityProps) => {
           //   key={`bossAboutAbility_${i}`}
           //   isEven={isEven}
           // />
-          <Text c="dimmed" key={`bossAboutAbility_${i}`}>This section has no data yet</Text>
+          <Text c="dimmed" key={abilityName}>
+            This section has no data yet
+          </Text>
         ) : (
-          <Text c="sand.2" key={`bossAboutAbility_${i}`}>{about}</Text>
-        )
+          <Text c="sand.2" key={abilityName}>
+            {about}
+          </Text>
+        ),
       )}
     </DetailRow>
   );

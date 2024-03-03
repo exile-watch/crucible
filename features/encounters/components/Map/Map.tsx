@@ -1,17 +1,17 @@
-import { ReactNode } from 'react';
-import { startCase } from 'lodash';
+import { startCase } from "lodash";
+import { ReactNode } from "react";
 
-import { Title } from '@exile-watch/writ-react';
+import { Title } from "@exile-watch/writ-react";
 
-import MapBossesHeading from './MapBossesHeading';
-import {useEncounterData} from "#hooks/useEncounterData";
+import { useEncounterData } from "#hooks/useEncounterData";
+import MapBossesHeading from "./MapBossesHeading";
 
 type MapProps = {
   children?: ReactNode;
 };
 
 const Map = ({ children }: MapProps) => {
-  const {isLoading, data, heading, subheading} = useEncounterData()
+  const { isLoading, data, heading, subheading } = useEncounterData();
 
   return (
     <>

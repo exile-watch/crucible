@@ -1,24 +1,26 @@
-import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
-import {BossAbilityWithNameType, DataType} from "#types";
-import {kebabCase} from "lodash";
+import { kebabCase } from "lodash";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { BossAbilityWithNameType, DataType } from "#types";
 
 function useEncounterData() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState<DataType>(null);
-  const [activeBossAbilities, setActiveBossAbilities] = useState<BossAbilityWithNameType[] | null>(
-    null
-  );
+  const [activeBossAbilities, setActiveBossAbilities] = useState<
+    BossAbilityWithNameType[] | null
+  >(null);
   const {
     query: { category, map, boss },
   } = useRouter();
-  const heading = category === 'common-maps' ? map : category;
-  const subheading = category !== 'common-maps' && data?.map;
-  const isMap = !!data?.map
+  const heading = category === "common-maps" ? map : category;
+  const subheading = category !== "common-maps" && data?.map;
+  const isMap = !!data?.map;
 
   useEffect(() => {
     setIsLoading(true);
-    import(`@exile-watch/encounter-data/dist/extracted-data/${category}/${map}.esm`)
+    import(
+      `@exile-watch/encounter-data/dist/extracted-data/${category}/${map}.esm`
+    )
       .then((d) => {
         setData(d);
         setIsLoading(false);
@@ -30,7 +32,7 @@ function useEncounterData() {
   }, [map]);
 
   useEffect(() => {
-    if(!data) return;
+    if (!data) return;
 
     data?.bosses?.find((b) => {
       const [[bossName, bossProps]] = Object.entries(b);
@@ -58,8 +60,8 @@ function useEncounterData() {
     queryMap: map,
     queryBoss: boss,
     isMap,
-    activeBossAbilities
-  }
+    activeBossAbilities,
+  };
 }
 
-export {useEncounterData}
+export { useEncounterData };

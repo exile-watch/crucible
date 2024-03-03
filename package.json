@@ -6,9 +6,9 @@
     "dev": "node server.js",
     "build": "nx build",
     "start": "node server.js",
-    "lint": "exit 0",
-    "lint:apply": "exit 0",
-    "format": "exit 0"
+    "lint": "npx @biomejs/biome check .",
+    "lint:apply": "npx @biomejs/biome check --apply .",
+    "format": "npx @biomejs/biome format --write ."
   },
   "config": {
     "commitizen": {
@@ -30,7 +30,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@exile-watch/lefthook-config": "^0.3.8",
+    "@exile-watch/biome-config": "^0.2.1",
+    "@exile-watch/lefthook-config": "^0.4.0",
     "@exile-watch/postcss-config": "^0.2.1",
     "@exile-watch/typescript-config": "^0.3.1",
     "@nx/next": "18.0.6",
