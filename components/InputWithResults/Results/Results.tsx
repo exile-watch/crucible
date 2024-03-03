@@ -3,17 +3,21 @@ import React from "react";
 
 import Result from "./Result";
 
+import { IndexedSearchType } from "@exile-watch/encounter-data";
 import { Combobox, Text } from "@exile-watch/writ-react";
 
 type ResultsProps = {
   inputValue: string;
-  indexedSearch: JSON;
+  indexedSearch: IndexedSearchType | [];
 };
 
-const filterResults = (inputValue: string, indexedSearch: JSON) => {
-  return Object.entries(indexedSearch)?.map(([category, data]: any) => {
+const filterResults = (
+  inputValue: string,
+  indexedSearch: IndexedSearchType | [],
+) => {
+  return Object.entries(indexedSearch)?.map(([category, data]) => {
     const filteredData = data.filter(
-      ({ mapName, encounterName, encounterAbilityName }: any) => {
+      ({ mapName, encounterName, encounterAbilityName }) => {
         const loweredInputValue = toLower(inputValue);
         const loweredMapName = toLower(mapName);
         const loweredEncounterName = toLower(encounterName);

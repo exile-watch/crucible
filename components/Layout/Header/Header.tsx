@@ -8,7 +8,12 @@ import { IconBrandDiscord, IconBrandGithub } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 
-const Header = ({ isOpen, toggle }) => {
+type HeaderProps = {
+  isOpen: boolean;
+  toggle: () => void;
+};
+
+const Header = ({ isOpen, toggle }: HeaderProps) => {
   const { isMobile } = useMediaQuery();
   // hydration issues...
   const [isMounted, setIsMounted] = useState(false);

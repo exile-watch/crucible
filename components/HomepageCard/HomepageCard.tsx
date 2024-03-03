@@ -7,19 +7,17 @@ import styles from "./HomepageCard.module.scss";
 import HomepageThumbnail from "./HomepageThumbnail/HomepageThumbnail";
 import HomepageVideoCard from "./HomepageVideoCard/HomepageVideoCard";
 
-type HomepageCardProps = {
-  name: string;
-  gif: string;
-  path: string;
-  thumbnail?: string;
-  isCategory: boolean;
+import type { HomepageObjType } from "@exile-watch/encounter-data";
+
+type HomepageCardProps = Partial<HomepageObjType> & {
+  isCategory?: boolean;
 };
 
 const HomepageCard = ({
   name,
   gif,
   path,
-  thumbnail = "",
+  thumbnail,
   isCategory = true,
 }: HomepageCardProps) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -27,6 +25,7 @@ const HomepageCard = ({
   const { pathname } = useRouter();
   const preferThumbnailOverVideoOnPaths =
     pathname === "/" || pathname === "/encounters";
+
   // Without debouncing the mouseover, we can start requests immediately
   // In an "edge" case where a "curious" user decides to furiously...
   // ...mouseover and mouseleave over 20+ video elements (homepage)...
@@ -70,7 +69,6 @@ const HomepageCard = ({
             isCategory={isCategory}
           />
         )}
-        {/*{gif && <HomepageVideoCard gif={gif} isHovering={isHovering} isCategory={isCategory}/>}*/}
       </Card.Section>
       <Card.Section mt="md">
         <Text ta="center" mb="md">

@@ -66,19 +66,6 @@ export type PathDataType =
   | null
   | [];
 
-/**
- * Category / Map / Boss Data
- */
-export type BossAbilityWithNameType = {
-  tip: string[];
-  about: string[];
-  gif: string;
-  isChallenge?: boolean;
-  aboutChallenge?: string;
-  type?: string;
-  name?: string;
-};
-
 export type PureBossAbilityType = {
   tip: string[];
   about?: string[];
@@ -93,20 +80,5 @@ export type PureBossAbilityType = {
 export type BossAbilityType = {
   [abilityName: string]: PureBossAbilityType;
 };
-
-export type BossType = {
-  [bossName: string]: {
-    abilities: BossAbilityType[];
-    damageTypes: string[];
-  };
-};
-
-export type MapType = {
-  bosses: BossType[];
-  category: string;
-  map: string;
-};
-
-export type DataType = MapType | null;
 
 export type Themes = "light" | "dark";

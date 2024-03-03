@@ -10,7 +10,7 @@ type AboutAbilityProps = {
   isEven?: boolean;
 };
 
-const AboutAbility = ({ about, abilityName, isEven }: AboutAbilityProps) => {
+const AboutAbility = ({ about, abilityName }: AboutAbilityProps) => {
   return (
     <DetailRow label="About" withBottomMargin>
       {about.map((about) =>

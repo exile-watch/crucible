@@ -2,9 +2,8 @@ import React, { useEffect, useRef } from "react";
 
 // import { Loader, MissingContent } from '@exile-watch/writ-react';
 
-import { Loader } from "@exile-watch/writ-react";
+import { Loader, Text } from "@exile-watch/writ-react";
 import cx from "classnames";
-import { MissingContent } from "#components";
 import { useIntersectionObserver } from "#hooks/useIntersectionObserver";
 import styles from "./Video.module.scss";
 
@@ -19,8 +18,8 @@ type VideoProps = {
 // @ts-ignore
 const Video = ({
   src,
-  isActive,
-  abilityName,
+  // isActive,
+  // abilityName,
   speed,
   isOnHomepage,
 }: VideoProps) => {
@@ -60,12 +59,7 @@ const Video = ({
 
   return (
     <div className={styles.videoWrapper} ref={videoContainerRef}>
-      {!src && (
-        <MissingContent
-          abilityName={abilityName}
-          missingContentType="Video Source"
-        />
-      )}
+      {!src && <Text c="dimmed">Something went wrong</Text>}
       {src && (
         <>
           <Loader className={styles.loader} size={40} />

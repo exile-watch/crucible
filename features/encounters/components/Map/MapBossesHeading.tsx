@@ -18,9 +18,8 @@ const MapBossesHeading = () => {
 
   return (
     <div className={styles.bosses}>
-      {data?.bosses?.map((boss) => {
-        const [bossName] = Object.keys(boss);
-        const kebabCasedEncounterName = kebabCase(bossName);
+      {data?.bosses?.map(({ name: encounterName }) => {
+        const kebabCasedEncounterName = kebabCase(encounterName);
         const isActive = isMap
           ? kebabCasedEncounterName === queryBoss
           : kebabCasedEncounterName === map;
@@ -29,12 +28,12 @@ const MapBossesHeading = () => {
           : `/encounters/${category}/${kebabCasedEncounterName}`;
 
         return (
-          <Title order={2} key={`mapBossesHeading_${bossName}`}>
+          <Title order={2} key={`mapBossesHeading_${encounterName}`}>
             <Link
               href={redirect}
               className={cx(isActive ? styles.active : undefined, styles.link)}
             >
-              {bossName}
+              {encounterName}
             </Link>
           </Title>
         );

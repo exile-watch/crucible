@@ -1,12 +1,12 @@
 import cx from "classnames";
 import { kebabCase, startCase } from "lodash";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import React, { MouseEvent, useEffect, useState } from "react";
 
 import { ArrowRightIcon } from "@exile-watch/writ-icons";
 import { AtomPathData } from "#types";
 
+import { SidebarNavigationPathsType } from "@exile-watch/encounter-data";
 import {
   Center,
   Divider,
@@ -32,9 +32,17 @@ const startingChar = (entities: AtomPathData, i: number) => {
   );
 };
 
-const SidebarEncountersDesktop = ({ isOpen, toggle }) => {
+type SidebarEncountersDesktopProps = {
+  isOpen: boolean;
+  toggle: () => void;
+};
+
+const SidebarEncountersDesktop = ({
+  isOpen,
+  toggle,
+}: SidebarEncountersDesktopProps) => {
   const [isDataLoaded, setIsDataLoaded] = useState(false);
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<SidebarNavigationPathsType | null>(null);
   const {
     query: { category, map, boss },
   } = useRouter();
@@ -66,7 +74,7 @@ const SidebarEncountersDesktop = ({ isOpen, toggle }) => {
       });
   }, []);
 
-  if (!isDataLoaded) {
+  if (!isDataLoaded || !data) {
     return null;
   }
 

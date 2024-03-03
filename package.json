@@ -8,7 +8,8 @@
     "start": "node server.js",
     "lint": "npx @biomejs/biome check .",
     "lint:apply": "npx @biomejs/biome check --apply .",
-    "format": "npx @biomejs/biome format --write ."
+    "format": "npx @biomejs/biome format --write .",
+    "typecheck": "npx tsc"
   },
   "config": {
     "commitizen": {
@@ -16,7 +17,7 @@
     }
   },
   "dependencies": {
-    "@exile-watch/encounter-data": "^0.9.0",
+    "@exile-watch/encounter-data": "^0.9.10",
     "@exile-watch/writ-icons": "^0.3.7",
     "@exile-watch/writ-react": "^0.2.17",
     "@tabler/icons-react": "^2.47.0",
@@ -31,7 +32,7 @@
   },
   "devDependencies": {
     "@exile-watch/biome-config": "^0.2.1",
-    "@exile-watch/lefthook-config": "^0.4.0",
+    "@exile-watch/lefthook-config": "^0.5.1",
     "@exile-watch/postcss-config": "^0.2.1",
     "@exile-watch/typescript-config": "^0.3.1",
     "@nx/next": "18.0.6",

@@ -5,16 +5,14 @@ import { kebabCase, startCase } from "lodash";
 import { useRouter } from "next/router";
 import { HomepageCard, Layout } from "#components";
 import Boss from "./[boss]";
+import { MapType } from "@exile-watch/encounter-data";
 
 const Map = () => {
   const {
     query: { category, map },
     asPath,
   } = useRouter();
-  const [data, setData] = useState(null);
-  const {
-    query: { boss },
-  } = useRouter();
+  const [data, setData] = useState<MapType | null>(null);
 
   useEffect(() => {
     import(
@@ -28,15 +26,15 @@ const Map = () => {
       });
   }, [map]);
 
+  if (!map) return null;
+
   if (category !== "common-maps") return <Boss />;
 
   return (
-    <Layout title={startCase(map)}>
+    <Layout title={startCase(map as string)}>
       <SimpleGrid cols={{ xxxl: 6, xxl: 5, xl: 4, lg: 3, md: 2, sm: 2, xs: 1 }}>
-        {data?.bosses.map((data) => {
-          const [encounterName] = Object.keys(data);
-          const [abilities] = Object.values(data);
-          const [ability] = Object.values(abilities.abilities.pop());
+        {data?.bosses.map(({ name: encounterName, abilities }) => {
+          const ability = abilities?.pop();
           const path = `${asPath}/${kebabCase(encounterName)}`;
 
           return (

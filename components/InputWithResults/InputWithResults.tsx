@@ -1,3 +1,4 @@
+import { IndexedSearchType } from "@exile-watch/encounter-data";
 import {
   Combobox,
   InputBase,
@@ -9,10 +10,17 @@ import { IconSearch } from "@tabler/icons-react";
 import React, { useEffect, useState } from "react";
 import Results from "./Results/Results";
 
-const InputWithResults = ({ isOpen, toggle }) => {
+type InputWithResultsProps = {
+  isOpen: boolean;
+  toggle: () => void;
+};
+
+const InputWithResults = ({ isOpen, toggle }: InputWithResultsProps) => {
   const { isMobile } = useMediaQuery();
   const [firstTimeClicked, setFirstTimeClicked] = useState(false);
-  const [indexedSearch, setIndexedSearch] = useState([]);
+  const [indexedSearch, setIndexedSearch] = useState<IndexedSearchType | []>(
+    [],
+  );
   const [isDataLoading, setIsDataLoading] = useState(false);
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),

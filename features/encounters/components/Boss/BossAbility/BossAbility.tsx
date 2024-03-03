@@ -2,21 +2,18 @@ import cx from "classnames";
 import kebabCase from "lodash/kebabCase";
 import React, { useEffect, useRef } from "react";
 
-import { PureBossAbilityType } from "#types";
-
 import { AbilityName, AbilityTip, AboutAbility } from "./Details";
 import Video from "./Video/Video";
 
+import { BossAbilityType } from "@exile-watch/encounter-data";
 import { useRouter } from "next/router";
 import styles from "./BossAbility.module.scss";
 
-const BossAbility = ({
-  name,
-  about,
-  gif,
-  tip,
-  isEven,
-}: PureBossAbilityType) => {
+type BossAbilityProps = BossAbilityType & {
+  isEven: boolean;
+};
+
+const BossAbility = ({ name, about, gif, tip, isEven }: BossAbilityProps) => {
   const { query } = useRouter();
   const activeAbilityRef = useRef<HTMLDivElement>(null);
   const isActive = query.ability === kebabCase(name);

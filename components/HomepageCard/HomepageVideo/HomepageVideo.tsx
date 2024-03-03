@@ -1,12 +1,13 @@
+import { HomepageObjType } from "@exile-watch/encounter-data";
 import { Skeleton } from "@exile-watch/writ-react";
 import cx from "classnames";
 import React, { useEffect, useRef } from "react";
 import styles from "./HomepageVideo.module.scss";
 
 type HomepageVideo = {
-  src: string;
+  src: HomepageObjType["gif"];
   isParentHovering: boolean;
-  isCategory: boolean;
+  isCategory?: boolean;
 };
 
 const HomepageVideo = ({
@@ -43,11 +44,11 @@ const HomepageVideo = ({
         muted
         loop
         playsInline
-        key={src}
+        key={src as string}
         ref={videoRef}
         onCanPlay={setPlayBack}
       >
-        <source src={src} type="video/mp4" />
+        <source src={src as string} type="video/mp4" />
       </video>
     </div>
   );

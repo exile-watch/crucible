@@ -1,16 +1,26 @@
 import { kebabCase } from "lodash";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { BossAbilityWithNameType, DataType } from "#types";
+
+import { BossType, MapType } from "@exile-watch/encounter-data";
+
+const MAP_WITHOUT_DIRECT_BOSS = [
+  "cortex",
+  "simulacrum",
+  "the-alluring-abyss",
+  "the-apex-of-sacrifice",
+];
 
 function useEncounterData() {
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState<DataType>(null);
+  const [data, setData] = useState<MapType | null>(null);
   const [activeBossAbilities, setActiveBossAbilities] = useState<
-    BossAbilityWithNameType[] | null
+    BossType["abilities"] | null
   >(null);
   const {
     query: { category, map, boss },
+    push,
+    asPath,
   } = useRouter();
   const heading = category === "common-maps" ? map : category;
   const subheading = category !== "common-maps" && data?.map;
@@ -33,23 +43,17 @@ function useEncounterData() {
 
   useEffect(() => {
     if (!data) return;
-
-    data?.bosses?.find((b) => {
-      const [[bossName, bossProps]] = Object.entries(b);
-      const abilities: any = bossProps.abilities?.reduce((acc, v) => {
-        const [[abilityName, abilities]]: any = Object.entries(v);
-        return acc.concat({
-          ...abilities,
-          name: abilityName,
-        });
-      }, []);
-
+    data?.bosses?.find(({ name, abilities: encounterAbilities }) => {
+      if (!boss && MAP_WITHOUT_DIRECT_BOSS?.includes(map as string)) {
+        void push(`${asPath}/${kebabCase(data.bosses[0].name)}`);
+      }
       const bossMatchedWithUrl = !!boss
-        ? kebabCase(bossName) === boss
-        : kebabCase(bossName) === map;
-      return bossMatchedWithUrl && setActiveBossAbilities(abilities);
+        ? kebabCase(name) === boss
+        : kebabCase(name) === map;
+
+      return bossMatchedWithUrl && setActiveBossAbilities(encounterAbilities);
     });
-  }, [data, boss]);
+  }, [map, data, boss]);
 
   return {
     isLoading,
