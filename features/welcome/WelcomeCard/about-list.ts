@@ -8,6 +8,7 @@ const welcomePageContent = {
       "or maybe is seeking a guide for your first step in Wraeclast",
     ],
     color: "sand",
+    src: "https://i.gyazo.com/d0583bb3c9d03c81cbcfef9338f690be.mp4",
   },
   poeConnoisseur: {
     title: "a Path of Exile Connoisseur",
@@ -18,6 +19,7 @@ const welcomePageContent = {
       "or perhaps want to see all of Maven's abilities before facing her",
     ],
     color: "red",
+    src: "https://i.gyazo.com/669502f0fa167d519c8782c35da1c13e.mp4",
   },
   softwareEngineer: {
     title: "a Software Engineer",
@@ -28,6 +30,7 @@ const welcomePageContent = {
       "or maybe enjoys reading engineering blogs",
     ],
     color: "teal",
+    src: "https://i.gyazo.com/7f7cb1ef83923fa860f2cf80c15cdd58.mp4",
   },
 };
 
@@ -36,6 +39,7 @@ type WelcomePageContentType = {
   dividerLabel: string;
   aboutList: string[];
   color: string;
+  src: string;
 };
 
 export { welcomePageContent };

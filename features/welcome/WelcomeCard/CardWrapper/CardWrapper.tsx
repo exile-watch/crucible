@@ -1,5 +1,6 @@
 import { Card, Divider, Stack, Text, Title } from "@exile-watch/writ-react";
 import cx from "classnames";
+import Video from "#features/encounters/components/Boss/BossAbility/Video/Video";
 import { WelcomePageContentType } from "#features/welcome/WelcomeCard/about-list";
 import styles from "./CardWrapper.module.scss";
 
@@ -8,6 +9,7 @@ const CardWrapper = ({
   title,
   dividerLabel,
   color,
+  src,
 }: WelcomePageContentType) => {
   return (
     <Stack>
@@ -16,6 +18,7 @@ const CardWrapper = ({
         shadow="md"
         c={`${color}.2`}
       >
+        <Video src={src} isOnWelcomePage />
         <Title order={3} ta="center" fs="italic">
           ... {title} ...
         </Title>
