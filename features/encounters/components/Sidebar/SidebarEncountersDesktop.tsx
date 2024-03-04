@@ -11,6 +11,7 @@ import {
   Center,
   Divider,
   Group,
+  NavLink,
   Stack,
   Text,
   useMediaQuery,
@@ -142,25 +143,43 @@ const SidebarEncountersDesktop = ({
           ))}
         </Stack>
       </Stack>
-      <Stack>
+      <Stack gap="xs">
+        <Divider label="About" mb={-8} />
+        <NavLink
+          component={Link}
+          href="https://docs.exile.watch"
+          target="_blank"
+          label="Docs"
+          c="sand.2"
+          ta="left"
+          p={0}
+        />
+        <NavLink
+          component={Link}
+          href="https://engineering.exile.watch"
+          target="_blank"
+          label="Engineering Blog"
+          c="sand.2"
+          ta="left"
+          p={0}
+          mb={-4}
+        />
+        <Divider label="Legal" mb={-8} />
+        <NavLink
+          component={Link}
+          href="https://docs.exile.watch/privacy-policy"
+          target="_blank"
+          label="Privacy Policy"
+          c="sand.2"
+          ta="left"
+          p={0}
+        />
         <Divider />
-        <Group justify="center">
-          <Link href="https://docs.exile.watch/legal" target="_blank">
-            <Text size="xs">Legal</Text>
-          </Link>
-          <Divider orientation="vertical" />
-          <Link
-            href="https://docs.exile.watch/legal/privacy-policy"
-            target="_blank"
-          >
-            <Text size="xs">Privacy Policy</Text>
-          </Link>
-        </Group>
-        <Divider />
-        <Text size="xs" ta="center" mb="md" c="dimmed">
+        <Text size="xs" ta="center" c="dimmed">
           This product isn't affiliated with or endorsed by Grinding Gear Games
           in any way.
         </Text>
+        <Divider label="© 2024 exile.watch" mb="xs" />
       </Stack>
     </Stack>
   );

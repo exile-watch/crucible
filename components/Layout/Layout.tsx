@@ -1,7 +1,6 @@
 import {
   AppShell,
   Flex,
-  Text,
   Title,
   useDisclosure,
   useMediaQuery,
@@ -13,50 +12,48 @@ const SidebarEncountersDesktop = dynamic(
   () =>
     import("#features/encounters/components/Sidebar/SidebarEncountersDesktop"),
 );
-import { useRouter } from "next/router";
 import styles from "./styles.module.scss";
 
 type LayoutProps = {
   children?: ReactNode;
   title?: string;
+  isWithoutSidebar?: boolean;
 };
 
-const Layout = ({ children, title }: LayoutProps) => {
+const Layout = ({ children, title, isWithoutSidebar = false }: LayoutProps) => {
   const [isOpen, { toggle }] = useDisclosure(false);
   const { isMobile } = useMediaQuery();
-  const { pathname, query } = useRouter();
-  const isWip =
-    pathname === "/" || pathname === "/encounters" || !!query?.category;
+
+  const renderSidebar =
+    isWithoutSidebar === false || (isWithoutSidebar === true && isMobile);
 
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={{ breakpoint: "md", width: 250, collapsed: { mobile: !isOpen } }}
+      navbar={
+        renderSidebar
+          ? { breakpoint: "md", width: 250, collapsed: { mobile: !isOpen } }
+          : { breakpoint: 0, width: 0, collapsed: { mobile: !isOpen } }
+      }
       withBorder={false}
     >
       <AppShell.Header bg="dark.6">
         <Header isOpen={isOpen} toggle={toggle} />
       </AppShell.Header>
-      <AppShell.Navbar bg="dark.6">
-        <SidebarEncountersDesktop isOpen={isOpen} toggle={toggle} />
-      </AppShell.Navbar>
-      <AppShell.Main mt="md" ml="md" pr="md" className={styles.main}>
+      {renderSidebar && (
+        <AppShell.Navbar bg="dark.6">
+          <SidebarEncountersDesktop isOpen={isOpen} toggle={toggle} />
+        </AppShell.Navbar>
+      )}
+      <AppShell.Main ml="md" pr="md" className={styles.main}>
         {title && (
           <Title mb="2rem" order={2}>
             {title}
           </Title>
         )}
-        {!isWip && (
-          <Flex className={styles.announcement} align="center" mr="md">
-            <Text mx={4} size={isMobile ? "xs" : "md"}>
-              🚧 This website is currently work in progress. Missing data is
-              expected.
-            </Text>
-          </Flex>
-        )}
-        <div className={!isWip ? styles.contentSmallMargin : ""}>
+        <Flex mt="md" display="block">
           {children}
-        </div>
+        </Flex>
       </AppShell.Main>
     </AppShell>
   );

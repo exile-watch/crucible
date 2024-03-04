@@ -42,9 +42,6 @@ const Header = ({ isOpen, toggle }: HeaderProps) => {
         <InputWithResults isOpen={isOpen} toggle={toggle} />
       )}
       <Group>
-        <Link href="https://docs.exile.watch" target="_blank">
-          docs
-        </Link>
         <Link href="https://github.com/exile-watch" target="_blank">
           <IconBrandGithub />
         </Link>
