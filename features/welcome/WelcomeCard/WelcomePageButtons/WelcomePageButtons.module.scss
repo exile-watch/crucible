@@ -1,0 +1,11 @@
+.button {
+  text-shadow: 1px 1px black;
+
+  span {
+    overflow: visible;
+  }
+
+  svg {
+    filter: drop-shadow(1px 1px 1px black)
+  }
+}

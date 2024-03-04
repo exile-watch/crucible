@@ -13,6 +13,7 @@ type VideoProps = {
   abilityName?: string;
   speed?: number;
   isOnHomepage?: boolean;
+  isOnWelcomePage?: boolean;
 };
 
 // @ts-ignore
@@ -22,6 +23,7 @@ const Video = ({
   // abilityName,
   speed,
   isOnHomepage,
+  isOnWelcomePage,
 }: VideoProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoContainerRef = useRef<HTMLDivElement>(null);
@@ -58,7 +60,12 @@ const Video = ({
   // }
 
   return (
-    <div className={styles.videoWrapper} ref={videoContainerRef}>
+    <div
+      className={cx(styles.videoWrapper, {
+        [styles.onWelcomePage]: isOnWelcomePage,
+      })}
+      ref={videoContainerRef}
+    >
       {!src && <Text c="dimmed">Something went wrong</Text>}
       {src && (
         <>
