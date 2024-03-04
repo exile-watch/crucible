@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import useActiveFeature from '#hooks/useActiveFeature';
-import { PathDataType } from '#types';
-import {paths} from '@exile-watch/encounter-data'
+import { paths } from "@exile-watch/encounter-data";
+import useActiveFeature from "#hooks/useActiveFeature";
+import { PathDataType } from "#types";
 function useLoadSidebarData() {
   const feature = useActiveFeature();
   const [data, setData] = useState<PathDataType | undefined>(undefined);

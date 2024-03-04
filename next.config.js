@@ -1,20 +1,20 @@
-const basePath = '';
+const basePath = "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: "standalone",
   images: {
     remotePatterns: [
       {
-        hostname: 'avatars.githubusercontent.com',
+        hostname: "avatars.githubusercontent.com",
       },
       {
-        hostname: 'raw.githubusercontent.com',
+        hostname: "raw.githubusercontent.com",
       },
       {
-        hostname: 'images.unsplash.com',
+        hostname: "images.unsplash.com",
       },
-    ]
+    ],
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -23,4 +23,4 @@ const nextConfig = {
   basePath,
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

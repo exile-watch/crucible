@@ -1,12 +1,11 @@
-import React, {useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from "react";
 
 // import { Loader, MissingContent } from '@exile-watch/writ-react';
 
-import styles from './Video.module.scss';
-import {useIntersectionObserver} from "#hooks/useIntersectionObserver";
-import {MissingContent} from "#components";
-import {Loader} from "@exile-watch/writ-react";
+import { Loader, Text } from "@exile-watch/writ-react";
 import cx from "classnames";
+import { useIntersectionObserver } from "#hooks/useIntersectionObserver";
+import styles from "./Video.module.scss";
 
 type VideoProps = {
   src?: string;
@@ -17,7 +16,13 @@ type VideoProps = {
 };
 
 // @ts-ignore
-const Video = ({ src, isActive, abilityName, speed, isOnHomepage }: VideoProps) => {
+const Video = ({
+  src,
+  // isActive,
+  // abilityName,
+  speed,
+  isOnHomepage,
+}: VideoProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoContainerRef = useRef<HTMLDivElement>(null);
   // const isVisible = useOnScreen<HTMLDivElement | null>(videoContainerRef.current);
@@ -54,12 +59,14 @@ const Video = ({ src, isActive, abilityName, speed, isOnHomepage }: VideoProps) 
 
   return (
     <div className={styles.videoWrapper} ref={videoContainerRef}>
-      {!src && <MissingContent abilityName={abilityName} missingContentType="Video Source" />}
+      {!src && <Text c="dimmed">Something went wrong</Text>}
       {src && (
         <>
           <Loader className={styles.loader} size={40} />
           <video
-            className={cx(styles.video, {[styles.videoOnHomepage]: isOnHomepage})}
+            className={cx(styles.video, {
+              [styles.videoOnHomepage]: isOnHomepage,
+            })}
             autoPlay={isVisible}
             muted
             loop

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import DetailRow from './DetailRow';
+import DetailRow from "./DetailRow";
 
-import {Text} from "@exile-watch/writ-react";
+import { Text } from "@exile-watch/writ-react";
 type AbilityNameProps = {
   name?: string;
 };

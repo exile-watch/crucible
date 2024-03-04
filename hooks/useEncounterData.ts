@@ -1,24 +1,36 @@
-import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
-import {BossAbilityWithNameType, DataType} from "#types";
-import {kebabCase} from "lodash";
+import { kebabCase } from "lodash";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+
+import { BossType, MapType } from "@exile-watch/encounter-data";
+
+const MAP_WITHOUT_DIRECT_BOSS = [
+  "cortex",
+  "simulacrum",
+  "the-alluring-abyss",
+  "the-apex-of-sacrifice",
+];
 
 function useEncounterData() {
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState<DataType>(null);
-  const [activeBossAbilities, setActiveBossAbilities] = useState<BossAbilityWithNameType[] | null>(
-    null
-  );
+  const [data, setData] = useState<MapType | null>(null);
+  const [activeBossAbilities, setActiveBossAbilities] = useState<
+    BossType["abilities"] | null
+  >(null);
   const {
     query: { category, map, boss },
+    push,
+    asPath,
   } = useRouter();
-  const heading = category === 'common-maps' ? map : category;
-  const subheading = category !== 'common-maps' && data?.map;
-  const isMap = !!data?.map
+  const heading = category === "common-maps" ? map : category;
+  const subheading = category !== "common-maps" && data?.map;
+  const isMap = !!data?.map;
 
   useEffect(() => {
     setIsLoading(true);
-    import(`@exile-watch/encounter-data/dist/extracted-data/${category}/${map}.esm`)
+    import(
+      `@exile-watch/encounter-data/dist/extracted-data/${category}/${map}.esm`
+    )
       .then((d) => {
         setData(d);
         setIsLoading(false);
@@ -30,24 +42,18 @@ function useEncounterData() {
   }, [map]);
 
   useEffect(() => {
-    if(!data) return;
-
-    data?.bosses?.find((b) => {
-      const [[bossName, bossProps]] = Object.entries(b);
-      const abilities: any = bossProps.abilities?.reduce((acc, v) => {
-        const [[abilityName, abilities]]: any = Object.entries(v);
-        return acc.concat({
-          ...abilities,
-          name: abilityName,
-        });
-      }, []);
-
+    if (!data) return;
+    data?.bosses?.find(({ name, abilities: encounterAbilities }) => {
+      if (!boss && MAP_WITHOUT_DIRECT_BOSS?.includes(map as string)) {
+        void push(`${asPath}/${kebabCase(data.bosses[0].name)}`);
+      }
       const bossMatchedWithUrl = !!boss
-        ? kebabCase(bossName) === boss
-        : kebabCase(bossName) === map;
-      return bossMatchedWithUrl && setActiveBossAbilities(abilities);
+        ? kebabCase(name) === boss
+        : kebabCase(name) === map;
+
+      return bossMatchedWithUrl && setActiveBossAbilities(encounterAbilities);
     });
-  }, [data, boss]);
+  }, [map, data, boss]);
 
   return {
     isLoading,
@@ -58,8 +64,8 @@ function useEncounterData() {
     queryMap: map,
     queryBoss: boss,
     isMap,
-    activeBossAbilities
-  }
+    activeBossAbilities,
+  };
 }
 
-export {useEncounterData}
+export { useEncounterData };
