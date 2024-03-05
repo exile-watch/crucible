@@ -1,3 +1,7 @@
+.container {
+  flex-flow: unset;
+}
+
 .sand {
   background: linear-gradient(to top right, color-mix(in srgb, var(--mantine-color-dimmed) 10%, transparent), color-mix(in srgb, var(--mantine-color-sand-1) 30%, transparent));
   span {

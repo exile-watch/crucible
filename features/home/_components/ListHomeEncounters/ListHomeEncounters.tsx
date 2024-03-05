@@ -1,10 +1,9 @@
+import { HomepageType } from "@exile-watch/encounter-data";
 import { SimpleGrid, Stack, Title } from "@exile-watch/writ-react";
 import React, { useEffect, useState } from "react";
 import { HomepageCard } from "#components";
 
-import { HomepageType } from "@exile-watch/encounter-data";
-
-const EncountersList = () => {
+const ListHomeEncounters = () => {
   const [data, setData] = useState<HomepageType | null>(null);
 
   useEffect(() => {
@@ -46,4 +45,4 @@ const EncountersList = () => {
   );
 };
 
-export default EncountersList;
+export default ListHomeEncounters;

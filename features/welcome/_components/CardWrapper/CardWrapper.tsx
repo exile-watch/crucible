@@ -1,7 +1,7 @@
 import { Card, Divider, Stack, Text, Title } from "@exile-watch/writ-react";
 import cx from "classnames";
-import Video from "#features/encounters/components/Boss/BossAbility/Video/Video";
-import { WelcomePageContentType } from "#features/welcome/WelcomeCard/about-list";
+import Video from "#features/encounters/Encounter/_components/EncounterAbility/Video/Video";
+import { WelcomePageContentType } from "#features/welcome/_components/about-list";
 import styles from "./CardWrapper.module.scss";
 
 const CardWrapper = ({
@@ -12,7 +12,7 @@ const CardWrapper = ({
   src,
 }: WelcomePageContentType) => {
   return (
-    <Stack>
+    <Stack className={styles.container}>
       <Card
         className={cx(styles.card, styles[color])}
         shadow="md"

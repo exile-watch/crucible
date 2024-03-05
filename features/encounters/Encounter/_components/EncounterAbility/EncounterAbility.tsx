@@ -2,18 +2,24 @@ import cx from "classnames";
 import kebabCase from "lodash/kebabCase";
 import React, { useEffect, useRef } from "react";
 
+import Video from "#features/encounters/Encounter/_components/EncounterAbility/Video/Video";
 import { AbilityName, AbilityTip, AboutAbility } from "./Details";
-import Video from "./Video/Video";
 
 import { BossAbilityType } from "@exile-watch/encounter-data";
 import { useRouter } from "next/router";
-import styles from "./BossAbility.module.scss";
+import styles from "./EncounterAbility.module.scss";
 
 type BossAbilityProps = BossAbilityType & {
   isEven: boolean;
 };
 
-const BossAbility = ({ name, about, gif, tip, isEven }: BossAbilityProps) => {
+const EncounterAbility = ({
+  name,
+  about,
+  gif,
+  tip,
+  isEven,
+}: BossAbilityProps) => {
   const { query } = useRouter();
   const activeAbilityRef = useRef<HTMLDivElement>(null);
   const isActive = query.ability === kebabCase(name);
@@ -46,4 +52,4 @@ const BossAbility = ({ name, about, gif, tip, isEven }: BossAbilityProps) => {
   );
 };
 
-export default BossAbility;
+export default EncounterAbility;

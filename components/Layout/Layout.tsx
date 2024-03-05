@@ -10,7 +10,7 @@ import { ReactNode } from "react";
 const Header = dynamic(() => import("./Header/Header"));
 const SidebarEncountersDesktop = dynamic(
   () =>
-    import("#features/encounters/components/Sidebar/SidebarEncountersDesktop"),
+    import("#features/encounters/_components/Sidebar/SidebarEncountersDesktop"),
 );
 import styles from "./styles.module.scss";
 

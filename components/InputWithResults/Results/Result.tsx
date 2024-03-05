@@ -2,13 +2,9 @@ import Link from "next/link";
 import React from "react";
 
 import { Badge, Combobox, Group, Stack, Text } from "@exile-watch/writ-react";
-import { IndexedSearchResultsBossProps } from "#types";
 
+import { IndexedSearchTypeItem } from "@exile-watch/encounter-data";
 import styles from "./Results.module.scss";
-
-type ResultProps = {
-  onClick: () => void;
-} & IndexedSearchResultsBossProps;
 
 const Result = ({
   mapPath,
@@ -17,11 +13,11 @@ const Result = ({
   encounterName,
   encounterAbilityPath,
   encounterAbilityName,
-}: ResultProps) => {
+}: IndexedSearchTypeItem) => {
   const isMap = !encounterPath && !encounterAbilityPath;
   const isBoss = encounterPath && !encounterAbilityPath;
 
-  if (isMap) {
+  if (isMap && mapPath && mapName) {
     return (
       <Link href={mapPath} className={styles.link}>
         <Combobox.Option value={mapName}>
@@ -36,7 +32,7 @@ const Result = ({
     );
   }
 
-  if (isBoss) {
+  if (isBoss && encounterPath && encounterName) {
     return (
       <Link href={encounterPath} className={styles.link}>
         <Combobox.Option value={encounterName}>
@@ -57,25 +53,28 @@ const Result = ({
       </Link>
     );
   }
+  if (encounterAbilityPath && encounterAbilityName) {
+    return (
+      <Link href={encounterAbilityPath} className={styles.link}>
+        <Combobox.Option value={encounterAbilityName}>
+          <Group justify="space-between">
+            <Stack gap={0}>
+              <Text size="sm">{encounterAbilityName}</Text>
+              <Text c="dimmed" size="xs" fs="italic">
+                {encounterName}
+                {mapName && ` - ${mapName}`}
+              </Text>
+            </Stack>
+            <Badge size="xs" color="blue">
+              ability
+            </Badge>
+          </Group>
+        </Combobox.Option>
+      </Link>
+    );
+  }
 
-  return (
-    <Link href={encounterAbilityPath} className={styles.link}>
-      <Combobox.Option value={encounterAbilityName}>
-        <Group justify="space-between">
-          <Stack gap={0}>
-            <Text size="sm">{encounterAbilityName}</Text>
-            <Text c="dimmed" size="xs" fs="italic">
-              {encounterName}
-              {mapName && ` - ${mapName}`}
-            </Text>
-          </Stack>
-          <Badge size="xs" color="blue">
-            ability
-          </Badge>
-        </Group>
-      </Combobox.Option>
-    </Link>
-  );
+  return null;
 };
 
 export default Result;

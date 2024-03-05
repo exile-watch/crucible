@@ -43,10 +43,10 @@ const Header = ({ isOpen, toggle }: HeaderProps) => {
       )}
       <Group>
         <Link href="https://github.com/exile-watch" target="_blank">
-          <IconBrandGithub />
+          <IconBrandGithub color="beige" />
         </Link>
         <Link href="https://discord.gg/U3kXS4ej" target="_blank">
-          <IconBrandDiscord />
+          <IconBrandDiscord color="beige" />
         </Link>
       </Group>
     </Group>

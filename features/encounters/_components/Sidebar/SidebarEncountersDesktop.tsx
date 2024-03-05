@@ -83,12 +83,10 @@ const SidebarEncountersDesktop = ({
     <Stack justify="space-between" mx={8} h="100%">
       <Stack gap={0}>
         {isMobile && (
-          <>
-            <Center>
-              <InputWithResults isOpen={isOpen} toggle={toggle} />
-              <Divider my="md" variant="ho" />
-            </Center>
-          </>
+          <Center>
+            <InputWithResults isOpen={isOpen} toggle={toggle} />
+            <Divider my="md" variant="ho" />
+          </Center>
         )}
         <Stack gap="xs" component="ul" className={styles.list}>
           {Object.entries(data).map(({ 0: category, 1: entities }) => (
@@ -123,7 +121,11 @@ const SidebarEncountersDesktop = ({
                 })}
               >
                 {entities.map(({ label, path }, i, self) => (
-                  <li key={`sidebar_${label}`} onClick={toggle}>
+                  <li
+                    key={`sidebar_${label}`}
+                    onClick={toggle}
+                    style={{ ...(i === 0 && { marginTop: 4 }) }}
+                  >
                     {category === "common-maps" && startingChar(self, i)}
                     <Link
                       href={path}
@@ -144,36 +146,43 @@ const SidebarEncountersDesktop = ({
         </Stack>
       </Stack>
       <Stack gap="xs">
-        <Divider label="About" mb={-8} />
-        <NavLink
-          component={Link}
-          href="https://docs.exile.watch"
-          target="_blank"
-          label="Docs"
-          c="sand.2"
-          ta="left"
-          p={0}
-        />
-        <NavLink
-          component={Link}
-          href="https://engineering.exile.watch"
-          target="_blank"
-          label="Engineering Blog"
-          c="sand.2"
-          ta="left"
-          p={0}
-          mb={-4}
-        />
-        <Divider label="Legal" mb={-8} />
-        <NavLink
-          component={Link}
-          href="https://docs.exile.watch/privacy-policy"
-          target="_blank"
-          label="Privacy Policy"
-          c="sand.2"
-          ta="left"
-          p={0}
-        />
+        <Text fw="bold" size="xs" c="dimmed" mb={-8}>
+          About
+        </Text>
+        <Stack gap={0}>
+          <NavLink
+            component={Link}
+            href="https://docs.exile.watch"
+            target="_blank"
+            label="Docs"
+            c="sand.2"
+            ta="left"
+            p={0}
+          />
+          <NavLink
+            component={Link}
+            href="https://engineering.exile.watch"
+            target="_blank"
+            label="Engineering Blog"
+            c="sand.2"
+            ta="left"
+            p={0}
+          />
+        </Stack>
+        <Text fw="bold" size="xs" c="dimmed" mb={-8}>
+          Legal
+        </Text>
+        <Stack gap={0}>
+          <NavLink
+            component={Link}
+            href="https://docs.exile.watch/privacy-policy"
+            target="_blank"
+            label="Privacy Policy"
+            c="sand.2"
+            ta="left"
+            p={0}
+          />
+        </Stack>
         <Divider />
         <Text size="xs" ta="center" c="dimmed">
           This product isn't affiliated with or endorsed by Grinding Gear Games

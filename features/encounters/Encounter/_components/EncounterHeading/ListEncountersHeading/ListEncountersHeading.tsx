@@ -1,15 +1,13 @@
+import { Title } from "@exile-watch/writ-react";
 import cx from "classnames";
 import { kebabCase } from "lodash";
 import Link from "next/link";
-import React from "react";
-
-import { Title } from "@exile-watch/writ-react";
-
 import { useRouter } from "next/router";
+import React from "react";
 import { useEncounterData } from "#hooks/useEncounterData";
-import styles from "./Map.module.scss";
+import styles from "./ListEncountersHeading.module.scss";
 
-const MapBossesHeading = () => {
+const ListEncountersHeading = () => {
   const {
     query: { category, map, boss: queryBoss },
   } = useRouter();
@@ -42,4 +40,4 @@ const MapBossesHeading = () => {
   );
 };
 
-export default MapBossesHeading;
+export default ListEncountersHeading;

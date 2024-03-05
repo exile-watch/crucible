@@ -1,5 +1,5 @@
 import { Group } from "@exile-watch/writ-react";
-import WelcomePageButton from "#features/welcome/WelcomeCard/WelcomePageButtons/WelcomePageButton";
+import WelcomePageButton from "#features/welcome/_components/WelcomePageButtons/WelcomePageButton";
 
 const WelcomePageButtons = () => {
   return (
