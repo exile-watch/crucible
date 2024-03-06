@@ -11,15 +11,8 @@ const nextConfig = {
       {
         hostname: "raw.githubusercontent.com",
       },
-      {
-        hostname: "images.unsplash.com",
-      },
     ],
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  productionBrowserSourceMaps: false,
   basePath,
 };
 

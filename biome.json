@@ -28,7 +28,7 @@
     }
   },
   "formatter": {
-    "lineEnding": "lf",
+    "lineEnding": "crlf",
     "indentStyle": "space"
   }
 }
