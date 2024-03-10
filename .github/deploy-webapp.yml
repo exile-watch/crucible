@@ -1,0 +1,16 @@
+name: "@exile-watch / doryani"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-webapp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Crucible to Cloudflare Pages
+        uses: exile-watch/doryani/deploy-webapp@main
+        with:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT_NAME: "crucible"
+          ENV: "production"
