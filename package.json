@@ -31,9 +31,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@exile-watch/biome-config": "^0.2.1",
+    "@exile-watch/biome-config": "^0.2.2",
     "@exile-watch/lefthook-config": "^0.5.1",
-    "@exile-watch/postcss-config": "^0.2.1",
+    "@exile-watch/postcss-config": "^0.2.2",
     "@exile-watch/typescript-config": "^0.3.1",
     "@exile-watch/unit-testing-config": "^0.1.3",
     "@nx/next": "18.0.6",
