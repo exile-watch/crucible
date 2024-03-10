@@ -49,8 +49,13 @@
     "targets": {
       "build": {
         "executor": "@naxodev/nx-cloudflare:next-build",
-        "outputs": ["{workspaceRoot}"],
-        "defaultConfiguration": "production"
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "defaultConfiguration": "production",
+        "options": {
+          "outputPath": "{workspaceRoot}"
+        }
       }
     }
   }
