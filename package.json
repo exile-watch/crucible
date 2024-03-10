@@ -58,7 +58,7 @@
         ],
         "defaultConfiguration": "production",
         "options": {
-          "outputPath": "{workspaceRoot}/.vercel/outputs/static"
+          "outputPath": "{workspaceRoot}/.vercel/output/static"
         }
       }
     }
