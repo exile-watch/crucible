@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "dev": "node server.js",
-    "build": "nx build",
     "start": "node server.js",
     "lint": "npx @biomejs/biome check .",
     "lint:apply": "npx @biomejs/biome check --apply .",
