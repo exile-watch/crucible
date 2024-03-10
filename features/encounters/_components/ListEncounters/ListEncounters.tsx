@@ -1,10 +1,10 @@
-import type { EncounersIndexPageType } from "@exile-watch/encounter-data";
+import type { EncountersIndexPageType } from "@exile-watch/encounter-data";
 import { SimpleGrid } from "@exile-watch/writ-react";
 import React, { useEffect, useState } from "react";
 import { ErrorBoundary, HomepageCard } from "#components";
 
 const ListEncounters = () => {
-  const [data, setData] = useState<EncounersIndexPageType | null>(null);
+  const [data, setData] = useState<EncountersIndexPageType | null>(null);
 
   useEffect(() => {
     import(
