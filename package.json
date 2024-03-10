@@ -2,8 +2,9 @@
   "name": "crucible",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js",
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
     "lint": "npx @biomejs/biome check .",
     "lint:apply": "npx @biomejs/biome check --apply .",
     "format": "npx @biomejs/biome format --write .",
