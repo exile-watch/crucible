@@ -49,13 +49,8 @@
     "targets": {
       "build": {
         "executor": "@naxodev/nx-cloudflare:next-build",
-        "outputs": [
-          "{options.outputPath}"
-        ],
-        "defaultConfiguration": "production",
-        "options": {
-          "outputPath": "{workspaceRoot}/.vercel/output/static"
-        }
+        "outputs": ["{workspaceRoot}"],
+        "defaultConfiguration": "production"
       }
     }
   }
