@@ -1,24 +1,24 @@
-import { screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
+
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { render } from "../../../../test-setup";
 import ListEncounters from "./ListEncounters"; // Adjust the import path as necessary
 
-const mockPath =
-  "@exile-watch/encounter-data/dist/extracted-data/encounters.esm";
-
-vi.mock(mockPath, () => {
-  return {
-    __esModule: true,
-    default: Promise.resolve({
-      someEncounterId: {
-        path: "some-path",
-        name: "Some Encounter",
-        isCategory: true,
-      },
-    }),
-  };
-});
+vi.mock(
+  "@exile-watch/encounter-data/dist/extracted-data/encounters.esm",
+  () => {
+    return {
+      __esModule: true,
+      default: Promise.resolve({
+        someEncounterId: {
+          path: "some-path",
+          name: "Some Encounter",
+          isCategory: true,
+        },
+      }),
+    };
+  },
+);
 
 describe("ListEncounters", () => {
   beforeEach(() => {
@@ -26,16 +26,19 @@ describe("ListEncounters", () => {
   });
 
   it("renders nothing when data is null", async () => {
-    vi.mock(mockPath, () => {
-      return {
-        __esModule: true,
-        default: Promise.resolve(null),
-      };
-    });
+    vi.mock(
+      "@exile-watch/encounter-data/dist/extracted-data/encounters.esm",
+      () => {
+        return {
+          __esModule: true,
+          default: Promise.resolve(null),
+        };
+      },
+    );
 
     render(<ListEncounters />);
 
-    expect(screen.queryByText("Some Encounter")).not.toBeInTheDocument();
+    expect(screen.queryByText("Some Encounter")).toBeFalsy();
   });
 
   it("renders correctly after fetching data", async () => {
