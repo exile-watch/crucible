@@ -1,10 +1,3 @@
-import { Layout } from "#components";
-import EncountersList from "#features/homepage/EncountersList/EncountersList";
+import { HomePage } from "#features/pages";
 
-export default function Home() {
-  return (
-    <Layout>
-      <EncountersList />
-    </Layout>
-  );
-}
+export default HomePage;

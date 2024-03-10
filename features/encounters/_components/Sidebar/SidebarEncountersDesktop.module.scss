@@ -1,0 +1,131 @@
+.list {
+  padding: 0;
+  margin: 16px 0;
+
+  @media (max-width: 48em) {
+    margin: 0 8px;
+  }
+
+  li {
+    margin-inline: 0;
+    list-style-type: none;
+  }
+}
+
+.sublist {
+  padding-left: 4px;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+  margin-right: 8px;
+  max-height: 400px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+
+    &-track {
+      background: var(--mantine-color-dark-5);
+    }
+
+    &-thumb {
+      background: var(--mantine-color-sand-2);
+    }
+  }
+}
+
+.divider {
+  border-top: none;
+  span {
+    color: var(--mantine-color-sand-2);
+  }
+}
+
+.category {
+  position: relative;
+  &:hover {
+    svg {
+      margin-right: -8px;
+    }
+  }
+}
+
+.categoryOpen {
+  &:hover {
+    svg {
+      margin-right: 0;
+    }
+  }
+}
+
+.categoryContainer {
+  cursor: pointer;
+}
+
+.arrowIcon {
+  transition: all ease 0.2s;
+  transform: scale(0.7);
+
+  path {
+    stroke: var(--mantine-color-sand-2);
+  }
+}
+
+.arrowIconActive {
+  transform: rotate(90deg) scale(0.7);
+}
+
+.boss {
+  display: block;
+  border-left: 1px solid var(--mantine-color-dimmed);
+  text-decoration: none;
+  transition: all ease 0.4s;
+
+  p {
+    margin-left: -2px;
+    padding: 4px 8px;
+    border-left: 4px solid transparent;
+  }
+
+  &:active,
+  &:link,
+  &:visited {
+    p {
+      color: var(--mantine-color-dimmed);
+    }
+  }
+
+  &:hover {
+    p {
+      color: var(--mantine-color-sand-2);
+      text-decoration: underline;
+      border-left: 4px solid var(--mantine-color-sand-3);
+      background: var(--mantine-color-dark-5);
+    }
+  }
+}
+
+.activeBoss{
+  &:active,
+  &:link,
+  &:visited {
+    p {
+      color: var(--mantine-color-sand-2);
+      text-decoration: underline;
+      border-left: 4px solid var(--mantine-color-sand-3);
+      background: linear-gradient(to right, var(--mantine-color-dark-5), var(--mantine-color-dark-6));
+    }
+  }
+  &:hover {
+    p {
+      background: linear-gradient(to right, var(--mantine-color-dark-5), var(--mantine-color-dark-5));
+    }
+  }
+}
