@@ -1,3 +1,3 @@
-import { EncounterPage } from "#features/pages";
+import { EncountersMapPage } from "#features/pages";
 
-export default EncounterPage;
+export default EncountersMapPage;

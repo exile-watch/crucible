@@ -1,4 +1,4 @@
-name: "@exile-watch / doryani"
+name: "Deploy crucible"
 
 on:
   workflow_dispatch:

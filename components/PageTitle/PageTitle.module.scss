@@ -1,4 +1,4 @@
-.bosses {
+.pageTitleContainer {
   display: flex;
   white-space: nowrap;
   overflow: auto;
@@ -58,4 +58,19 @@
   &:active {
     color: var(--mantine-color-sand-2);
   }
+}
+
+.label {
+  color: var(--mantine-color-dimmed);
+  text-decoration: none;
+  text-transform: capitalize;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.pageTitle {
+  color: var(--mantine-color-sand-2);
+  text-transform: capitalize;
 }

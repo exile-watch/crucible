@@ -1,7 +1,6 @@
 import {
   AppShell,
   Flex,
-  Title,
   useDisclosure,
   useMediaQuery,
 } from "@exile-watch/writ-react";
@@ -14,16 +13,33 @@ const SidebarEncountersDesktop = dynamic(
 );
 import styles from "./styles.module.scss";
 
+import cx from "classnames";
+import localFont from "next/font/local";
+import { PageTitle } from "../PageTitle/PageTitle";
+
+// @ts-ignore
+const font = localFont({
+  src: "../../fonts/Fontin-Regular.ttf",
+  variable: "--global-font-fontin",
+});
+
 type LayoutProps = {
   children?: ReactNode;
-  title?: string;
+  label?: string;
+  sublabel?: string;
+  title?: string | Array<{ name: string; isMap?: boolean; redirect: string }>;
   isWithoutSidebar?: boolean;
 };
 
-const Layout = ({ children, title, isWithoutSidebar = false }: LayoutProps) => {
+const Layout = ({
+  children,
+  title,
+  label,
+  sublabel,
+  isWithoutSidebar = false,
+}: LayoutProps) => {
   const [isOpen, { toggle }] = useDisclosure(false);
-  const { isMobile } = useMediaQuery();
-
+  const { isMobile, isTablet } = useMediaQuery();
   const renderSidebar =
     isWithoutSidebar === false || (isWithoutSidebar === true && isMobile);
 
@@ -36,21 +52,27 @@ const Layout = ({ children, title, isWithoutSidebar = false }: LayoutProps) => {
           : { breakpoint: 0, width: 0, collapsed: { mobile: !isOpen } }
       }
       withBorder={false}
+      className={cx(styles.main, font.variable)}
     >
-      <AppShell.Header bg="dark.6">
+      <AppShell.Header
+        className={cx(styles.header, {
+          [styles.headerMobile]: isTablet,
+          [styles.headerWithoutSidebar]: !renderSidebar,
+        })}
+      >
         <Header isOpen={isOpen} toggle={toggle} />
       </AppShell.Header>
+
       {renderSidebar && (
-        <AppShell.Navbar bg="dark.6">
+        <AppShell.Navbar
+          className={cx(styles.navbar, { [styles.navbarMobile]: isTablet })}
+        >
           <SidebarEncountersDesktop isOpen={isOpen} toggle={toggle} />
         </AppShell.Navbar>
       )}
-      <AppShell.Main ml="md" pr="md" className={styles.main}>
-        {title && (
-          <Title mb="2rem" order={2}>
-            {title}
-          </Title>
-        )}
+
+      <AppShell.Main ml="md" pr="md">
+        <PageTitle label={label} sublabel={sublabel} title={title} />
         <Flex mt="md" display="block">
           {children}
         </Flex>

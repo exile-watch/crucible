@@ -1,6 +1,8 @@
 .list {
   padding: 0;
   margin: 16px 0;
+  font-family: var(--global-font-fontin);
+  text-shadow: 1px 1px black;
 
   @media (max-width: 48em) {
     margin: 0 8px;

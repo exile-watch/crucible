@@ -3,13 +3,29 @@
   background-size: 22px 22px;
 }
 
-.announcement {
-  background: linear-gradient(to left, var(--mantine-color-dark-7), var(--mantine-color-red-9));
-  color: var(--mantine-color-red-2);
-  padding: 4px;
-  border: 2px solid var(--mantine-color-red-4);
-  border-radius: var(--mantine-radius-sm);
-  position: fixed;
-  z-index: 100;
-  box-shadow: 0 0 10px black;
+.header,
+.navbar {
+  background: color-mix(in srgb, var(--mantine-color-dimmed) 10%, transparent);
+  backdrop-filter: blur(1px);
+}
+
+.headerMobile,
+.navbarMobile {
+  backdrop-filter: blur(50px);
+}
+
+.header {
+  box-shadow: 253px 0 10px var(--mantine-color-dark-9);
+}
+
+.headerMobile {
+  box-shadow: 0 10px 10px var(--mantine-color-dark-9);
+}
+
+.headerWithoutSidebar {
+  box-shadow: 0 0 10px var(--mantine-color-dark-9);
+}
+
+.navbar {
+  box-shadow: 0 12px 10px var(--mantine-color-dark-9);
 }

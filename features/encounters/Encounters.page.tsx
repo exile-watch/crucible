@@ -4,7 +4,7 @@ import ListEncounters from "./_components/ListEncounters/ListEncounters";
 
 const EncountersPage = () => {
   return (
-    <Layout>
+    <Layout title="Encounters">
       <ListEncounters />
     </Layout>
   );

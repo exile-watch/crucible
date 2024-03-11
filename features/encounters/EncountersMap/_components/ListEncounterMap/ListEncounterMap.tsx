@@ -4,7 +4,6 @@ import { kebabCase } from "lodash";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { HomepageCard } from "#components";
-import { EncounterPage } from "#features/pages";
 
 const ListEncounterMap = () => {
   const {
@@ -24,10 +23,6 @@ const ListEncounterMap = () => {
         setData(null);
       });
   }, [map]);
-
-  if (!map) return null;
-
-  if (category !== "common-maps") return <EncounterPage />;
 
   return (
     <SimpleGrid cols={{ xxxl: 6, xxl: 5, xl: 4, lg: 3, md: 2, sm: 2, xs: 1 }}>

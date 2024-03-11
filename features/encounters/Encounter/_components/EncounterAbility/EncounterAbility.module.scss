@@ -68,7 +68,6 @@
   opacity: 0.2;
 }
 
-
 .link {
   position: absolute;
   top: 0;
@@ -77,6 +76,11 @@
   bottom: 0;
   z-index: 2;
 }
+
 .details {
   letter-spacing: .4px;
+
+  p {
+    font-family: var(--global-font-fontin)
+  }
 }

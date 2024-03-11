@@ -22,11 +22,11 @@ const AboutAbility = ({ about, abilityName }: AboutAbilityProps) => {
           //   key={`bossAboutAbility_${i}`}
           //   isEven={isEven}
           // />
-          <Text c="dimmed" key={abilityName}>
+          <Text c="dimmed" key={`about_ability_${abilityName}`}>
             This section has no data yet
           </Text>
         ) : (
-          <Text c="sand.2" key={abilityName}>
+          <Text c="sand.2" key={`about_ability_${abilityName}`}>
             {about}
           </Text>
         ),

@@ -31,7 +31,7 @@ const Video = ({
 
   const isVisible = useIntersectionObserver(videoContainerRef, {
     root: null,
-    threshold: 0.25,
+    threshold: 0.5,
   });
 
   const setPlayBack = () => {

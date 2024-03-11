@@ -71,7 +71,7 @@ const HomepageCard = ({
         )}
       </Card.Section>
       <Card.Section mt="md">
-        <Text ta="center" mb="md">
+        <Text ta="center" mb="md" className={styles.label}>
           {name}
         </Text>
       </Card.Section>

@@ -5,6 +5,8 @@
 .label {
   width: 100%;
   text-transform: uppercase;
+  font-family: inherit;
+  font-size: var(--mantine-font-size-xs)
 }
 
 .missingContent {

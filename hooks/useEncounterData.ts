@@ -9,6 +9,7 @@ const MAP_WITHOUT_DIRECT_BOSS = [
   "simulacrum",
   "the-alluring-abyss",
   "the-apex-of-sacrifice",
+  "the-shapers-realm",
 ];
 
 function useEncounterData() {
@@ -22,8 +23,12 @@ function useEncounterData() {
     push,
     asPath,
   } = useRouter();
-  const heading = category === "common-maps" ? map : category;
-  const subheading = category !== "common-maps" && data?.map;
+  const heading = ["common-maps", "endgame-bosses"].includes(category as string)
+    ? map
+    : category;
+  const subheading =
+    !["common-maps", "endgame-bosses"].includes(category as string) &&
+    data?.map;
   const isMap = !!data?.map;
 
   useEffect(() => {
@@ -68,4 +73,4 @@ function useEncounterData() {
   };
 }
 
-export { useEncounterData };
+export { useEncounterData, MAP_WITHOUT_DIRECT_BOSS };

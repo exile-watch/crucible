@@ -18,7 +18,8 @@
 .videoWrapper {
   height: 450px;
   overflow: hidden;
-  box-shadow: 0 5px 20px black;
+  box-shadow: 0 2px 10px #00000090;
+  border-radius: var(--mantine-radius-sm);
 
   @media (max-width: 45em) {
     height: 45vw;

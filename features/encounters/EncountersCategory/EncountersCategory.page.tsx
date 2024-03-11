@@ -10,7 +10,7 @@ const EncountersCategoryPage = () => {
   } = useRouter();
 
   return (
-    <Layout title={startCase(category as string)}>
+    <Layout label={startCase(category as string)}>
       <ListEncounterCategories />
     </Layout>
   );

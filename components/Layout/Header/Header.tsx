@@ -41,7 +41,7 @@ const Header = ({ isOpen, toggle }: HeaderProps) => {
       {isMounted && !isMobile && (
         <InputWithResults isOpen={isOpen} toggle={toggle} />
       )}
-      <Group>
+      <Group className={styles.icons}>
         <Link href="https://github.com/exile-watch" target="_blank">
           <IconBrandGithub color="beige" />
         </Link>
