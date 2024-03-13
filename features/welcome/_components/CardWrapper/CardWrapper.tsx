@@ -19,16 +19,17 @@ const CardWrapper = ({
         c={`${color}.2`}
       >
         <Video src={src} isOnWelcomePage />
-        <Title order={3} ta="center" fs="italic">
+        <Title order={3} ta="center">
           ... {title} ...
         </Title>
         <Divider
           fs="italic"
           labelPosition="center"
           label={`... ${dividerLabel} ...`}
-          mt="sm"
+          mt="xs"
           color={`${color}.2`}
         />
+
         <Card.Section p="md">
           <Stack>
             {aboutList.map((item, i, self) => (

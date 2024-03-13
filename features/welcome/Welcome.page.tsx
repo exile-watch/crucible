@@ -13,6 +13,7 @@ import CardWrapper from "#features/welcome/_components/CardWrapper/CardWrapper";
 import WelcomePageButtons from "#features/welcome/_components/WelcomePageButtons/WelcomePageButtons";
 import WelcomePageSummary from "#features/welcome/_components/WelcomePageSummary/WelcomePageSummary";
 import { welcomePageContent } from "#features/welcome/_components/about-list";
+import styles from "./Welcome.module.scss";
 
 const WelcomePage = () => {
   return (
@@ -26,7 +27,7 @@ const WelcomePage = () => {
               alt="exile.watch logo"
             />
           </Center>
-          <Title fs="italic">Are you...</Title>
+          <Title className={styles.container}>Are you...</Title>
           <Center>
             <SimpleGrid cols={{ md: 3, sm: 1, xs: 1 }}>
               <CardWrapper {...welcomePageContent.outsider} />

@@ -6,14 +6,10 @@
   text-align: center;
 
   > div:first-child {
-    margin-bottom: 2em;
+    margin-bottom: var(--mantine-spacing-lg);
     width: calc(100% - 16px);
-    max-width: 795px;
+    max-width: 800px;
     align-self: center;
-  }
-
-  &:last-child {
-    margin-bottom: 1em;
   }
 
   @media (min-width: 88em) {
@@ -26,6 +22,7 @@
     &:nth-child(odd) {
       flex-direction: row;
       text-align: left;
+
       > div:last-child {
         margin-left: 2rem;
 
@@ -50,13 +47,7 @@
           }
         }
       }
-  }
-
-
-  }
-
-  &:first-child {
-    margin-top: 2rem;
+    }
   }
 }
 

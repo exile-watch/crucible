@@ -1,6 +1,7 @@
 import {
   AppShell,
   Flex,
+  Stack,
   useDisclosure,
   useMediaQuery,
 } from "@exile-watch/writ-react";
@@ -42,6 +43,7 @@ const Layout = ({
   const { isMobile, isTablet } = useMediaQuery();
   const renderSidebar =
     isWithoutSidebar === false || (isWithoutSidebar === true && isMobile);
+  const withPageTitle = title || label;
 
   return (
     <AppShell
@@ -52,12 +54,11 @@ const Layout = ({
           : { breakpoint: 0, width: 0, collapsed: { mobile: !isOpen } }
       }
       withBorder={false}
-      className={cx(styles.main, font.variable)}
+      className={cx(styles.appShell, font.variable)}
     >
       <AppShell.Header
         className={cx(styles.header, {
           [styles.headerMobile]: isTablet,
-          [styles.headerWithoutSidebar]: !renderSidebar,
         })}
       >
         <Header isOpen={isOpen} toggle={toggle} />
@@ -71,11 +72,24 @@ const Layout = ({
         </AppShell.Navbar>
       )}
 
-      <AppShell.Main ml="md" pr="md">
-        <PageTitle label={label} sublabel={sublabel} title={title} />
-        <Flex mt="md" display="block">
-          {children}
-        </Flex>
+      <AppShell.Main mr="md">
+        <Stack>
+          {withPageTitle && (
+            <PageTitle label={label} sublabel={sublabel} title={title} />
+          )}
+          <Flex
+            mt="md"
+            px="md"
+            display="block"
+            className={
+              withPageTitle
+                ? styles.mainContainer
+                : styles.mainContainerWithoutPageTitle
+            }
+          >
+            {children}
+          </Flex>
+        </Stack>
       </AppShell.Main>
     </AppShell>
   );

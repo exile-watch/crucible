@@ -23,7 +23,7 @@ const welcomePageContent = {
   },
   softwareEngineer: {
     title: "a Software Engineer",
-    dividerLabel: "that",
+    dividerLabel: "who",
     aboutList: [
       "likes digging through Software Architecture, primarily Frontend",
       "would like to contribute to an open-source project",

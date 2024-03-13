@@ -1,4 +1,4 @@
-.main {
+.appShell {
   background: linear-gradient(90deg, var(--mantine-color-dark-7) 21px,transparent 1%) center, linear-gradient(var(--mantine-color-dark-7) 21px, transparent 1%), #eeeeee40;
   background-size: 22px 22px;
 }
@@ -14,18 +14,39 @@
   backdrop-filter: blur(50px);
 }
 
-.header {
-  box-shadow: 253px 0 10px var(--mantine-color-dark-9);
+$viewportHeight: 100vh;
+$headingSpacing: var(--mantine-spacing-md);
+$contentMarginBottom: var(--mantine-spacing-md);
+$pageTitleHeight: 70px;
+$pageTitleBottomPadding: 4px;
+$headerHeight: 70px;
+
+$height: calc($viewportHeight - $headerHeight - $pageTitleHeight - $pageTitleBottomPadding - $headingSpacing - $contentMarginBottom * 2);
+$heightWithoutPageTitle: calc($viewportHeight - $headerHeight - $headingSpacing);
+
+.mainContainer,
+.mainContainerWithoutPageTitle {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+
+    &-track {
+      background: var(--mantine-color-dark-5);
+      //border-radius: 3px;
+    }
+
+    &-thumb {
+      background: var(--mantine-color-sand-2);
+      //border-radius: 3px;
+    }
+  }
 }
 
-.headerMobile {
-  box-shadow: 0 10px 10px var(--mantine-color-dark-9);
+.mainContainer {
+  height: $height;
 }
 
-.headerWithoutSidebar {
-  box-shadow: 0 0 10px var(--mantine-color-dark-9);
-}
-
-.navbar {
-  box-shadow: 0 12px 10px var(--mantine-color-dark-9);
+.mainContainerWithoutPageTitle {
+  height: $heightWithoutPageTitle
 }

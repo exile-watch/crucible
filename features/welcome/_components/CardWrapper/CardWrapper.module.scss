@@ -1,5 +1,10 @@
 .container {
-  flex-flow: unset;
+  h3, p, span {
+    font-family: var(--global-font-fontin);
+  }
+  @media (min-width: 62em) {
+    flex-flow: unset;
+  }
 }
 
 .sand {

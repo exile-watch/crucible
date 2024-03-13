@@ -69,10 +69,8 @@ const PageTitle = ({ label, sublabel, title }: PageTitleProps) => {
     ? asPath.split("/").slice(0, -2)?.join("/")
     : asPath.split("/").slice(0, -1)?.join("/");
 
-  if (!label && !title) return null;
-
   return (
-    <Stack mt={_label ? "md" : "sm"} gap={0}>
+    <Stack mt={_label ? "md" : "sm"} gap={0} ml="md">
       {_label && (
         <Title order={4}>
           <Link href={redirectToPreviousCategory} className={styles.label}>

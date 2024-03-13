@@ -9,14 +9,18 @@ const WelcomePageSummary = () => {
       </Text>
       <Divider />
       <Text>
-        <Code>exile.watch</Code> aims to provide quick snippets of the majority
-        of Path of Exile encounters' abilities.
+        <Code>exile.watch</Code> offers concise, visual guides and explanations
+        for boss encounters in Path of Exile, targeting gamers seeking quick
+        insights into game mechanics.
       </Text>
       <Text>
-        In the modern world, no one has time to watch a 10-minute fight guide.
+        This platform simplifies learning through short, informative GIFs,
+        bypassing lengthy tutorials for efficient strategy acquisition.
       </Text>
-      <Text>Learn strategies in no time.</Text>
-      <Text>Each ability is explained with short GIFs</Text>
+      <Text>
+        Ideal for both new and experienced players, it aims to enhance
+        understanding and gameplay with immediate, easy-to-digest content.
+      </Text>
     </>
   );
 };
