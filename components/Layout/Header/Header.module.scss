@@ -1,6 +1,15 @@
+.header {
+  background: color-mix(in srgb, var(--mantine-color-dimmed) 10%, transparent);
+  backdrop-filter: blur(1px);
+
+  @media (max-width: 64em) {
+    backdrop-filter: blur(50px);
+  }
+}
+
 .link {
   text-decoration: none;
-  font-family: "Fontin-Regular";
+  font-family: var(--global-font-fontin);
 }
 
 .icons {

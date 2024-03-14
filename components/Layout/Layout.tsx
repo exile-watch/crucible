@@ -1,7 +1,5 @@
 import {
   AppShell,
-  Flex,
-  Stack,
   useDisclosure,
   useMediaQuery,
 } from "@exile-watch/writ-react";
@@ -16,7 +14,7 @@ import styles from "./styles.module.scss";
 
 import cx from "classnames";
 import localFont from "next/font/local";
-import { PageTitle } from "../PageTitle/PageTitle";
+import Main from "./Main/Main";
 
 // @ts-ignore
 const font = localFont({
@@ -41,30 +39,22 @@ const Layout = ({
 }: LayoutProps) => {
   const [isOpen, { toggle }] = useDisclosure(false);
   const { isMobile, isTablet } = useMediaQuery();
-  const renderSidebar =
+  const withSidebar =
     isWithoutSidebar === false || (isWithoutSidebar === true && isMobile);
-  const withPageTitle = title || label;
+  const navbar = withSidebar
+    ? { breakpoint: "md", width: 250, collapsed: { mobile: !isOpen } }
+    : { breakpoint: 0, width: 0, collapsed: { mobile: !isOpen } };
 
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={
-        renderSidebar
-          ? { breakpoint: "md", width: 250, collapsed: { mobile: !isOpen } }
-          : { breakpoint: 0, width: 0, collapsed: { mobile: !isOpen } }
-      }
+      navbar={navbar}
       withBorder={false}
       className={cx(styles.appShell, font.variable)}
     >
-      <AppShell.Header
-        className={cx(styles.header, {
-          [styles.headerMobile]: isTablet,
-        })}
-      >
-        <Header isOpen={isOpen} toggle={toggle} />
-      </AppShell.Header>
+      <Header isOpen={isOpen} toggle={toggle} />
 
-      {renderSidebar && (
+      {withSidebar && (
         <AppShell.Navbar
           className={cx(styles.navbar, { [styles.navbarMobile]: isTablet })}
         >
@@ -72,25 +62,9 @@ const Layout = ({
         </AppShell.Navbar>
       )}
 
-      <AppShell.Main mr="md">
-        <Stack>
-          {withPageTitle && (
-            <PageTitle label={label} sublabel={sublabel} title={title} />
-          )}
-          <Flex
-            mt="md"
-            px="md"
-            display="block"
-            className={
-              withPageTitle
-                ? styles.mainContainer
-                : styles.mainContainerWithoutPageTitle
-            }
-          >
-            {children}
-          </Flex>
-        </Stack>
-      </AppShell.Main>
+      <Main label={label} sublabel={sublabel} title={title}>
+        {children}
+      </Main>
     </AppShell>
   );
 };

@@ -1,0 +1,38 @@
+$viewportHeight: 100vh;
+$headingSpacing: var(--mantine-spacing-md);
+$contentMarginBottom: var(--mantine-spacing-md);
+$pageTitleHeight: 70px;
+$pageTitleBottomPadding: 4px;
+$headerHeight: 70px;
+
+$height: calc($viewportHeight - $headerHeight - $pageTitleHeight - $pageTitleBottomPadding - $headingSpacing - $contentMarginBottom * 2);
+$heightWithoutPageTitle: calc($viewportHeight - $headerHeight - $headingSpacing);
+
+.mainContainer {
+  height: $height;
+}
+
+.mainContainerWithoutPageTitle {
+  height: $heightWithoutPageTitle
+}
+
+.mainContainer,
+.mainContainerWithoutPageTitle {
+  overflow: auto;
+}
+
+.withScrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+
+    &-track {
+      background: var(--mantine-color-dark-5);
+      //border-radius: 3px;
+    }
+
+    &-thumb {
+      background: var(--mantine-color-sand-2);
+      //border-radius: 3px;
+    }
+  }
+}
