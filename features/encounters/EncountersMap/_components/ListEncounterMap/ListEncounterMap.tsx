@@ -7,14 +7,14 @@ import { HomepageCard } from "#components";
 
 const ListEncounterMap = () => {
   const {
-    query: { category, map },
+    query: { directory, category, map },
     asPath,
   } = useRouter();
   const [data, setData] = useState<MapType | null>(null);
 
   useEffect(() => {
     import(
-      `@exile-watch/encounter-data/dist/extracted-data/${category}/${map}.esm` as string
+      `@exile-watch/encounter-data/dist/extracted-data/${directory}/${category}/${map}.esm` as string
     )
       .then((d) => {
         setData(d.default);

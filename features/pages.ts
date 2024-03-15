@@ -7,6 +7,11 @@ export { EncountersCategoryPage } from "./encounters/EncountersCategory/Encounte
 export { EncountersMapPage } from "./encounters/EncountersMap/EncountersMap.page";
 
 /**
+ * Directory
+ */
+export { DirectoryPage } from "./directory/Directory.page";
+
+/**
  * Home
  */
 export { HomePage } from "./home/Home.page";

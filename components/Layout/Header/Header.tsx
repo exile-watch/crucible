@@ -7,6 +7,7 @@ import { useMediaQuery } from "@exile-watch/writ-react";
 import { IconBrandDiscord, IconBrandGithub } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
+// import HeaderDirectories from "./HeaderDirectories/HeaderDirectories";
 
 type HeaderProps = {
   isOpen: boolean;
@@ -24,8 +25,8 @@ const Header = ({ isOpen, toggle }: HeaderProps) => {
 
   return (
     <AppShell.Header className={styles.header}>
-      <Group h="100%" px="xs" justify="space-between">
-        <Group gap="xs">
+      <Group h="100%" px="xs" gap={0}>
+        <Group gap="xs" className={styles.logoContainer}>
           <Burger opened={isOpen} onClick={toggle} hiddenFrom="md" size="sm" />
           <Link href="/" className={styles.link}>
             <Group gap="xs">
@@ -39,16 +40,20 @@ const Header = ({ isOpen, toggle }: HeaderProps) => {
             </Group>
           </Link>
         </Group>
-        {isMounted && !isMobile && (
-          <InputWithResults isOpen={isOpen} toggle={toggle} />
-        )}
-        <Group className={styles.icons}>
-          <Link href="https://github.com/exile-watch" target="_blank">
-            <IconBrandGithub color="beige" />
-          </Link>
-          <Link href="https://discord.gg/U3kXS4ej" target="_blank">
-            <IconBrandDiscord color="beige" />
-          </Link>
+        <Group justify="space-between" className={styles.rightContainer}>
+          <div />
+          {/*<HeaderDirectories />*/}
+          {isMounted && !isMobile && (
+            <InputWithResults isOpen={isOpen} toggle={toggle} />
+          )}
+          <Group className={styles.icons}>
+            <Link href="https://github.com/exile-watch" target="_blank">
+              <IconBrandGithub color="beige" />
+            </Link>
+            <Link href="https://discord.gg/U3kXS4ej" target="_blank">
+              <IconBrandDiscord color="beige" />
+            </Link>
+          </Group>
         </Group>
       </Group>
     </AppShell.Header>

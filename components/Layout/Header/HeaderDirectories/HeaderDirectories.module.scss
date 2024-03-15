@@ -1,0 +1,36 @@
+.directoryLinksContainer {
+  height: 100%;
+}
+
+.directory {
+  padding: 0 var(--mantine-spacing-xs);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  color: var(--mantine-color-dimmed);
+  padding-top: 2px;
+
+  &:hover {
+    border-bottom: 2px solid var(--mantine-color-sand-2);
+    color: var(--mantine-color-sand-2);
+  }
+}
+
+.activeDirectory {
+  border-bottom: 2px solid var(--mantine-color-sand-2);
+  color: var(--mantine-color-sand-2);
+}
+
+.disabledDirectory {
+  border-bottom: 2px solid transparent;
+  color: var(--mantine-color-dimmed);
+  cursor: default;
+  pointer-events: none;
+
+  &:hover {
+    border-bottom: 2px solid transparent;
+    color: transparent;
+  }
+}

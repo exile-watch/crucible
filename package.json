@@ -9,6 +9,7 @@
     "lint:apply": "npx @biomejs/biome check --apply .",
     "format": "npx @biomejs/biome format --write .",
     "typecheck": "npx tsc",
+    "qc": "npm run format && npm run lint:apply && npm run typecheck",
     "test": "vitest --silent",
     "postinstall": "npx lefthook install"
   },
@@ -18,7 +19,7 @@
     }
   },
   "dependencies": {
-    "@exile-watch/encounter-data": "^0.10.0",
+    "@exile-watch/encounter-data": "^0.11.0",
     "@exile-watch/writ-icons": "^0.3.7",
     "@exile-watch/writ-react": "^0.7.1",
     "@tabler/icons-react": "^2.47.0",
