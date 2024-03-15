@@ -19,3 +19,4 @@ jobs:
           DRY_RUN: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_ACTOR: ${{ github.actor }}
+          prRef: ${{ github.event.pull_request.head.ref }}
