@@ -1,0 +1,22 @@
+name: "Deploy crucible"
+
+on:
+  pull_request_target:
+    types:
+      - labeled
+
+jobs:
+  preview-deploy-webapp:
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'preview-deploy')
+    steps:
+      - name: Preview deploy Crucible to Cloudflare Pages
+        uses: exile-watch/doryani/preview-deploy-webapp@main
+        with:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT_NAME: "crucible"
+          ENV: "preview"
+          DRY_RUN: true
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_ACTOR: ${{ github.actor }}
