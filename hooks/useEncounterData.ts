@@ -19,7 +19,7 @@ function useEncounterData() {
     BossType["abilities"] | null
   >(null);
   const {
-    query: { category, map, boss },
+    query: { directory, category, map, boss },
     push,
     asPath,
   } = useRouter();
@@ -34,7 +34,7 @@ function useEncounterData() {
   useEffect(() => {
     setIsLoading(true);
     import(
-      `@exile-watch/encounter-data/dist/extracted-data/${category}/${map}.esm`
+      `@exile-watch/encounter-data/dist/extracted-data/${directory}/${category}/${map}.esm`
     )
       .then((d) => {
         setData(d);

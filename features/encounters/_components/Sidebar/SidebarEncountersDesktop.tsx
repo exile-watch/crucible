@@ -45,7 +45,7 @@ const SidebarEncountersDesktop = ({
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [data, setData] = useState<SidebarNavigationPathsType | null>(null);
   const {
-    query: { category, map, boss },
+    query: { directory, category, map, boss },
   } = useRouter();
   const [activeCategory, setActiveCategory] = useState(`sidebar_${category}`);
 
@@ -63,7 +63,9 @@ const SidebarEncountersDesktop = ({
 
   useEffect(() => {
     import(
-      "@exile-watch/encounter-data/dist/extracted-data/paths.esm" as string
+      `@exile-watch/encounter-data/dist/extracted-data/${
+        directory || "path-of-exile-1"
+      }/paths.esm`
     )
       .then((d) => {
         setData(d.default);

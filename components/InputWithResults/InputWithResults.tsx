@@ -30,7 +30,7 @@ const InputWithResults = ({ isOpen, toggle }: InputWithResultsProps) => {
   const loadData = async () => {
     setIsDataLoading(true);
     const indexedSearch = await import(
-      "@exile-watch/encounter-data/dist/extracted-data/indexed-search.esm" as string
+      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/indexed-search.esm" as string
     );
     setIndexedSearch(indexedSearch.default);
     setIsDataLoading(false);

@@ -6,13 +6,13 @@ import { HomepageCard, SimpleCard } from "#components";
 
 const ListEncounterCategories = () => {
   const {
-    query: { category },
+    query: { directory, category },
   } = useRouter();
   const [data, setData] = useState<CategoryPageType | null>(null);
 
   useEffect(() => {
     import(
-      `@exile-watch/encounter-data/dist/extracted-data/${category}.esm` as string
+      `@exile-watch/encounter-data/dist/extracted-data/${directory}/${category}.esm` as string
     )
       .then((d) => {
         setData(d.default);
