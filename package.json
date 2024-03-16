@@ -40,7 +40,7 @@
     "@exile-watch/typescript-config": "^0.3.1",
     "@exile-watch/unit-testing-config": "^0.2.0",
     "@naxodev/nx-cloudflare": "^2.0.1",
-    "@nx/next": "18.0.8",
+    "@nx/next": "18.1.1",
     "@types/lodash": "^4.14.168",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.64",
