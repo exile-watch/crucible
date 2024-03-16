@@ -1,3 +1,5 @@
+import { metaEncountersCategoryMaps } from "@exile-watch/seo";
+import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import React from "react";
 import { Layout } from "#components";
@@ -7,7 +9,7 @@ import ListEncounterMap from "./_components/ListEncounterMap/ListEncounterMap";
 
 const EncountersMapPage = () => {
   const {
-    query: { category, map },
+    query: { directory, category, map },
   } = useRouter();
   const isMapWithoutDirectBoss = MAP_WITHOUT_DIRECT_BOSS.includes(
     map as string,
@@ -17,9 +19,17 @@ const EncountersMapPage = () => {
     return <EncounterPage />;
 
   return (
-    <Layout title={map as string}>
-      <ListEncounterMap />
-    </Layout>
+    <>
+      {directory && category && map && (
+        <NextSeo
+          {...metaEncountersCategoryMaps({ directory, category, map })}
+        />
+      )}
+
+      <Layout title={map as string}>
+        <ListEncounterMap />
+      </Layout>
+    </>
   );
 };
 
