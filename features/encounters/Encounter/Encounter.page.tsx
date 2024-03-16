@@ -26,8 +26,10 @@ const EncounterPage = () => {
 
   return (
     <>
-      {directory && category && map && boss && (
-        <NextSeo {...metaEncounter({ directory, category, encounter: boss })} />
+      {directory && category && (map || boss) && (
+        <NextSeo
+          {...metaEncounter({ directory, category, encounter: map || boss })}
+        />
       )}
 
       <Layout title={title}>
