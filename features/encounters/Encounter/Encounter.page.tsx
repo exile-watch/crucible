@@ -1,4 +1,6 @@
+import { metaEncounter } from "@exile-watch/seo";
 import { kebabCase } from "lodash";
+import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { Layout } from "#components";
 import { useEncounterData } from "#hooks/useEncounterData";
@@ -6,15 +8,15 @@ import EncounterContainer from "./_components/EncounterHeading/EncounterContaine
 
 const EncounterPage = () => {
   const {
-    query: { category, map },
+    query: { directory, category, map, boss },
   } = useRouter();
   const { data, isMap } = useEncounterData();
 
   const title = data?.bosses?.map(({ name: encounterName }) => {
     const kebabCasedEncounterName = kebabCase(encounterName);
     const redirect = isMap
-      ? `/encounters/${category}/${map}/${kebabCasedEncounterName}`
-      : `/encounters/${category}/${kebabCasedEncounterName}`;
+      ? `/${directory}/encounters/${category}/${map}/${kebabCasedEncounterName}`
+      : `/${directory}/encounters/${category}/${kebabCasedEncounterName}`;
     return {
       name: encounterName,
       redirect,
@@ -23,9 +25,15 @@ const EncounterPage = () => {
   });
 
   return (
-    <Layout title={title}>
-      <EncounterContainer />
-    </Layout>
+    <>
+      {directory && category && map && boss && (
+        <NextSeo {...metaEncounter({ directory, category, encounter: boss })} />
+      )}
+
+      <Layout title={title}>
+        <EncounterContainer />
+      </Layout>
+    </>
   );
 };
 

@@ -1,4 +1,6 @@
+import { metaEncountersCategories } from "@exile-watch/seo";
 import { startCase } from "lodash";
+import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import React from "react";
 import { Layout } from "#components";
@@ -6,13 +8,19 @@ import ListEncounterCategories from "./_components/ListEncounterCategories/ListE
 
 const EncountersCategoryPage = () => {
   const {
-    query: { category },
+    query: { directory, category },
   } = useRouter();
 
   return (
-    <Layout label={startCase(category as string)}>
-      <ListEncounterCategories />
-    </Layout>
+    <>
+      {directory && category && (
+        <NextSeo {...metaEncountersCategories({ directory, category })} />
+      )}
+
+      <Layout label={startCase(category as string)}>
+        <ListEncounterCategories />
+      </Layout>
+    </>
   );
 };
 
