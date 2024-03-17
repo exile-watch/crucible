@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.10.0",
-    "@exile-watch/biome-config": "^0.2.2",
+    "@exile-watch/biome-config": "^0.3.2",
     "@exile-watch/lefthook-config": "^0.5.2",
     "@exile-watch/postcss-config": "^0.2.2",
     "@exile-watch/typescript-config": "^0.3.1",
@@ -53,9 +53,7 @@
     "targets": {
       "build": {
         "executor": "@naxodev/nx-cloudflare:next-build",
-        "outputs": [
-          "{options.outputPath}"
-        ],
+        "outputs": ["{options.outputPath}"],
         "defaultConfiguration": "production",
         "options": {
           "outputPath": "{workspaceRoot}"

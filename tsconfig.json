@@ -11,12 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "es5",
-      "dom",
-      "es2017",
-      "dom.iterable"
-    ],
+    "lib": ["es5", "dom", "es2017", "dom.iterable"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -30,33 +25,15 @@
     "baseUrl": ".",
     "removeComments": true,
     "paths": {
-      "#build-tools/*": [
-        "build-tools/*"
-      ],
-      "#constants/*": [
-        "constants/*"
-      ],
-      "#components": [
-        "components"
-      ],
-      "#data/*": [
-        "data/*"
-      ],
-      "#enums/*": [
-        "enums/*"
-      ],
-      "#features/*": [
-        "features/*"
-      ],
-      "#hooks/*": [
-        "hooks/*"
-      ],
-      "#store": [
-        "store/store.ts"
-      ],
-      "#types": [
-        "types"
-      ]
+      "#build-tools/*": ["build-tools/*"],
+      "#constants/*": ["constants/*"],
+      "#components": ["components"],
+      "#data/*": ["data/*"],
+      "#enums/*": ["enums/*"],
+      "#features/*": ["features/*"],
+      "#hooks/*": ["hooks/*"],
+      "#store": ["store/store.ts"],
+      "#types": ["types"]
     },
     "incremental": true,
     "plugins": [
@@ -65,13 +42,6 @@
       }
     ]
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "vitest/**/*"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "vitest/**/*"]
 }

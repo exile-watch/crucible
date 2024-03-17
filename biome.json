@@ -1,34 +1,3 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
-  "files": {
-    "ignore": ["node_modules", ".next", ".nx", "out"]
-  },
-  "organizeImports": {
-    "enabled": true
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "a11y": {
-        "useKeyWithClickEvents": "off"
-      },
-      "suspicious": {
-        "noExplicitAny": "off",
-        "noArrayIndexKey": "off",
-        "noShadowRestrictedNames": "off"
-      },
-      "correctness": {
-        "useExhaustiveDependencies": "off"
-      },
-      "complexity": {
-        "noExtraBooleanCast": "off",
-        "noForEach": "off"
-      }
-    }
-  },
-  "formatter": {
-    "lineEnding": "crlf",
-    "indentStyle": "space"
-  }
+  "extends": ["@exile-watch/biome-config"]
 }
