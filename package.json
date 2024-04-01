@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.10.0",
-    "@exile-watch/biome-config": "^0.3.4",
-    "@exile-watch/lefthook-config": "^0.5.8",
+    "@exile-watch/biome-config": "^0.3.6",
+    "@exile-watch/lefthook-config": "^0.5.11",
     "@exile-watch/postcss-config": "^0.2.2",
     "@exile-watch/typescript-config": "^0.3.2",
     "@exile-watch/unit-testing-config": "^0.2.0",
