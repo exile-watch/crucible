@@ -46,7 +46,7 @@
     "@types/node": "^20.11.28",
     "@types/react": "^18.2.64",
     "nx": "18.0.8",
-    "sass": "^1.72.0"
+    "sass": "^1.74.1"
   },
   "nx": {
     "includedScripts": [],
