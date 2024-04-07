@@ -12,7 +12,7 @@ const EncounterPage = () => {
   } = useRouter();
   const { data, isMap } = useEncounterData();
 
-  const title = data?.bosses?.map(({ name: encounterName }) => {
+  const title = data?.encounters?.map(({ name: encounterName }) => {
     const kebabCasedEncounterName = kebabCase(encounterName);
     const redirect = isMap
       ? `/${directory}/encounters/${category}/${map}/${kebabCasedEncounterName}`

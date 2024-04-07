@@ -1,4 +1,4 @@
-import { HomepageObjType } from "@exile-watch/encounter-data";
+import type { HomepageObjType } from "@exile-watch/encounter-data";
 import { SimpleGrid } from "@exile-watch/writ-react";
 import React from "react";
 import HomepageVideo from "../HomepageVideo/HomepageVideo";

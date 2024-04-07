@@ -8,7 +8,7 @@ const ListEncounters = () => {
 
   useEffect(() => {
     import(
-      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/encounters.esm" as string
+      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/encounters.mjs" as string
     )
       .then((d) => {
         setData(d.default);

@@ -1,4 +1,4 @@
-import { HomepageType } from "@exile-watch/encounter-data";
+import type { HomepageType } from "@exile-watch/encounter-data";
 import { SimpleGrid, Stack, Title } from "@exile-watch/writ-react";
 import React, { useEffect, useState } from "react";
 import { HomepageCard } from "#components";
@@ -8,7 +8,7 @@ const ListHomeEncounters = () => {
 
   useEffect(() => {
     import(
-      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/homepage.esm" as string
+      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/homepage.mjs" as string
     )
       .then((d) => {
         setData(d.default);

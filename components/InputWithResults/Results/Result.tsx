@@ -3,7 +3,7 @@ import React from "react";
 
 import { Badge, Combobox, Group, Stack, Text } from "@exile-watch/writ-react";
 
-import { IndexedSearchTypeItem } from "@exile-watch/encounter-data";
+import type { IndexedSearchTypeItem } from "@exile-watch/encounter-data";
 import styles from "./Results.module.scss";
 
 const Result = ({

@@ -3,7 +3,7 @@ import React from "react";
 
 import Result from "./Result";
 
-import { IndexedSearchType } from "@exile-watch/encounter-data";
+import type { IndexedSearchType } from "@exile-watch/encounter-data";
 import { Combobox, Text } from "@exile-watch/writ-react";
 
 type ResultsProps = {

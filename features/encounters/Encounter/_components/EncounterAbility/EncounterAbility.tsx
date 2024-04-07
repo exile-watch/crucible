@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from "react";
 import Video from "#features/encounters/Encounter/_components/EncounterAbility/Video/Video";
 import { AbilityName, AbilityTip, AboutAbility } from "./Details";
 
-import { BossAbilityType } from "@exile-watch/encounter-data";
+import type { BossAbilityType } from "@exile-watch/encounter-data";
 import { useRouter } from "next/router";
 import styles from "./EncounterAbility.module.scss";
 
@@ -17,7 +17,7 @@ const EncounterAbility = ({
   name,
   about,
   gif,
-  tip,
+  type,
   isEven,
 }: BossAbilityProps) => {
   const { query } = useRouter();
@@ -46,7 +46,7 @@ const EncounterAbility = ({
         {about && (
           <AboutAbility about={about} abilityName={name} isEven={isEven} />
         )}
-        <AbilityTip tip={tip} />
+        <AbilityTip type={type} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 
 import { Stack, Title } from "@exile-watch/writ-react";
 import styles from "./Details.module.scss";

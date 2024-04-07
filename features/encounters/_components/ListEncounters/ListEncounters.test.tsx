@@ -5,7 +5,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import ListEncounters from "./ListEncounters"; // Adjust the import path as necessary
 
 vi.mock(
-  "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/encounters.esm",
+  "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/encounters.mjs",
   () => {
     return {
       __esModule: true,
@@ -27,7 +27,7 @@ describe("ListEncounters", () => {
 
   it("renders nothing when data is null", async () => {
     vi.mock(
-      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/encounters.esm",
+      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/encounters.mjs",
       () => {
         return {
           __esModule: true,

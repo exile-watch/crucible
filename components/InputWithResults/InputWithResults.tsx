@@ -1,4 +1,4 @@
-import { IndexedSearchType } from "@exile-watch/encounter-data";
+import type { IndexedSearchType } from "@exile-watch/encounter-data";
 import {
   Combobox,
   InputBase,
@@ -30,7 +30,7 @@ const InputWithResults = ({ isOpen, toggle }: InputWithResultsProps) => {
   const loadData = async () => {
     setIsDataLoading(true);
     const indexedSearch = await import(
-      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/indexed-search.esm" as string
+      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/indexed-search.mjs" as string
     );
     setIndexedSearch(indexedSearch.default);
     setIsDataLoading(false);
@@ -77,7 +77,7 @@ const InputWithResults = ({ isOpen, toggle }: InputWithResultsProps) => {
           w={isMobile ? "100%" : "350px"}
         />
       </Combobox.Target>
-      {!isDataLoading && (
+      {!isDataLoading && indexedSearch && (
         <Results inputValue={search} indexedSearch={indexedSearch} />
       )}
     </Combobox>

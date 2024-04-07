@@ -1,4 +1,6 @@
-const basePath = "";
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: false,
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -13,7 +15,6 @@ const nextConfig = {
       },
     ],
   },
-  basePath,
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

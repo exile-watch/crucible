@@ -1,4 +1,4 @@
-import { HomepageObjType } from "@exile-watch/encounter-data";
+import type { HomepageObjType } from "@exile-watch/encounter-data";
 import { Skeleton } from "@exile-watch/writ-react";
 import cx from "classnames";
 import React, { useEffect, useRef } from "react";

@@ -1,4 +1,4 @@
-import { MapType } from "@exile-watch/encounter-data";
+import type { MapType } from "@exile-watch/encounter-data";
 import { SimpleGrid } from "@exile-watch/writ-react";
 import { kebabCase } from "lodash";
 import { useRouter } from "next/router";
@@ -14,7 +14,7 @@ const ListEncounterMap = () => {
 
   useEffect(() => {
     import(
-      `@exile-watch/encounter-data/dist/extracted-data/${directory}/${category}/${map}.esm` as string
+      `@exile-watch/encounter-data/dist/extracted-data/${directory}/${category}/${map}.mjs` as string
     )
       .then((d) => {
         setData(d.default);
@@ -26,7 +26,7 @@ const ListEncounterMap = () => {
 
   return (
     <SimpleGrid cols={{ xxxl: 6, xxl: 5, xl: 4, lg: 3, md: 2, sm: 2, xs: 1 }}>
-      {data?.bosses.map(({ name: encounterName, abilities }) => {
+      {data?.encounters.map(({ name: encounterName, abilities }) => {
         const ability = abilities?.pop();
         const path = `${asPath}/${kebabCase(encounterName)}`;
 

@@ -1,4 +1,10 @@
-import { RefObject, useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+  type RefObject,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 
 const useIsOverflow = (
   ref: RefObject<HTMLElement>,

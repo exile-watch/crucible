@@ -1,7 +1,7 @@
 import { Card, Divider, Stack, Text, Title } from "@exile-watch/writ-react";
 import cx from "classnames";
 import Video from "#features/encounters/Encounter/_components/EncounterAbility/Video/Video";
-import { WelcomePageContentType } from "#features/welcome/_components/about-list";
+import type { WelcomePageContentType } from "#features/welcome/_components/about-list";
 import styles from "./CardWrapper.module.scss";
 
 const CardWrapper = ({

@@ -1,6 +1,6 @@
 import { AppShell, Flex, Stack } from "@exile-watch/writ-react";
 import cx from "classnames";
-import { ReactNode, useRef } from "react";
+import { type ReactNode, useRef } from "react";
 import { PageTitle } from "#components";
 import { useIsOverflow } from "#hooks/useIsOverflow";
 import styles from "./Main.module.scss";

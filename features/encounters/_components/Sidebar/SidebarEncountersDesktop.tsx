@@ -1,12 +1,12 @@
 import cx from "classnames";
 import { kebabCase, startCase } from "lodash";
 import Link from "next/link";
-import React, { MouseEvent, useEffect, useState } from "react";
+import React, { type MouseEvent, useEffect, useState } from "react";
 
 import { ArrowRightIcon } from "@exile-watch/writ-icons";
-import { AtomPathData } from "#types";
+import type { AtomPathData } from "#types";
 
-import { SidebarNavigationPathsType } from "@exile-watch/encounter-data";
+import type { SidebarNavigationPathsType } from "@exile-watch/encounter-data";
 import {
   Center,
   Divider,
@@ -65,7 +65,7 @@ const SidebarEncountersDesktop = ({
     import(
       `@exile-watch/encounter-data/dist/extracted-data/${
         directory || "path-of-exile-1"
-      }/paths.esm`
+      }/paths.mjs`
     )
       .then((d) => {
         setData(d.default);

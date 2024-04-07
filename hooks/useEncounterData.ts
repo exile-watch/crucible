@@ -2,7 +2,7 @@ import { kebabCase } from "lodash";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-import { BossType, MapType } from "@exile-watch/encounter-data";
+import type { BossType, MapType } from "@exile-watch/encounter-data";
 
 const MAP_WITHOUT_DIRECT_BOSS = [
   "cortex",
@@ -34,7 +34,7 @@ function useEncounterData() {
   useEffect(() => {
     setIsLoading(true);
     import(
-      `@exile-watch/encounter-data/dist/extracted-data/${directory}/${category}/${map}.esm`
+      `@exile-watch/encounter-data/dist/extracted-data/${directory}/${category}/${map}.mjs`
     )
       .then((d) => {
         setData(d);
@@ -48,9 +48,9 @@ function useEncounterData() {
 
   useEffect(() => {
     if (!data) return;
-    data?.bosses?.find(({ name, abilities: encounterAbilities }) => {
+    data?.encounters?.find(({ name, abilities: encounterAbilities }) => {
       if (!boss && MAP_WITHOUT_DIRECT_BOSS?.includes(map as string)) {
-        void push(`${asPath}/${kebabCase(data.bosses[0].name)}`);
+        void push(`${asPath}/${kebabCase(data.encounters[0].name)}`);
       }
       const bossMatchedWithUrl = !!boss
         ? kebabCase(name) === boss
