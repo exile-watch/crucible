@@ -1,0 +1,17 @@
+name: "Code quality assurance: @exile-watch / doryani"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  code-quality-assurance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code quality assurance
+        if: "!contains(github.event.head_commit.message, '[skip ci]')"
+        uses: exile-watch/doryani/code-quality-assurance@main
+        with:
+          GH_ACTOR: ${{ github.actor }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
