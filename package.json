@@ -43,7 +43,7 @@
     "@naxodev/nx-cloudflare": "^2.0.1",
     "@nx/next": "18.1.2",
     "@types/lodash": "^4.17.0",
-    "@types/node": "^20.11.28",
+    "@types/node": "^20.12.5",
     "@types/react": "^18.2.64",
     "nx": "18.0.8",
     "sass": "^1.74.1"
