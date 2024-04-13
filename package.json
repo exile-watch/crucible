@@ -13,7 +13,7 @@
     "test": "vitest --silent",
     "postinstall": "npx lefthook install",
     "ci:typecheck": "lerna run ci:typecheck",
-    "ci:lint": "lerna run ci:lint"
+    "ci:lint": "npx @biomejs/biome ci ."
   },
   "config": {
     "commitizen": {
