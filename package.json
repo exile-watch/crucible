@@ -12,7 +12,7 @@
     "cq": "npm run format && npm run lint:apply && npm run typecheck",
     "test": "vitest --silent",
     "postinstall": "npx lefthook install",
-    "ci:typecheck": "lerna run ci:typecheck",
+    "ci:typecheck": "npx tsc --noEmit",
     "ci:lint": "npx @biomejs/biome ci ."
   },
   "config": {
