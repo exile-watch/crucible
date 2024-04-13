@@ -11,7 +11,9 @@
     "typecheck": "npx tsc",
     "cq": "npm run format && npm run lint:apply && npm run typecheck",
     "test": "vitest --silent",
-    "postinstall": "npx lefthook install"
+    "postinstall": "npx lefthook install",
+    "ci:typecheck": "lerna run ci:typecheck",
+    "ci:lint": "lerna run ci:lint"
   },
   "config": {
     "commitizen": {
