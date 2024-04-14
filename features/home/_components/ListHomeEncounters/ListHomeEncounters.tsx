@@ -1,25 +1,13 @@
-import type { HomepageType } from "@exile-watch/encounter-data";
+import type {HomepageType} from "@exile-watch/encounter-data";
 import { SimpleGrid, Stack, Title } from "@exile-watch/writ-react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { HomepageCard } from "#components";
 
-const ListHomeEncounters = () => {
-  const [data, setData] = useState<HomepageType | null>(null);
+type ListHomeEncountersProps = {
+  data: HomepageType
+}
 
-  useEffect(() => {
-    import(
-      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/homepage.mjs" as string
-    )
-      .then((d) => {
-        setData(d.default);
-      })
-      .catch(() => {
-        setData(null);
-      });
-  }, []);
-
-  if (!data) return null;
-
+const ListHomeEncounters = ({data}: ListHomeEncountersProps) => {
   return (
     <Stack>
       <SimpleGrid cols={{ xxxl: 6, xxl: 5, xl: 4, lg: 3, md: 2, sm: 2, xs: 1 }}>
