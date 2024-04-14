@@ -5,8 +5,10 @@ import { useRouter } from "next/router";
 import React from "react";
 import { Layout } from "#components";
 import ListEncounterCategories from "./_components/ListEncounterCategories/ListEncounterCategories";
+import {InferGetStaticPropsType} from "next";
+import {getStaticProps} from "#pages/[directory]/encounters/[category]";
 
-const EncountersCategoryPage = () => {
+const EncountersCategoryPage = ({data}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const {
     query: { directory, category },
   } = useRouter();
@@ -18,7 +20,7 @@ const EncountersCategoryPage = () => {
       )}
 
       <Layout label={startCase(category as string)}>
-        <ListEncounterCategories />
+        <ListEncounterCategories data={data} />
       </Layout>
     </>
   );
