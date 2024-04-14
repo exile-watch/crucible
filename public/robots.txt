@@ -1,2 +1,3 @@
 User-agent: *
+Disallow: /encounters
 Sitemap: https://www.exile.watch/sitemap.xml
