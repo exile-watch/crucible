@@ -1,13 +1,13 @@
-import type {HomepageType} from "@exile-watch/encounter-data";
+import type { HomepageType } from "@exile-watch/encounter-data";
 import { SimpleGrid, Stack, Title } from "@exile-watch/writ-react";
 import React from "react";
 import { HomepageCard } from "#components";
 
 type ListHomeEncountersProps = {
-  data: HomepageType
-}
+  data: HomepageType;
+};
 
-const ListHomeEncounters = ({data}: ListHomeEncountersProps) => {
+const ListHomeEncounters = ({ data }: ListHomeEncountersProps) => {
   return (
     <Stack>
       <SimpleGrid cols={{ xxxl: 6, xxl: 5, xl: 4, lg: 3, md: 2, sm: 2, xs: 1 }}>

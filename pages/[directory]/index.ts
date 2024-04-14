@@ -1,18 +1,21 @@
+import type { GetStaticPaths, GetStaticProps } from "next";
+import { REVALIDATE_FREQUENCY } from "#constants";
+import {
+  checkIfDirExists,
+  directoryPaths,
+} from "#features/directory/Directory.api";
 import { DirectoryPage } from "#features/pages";
-import {checkIfDirExists, directoryPaths} from "#features/directory/Directory.api";
-import {GetStaticPaths, GetStaticProps} from "next";
-import {REVALIDATE_FREQUENCY} from "#constants";
 
 type GetStaticPropsType = {
   directory: string;
-}
+};
 
 export const getStaticPaths = (async () => {
   return {
     paths: directoryPaths,
-    fallback: 'blocking'
+    fallback: "blocking",
   };
-}) satisfies GetStaticPaths
+}) satisfies GetStaticPaths;
 
 export const getStaticProps = (async (context) => {
   const { params } = context;
@@ -31,8 +34,8 @@ export const getStaticProps = (async (context) => {
 
   return {
     props: {},
-    revalidate: REVALIDATE_FREQUENCY
+    revalidate: REVALIDATE_FREQUENCY,
   };
-}) satisfies GetStaticProps<{}, GetStaticPropsType>
+}) satisfies GetStaticProps<Record<string, never>, GetStaticPropsType>;
 
 export default DirectoryPage;

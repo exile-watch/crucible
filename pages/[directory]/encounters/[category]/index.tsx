@@ -1,23 +1,26 @@
 import { EncountersCategoryPage } from "#features/pages";
 
-import {checkIfDirExists} from "#features/directory/Directory.api";
-import {fetchCategoryPaths, fetchCategoryData} from "#features/encounters/EncountersCategory/EncountersCategory.api";
-import {GetStaticPaths, GetStaticProps} from "next";
-import type {CategoryPageType} from "@exile-watch/encounter-data";
-import {REVALIDATE_FREQUENCY} from "#constants";
+import type { CategoryPageType } from "@exile-watch/encounter-data";
+import type { GetStaticPaths, GetStaticProps } from "next";
+import { REVALIDATE_FREQUENCY } from "#constants";
+import { checkIfDirExists } from "#features/directory/Directory.api";
+import {
+  fetchCategoryData,
+  fetchCategoryPaths,
+} from "#features/encounters/EncountersCategory/EncountersCategory.api";
 
 type GetStaticParams = {
   directory: string;
   category: string;
-}
+};
 
 export const getStaticPaths = (async () => {
   const paths = await fetchCategoryPaths();
   return {
     paths,
-    fallback: 'blocking'
+    fallback: "blocking",
   };
-}) satisfies GetStaticPaths
+}) satisfies GetStaticPaths;
 
 export const getStaticProps = (async (context) => {
   const { params } = context;
@@ -29,7 +32,7 @@ export const getStaticProps = (async (context) => {
   const { directory, category } = params;
 
   const dirExists = await checkIfDirExists(directory);
-  const categoryData = await fetchCategoryData({directory, category});
+  const categoryData = await fetchCategoryData({ directory, category });
 
   if (!dirExists || !categoryData?.default) {
     return { notFound: true };
@@ -37,10 +40,10 @@ export const getStaticProps = (async (context) => {
 
   return {
     props: {
-      data: categoryData?.default
+      data: categoryData?.default,
     },
-    revalidate: REVALIDATE_FREQUENCY
+    revalidate: REVALIDATE_FREQUENCY,
   };
-}) satisfies GetStaticProps<{data: CategoryPageType}, GetStaticParams>
+}) satisfies GetStaticProps<{ data: CategoryPageType }, GetStaticParams>;
 
 export default EncountersCategoryPage;

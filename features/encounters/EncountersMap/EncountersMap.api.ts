@@ -1,18 +1,24 @@
-import {MapType} from "@exile-watch/encounter-data";
+import type { MapType } from "@exile-watch/encounter-data";
 
 type FetchEncountersMapDataProps = {
-  directory: string
-  category: string
-  map: string
-}
+  directory: string;
+  category: string;
+  map: string;
+};
 
-async function fetchEncountersMapData({directory, category, map}: FetchEncountersMapDataProps): Promise<MapType | null> {
+async function fetchEncountersMapData({
+  directory,
+  category,
+  map,
+}: FetchEncountersMapDataProps): Promise<MapType | null> {
   try {
-    const data = await import(`@exile-watch/encounter-data/dist/extracted-data/${directory}/${category}/${map}.mjs`);
+    const data = await import(
+      `@exile-watch/encounter-data/dist/extracted-data/${directory}/${category}/${map}.mjs`
+    );
     return data?.default;
-  } catch(e) {
-    return null
+  } catch (e) {
+    return null;
   }
 }
 
-export {fetchEncountersMapData}
+export { fetchEncountersMapData };

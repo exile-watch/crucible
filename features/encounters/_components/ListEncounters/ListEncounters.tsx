@@ -1,12 +1,13 @@
 import type { EncountersIndexPageType } from "@exile-watch/encounter-data";
 import { SimpleGrid } from "@exile-watch/writ-react";
+import React from "react";
 import { ErrorBoundary, HomepageCard } from "#components";
 
 type ListEncountersProps = {
-  data: EncountersIndexPageType
-}
+  data: EncountersIndexPageType;
+};
 
-const ListEncounters = ({data}: ListEncountersProps) => {
+const ListEncounters = ({ data }: ListEncountersProps) => {
   return (
     // ErrorBoundary mainly for testing env due to: @mantine/core: MantineProvider was not found in component tree
     <ErrorBoundary>

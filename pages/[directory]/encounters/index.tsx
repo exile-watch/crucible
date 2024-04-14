@@ -1,20 +1,23 @@
+import type { CategoryPageType } from "@exile-watch/encounter-data";
+import type { GetStaticPaths, GetStaticProps } from "next";
+import { REVALIDATE_FREQUENCY } from "#constants";
+import {
+  checkIfDirExists,
+  directoryPaths,
+} from "#features/directory/Directory.api";
+import { fetchEncountersData } from "#features/encounters/Encounters.api";
 import { EncountersPage } from "#features/pages";
-import {checkIfDirExists, directoryPaths} from "#features/directory/Directory.api";
-import {GetStaticPaths, GetStaticProps} from "next";
-import {fetchEncountersData} from "#features/encounters/Encounters.api";
-import type {CategoryPageType} from "@exile-watch/encounter-data";
-import {REVALIDATE_FREQUENCY} from "#constants";
 
 type GetStaticParams = {
   directory: string;
-}
+};
 
 export const getStaticPaths = (async () => {
   return {
     paths: directoryPaths,
-    fallback: 'blocking'
+    fallback: "blocking",
   };
-}) satisfies GetStaticPaths
+}) satisfies GetStaticPaths;
 
 export const getStaticProps = (async (context) => {
   const { params } = context;
@@ -34,10 +37,10 @@ export const getStaticProps = (async (context) => {
 
   return {
     props: {
-      data: data?.default
+      data: data?.default,
     },
-    revalidate: REVALIDATE_FREQUENCY
+    revalidate: REVALIDATE_FREQUENCY,
   };
-}) satisfies GetStaticProps<{data: CategoryPageType}, GetStaticParams>
+}) satisfies GetStaticProps<{ data: CategoryPageType }, GetStaticParams>;
 
 export default EncountersPage;

@@ -5,11 +5,11 @@ import { useRouter } from "next/router";
 import { HomepageCard } from "#components";
 
 type ListEncounterMapProps = {
-  data: MapType
-}
+  data: MapType;
+};
 
-const ListEncounterMap = ({data}: ListEncounterMapProps) => {
-  const {asPath} = useRouter();
+const ListEncounterMap = ({ data }: ListEncounterMapProps) => {
+  const { asPath } = useRouter();
 
   return (
     <SimpleGrid cols={{ xxxl: 6, xxl: 5, xl: 4, lg: 3, md: 2, sm: 2, xs: 1 }}>

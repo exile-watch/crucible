@@ -4,10 +4,10 @@ import { useRouter } from "next/router";
 import { HomepageCard, SimpleCard } from "#components";
 
 type ListEncounterCategoriesProps = {
-  data: CategoryPageType
-}
+  data: CategoryPageType;
+};
 
-const ListEncounterCategories = ({data}: ListEncounterCategoriesProps) => {
+const ListEncounterCategories = ({ data }: ListEncounterCategoriesProps) => {
   const {
     query: { category },
   } = useRouter();
