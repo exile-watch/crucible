@@ -4,7 +4,7 @@ import { kebabCase, startCase } from "lodash";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { MAP_WITHOUT_DIRECT_BOSS } from "#hooks/useEncounterData";
+import { MAP_WITHOUT_DIRECT_BOSS } from "#constants";
 import styles from "./PageTitle.module.scss";
 
 interface PageTitleProps {

@@ -26,12 +26,13 @@
     "removeComments": true,
     "paths": {
       "#build-tools/*": ["build-tools/*"],
-      "#constants/*": ["constants/*"],
+      "#constants": ["constants.ts"],
       "#components": ["components"],
       "#data/*": ["data/*"],
       "#enums/*": ["enums/*"],
       "#features/*": ["features/*"],
       "#hooks/*": ["hooks/*"],
+      "#pages/*": ["pages/*"],
       "#store": ["store/store.ts"],
       "#types": ["types"]
     },

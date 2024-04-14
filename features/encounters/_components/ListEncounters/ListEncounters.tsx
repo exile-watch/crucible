@@ -1,25 +1,13 @@
 import type { EncountersIndexPageType } from "@exile-watch/encounter-data";
 import { SimpleGrid } from "@exile-watch/writ-react";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ErrorBoundary, HomepageCard } from "#components";
 
-const ListEncounters = () => {
-  const [data, setData] = useState<EncountersIndexPageType | null>(null);
+type ListEncountersProps = {
+  data: EncountersIndexPageType;
+};
 
-  useEffect(() => {
-    import(
-      "@exile-watch/encounter-data/dist/extracted-data/path-of-exile-1/encounters.mjs" as string
-    )
-      .then((d) => {
-        setData(d.default);
-      })
-      .catch(() => {
-        setData(null);
-      });
-  }, []);
-
-  if (!data) return null;
-
+const ListEncounters = ({ data }: ListEncountersProps) => {
   return (
     // ErrorBoundary mainly for testing env due to: @mantine/core: MantineProvider was not found in component tree
     <ErrorBoundary>
