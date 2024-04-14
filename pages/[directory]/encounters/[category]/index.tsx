@@ -4,6 +4,7 @@ import {checkIfDirExists} from "#features/directory/Directory.api";
 import {fetchCategoryPaths, fetchCategoryData} from "#features/encounters/EncountersCategory/EncountersCategory.api";
 import {GetStaticPaths, GetStaticProps} from "next";
 import type {CategoryPageType} from "@exile-watch/encounter-data";
+import {REVALIDATE_FREQUENCY} from "#constants";
 
 type GetStaticParams = {
   directory: string;
@@ -38,7 +39,7 @@ export const getStaticProps = (async (context) => {
     props: {
       data: categoryData?.default
     },
-    revalidate: 60, // Revalidate at most once per minute
+    revalidate: REVALIDATE_FREQUENCY
   };
 }) satisfies GetStaticProps<{data: CategoryPageType}, GetStaticParams>
 

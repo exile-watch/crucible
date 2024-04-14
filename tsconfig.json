@@ -26,7 +26,7 @@
     "removeComments": true,
     "paths": {
       "#build-tools/*": ["build-tools/*"],
-      "#constants/*": ["constants/*"],
+      "#constants": ["constants.ts"],
       "#components": ["components"],
       "#data/*": ["data/*"],
       "#enums/*": ["enums/*"],

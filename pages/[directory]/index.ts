@@ -1,6 +1,7 @@
 import { DirectoryPage } from "#features/pages";
 import {checkIfDirExists, directoryPaths} from "#features/directory/Directory.api";
 import {GetStaticPaths, GetStaticProps} from "next";
+import {REVALIDATE_FREQUENCY} from "#constants";
 
 type GetStaticPropsType = {
   directory: string;
@@ -30,7 +31,7 @@ export const getStaticProps = (async (context) => {
 
   return {
     props: {},
-    revalidate: 60, // Revalidate at most once per minute
+    revalidate: REVALIDATE_FREQUENCY
   };
 }) satisfies GetStaticProps<{}, GetStaticPropsType>
 

@@ -2,6 +2,7 @@ import { HomePage } from "#features/pages";
 import {GetStaticProps} from "next";
 import type {HomepageType} from "@exile-watch/encounter-data";
 import {fetchHomeData} from "#features/home/Home.api";
+import {REVALIDATE_FREQUENCY} from "#constants";
 
 
 type GetStaticParams = {
@@ -20,7 +21,7 @@ export const getStaticProps = (async () => {
     props: {
       data: data?.default
     },
-    revalidate: 60, // Revalidate at most once per minute
+    revalidate: REVALIDATE_FREQUENCY
   };
 }) satisfies GetStaticProps<{data: HomepageType}, GetStaticParams>
 
