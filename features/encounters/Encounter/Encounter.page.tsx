@@ -1,16 +1,20 @@
 import { metaEncounter } from "@exile-watch/seo";
 import { kebabCase } from "lodash";
+import type { InferGetStaticPropsType } from "next";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { Layout } from "#components";
-import { useEncounterData } from "#hooks/useEncounterData";
+import type { getStaticProps } from "#pages/[directory]/encounters/[category]/[map]/[boss]";
 import EncounterContainer from "./_components/EncounterHeading/EncounterContainer";
 
-const EncounterPage = () => {
+const EncounterPage = ({
+  data,
+  isMap,
+  activeEncounterAbilities,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const {
     query: { directory, category, map, boss },
   } = useRouter();
-  const { data, isMap } = useEncounterData();
 
   const title = data?.encounters?.map(({ name: encounterName }) => {
     const kebabCasedEncounterName = kebabCase(encounterName);
@@ -33,7 +37,9 @@ const EncounterPage = () => {
       )}
 
       <Layout title={title}>
-        <EncounterContainer />
+        <EncounterContainer
+          activeEncounterAbilities={activeEncounterAbilities}
+        />
       </Layout>
     </>
   );

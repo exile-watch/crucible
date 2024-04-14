@@ -1,17 +1,21 @@
 import cx from "classnames";
 
 import EncounterAbility from "#features/encounters/Encounter/_components/EncounterAbility/EncounterAbility";
-import { useEncounterData } from "#hooks/useEncounterData";
 
+import type { BossAbilityType } from "@exile-watch/encounter-data";
 import styles from "./EncounterContainer.module.scss";
 
-const EncounterContainer = () => {
-  const { activeBossAbilities } = useEncounterData();
+type EncounterContainerProps = {
+  activeEncounterAbilities?: BossAbilityType[];
+};
 
+const EncounterContainer = ({
+  activeEncounterAbilities,
+}: EncounterContainerProps) => {
   return (
     <div className={cx("pl-3 ml-3", styles.abilitiesWrapper)}>
       <div className={styles.abilities}>
-        {activeBossAbilities?.map((props, i) => (
+        {activeEncounterAbilities?.map((props, i) => (
           <EncounterAbility
             {...props}
             isEven={i % 2 === 1}
