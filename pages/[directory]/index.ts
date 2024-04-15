@@ -6,6 +6,8 @@ import {
 } from "#features/directory/Directory.api";
 import { DirectoryPage } from "#features/pages";
 
+export const config = { runtime: "experimental-edge" };
+
 type GetStaticPropsType = {
   directory: string;
 };

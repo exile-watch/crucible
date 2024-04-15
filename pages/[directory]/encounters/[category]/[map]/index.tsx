@@ -12,6 +12,8 @@ import { fetchCategoryData } from "#features/encounters/EncountersCategory/Encou
 import { fetchEncountersMapData } from "#features/encounters/EncountersMap/EncountersMap.api";
 import { EncountersMapPage } from "#features/pages";
 
+export const config = { runtime: "experimental-edge" };
+
 type GetStaticParams = {
   directory: string;
   category: string;

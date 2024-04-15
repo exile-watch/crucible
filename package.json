@@ -21,7 +21,7 @@
     }
   },
   "dependencies": {
-    "@exile-watch/encounter-data": "^1.0.1",
+    "@exile-watch/encounter-data": "^1.0.2",
     "@exile-watch/seo": "^2.0.0",
     "@exile-watch/writ-icons": "^1.0.8",
     "@exile-watch/writ-react": "^1.0.8",
