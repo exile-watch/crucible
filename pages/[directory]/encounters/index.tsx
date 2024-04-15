@@ -8,7 +8,7 @@ import {
 import { fetchEncountersData } from "#features/encounters/Encounters.api";
 import { EncountersPage } from "#features/pages";
 
-export const config = { runtime: "experimental-edge" };
+export const config = { runtime: "edge" };
 
 type GetStaticParams = {
   directory: string;

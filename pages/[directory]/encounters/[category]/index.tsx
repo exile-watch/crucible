@@ -9,7 +9,7 @@ import {
   fetchCategoryPaths,
 } from "#features/encounters/EncountersCategory/EncountersCategory.api";
 
-export const config = { runtime: "experimental-edge" };
+export const config = { runtime: "edge" };
 
 type GetStaticParams = {
   directory: string;
