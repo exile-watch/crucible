@@ -43,7 +43,7 @@
     "@exile-watch/typescript-config": "^1.1.0",
     "@exile-watch/unit-testing-config": "^1.1.2",
     "@naxodev/nx-cloudflare": "^2.0.1",
-    "@next/bundle-analyzer": "^14.1.4",
+    "@next/bundle-analyzer": "^14.2.2",
     "@nx/next": "18.2.3",
     "@types/lodash": "^4.17.0",
     "@types/node": "^20.12.5",
