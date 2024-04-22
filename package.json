@@ -47,7 +47,7 @@
     "@nx/next": "18.2.3",
     "@types/lodash": "^4.17.0",
     "@types/node": "^20.12.5",
-    "@types/react": "^18.2.64",
+    "@types/react": "^18.2.79",
     "nx": "18.2.3",
     "sass": "^1.74.1"
   },
