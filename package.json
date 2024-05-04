@@ -46,7 +46,7 @@
     "@next/bundle-analyzer": "^14.2.3",
     "@nx/next": "18.3.4",
     "@types/lodash": "^4.17.0",
-    "@types/node": "^20.12.5",
+    "@types/node": "^20.12.8",
     "@types/react": "^18.3.1",
     "nx": "18.2.3",
     "sass": "^1.76.0"
