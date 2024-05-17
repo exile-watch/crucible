@@ -25,7 +25,7 @@
     "@exile-watch/seo": "^2.0.1",
     "@exile-watch/writ-icons": "^1.0.8",
     "@exile-watch/writ-react": "^1.0.8",
-    "@tabler/icons-react": "^3.1.0",
+    "@tabler/icons-react": "^3.3.0",
     "classnames": "^2.3.1",
     "cookie-parser": "^1.4.5",
     "express": "^4.19.2",
