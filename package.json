@@ -42,7 +42,7 @@
     "@exile-watch/postcss-config": "^1.1.1",
     "@exile-watch/typescript-config": "^1.1.0",
     "@exile-watch/unit-testing-config": "^1.1.4",
-    "@naxodev/nx-cloudflare": "^3.0.0",
+    "@naxodev/nx-cloudflare": "^3.1.1",
     "@next/bundle-analyzer": "^14.2.5",
     "@nx/next": "19.1.1",
     "@types/lodash": "^4.17.4",
